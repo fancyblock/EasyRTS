@@ -13,7 +13,7 @@ package mapItem
 		//------------------------------ private member ------------------------------------
 		
 		protected var m_pos:Point = null;
-		protected var m_occupyGrid:Vector.<GridInfo> = null;
+		protected var m_size:Point = null;
 		
 		//------------------------------ public function -----------------------------------
 		
@@ -22,6 +22,9 @@ package mapItem
 		 */
 		public function MapItem() 
 		{
+			m_pos = new Point();
+			m_size = new Point();
+			
 			//TODO 
 		}
 		

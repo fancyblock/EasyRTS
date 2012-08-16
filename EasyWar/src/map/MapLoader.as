@@ -56,6 +56,22 @@ package map
 			return gridMap;
 		}
 		
+		
+		/**
+		 * @desc	generate a random map
+		 * @param	wid
+		 * @param	hei
+		 * @return
+		 */
+		public function GenRandomMap( wid:int, hei:int ):GridMap
+		{
+			var gridMap:GridMap = null;
+			
+			//TODO
+			
+			return gridMap;
+		}
+		
 	}
 
 }

@@ -1,5 +1,6 @@
 package map 
 {
+	import mapItem.MapItem;
 	/**
 	 * ...
 	 * @author Hejiabin
@@ -14,6 +15,7 @@ package map
 		public var _y:int = 0;
 		
 		public var _type:int = 0;
+		public var _coverItem:MapItem = null;
 		
 	}
 
