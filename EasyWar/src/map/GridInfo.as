@@ -9,6 +9,9 @@ package map
 	{
 		//------------------------------ static member -------------------------------------
 		
+		static public const BLANK:int = 0;
+		//TODO 
+		
 		//------------------------------ private member ------------------------------------
 		
 		public var _x:int = 0;

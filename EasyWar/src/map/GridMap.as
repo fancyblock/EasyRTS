@@ -9,11 +9,13 @@ package map
 		//------------------------------ static member -------------------------------------
 		
 		static public const MAX_SIZE:int = 160;
+		static public const DEFAULT_GRID_SIZE:Number = 32;
 		
 		//------------------------------ private member ------------------------------------
 		
 		protected var m_width:int = 0;
 		protected var m_height:int = 0;
+		protected var m_gridSize:Number = DEFAULT_GRID_SIZE;
 		
 		protected var m_mapData:Vector.<Vector.<GridInfo>> = null;
 		
@@ -74,6 +76,21 @@ package map
 			}
 			
 			return gridInfo;
+		}
+		
+		
+		/**
+		 * @desc	set the grid size
+		 * @param	gridSize
+		 */
+		public function SetGridSize( gridSize:Number ):void
+		{
+			if ( gridSize <= 0 )
+			{
+				throw new Error( "[Error]: GridMap  grid size must be bigger than 0" );
+			}
+			
+			m_gridSize = gridSize;
 		}
 		
 		//------------------------------ private function ----------------------------------

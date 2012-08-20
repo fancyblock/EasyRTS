@@ -12,8 +12,8 @@ package mapItem
 		
 		//------------------------------ private member ------------------------------------
 		
-		protected var m_pos:Point = null;
-		protected var m_size:Point = null;
+		protected var m_pos:Point = null;			// the pos on grid
+		protected var m_size:Point = null;			// the size on grid
 		
 		//------------------------------ public function -----------------------------------
 		
@@ -26,6 +26,7 @@ package mapItem
 			m_size = new Point();
 			
 			//TODO 
+			
 		}
 		
 		
