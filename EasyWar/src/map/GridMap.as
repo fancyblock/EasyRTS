@@ -1,5 +1,6 @@
 package map 
 {
+	import mapItem.MapItem;
 	/**
 	 * ...
 	 * @author Hejiabin
@@ -91,6 +92,38 @@ package map
 			}
 			
 			m_gridSize = gridSize;
+		}
+		
+		
+		/**
+		 * @desc	return the gridInfo of the specific position 
+		 * @param	xPos
+		 * @param	yPos
+		 * @return
+		 */
+		public function GetPositionGrid( xPos:Number, yPos:Number ):GridInfo
+		{
+			var gridInfo:GridInfo = null;
+			
+			//TODO 
+			
+			return gridInfo;
+		}
+		
+		
+		/**
+		 * @desc	return the mapItem of the specific position
+		 * @param	xPos
+		 * @param	yPos
+		 * @return
+		 */
+		public function GetPositionItem( xPos:Number, yPos:Number ):MapItem
+		{
+			var mapItem:MapItem = null;
+			
+			//TODO 
+			
+			return mapItem;
 		}
 		
 		//------------------------------ private function ----------------------------------

@@ -104,12 +104,16 @@ package stages
 			{
 				m_state = STATE_LEAVING;
 				m_nextStage = m_stages[name];
+				
+				return true;
 			}
 			
 			if ( m_state == STATE_NONE )
 			{
 				m_state = STATE_ENTERING;
 				m_nextStage = m_stages[name];
+				
+				return true;
 			}
 			
 			if ( m_state == STATE_LEAVING || m_state == STATE_ENTERING )
