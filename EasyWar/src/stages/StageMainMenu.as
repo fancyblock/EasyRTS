@@ -20,6 +20,7 @@ package stages
 		
 		override public function onEnter():void 
 		{
+			// initial the ui
 			m_ui = new mainMenu();
 			
 			m_ui.getChildByName( "btnStart" ).addEventListener( MouseEvent.CLICK, _onStart );

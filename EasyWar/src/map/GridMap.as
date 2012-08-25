@@ -105,7 +105,13 @@ package map
 		{
 			var gridInfo:GridInfo = null;
 			
-			//TODO 
+			var posWid:Number = this.m_width * this.m_gridSize;
+			var posHei:Number = this.m_height * this.m_gridSize;
+			
+			if ( xPos >= 0 && yPos >= 0 && xPos < posWid && yPos < posHei )
+			{
+				gridInfo = this.GetGridInfo( xPos / m_gridSize, yPos / m_gridSize );
+			}
 			
 			return gridInfo;
 		}
@@ -121,7 +127,12 @@ package map
 		{
 			var mapItem:MapItem = null;
 			
-			//TODO 
+			var gridInfo:GridInfo = this.GetPositionGrid( xPos, yPos );
+			
+			if ( gridInfo != null )
+			{
+				mapItem = gridInfo._coverItem;
+			}
 			
 			return mapItem;
 		}

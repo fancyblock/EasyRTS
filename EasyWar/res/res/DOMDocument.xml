@@ -1,6 +1,7 @@
 <DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#333333" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
      <symbols>
           <Include href="btnStart.xml" itemIcon="0" loadImmediate="false"/>
+          <Include href="inGame.xml"/>
           <Include href="mainMenu.xml"/>
      </symbols>
      <timelines>
@@ -9,7 +10,13 @@
                     <DOMLayer name="图层 1" color="#4FFF4F" current="true" isSelected="true">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
-                                   <elements/>
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="inGame" name="" selected="true" centerPoint3DX="512" centerPoint3DY="383.95">
+                                             <transformationPoint>
+                                                  <Point x="512" y="383.95"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
@@ -319,6 +326,7 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="2694" publishTime="1345913234"/>
           <PublishItem publishSize="2545" publishTime="1344252131"/>
           <PublishItem publishSize="2052" publishTime="1344251245"/>
           <PublishItem publishSize="895" publishTime="1344250687"/>

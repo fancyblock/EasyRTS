@@ -10,7 +10,7 @@ package
 	 * ...
 	 * @author Hejiabin
 	 */
-	[SWF(width="1024", height="768", backgroundColor="0x000000")]
+	[SWF(width="1024", height="768", backgroundColor="0xffffff")]
 	public class Main extends Sprite 
 	{
 		
