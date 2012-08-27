@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="inGame" itemID="50390172-00000014" linkageExportForAS="true" linkageClassName="inGameUI" sourceLibraryItemHRef="元件 1" lastModified="1345913371">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="inGame" itemID="50390172-00000014" linkageExportForAS="true" linkageClassName="inGameUI" sourceLibraryItemHRef="元件 1" lastModified="1346056772">
   <timeline>
     <DOMTimeline name="inGame">
       <layers>
@@ -18,6 +18,33 @@
                   </strokes>
                   <edges>
                     <Edge strokeStyle="1" edges="!20480 15360|0 15360!0 15360|0 0!0 0|20480 0!20480 0|20480 15360"/>
+                  </edges>
+                </DOMShape>
+                <DOMShape isDrawingObject="true">
+                  <matrix>
+                    <Matrix tx="1" ty="-60"/>
+                  </matrix>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <RaggedStroke scaleMode="normal" weight="2">
+                        <fill>
+                          <SolidColor/>
+                        </fill>
+                      </RaggedStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge strokeStyle="1" edges="!0 12400|20480 12400"/>
+                  </edges>
+                </DOMShape>
+                <DOMShape isDrawingObject="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.4"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!20480 15360|20 15360!20 15360|20 11200!20 11200|20480 11200!20480 11200|20480 15360"/>
                   </edges>
                 </DOMShape>
               </elements>

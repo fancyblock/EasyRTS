@@ -1,7 +1,7 @@
 package mapItem 
 {
 	import flash.geom.Point;
-	import map.GridInfo;
+	import map.GridMap;
 	/**
 	 * ...
 	 * @author Hejiabin
@@ -12,21 +12,37 @@ package mapItem
 		
 		//------------------------------ private member ------------------------------------
 		
-		protected var m_pos:Point = null;			// the pos on grid
-		protected var m_size:Point = null;			// the size on grid
+		protected var m_gridPos:Point = null;			// the pos on grid
+		protected var m_gridSize:Point = null;			// the size on grid
+		
+		protected var m_pos:Point = null;
+		protected var m_size:Point = null;
+		
+		protected var m_map:GridMap = null;
 		
 		//------------------------------ public function -----------------------------------
+		
 		
 		/**
 		 * @desc	constructor of MapItem
 		 */
 		public function MapItem() 
 		{
+			m_gridPos = new Point();
+			m_gridSize = new Point();
+			
 			m_pos = new Point();
 			m_size = new Point();
-			
-			//TODO 
-			
+		}
+		
+		
+		/**
+		 * @desc	set the item owner map
+		 * @param	map
+		 */
+		public function SetMap( map:GridMap ):void
+		{
+			m_map = map;
 		}
 		
 		
@@ -36,7 +52,6 @@ package mapItem
 		 */
 		public function Update( elapsed:Number ):void
 		{
-			//TODO 
 		}
 		
 		//------------------------------ private function ----------------------------------
