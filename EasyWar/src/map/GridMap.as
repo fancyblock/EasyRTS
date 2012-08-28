@@ -1,6 +1,7 @@
 package map 
 {
 	import mapItem.MapItem;
+	
 	/**
 	 * ...
 	 * @author Hejiabin
@@ -81,10 +82,10 @@ package map
 		
 		
 		/**
-		 * @desc	set the grid size
-		 * @param	gridSize
+		 * @desc	getter & setter of the grid size
 		 */
-		public function SetGridSize( gridSize:Number ):void
+		public function get GRID_SIZE():Number { return m_gridSize; }
+		public function set GRID_SIZE( gridSize:Number ):void 
 		{
 			if ( gridSize <= 0 )
 			{

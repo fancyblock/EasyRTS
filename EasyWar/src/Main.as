@@ -30,7 +30,7 @@ package
 			StageManager.SINGLETON.CANVAS = gameLayer;
 			
 			this.addChild( gameLayer );
-			this.addChild( new GameMonitor() );
+			this.addChild( new GameMonitor( GameMonitor.ALIGH_RIGHT ) );
 			
 			// inital the game
 			StageManager.SINGLETON.AddStage( new StageMainMenu(), "MainMenu" );
