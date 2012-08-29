@@ -7,6 +7,7 @@ package stages
 	import flash.geom.Rectangle;
 	import gameComponent.Battlefield;
 	import gameObj.moveableObj.Tank;
+	import Utility.MathCalculator;
 	
 	/**
 	 * ...
@@ -113,7 +114,12 @@ package stages
 			{
 				m_isSingleSelect = false;
 			
-				//TODO 
+				// draw the rect
+				m_mouseArea.graphics.clear();
+				m_mouseArea.graphics.lineStyle( 1, 0xff0000 );
+				var rect:Rectangle = MathCalculator.GetRectBy2Spot( evt.localX, evt.localY, m_selectStartPos.x, m_selectStartPos.y );
+				m_mouseArea.graphics.drawRect( rect.left, rect.top, rect.width, rect.height );
+				
 			}
 			
 			if ( m_isSelectting == false )
@@ -144,6 +150,9 @@ package stages
 			if ( m_isSingleSelect == false )
 			{
 				//TODO 
+				
+				// clear the rect
+				m_mouseArea.graphics.clear();
 			}
 			
 			m_isSelectting = false;
