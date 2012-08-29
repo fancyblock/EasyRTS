@@ -51,6 +51,7 @@
   <!-- SWC Libraries -->
   <libraryPaths>
     <element path="res\res.swc" />
+    <element path="res\game_obj.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>

@@ -1,7 +1,9 @@
 package gameComponent 
 {
+	import flash.display.Bitmap;
 	import flash.display.DisplayObjectContainer;
 	import gameObj.IGameObject;
+	import map.GridInfo;
 	import map.GridMap;
 	import mapItem.MapItem;
 	
@@ -22,6 +24,8 @@ package gameComponent
 		protected var m_map:GridMap = null;
 		protected var m_unitList:Vector.<IGameObject> = null;
 		protected var m_selectedUnit:MapItem = null;
+		
+		protected var m_mapBG:Bitmap = null;
 		
 		//------------------------------ public function -----------------------------------
 		
@@ -75,8 +79,24 @@ package gameComponent
 			}
 			
 			m_map = new GridMap( wid, hei );
+			//m_map.GetGridInfo( 3, 7 )._type = GridInfo.BLOCK;
+			m_mapBG = m_map.GetMapBitmap();
 			
-			//TODO 
+			m_canvas.addChild( m_mapBG );
+		}
+		
+		
+		/**
+		 * @desc	move map
+		 * @param	offsetX
+		 * @param	offsetY
+		 */
+		public function MoveMap( offsetX:Number, offsetY:Number ):void
+		{
+			//TODO
+			
+			m_mapBG.x += offsetX;
+			m_mapBG.y += offsetY;
 		}
 		
 		

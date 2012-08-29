@@ -10,8 +10,8 @@ package map
 		//------------------------------ static member -------------------------------------
 		
 		static public const BLANK:int = 0;
-		static public const OBJ_OCCUPY:int = 1;
-		//TODO 
+		static public const BLOCK:int = 1;
+		static public const UNIT:int = 2;
 		
 		//------------------------------ private member ------------------------------------
 		
@@ -38,7 +38,7 @@ package map
 		 */
 		public function SetMapItem( item:MapItem ):void
 		{
-			this._type = OBJ_OCCUPY;
+			this._type = UNIT;
 			this._coverItem = item;
 		}
 		

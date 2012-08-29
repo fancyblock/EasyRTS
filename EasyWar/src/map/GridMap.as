@@ -1,5 +1,9 @@
 package map 
 {
+	import flash.display.Bitmap;
+	import flash.display.BitmapData;
+	import flash.display.Sprite;
+	import flash.geom.Matrix;
 	import mapItem.MapItem;
 	
 	/**
@@ -136,6 +140,41 @@ package map
 			}
 			
 			return mapItem;
+		}
+		
+		
+		/**
+		 * @desc	return the map bitmap
+		 * @return
+		 */
+		public function GetMapBitmap():Bitmap
+		{
+			var bmp:Bitmap = new Bitmap();
+			
+			var wid:Number = m_width * GRID_SIZE;
+			var hei:Number = m_height * GRID_SIZE;
+			
+			var bitmapData:BitmapData = new BitmapData( wid, hei, true, 0xffffff );
+			var blockTile:Sprite = new mcBlockTile();
+			var translate:Matrix = new Matrix();
+			
+			for ( var i:int = 0; i < m_width; i++ )
+			{
+				for ( var j:int = 0; j < m_height; j++ )
+				{
+					//if ( m_mapData[i][j]._type == GridInfo.BLOCK )
+					{
+						translate.tx = i * GRID_SIZE;
+						translate.ty = j * GRID_SIZE;
+						
+						bitmapData.draw( blockTile, translate );
+					}
+				}
+			}
+			
+			bmp.bitmapData = bitmapData;
+			
+			return bmp;
 		}
 		
 		//------------------------------ private function ----------------------------------
