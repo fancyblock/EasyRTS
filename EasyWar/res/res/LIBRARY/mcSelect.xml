@@ -1,6 +1,6 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="mcSelect" itemID="503c98e2-0000001c" linkageExportForAS="true" linkageClassName="mcSelect" sourceLibraryItemHRef="元件 1" lastModified="1346149389">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="mcSelect" itemID="503c98e2-0000001c" linkageExportForAS="true" linkageClassName="mcSelect" sourceLibraryItemHRef="元件 1" lastModified="1346225195">
   <timeline>
-    <DOMTimeline name="mcSelect" currentFrame="14">
+    <DOMTimeline name="mcSelect" currentFrame="12">
       <layers>
         <DOMLayer name="图层 1" color="#4FFF4F" current="true" isSelected="true">
           <frames>
@@ -11,13 +11,13 @@
                     <StrokeStyle index="1">
                       <SolidStroke scaleMode="normal" weight="5">
                         <fill>
-                          <SolidColor color="#FF3300"/>
+                          <SolidColor color="#333333"/>
                         </fill>
                       </SolidStroke>
                     </StrokeStyle>
                   </strokes>
                   <edges>
-                    <Edge strokeStyle="1" edges="!300 -300|0 0!0 0|300 300!0 0|-300 300!-300 -300|0 0"/>
+                    <Edge strokeStyle="1" edges="!300 -300|0 0!0 0|300 300!-300 -300|0 0!0 0|-300 300"/>
                     <Edge cubics="!-300 -300(;-300,-300 0,0 0,0q-300 -300 0 0);"/>
                     <Edge cubics="!0 0(;0,0 300,300 300,300q0 0 300 300);"/>
                     <Edge cubics="!300 -300(300,-300;300,-300 0,0 0,0q300 -300 0 0);"/>
@@ -33,13 +33,13 @@
                     <StrokeStyle index="1">
                       <SolidStroke scaleMode="normal" weight="5">
                         <fill>
-                          <SolidColor color="#FF3300"/>
+                          <SolidColor color="#333333"/>
                         </fill>
                       </SolidStroke>
                     </StrokeStyle>
                   </strokes>
                   <edges>
-                    <Edge strokeStyle="1" edges="!200 -200|0 0!0 0|200 200!0 0|-200 200!-200 -200|0 0"/>
+                    <Edge strokeStyle="1" edges="!200 -200|0 0!0 0|200 200!-200 -200|0 0!0 0|-200 200"/>
                     <Edge cubics="!-200 -200(;-200,-200 0,0 0,0q-200 -200 0 0);"/>
                     <Edge cubics="!0 0(;0,0 200,200 200,200q0 0 200 200);"/>
                     <Edge cubics="!200 -200(200,-200;200,-200 0,0 0,0q200 -200 0 0);"/>
@@ -55,13 +55,13 @@
                     <StrokeStyle index="1">
                       <SolidStroke scaleMode="normal" weight="5">
                         <fill>
-                          <SolidColor color="#FF3300"/>
+                          <SolidColor color="#333333"/>
                         </fill>
                       </SolidStroke>
                     </StrokeStyle>
                   </strokes>
                   <edges>
-                    <Edge strokeStyle="1" edges="!100 -100|0 0!0 0|100 100!0 0|-100 100!-100 -100|0 0"/>
+                    <Edge strokeStyle="1" edges="!100 -100|0 0!0 0|100 100!-100 -100|0 0!0 0|-100 100"/>
                     <Edge cubics="!-100 -100(;-100,-100 0,0 0,0q-100 -100 0 0);"/>
                     <Edge cubics="!0 0(;0,0 100,100 100,100q0 0 100 100);"/>
                     <Edge cubics="!100 -100(100,-100;100,-100 0,0 0,0q100 -100 0 0);"/>
@@ -75,11 +75,11 @@
                 <DOMShape>
                   <fills>
                     <FillStyle index="1">
-                      <SolidColor color="#FF0000"/>
+                      <SolidColor color="#333333"/>
                     </FillStyle>
                   </fills>
                   <edges>
-                    <Edge fillStyle1="1" edges="!42 -1S2[42 11 35 22!35 22[25 37 5 37!5 37[-17 37 -26 19!-26 19[-31 9 -31 0!-31 0[-31 -40 6 -35!6 -35[42 -31 42 -1"/>
+                    <Edge fillStyle1="1" edges="!42 -1[42 11 35 22!35 22[25 37 5 37!5 37[-17 37 -26 19!-26 19[-31 9 -31 0!-31 0[-31 -40 6 -35!6 -35[42 -31 42 -1"/>
                     <Edge cubics="!42 -1(;42,10 35,37 5,37q42 -1Q42 11q35 22Q25 37q5 37);"/>
                     <Edge cubics="!5 37(5,37;-30,37 -31,0 -31,0q5 37Q-17 37q-26 19Q-31 9q-31 0);"/>
                     <Edge cubics="!-31 0(;-31,-56 42,-38 42,-1q-31 0Q-31 -40q6 -35Q42 -31q42 -1);"/>

@@ -1,8 +1,9 @@
 package gameComponent 
 {
 	import flash.display.DisplayObjectContainer;
-	import map.GridMap;
+	import flash.geom.Rectangle;
 	import gameObj.IGameObject;
+	import map.GridMap;
 	
 	/**
 	 * ...
@@ -11,6 +12,9 @@ package gameComponent
 	public class Battlefield 
 	{
 		//------------------------------ static member -------------------------------------
+		
+		static public const UNIT_TROOP:int = 1;
+		static public const UNIT_BUILDING:int = 2;
 		
 		//------------------------------ private member ------------------------------------
 		
@@ -66,10 +70,10 @@ package gameComponent
 		
 		
 		/**
-		 * @desc	add game object
+		 * @desc	add game object	to the map ( grid coordinate )
 		 * @param	gameObj
 		 */
-		public function AddGameObject( gameObj:IGameObject, xPos:Number, yPos:Number ):void
+		public function AddGameObject( gameObj:IGameObject, xPos:int, yPos:int ):void
 		{
 			//TODO 
 		}
@@ -84,7 +88,48 @@ package gameComponent
 			//TODO 
 		}
 		
+		
+		/**
+		 * @desc	select the army or building
+		 * @param	xPos
+		 * @param	yPos
+		 * @return
+		 */
+		public function SelectSingle( xPos:Number, yPos:Number ):int
+		{
+			var selectCnt:int = 0;
+			
+			cleanCurrentSelect();
+			
+			//TODO 
+			
+			return selectCnt;
+		}
+		
+		
+		/**
+		 * @desc	select a group of the army
+		 * @param	rect
+		 * @return
+		 */
+		public function SelectGroup( rect:Rectangle ):int
+		{
+			var selectCnt:int = 0;
+			
+			cleanCurrentSelect();
+			
+			//TODO
+			
+			return selectCnt;
+		}
+		
 		//------------------------------ private function ----------------------------------
+		
+		// clean the current selected unit
+		protected function cleanCurrentSelect():void
+		{
+			//TODO
+		}
 		
 		//------------------------------- event callback -----------------------------------
 		

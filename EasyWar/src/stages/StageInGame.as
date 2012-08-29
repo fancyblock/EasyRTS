@@ -61,7 +61,7 @@ package stages
 			m_ui = new inGameUI();
 			m_mouseArea = m_ui.getChildByName( "mcMouseArea" ) as Sprite;
 			m_mouseArea.addEventListener( MouseEvent.MOUSE_DOWN, onStartSelect );
-			m_mouseArea.addEventListener( MouseEvent.MOUSE_MOVE, onSelect );
+			m_mouseArea.addEventListener( MouseEvent.MOUSE_MOVE, onGroupSelect );
 			m_mouseArea.addEventListener( MouseEvent.MOUSE_UP, onEndSelect );
 			
 			//TODO	ui stuff
@@ -79,7 +79,7 @@ package stages
 			m_battlefield.Create( 50, 30 );
 			
 			var tank:Tank = new Tank();
-			m_battlefield.AddGameObject( tank, 100, 100 );
+			m_battlefield.AddGameObject( tank, 5, 5 );
 			//[TEMP]
 			
 			// set game state
@@ -107,25 +107,48 @@ package stages
 		// single select your troop
 		protected function singleSelect( posX:Number, posY:Number ):void
 		{
-			//TODO 
+			var selectCnt:int = m_battlefield.SelectSingle( posX, posY );
+			
+			if ( selectCnt > 0 )
+			{
+				m_state = STATE_ORDER;
+			}
+			
+			if ( selectCnt == 0 )
+			{
+				m_state = STATE_NORMAL;
+			}
 		}
 		
 		// group select your troop
 		protected function groupSelect( rect:Rectangle ):void
 		{
-			//TODO 
+			var selectCnt:int = m_battlefield.SelectGroup( rect );
+			
+			if ( selectCnt > 0 )
+			{
+				m_state = STATE_ORDER;
+			}
+			
+			if ( selectCnt == 0 )
+			{
+				m_state = STATE_NORMAL;
+			}
 		}
 		
 		// order selected troop to attack or move
 		protected function orderSpot( xPos:Number, yPos:Number ):void
 		{
 			//TODO 
-		}
-		
-		// scroll the map
-		protected function scrollMap( xPos:Number, yPos:Number ):void
-		{
-			//TODO 
+			
+			/*
+			// play animation
+			var aniSelect:mcSelect = new mcSelect();
+			aniSelect.x = endPosX;
+			aniSelect.y = endPosY;
+			m_gameLayer.addChild( aniSelect );
+			aniSelect.play();
+			*/
 		}
 		
 		// build the building at this position
@@ -161,18 +184,13 @@ package stages
 				buildingAt( evt.localX, evt.localY );
 			}
 			
-			if ( m_state == STATE_ORDER )
-			{
-				orderSpot( evt.localX, evt.localY );
-			}
-			
 			if ( m_state == STATE_SELL )
 			{
 				sellBuilding( evt.localX, evt.localY );
 			}
 		}
 		
-		protected function onSelect( evt:MouseEvent ):void
+		protected function onGroupSelect( evt:MouseEvent ):void
 		{
 			if ( m_state == STATE_NORMAL || m_state == STATE_ORDER )
 			{
@@ -182,38 +200,34 @@ package stages
 				
 					// draw the rect
 					m_mouseArea.graphics.clear();
-					m_mouseArea.graphics.lineStyle( 1, 0xff0000 );
+					m_mouseArea.graphics.lineStyle( 1, 0x000000 );
 					var rect:Rectangle = MathCalculator.GetRectBy2Spot( evt.localX, evt.localY, m_selectStartPos.x, m_selectStartPos.y );
 					m_mouseArea.graphics.drawRect( rect.left, rect.top, rect.width, rect.height );
 					
 				}
 			}
-			
-			//TODO 	scroll the map
-			if ( m_isSelectting == false )
-			{
-				scrollMap( evt.localX, evt.localY ); 
-			}
 		}
 		
 		protected function onEndSelect( evt:MouseEvent ):void
 		{
-			if ( m_state == STATE_NORMAL || m_state == STATE_ORDER || m_isSelectting == true )
+			if ( m_state == STATE_NORMAL || m_state == STATE_ORDER )
 			{
 				var endPosX:Number = evt.localX;
 				var endPosY:Number = evt.localY;
 				
+				// single select || send order
 				if ( m_isSingleSelect == true )
 				{
-					// play animation
-					var aniSelect:mcSelect = new mcSelect();
-					aniSelect.x = endPosX;
-					aniSelect.y = endPosY;
-					m_gameLayer.addChild( aniSelect );
-					aniSelect.play();
+					if ( m_state == STATE_NORMAL )
+					{
+						// send select message
+						singleSelect( endPosX, endPosY );
+					}
 					
-					// send select message
-					singleSelect( endPosX, endPosY );
+					if ( m_state == STATE_ORDER )
+					{
+						orderSpot( endPosX, endPosY );
+					}
 				}
 				
 				// group select 
