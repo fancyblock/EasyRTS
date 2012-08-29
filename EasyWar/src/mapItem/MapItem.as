@@ -1,5 +1,6 @@
 package mapItem 
 {
+	import flash.display.DisplayObjectContainer;
 	import flash.geom.Point;
 	import gameObj.IGameObject;
 	import map.GridInfo;
@@ -17,13 +18,15 @@ package mapItem
 		//------------------------------ private member ------------------------------------
 		
 		protected var m_gridPos:Point = null;			// the pos on grid
-		protected var m_gridSize:Point = null;			// the size on grid
 		
 		protected var m_pos:Point = null;
-		protected var m_size:Point = null;
 		
 		protected var m_map:GridMap = null;
 		protected var m_isClingToGrid:Boolean = false;
+		protected var m_group:int = 0;
+		protected var m_type:int = 0;
+		
+		protected var m_canvas:DisplayObjectContainer = null;
 		
 		//------------------------------ public function -----------------------------------
 		
@@ -34,10 +37,8 @@ package mapItem
 		public function MapItem() 
 		{
 			m_gridPos = new Point();
-			m_gridSize = new Point();
 			
 			m_pos = new Point();
-			m_size = new Point();
 		}
 		
 		
@@ -59,19 +60,30 @@ package mapItem
 		
 		
 		/**
+		 * @desc	setter & getter of the group property
+		 */
+		public function get GROUP():int { return m_group; }
+		public function set GROUP( value:int ):void { m_group = value; }
+		
+		
+		/**
+		 * @desc	setter & getter of the type property
+		 */
+		public function get TYPE():int { return m_type; }
+		public function set TYPE( value:int ):void { m_type = value; }
+		
+		
+		/**
 		 * @desc	set the grid position 
 		 * @param	xPos
 		 * @param	yPos
 		 * @param	sizeWid
 		 * @param	sizeHei
 		 */
-		public function SetGridPosition( xPos:int, yPos:int, sizeWid:int, sizeHei:int ):void
+		public function SetGridPosition( xPos:int, yPos:int ):void
 		{
 			m_gridPos.x = xPos;
 			m_gridPos.y = yPos;
-			
-			m_gridSize.x = sizeWid;
-			m_gridSize.y = sizeHei;
 		}
 		
 		
@@ -96,18 +108,12 @@ package mapItem
 			// judge if can set this position or not ( only for cling item )
 			if ( m_isClingToGrid == true )
 			{
-				for ( i = m_gridPos.x; i < ( m_gridPos.x + m_gridSize.x ); i ++ )
+				gridInfo = m_map.GetGridInfo( m_gridPos.x, m_gridPos.y );
+				
+				// the grid already be occupy
+				if ( gridInfo._type != GridInfo.BLANK )
 				{
-					for ( j = m_gridPos.y; j < ( m_gridPos.y + m_gridSize.y ); j++ )
-					{
-						gridInfo = m_map.GetGridInfo( i, j );
-						
-						// the grid already be occupy
-						if ( gridInfo._type != GridInfo.BLANK )
-						{
-							return false;
-						}
-					}
+					return false;
 				}
 			}
 			
@@ -124,24 +130,12 @@ package mapItem
 				if ( newGridPosX != (int)(m_gridPos.x) || newGridPosY != (int)(m_gridPos.y) )
 				{
 					// clean the map first
-					for ( i = m_gridPos.x; i < ( m_gridPos.x + m_gridSize.x ); i ++ )
-					{
-						for ( j = m_gridPos.y; j < ( m_gridPos.y + m_gridSize.y ); j++ )
-						{
-							gridInfo = m_map.GetGridInfo( i, j );
-							gridInfo.SetBlank();
-						}
-					}
+					gridInfo = m_map.GetGridInfo( m_gridPos.x, m_gridPos.y );
+					gridInfo.SetBlank();
 					
 					// set the new item info
-					for ( i = newGridPosX; i < ( newGridPosX + m_gridSize.x ); i ++ )
-					{
-						for ( j = newGridPosY; j < ( newGridPosY + m_gridSize.y ); j++ )
-						{
-							gridInfo = m_map.GetGridInfo( i, j );
-							gridInfo.SetMapItem( this );
-						}
-					}
+					gridInfo = m_map.GetGridInfo( newGridPosX, newGridPosY );
+					gridInfo.SetMapItem( this );
 					
 					m_gridPos.x = newGridPosX;
 					m_gridPos.y = newGridPosY;
@@ -158,6 +152,34 @@ package mapItem
 		 */
 		public function Update( elapsed:Number ):void
 		{
+		}
+		
+		
+		/**
+		 * @desc	callback when object be add
+		 */
+		public function onAdd():void
+		{
+			//TODO
+		}
+		
+		
+		/**
+		 * @desc	callback when object be removed
+		 */
+		public function onRemove():void
+		{
+			//TODO
+		}
+		
+		
+		/**
+		 * @desc	set canvas
+		 * @param	canvas
+		 */
+		public function SetCanvas( canvas:DisplayObjectContainer ):void
+		{
+			m_canvas = canvas;
 		}
 		
 		//------------------------------ private function ----------------------------------

@@ -1,9 +1,9 @@
 package gameComponent 
 {
 	import flash.display.DisplayObjectContainer;
-	import flash.geom.Rectangle;
 	import gameObj.IGameObject;
 	import map.GridMap;
+	import mapItem.MapItem;
 	
 	/**
 	 * ...
@@ -20,6 +20,8 @@ package gameComponent
 		
 		protected var m_canvas:DisplayObjectContainer = null;
 		protected var m_map:GridMap = null;
+		protected var m_unitList:Vector.<IGameObject> = null;
+		protected var m_selectedUnit:MapItem = null;
 		
 		//------------------------------ public function -----------------------------------
 		
@@ -28,7 +30,7 @@ package gameComponent
 		 */
 		public function Battlefield() 
 		{
-			//TODO 
+			m_unitList = new Vector.<IGameObject>(); 
 		}
 		
 		
@@ -48,6 +50,15 @@ package gameComponent
 		public function set CANVAS( value:DisplayObjectContainer ):void 
 		{
 			m_canvas = value;
+		}
+		
+		
+		/**
+		 * @desc	return the selected unit type
+		 */
+		public function get SELECTED_UNIT():MapItem 
+		{ 
+			return m_selectedUnit;
 		}
 		
 		
@@ -73,9 +84,12 @@ package gameComponent
 		 * @desc	add game object	to the map ( grid coordinate )
 		 * @param	gameObj
 		 */
-		public function AddGameObject( gameObj:IGameObject, xPos:int, yPos:int ):void
+		public function AddGameObject( unit:MapItem, xPos:int, yPos:int ):void
 		{
 			//TODO 
+			
+			unit.onAdd();
+			m_unitList.push( unit );
 		}
 		
 		
@@ -85,8 +99,17 @@ package gameComponent
 		 */
 		public function Update( elapsed:Number ):void
 		{
-			//TODO 
+			for ( var i:int = 0; i < m_unitList.length; i++ )
+			{
+				m_unitList[i].Update( elapsed );
+			}
 		}
+		
+		
+		/**
+		 * @desc	return the grid map
+		 */
+		public function get MAP():GridMap { return m_map; }
 		
 		
 		/**
@@ -95,32 +118,15 @@ package gameComponent
 		 * @param	yPos
 		 * @return
 		 */
-		public function SelectSingle( xPos:Number, yPos:Number ):int
+		public function SelectUnit( xPos:Number, yPos:Number ):Boolean
 		{
-			var selectCnt:int = 0;
+			var selectSuccess:Boolean = false;
 			
 			cleanCurrentSelect();
 			
 			//TODO 
 			
-			return selectCnt;
-		}
-		
-		
-		/**
-		 * @desc	select a group of the army
-		 * @param	rect
-		 * @return
-		 */
-		public function SelectGroup( rect:Rectangle ):int
-		{
-			var selectCnt:int = 0;
-			
-			cleanCurrentSelect();
-			
-			//TODO
-			
-			return selectCnt;
+			return selectSuccess;
 		}
 		
 		//------------------------------ private function ----------------------------------
@@ -128,7 +134,7 @@ package gameComponent
 		// clean the current selected unit
 		protected function cleanCurrentSelect():void
 		{
-			//TODO
+			m_selectedUnit = null;
 		}
 		
 		//------------------------------- event callback -----------------------------------

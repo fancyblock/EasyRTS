@@ -1,4 +1,4 @@
-<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" width="1024" height="768" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" gridSpacingX="30" gridSpacingY="30" objectsSnapTo="false" adjustViewAngle3D="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" width="1024" height="768" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" gridSpacingX="20" gridSpacingY="20" gridVisible="true" objectsSnapTo="false" adjustViewAngle3D="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
      <symbols>
           <Include href="btnStart.xml" itemIcon="0" loadImmediate="false"/>
           <Include href="inGame.xml"/>
@@ -14,7 +14,7 @@
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="inGame" name="" selected="true" centerPoint3DX="512" centerPoint3DY="383.95">
+                                        <DOMSymbolInstance libraryItemName="inGame" name="" centerPoint3DX="512" centerPoint3DY="383.95">
                                              <transformationPoint>
                                                   <Point x="512" y="383.95"/>
                                              </transformationPoint>
@@ -329,6 +329,7 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="7470" publishTime="1346225213"/>
           <PublishItem publishSize="7464" publishTime="1346213228"/>
           <PublishItem publishSize="7375" publishTime="1346150066"/>
           <PublishItem publishSize="7375" publishTime="1346150058"/>

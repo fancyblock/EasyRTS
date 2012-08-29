@@ -11,6 +11,7 @@ package map
 		
 		static public const BLANK:int = 0;
 		static public const OBJ_OCCUPY:int = 1;
+		//TODO 
 		
 		//------------------------------ private member ------------------------------------
 		

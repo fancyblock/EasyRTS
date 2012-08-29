@@ -2,11 +2,9 @@ package stages
 {
 	import flash.display.Sprite;
 	import flash.events.MouseEvent;
-	import flash.geom.Point;
-	import flash.geom.Rectangle;
 	import gameComponent.Battlefield;
 	import gameObj.moveableObj.Tank;
-	import Utility.MathCalculator;
+	import mapItem.MapItem;
 	
 	/**
 	 * ...
@@ -17,9 +15,10 @@ package stages
 		//---------------------------- static member ------------------------------
 		
 		static protected const STATE_NORMAL:int = 0;
-		static protected const STATE_ORDER:int = 1;
-		static protected const STATE_BUILDING:int = 2;
-		static protected const STATE_SELL:int = 3;
+		static protected const STATE_SELECTED_TROOP:int = 1;
+		static protected const STATE_SELECTED_BUILDING:int = 2;
+		
+		static protected const SELF_GROUP:int = 0;
 		
 		//---------------------------- private member ----------------------------- 
 		
@@ -27,14 +26,11 @@ package stages
 		protected var m_gameLayer:Sprite = null;
 		protected var m_battlefield:Battlefield = null;
 		
-		// for mouse action
-		protected var m_mouseArea:Sprite = null;
-		protected var m_isSelectting:Boolean = false;
-		protected var m_isSingleSelect:Boolean = false;
-		protected var m_selectStartPos:Point = new Point();
-		
 		// mini map
 		protected var m_miniMapFrame:Sprite = null;
+		
+		// for mouse action
+		protected var m_mouseArea:Sprite = null;
 		
 		protected var m_state:int = 0;
 		
@@ -60,9 +56,7 @@ package stages
 			// initial the ui
 			m_ui = new inGameUI();
 			m_mouseArea = m_ui.getChildByName( "mcMouseArea" ) as Sprite;
-			m_mouseArea.addEventListener( MouseEvent.MOUSE_DOWN, onStartSelect );
-			m_mouseArea.addEventListener( MouseEvent.MOUSE_MOVE, onGroupSelect );
-			m_mouseArea.addEventListener( MouseEvent.MOUSE_UP, onEndSelect );
+			m_mouseArea.addEventListener( MouseEvent.MOUSE_DOWN, onSelect );
 			
 			//TODO	ui stuff
 			
@@ -77,7 +71,6 @@ package stages
 			
 			//[TEMP]
 			m_battlefield.Create( 50, 30 );
-			
 			var tank:Tank = new Tank();
 			m_battlefield.AddGameObject( tank, 5, 5 );
 			//[TEMP]
@@ -89,8 +82,6 @@ package stages
 		override public function onFrame(elapsed:Number):void 
 		{
 			m_battlefield.Update( elapsed );
-			
-			//TODO 
 		}
 		
 		override public function onLeave():void 
@@ -105,142 +96,58 @@ package stages
 		//--------------------------- private function ----------------------------
 		
 		// single select your troop
-		protected function singleSelect( posX:Number, posY:Number ):void
+		protected function selectUnit( posX:Number, posY:Number ):void
 		{
-			var selectCnt:int = m_battlefield.SelectSingle( posX, posY );
+			m_battlefield.SelectUnit( posX, posY );
 			
-			if ( selectCnt > 0 )
-			{
-				m_state = STATE_ORDER;
-			}
+			var unit:MapItem = m_battlefield.SELECTED_UNIT;
+			var type:int = unit.TYPE;
 			
-			if ( selectCnt == 0 )
-			{
-				m_state = STATE_NORMAL;
-			}
-		}
-		
-		// group select your troop
-		protected function groupSelect( rect:Rectangle ):void
-		{
-			var selectCnt:int = m_battlefield.SelectGroup( rect );
-			
-			if ( selectCnt > 0 )
-			{
-				m_state = STATE_ORDER;
-			}
-			
-			if ( selectCnt == 0 )
-			{
-				m_state = STATE_NORMAL;
-			}
+			//TODO 
 		}
 		
 		// order selected troop to attack or move
 		protected function orderSpot( xPos:Number, yPos:Number ):void
 		{
 			//TODO 
-			
-			/*
+		}
+		
+		// play the move animation
+		protected function playAniMoveDest( xPos:Number, yPos:Number ):void
+		{
 			// play animation
 			var aniSelect:mcSelect = new mcSelect();
-			aniSelect.x = endPosX;
-			aniSelect.y = endPosY;
-			m_gameLayer.addChild( aniSelect );
+			aniSelect.x = xPos;
+			aniSelect.y = yPos;
+			m_mouseArea.addChild( aniSelect );
 			aniSelect.play();
-			*/
 		}
 		
-		// build the building at this position
-		protected function buildingAt( xPos:Number, yPos:Number ):void
-		{
-			//TODO 
-		}
+		//----------------------------- event function ---------------------------- 
 		
-		// cell the building at this position
-		protected function sellBuilding( xPos:Number, yPos:Number ):void
+		protected function onSelect( evt:MouseEvent ):void
 		{
-			//TODO 
-		}
-		
-		//----------------------------- event function ----------------------------
-		
-		protected function onStartSelect( evt:MouseEvent ):void
-		{
-			if( m_state == STATE_NORMAL || m_state == STATE_ORDER )
+			if( m_state == STATE_NORMAL )
 			{
-				m_isSelectting = true;
-				m_isSingleSelect = true;
+				var unit:MapItem = m_battlefield.MAP.GetPositionItem( evt.localX, evt.localY );
 				
-				var startPosX:Number = evt.localX;
-				var startPosY:Number = evt.localY;
-				
-				m_selectStartPos.x = startPosX;
-				m_selectStartPos.y = startPosY;
-			}
-			
-			if ( m_state == STATE_BUILDING )
-			{
-				buildingAt( evt.localX, evt.localY );
-			}
-			
-			if ( m_state == STATE_SELL )
-			{
-				sellBuilding( evt.localX, evt.localY );
-			}
-		}
-		
-		protected function onGroupSelect( evt:MouseEvent ):void
-		{
-			if ( m_state == STATE_NORMAL || m_state == STATE_ORDER )
-			{
-				if ( m_isSelectting == true )
+				if ( unit != null )
 				{
-					m_isSingleSelect = false;
-				
-					// draw the rect
-					m_mouseArea.graphics.clear();
-					m_mouseArea.graphics.lineStyle( 1, 0x000000 );
-					var rect:Rectangle = MathCalculator.GetRectBy2Spot( evt.localX, evt.localY, m_selectStartPos.x, m_selectStartPos.y );
-					m_mouseArea.graphics.drawRect( rect.left, rect.top, rect.width, rect.height );
-					
-				}
-			}
-		}
-		
-		protected function onEndSelect( evt:MouseEvent ):void
-		{
-			if ( m_state == STATE_NORMAL || m_state == STATE_ORDER )
-			{
-				var endPosX:Number = evt.localX;
-				var endPosY:Number = evt.localY;
-				
-				// single select || send order
-				if ( m_isSingleSelect == true )
-				{
-					if ( m_state == STATE_NORMAL )
+					if ( unit.GROUP == SELF_GROUP )
 					{
-						// send select message
-						singleSelect( endPosX, endPosY );
-					}
-					
-					if ( m_state == STATE_ORDER )
-					{
-						orderSpot( endPosX, endPosY );
+						selectUnit( evt.localX, evt.localY );
 					}
 				}
-				
-				// group select 
-				if ( m_isSingleSelect == false )
-				{
-					var rect:Rectangle = MathCalculator.GetRectBy2Spot( evt.localX, evt.localY, m_selectStartPos.x, m_selectStartPos.y );
-					this.groupSelect( rect );
-					
-					// clear the rect
-					m_mouseArea.graphics.clear();
-				}
-				
-				m_isSelectting = false;
+			}
+			
+			if ( m_state == STATE_SELECTED_TROOP )
+			{
+				//TODO 
+			}
+			
+			if ( m_state == STATE_SELECTED_BUILDING )
+			{
+				//TODO
 			}
 		}
 		
