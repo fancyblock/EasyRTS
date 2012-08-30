@@ -1,5 +1,7 @@
 package gameObj.moveableObj 
 {
+	import flash.display.MovieClip;
+	import flash.display.Sprite;
 	import mapItem.MoveableItem;
 	
 	/**
@@ -11,6 +13,10 @@ package gameObj.moveableObj
 		//------------------------------ static member -------------------------------------
 		
 		//------------------------------ private member ------------------------------------
+		
+		protected var m_display:Sprite = null;
+		protected var m_imgBody:MovieClip = null;
+		protected var m_imgGun:Sprite = null;
 		
 		//------------------------------ public function -----------------------------------
 		
@@ -43,7 +49,17 @@ package gameObj.moveableObj
 		{
 			super.onAdd();
 			
-			//TODO
+			m_display = new Sprite();
+			m_imgBody = new mcTankBody();
+			m_imgGun = new mcTankGun();
+			
+			m_display.addChild( m_imgBody );
+			m_display.addChild( m_imgGun );
+			
+			this.m_canvas.addChild( m_display );
+			
+			m_display.x = this.m_pos.x;
+			m_display.y = this.m_pos.y;
 		}
 		
 		

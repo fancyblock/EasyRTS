@@ -65,11 +65,38 @@ package map
 		 */
 		public function GenRandomMap( wid:int, hei:int ):GridMap
 		{
-			var gridMap:GridMap = null;
+			var gridMap:GridMap = new GridMap( wid, hei );
 			
-			//TODO
+			var gridCnt:int = wid * hei;
+			var blockCnt:int = gridCnt / 50;
+			
+			for ( var i:int = 0; i < blockCnt; i++ )
+			{
+				var randX:int = Math.random() * wid;
+				var randY:int = Math.random() * hei;
+				
+				//[hack]
+				if ( randX == 5 && randY == 5 )
+				{
+					continue;
+				}
+				//[hack]
+				
+				addBlock( gridMap, randX, randY, Math.random() * 5 + 3 );
+			}
 			
 			return gridMap;
+		}
+		
+		
+		//-------------------------- private functions -------------------------
+		
+		// add block on map
+		protected function addBlock( theMap:GridMap, posX:int, posY:int, cnt:int ):void
+		{
+			theMap.GetGridInfo( posX, posY ).SetBlock();
+			
+			//TODO 
 		}
 		
 	}

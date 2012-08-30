@@ -1,8 +1,8 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="inGame" itemID="50390172-00000014" linkageExportForAS="true" linkageClassName="inGameUI" sourceLibraryItemHRef="元件 1" lastModified="1346262892">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="inGame" itemID="50390172-00000014" linkageExportForAS="true" linkageClassName="inGameUI" sourceLibraryItemHRef="元件 1" lastModified="1346296526">
   <timeline>
     <DOMTimeline name="inGame">
       <layers>
-        <DOMLayer name="uiframe" color="#4FFF4F" locked="true" autoNamed="false" visible="false">
+        <DOMLayer name="uiframe" color="#4FFF4F" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -41,7 +41,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="minMap" color="#9933CC" locked="true" autoNamed="false" visible="false">
+        <DOMLayer name="minMap" color="#9933CC" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -57,7 +57,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="uibg" color="#FF800A" locked="true" autoNamed="false" visible="false">
+        <DOMLayer name="uibg" color="#FF800A" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -75,13 +75,13 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="scrollBar2" color="#FF800A" autoNamed="false">
+        <DOMLayer name="scrollBar2" color="#FF800A" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="mcScrollLeft" name="mcScrollLeft" symbolType="button">
                   <matrix>
-                    <Matrix ty="7"/>
+                    <Matrix a="0.5625" ty="7"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="16" y="272"/>
@@ -92,7 +92,7 @@
                 </DOMSymbolInstance>
                 <DOMSymbolInstance libraryItemName="mcScrollRight" name="mcScrollRight" symbolType="button">
                   <matrix>
-                    <Matrix tx="991" ty="6"/>
+                    <Matrix a="0.5625" tx="1005" ty="6"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="16" y="272"/>
@@ -105,11 +105,14 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="scrollBar" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+        <DOMLayer name="scrollBar" color="#9933CC" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="mcScrollUp" name="mcScrollUp" symbolType="button">
+                  <matrix>
+                    <Matrix d="0.5625"/>
+                  </matrix>
                   <transformationPoint>
                     <Point x="512" y="16"/>
                   </transformationPoint>
@@ -117,9 +120,9 @@
                     <Color alphaMultiplier="0.3984375"/>
                   </color>
                 </DOMSymbolInstance>
-                <DOMSymbolInstance libraryItemName="mcScrollDown" name="mcScrollDown" selected="true" symbolType="button">
+                <DOMSymbolInstance libraryItemName="mcScrollDown" name="mcScrollDown" symbolType="button">
                   <matrix>
-                    <Matrix ty="525.95"/>
+                    <Matrix d="0.5625" ty="540.95"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="512" y="16"/>
@@ -132,7 +135,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="mouseArea" color="#9933CC" locked="true" autoNamed="false" visible="false">
+        <DOMLayer name="mouseArea" color="#9933CC" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>

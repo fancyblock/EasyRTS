@@ -22,10 +22,13 @@
                     </StrokeStyle>
                   </strokes>
                   <edges>
-                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!0 0|320 320!320 320|640 0"/>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!0 0|0 640"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!0 640|320 320!320 320|0 0"/>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!0 640|640 640"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!640 640|320 320"/>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!640 640|640 0"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!640 0|320 320"/>
                     <Edge fillStyle0="1" strokeStyle="1" edges="!640 0|0 0"/>
-                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!0 640|320 320!320 320|640 640"/>
-                    <Edge fillStyle0="1" strokeStyle="1" edges="!640 640|640 0!0 640|640 640!0 0|0 640"/>
                     <Edge cubics="!0 0(;0,0 320,320 320,320q0 0 320 320);"/>
                     <Edge cubics="!320 320(;320,320 640,640 640,640q320 320 640 640);"/>
                     <Edge cubics="!640 640(;640,640 640,0 640,0q640 640 640 0);"/>

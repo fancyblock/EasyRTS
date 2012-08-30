@@ -33,6 +33,16 @@ package map
 		
 		
 		/**
+		 * @desc	set block
+		 */
+		public function SetBlock():void
+		{
+			this._type = BLOCK;
+			this._coverItem = null;
+		}
+		
+		
+		/**
 		 * @desc	set the mapItem
 		 * @param	item
 		 */

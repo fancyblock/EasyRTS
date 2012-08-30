@@ -1,30 +1,73 @@
-<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" gridSpacingX="32" gridSpacingY="32" gridSnapTo="true" gridVisible="true" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" gridSpacingX="1" gridSpacingY="1" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
      <symbols>
           <Include href="mcBlockTile.xml"/>
+          <Include href="mcTankGun.xml"/>
+          <Include href="tankBody01.xml"/>
      </symbols>
      <timelines>
           <DOMTimeline name="场景 1">
                <layers>
-                    <DOMLayer name="图层 2" color="#9933CC" current="true" isSelected="true">
+                    <DOMLayer name="图层 7" color="#4F80FF" current="true" isSelected="true">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="mcBlockTile" name="" selected="true" centerPoint3DX="208" centerPoint3DY="144">
-                                             <matrix>
-                                                  <Matrix tx="192" ty="128"/>
-                                             </matrix>
+                                        <DOMSymbolInstance libraryItemName="mcTankGun" name="" selected="true" centerPoint3DX="22.25" centerPoint3DY="16">
                                              <transformationPoint>
-                                                  <Point x="16" y="16"/>
+                                                  <Point/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
                                    </elements>
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
-                    <DOMLayer name="图层 1" color="#4FFF4F">
+                    <DOMLayer name="图层 6" color="#808080">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
-                                   <elements/>
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="tankBody01" name="" centerPoint3DX="13" centerPoint3DY="13">
+                                             <transformationPoint>
+                                                  <Point x="13" y="13"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="图层 2" color="#9933CC" locked="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="mcBlockTile" name="" centerPoint3DX="48" centerPoint3DY="48">
+                                             <matrix>
+                                                  <Matrix tx="32" ty="32"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="16" y="16"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMGroup selected="true">
+                                             <members>
+                                                  <DOMShape selected="true">
+                                                       <strokes>
+                                                            <StrokeStyle index="1">
+                                                                 <SolidStroke scaleMode="normal" weight="0.1">
+                                                                      <fill>
+                                                                           <SolidColor color="#FF6600"/>
+                                                                      </fill>
+                                                                 </SolidStroke>
+                                                            </StrokeStyle>
+                                                       </strokes>
+                                                       <edges>
+                                                            <Edge strokeStyle="1" edges="!5120 640|4480 640!4480 640|4480 1280!4480 1280|5120 1280!5120 1280|5120 640"/>
+                                                            <Edge cubics="!4480 640(;4480,640 4480,1280 4480,1280p4480 640 4480 1280);"/>
+                                                            <Edge cubics="!4480 1280(;4480,1280 5120,1280 5120,1280q4480 1280 5120 1280);"/>
+                                                            <Edge cubics="!5120 1280(;5120,1280 5120,640 5120,640q5120 1280 5120 640);"/>
+                                                            <Edge cubics="!5120 640(;5120,640 4480,640 4480,640q5120 640 4480 640);"/>
+                                                       </edges>
+                                                  </DOMShape>
+                                             </members>
+                                        </DOMGroup>
+                                   </elements>
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
@@ -334,6 +377,9 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="2063" publishTime="1346310457"/>
+          <PublishItem publishSize="1986" publishTime="1346310383"/>
+          <PublishItem publishSize="1932" publishTime="1346310232"/>
           <PublishItem publishSize="965" publishTime="1346258126"/>
           <PublishItem publishSize="962" publishTime="1346256957"/>
           <PublishItem publishSize="533" publishTime="1346056047"/>

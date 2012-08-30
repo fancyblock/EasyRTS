@@ -1,0 +1,51 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="mcTankGun" itemID="503f11f9-00000033" linkageExportForAS="true" linkageClassName="mcTankGun" sourceLibraryItemHRef="元件 1" lastModified="1346311048">
+  <timeline>
+    <DOMTimeline name="mcTankGun">
+      <layers>
+        <DOMLayer name="图层 3" color="#FF800A" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#666666"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" weight="0.7">
+                        <fill>
+                          <SolidColor/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!-90 -40|-90 40!-90 40|-50 80!-50 80|70 80!70 80|110 40!110 40|110 20!110 20|330 20!330 20|330 40!330 40|350 40!350 40|350 -40!350 -40|330 -40!330 -40|330 -20!330 -20|110 -20!110 -20|110 -40!110 -40|70 -80!70 -80|-50 -80!-50 -80|-90 -40"/>
+                    <Edge cubics="!-50 -80(;-50,-80 -90,-40 -90,-40p-50 -80 -90 -40);"/>
+                    <Edge cubics="!-90 -40(;-90,-40 -90,40 -90,40p-90 -40 -90 40);"/>
+                    <Edge cubics="!-90 40(;-90,40 -50,80 -50,80p-90 40 -50 80);"/>
+                    <Edge cubics="!-50 80(;-50,80 70,80 70,80p-50 80 70 80);"/>
+                    <Edge cubics="!70 80(;70,80 110,40 110,40p70 80 110 40);"/>
+                    <Edge cubics="!110 40(;110,40 110,20 110,20q110 40 110 20);"/>
+                    <Edge cubics="!110 -20(110,-20;110,-20 110,-40 110,-40q110 -20 110 -40)110,-40;"/>
+                    <Edge cubics="!110 -40(;110,-40 70,-80 70,-80p110 -40 70 -80);"/>
+                    <Edge cubics="!70 -80(;70,-80 -50,-80 -50,-80p70 -80 -50 -80);"/>
+                    <Edge cubics="!330 -20(330,-20;330,-20 330,-40 330,-40p330 -20 330 -40);"/>
+                    <Edge cubics="!330 -40(;330,-40 350,-40 350,-40p330 -40 350 -40);"/>
+                    <Edge cubics="!350 -40(;350,-40 350,40 350,40p350 -40 350 40);"/>
+                    <Edge cubics="!350 40(;350,40 330,40 330,40p350 40 330 40);"/>
+                    <Edge cubics="!330 40(;330,40 330,20 330,20p330 40 330 20)330,20;"/>
+                    <Edge cubics="!110 -20(110,-20;110,-20 330,-20 330,-20p110 -20 330 -20);"/>
+                    <Edge cubics="!330 20(;330,20 110,20 110,20p330 20 110 20)110,20;"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

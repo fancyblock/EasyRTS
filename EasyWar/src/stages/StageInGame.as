@@ -27,7 +27,10 @@ package stages
 		static protected const SCROLL_LEFT:int = 2;
 		static protected const SCROLL_RIGHT:int = 3;
 		
-		static protected const SCROLL_VELOCITY:Number = 7.5;
+		static protected const SCROLL_VELOCITY:Number = 10;
+		
+		static protected const VIEWPORT_WIDTH:int = 1024;
+		static protected const VIEWPORT_HEIGHT:int = 558;
 		
 		//---------------------------- private member ----------------------------- 
 		
@@ -92,10 +95,11 @@ package stages
 			
 			// create the game stuff
 			m_battlefield = new Battlefield();
+			m_battlefield.SetViewport( VIEWPORT_WIDTH, VIEWPORT_HEIGHT );
 			m_battlefield.CANVAS = m_gameLayer;
 			
 			//[TEMP]
-			m_battlefield.Create( 50, 30 );
+			m_battlefield.RandomCreate( 50, 50 );
 			var tank:Tank = new Tank();
 			m_battlefield.AddGameObject( tank, 5, 5 );
 			//[TEMP]

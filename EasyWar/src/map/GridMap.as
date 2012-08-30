@@ -4,6 +4,7 @@ package map
 	import flash.display.BitmapData;
 	import flash.display.Sprite;
 	import flash.geom.Matrix;
+	import flash.geom.Point;
 	import mapItem.MapItem;
 	
 	/**
@@ -22,6 +23,7 @@ package map
 		protected var m_width:int = 0;
 		protected var m_height:int = 0;
 		protected var m_gridSize:Number = DEFAULT_GRID_SIZE;
+		protected var m_mapSize:Point = new Point();
 		
 		protected var m_mapData:Vector.<Vector.<GridInfo>> = null;
 		
@@ -41,6 +43,9 @@ package map
 			
 			m_width = wid;
 			m_height = hei;
+			
+			m_mapSize.x = wid * m_gridSize;
+			m_mapSize.y = hei * m_gridSize;
 			
 			// initial the map data
 			m_mapData = new Vector.<Vector.<GridInfo>>();
@@ -97,7 +102,17 @@ package map
 			}
 			
 			m_gridSize = gridSize;
+			
+			m_mapSize.x = m_width * m_gridSize;
+			m_mapSize.y = m_height * m_gridSize;
 		}
+		
+		
+		/**
+		 * @desc	return the map size
+		 */
+		public function get MAP_SIZE_WIDTH():Number { return m_mapSize.x; }
+		public function get MAP_SIZE_HEIGHT():Number { return m_mapSize.y; }
 		
 		
 		/**
@@ -162,7 +177,7 @@ package map
 			{
 				for ( var j:int = 0; j < m_height; j++ )
 				{
-					//if ( m_mapData[i][j]._type == GridInfo.BLOCK )
+					if ( m_mapData[i][j]._type == GridInfo.BLOCK )
 					{
 						translate.tx = i * GRID_SIZE;
 						translate.ty = j * GRID_SIZE;
