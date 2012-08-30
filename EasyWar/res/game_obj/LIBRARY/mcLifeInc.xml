@@ -1,0 +1,30 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="mcLifeInc" itemID="503f3358-00000046" sourceLibraryItemHRef="元件 1" lastModified="1346319822">
+  <timeline>
+    <DOMTimeline name="mcLifeInc">
+      <layers>
+        <DOMLayer name="图层 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#0033CC"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!0 40S2|0 0!0 0|600 0!600 0|600 40!600 40|0 40"/>
+                    <Edge cubics="!0 40(;0,40 0,0 0,0p0 40 0 0);"/>
+                    <Edge cubics="!0 0(;0,0 600,0 600,0q0 0 600 0);"/>
+                    <Edge cubics="!600 0(;600,0 600,40 600,40q600 0 600 40);"/>
+                    <Edge cubics="!600 40(;600,40 0,40 0,40q600 40 0 40);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -4,11 +4,13 @@ package gameComponent
 	import flash.display.DisplayObjectContainer;
 	import flash.display.Sprite;
 	import flash.geom.Point;
+	import flash.geom.Rectangle;
 	import gameObj.IGameObject;
 	import map.GridInfo;
 	import map.GridMap;
 	import map.MapLoader;
 	import mapItem.MapItem;
+	import mapItem.MoveableItem;
 	
 	/**
 	 * ...
@@ -25,8 +27,8 @@ package gameComponent
 		
 		protected var m_canvas:DisplayObjectContainer = null;
 		protected var m_map:GridMap = null;
-		protected var m_unitList:Vector.<IGameObject> = null;
-		protected var m_selectedUnit:MapItem = null;
+		protected var m_unitList:Array = null;
+		protected var m_selectedUnit:Array = null;
 		
 		protected var m_mapCanvas:Sprite = null;
 		protected var m_mapBG:Bitmap = null;
@@ -40,7 +42,8 @@ package gameComponent
 		 */
 		public function Battlefield() 
 		{
-			m_unitList = new Vector.<IGameObject>(); 
+			m_unitList = new Array();
+			m_selectedUnit = new Array();
 		}
 		
 		
@@ -66,7 +69,7 @@ package gameComponent
 		/**
 		 * @desc	return the selected unit type
 		 */
-		public function get SELECTED_UNIT():MapItem 
+		public function get SELECTED_UNIT():Array
 		{ 
 			return m_selectedUnit;
 		}
@@ -173,7 +176,7 @@ package gameComponent
 			unit.SetCanvas( m_mapCanvas );
 			unit.SetPosition( xPos * m_map.GRID_SIZE, yPos * m_map.GRID_SIZE );
 			unit.onAdd();
-			 
+			
 			m_unitList.push( unit );
 		}
 		
@@ -201,19 +204,41 @@ package gameComponent
 		
 		/**
 		 * @desc	select the army or building
-		 * @param	xPos
-		 * @param	yPos
+		 * @param	rect
 		 * @return
 		 */
-		public function SelectUnit( xPos:Number, yPos:Number ):Boolean
+		public function SelectUnit( rect:Rectangle ):int
 		{
-			var selectSuccess:Boolean = false;
+			var selectCnt:int = 0;
 			
 			cleanCurrentSelect();
 			
-			//TODO 
+			var i:int;
+			var j:int;
 			
-			return selectSuccess;
+			var startGridX:int = rect.left / m_map.GRID_SIZE;
+			var startGridY:int = rect.top / m_map.GRID_SIZE;
+			
+			var endGridX:int = ( rect.left + rect.width ) / m_map.GRID_SIZE;
+			var endGridY:int = ( rect.top + rect.height ) / m_map.GRID_SIZE;
+			
+			for ( i = startGridX; i <= endGridX; i++ )
+			{
+				for ( j = startGridY; j <= endGridY; j++ )
+				{
+					var gridInfo:GridInfo = m_map.GetGridInfo( i, j );
+					
+					if ( gridInfo._type == GridInfo.UNIT )
+					{
+						gridInfo._coverItem.SELECTED = true;
+						m_selectedUnit.push( gridInfo._coverItem );
+						
+						selectCnt++;
+					}
+				}
+			}
+			
+			return selectCnt;
 		}
 		
 		//------------------------------ private function ----------------------------------
@@ -221,7 +246,12 @@ package gameComponent
 		// clean the current selected unit
 		protected function cleanCurrentSelect():void
 		{
-			m_selectedUnit = null;
+			for ( var i:int = 0; i < m_selectedUnit.length; i++ )
+			{
+				( m_selectedUnit[i] as MapItem ).SELECTED = false;
+			}
+			
+			m_selectedUnit = new Array();
 		}
 		
 		//------------------------------- event callback -----------------------------------

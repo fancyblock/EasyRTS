@@ -20,7 +20,7 @@ package mapItem
 		protected var m_moveVector:Point = new Point();
 		
 		protected var m_path:Vector.<GridInfo> = null;
-		protected var m_state:int = 0;
+		protected var m_moveState:int = 0;
 		
 		//------------------------------ public function -----------------------------------
 		
@@ -51,7 +51,7 @@ package mapItem
 		{
 			super.Update( elapsed );
 			
-			if ( m_state == STATE_MOVE )
+			if ( m_moveState == STATE_MOVE )
 			{
 				//TODO 
 			}

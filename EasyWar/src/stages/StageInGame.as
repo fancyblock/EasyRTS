@@ -4,9 +4,10 @@ package stages
 	import flash.display.Sprite;
 	import flash.events.MouseEvent;
 	import flash.geom.Point;
+	import flash.geom.Rectangle;
 	import gameComponent.Battlefield;
 	import gameObj.moveableObj.Tank;
-	import mapItem.MapItem;
+	import Utility.MathCalculator;
 	
 	/**
 	 * ...
@@ -17,8 +18,7 @@ package stages
 		//---------------------------- static member ------------------------------
 		
 		static protected const STATE_NORMAL:int = 0;
-		static protected const STATE_SELECTED_TROOP:int = 1;
-		static protected const STATE_SELECTED_BUILDING:int = 2;
+		//TODO
 		
 		static protected const SELF_GROUP:int = 0;
 		
@@ -32,6 +32,8 @@ package stages
 		static protected const VIEWPORT_WIDTH:int = 1024;
 		static protected const VIEWPORT_HEIGHT:int = 558;
 		
+		static protected const SELECT_FRAME_COLOR:uint = 0xea172b;
+		
 		//---------------------------- private member ----------------------------- 
 		
 		protected var m_ui:Sprite = null;
@@ -44,6 +46,8 @@ package stages
 		
 		// for mouse action
 		protected var m_mouseArea:Sprite = null;
+		protected var m_isMouseDown:Boolean = false;
+		protected var m_startMousePos:Point = new Point();
 		
 		protected var m_state:int = 0;
 		protected var m_inScrollMap:Boolean = false;
@@ -70,7 +74,9 @@ package stages
 			// initial the ui
 			m_ui = new inGameUI();
 			m_mouseArea = m_ui.getChildByName( "mcMouseArea" ) as Sprite;
-			m_mouseArea.addEventListener( MouseEvent.MOUSE_DOWN, onSelect );
+			m_mouseArea.addEventListener( MouseEvent.MOUSE_DOWN, onMouseDown );
+			m_mouseArea.addEventListener( MouseEvent.MOUSE_MOVE, onMouseMove );
+			m_mouseArea.addEventListener( MouseEvent.MOUSE_UP, onMouseUp );
 			
 			m_scrollBars = new Array(4);
 			m_scrollBars[SCROLL_UP] = m_ui.getChildByName( "mcScrollUp" ) as SimpleButton;
@@ -134,12 +140,9 @@ package stages
 		//--------------------------- private function ----------------------------
 		
 		// single select your troop
-		protected function selectUnit( posX:Number, posY:Number ):void
+		protected function selectUnit( rect:Rectangle ):void
 		{
-			m_battlefield.SelectUnit( posX, posY );
-			
-			var unit:MapItem = m_battlefield.SELECTED_UNIT;
-			var type:int = unit.TYPE;
+			var cnt:int = m_battlefield.SelectUnit( rect );
 			
 			//TODO 
 		}
@@ -157,36 +160,50 @@ package stages
 			var aniSelect:mcSelect = new mcSelect();
 			aniSelect.x = xPos;
 			aniSelect.y = yPos;
-			m_mouseArea.addChild( aniSelect );
+			m_gameLayer.addChild( aniSelect );
 			aniSelect.play();
 		}
 		
 		//----------------------------- event function ---------------------------- 
 		
-		protected function onSelect( evt:MouseEvent ):void
+		protected function onMouseDown( evt:MouseEvent ):void
 		{
-			if( m_state == STATE_NORMAL )
+			m_isMouseDown = true;
+			
+			m_startMousePos.x = evt.localX;
+			m_startMousePos.y = evt.localY;
+			
+			//TODO 
+		}
+		
+		protected function onMouseMove( evt:MouseEvent ):void
+		{
+			if ( m_isMouseDown )
 			{
-				var unit:MapItem = m_battlefield.MAP.GetPositionItem( evt.localX, evt.localY );
-				
-				if ( unit != null )
-				{
-					if ( unit.GROUP == SELF_GROUP )
-					{
-						selectUnit( evt.localX, evt.localY );
-					}
-				}
+				m_mouseArea.graphics.clear();
+				m_mouseArea.graphics.lineStyle( 1, SELECT_FRAME_COLOR );
+				var rect:Rectangle = MathCalculator.GetRectBy2Spot( evt.localX, evt.localY, m_startMousePos.x, m_startMousePos.y );
+				m_mouseArea.graphics.drawRect( rect.x, rect.y, rect.width, rect.height );
+			}
+		}
+		
+		protected function onMouseUp( evt:MouseEvent ):void
+		{
+			m_isMouseDown = false;
+			
+			var rect:Rectangle = MathCalculator.GetRectBy2Spot( evt.localX, evt.localY, m_startMousePos.x, m_startMousePos.y );
+			
+			// no move
+			if ( rect.width == 0 && rect.height == 0 )
+			{
+				playAniMoveDest( evt.localX, evt.localY );
+			}
+			else
+			{
+				selectUnit( rect );
 			}
 			
-			if ( m_state == STATE_SELECTED_TROOP )
-			{
-				//TODO 
-			}
-			
-			if ( m_state == STATE_SELECTED_BUILDING )
-			{
-				//TODO
-			}
+			m_mouseArea.graphics.clear();
 		}
 		
 		
