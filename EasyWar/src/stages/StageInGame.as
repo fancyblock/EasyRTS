@@ -32,7 +32,7 @@ package stages
 		static protected const VIEWPORT_WIDTH:int = 1024;
 		static protected const VIEWPORT_HEIGHT:int = 558;
 		
-		static protected const SELECT_FRAME_COLOR:uint = 0xea172b;
+		static protected const SELECT_FRAME_COLOR:uint = 0x070bea;
 		
 		//---------------------------- private member ----------------------------- 
 		
@@ -151,6 +151,10 @@ package stages
 		protected function orderSpot( xPos:Number, yPos:Number ):void
 		{
 			//TODO 
+			
+			//m_battlefield.
+			
+			playAniMoveDest( xPos, yPos );
 		}
 		
 		// play the move animation
@@ -172,8 +176,6 @@ package stages
 			
 			m_startMousePos.x = evt.localX;
 			m_startMousePos.y = evt.localY;
-			
-			//TODO 
 		}
 		
 		protected function onMouseMove( evt:MouseEvent ):void
@@ -196,7 +198,7 @@ package stages
 			// no move
 			if ( rect.width == 0 && rect.height == 0 )
 			{
-				playAniMoveDest( evt.localX, evt.localY );
+				orderSpot( evt.localX, evt.localY );
 			}
 			else
 			{

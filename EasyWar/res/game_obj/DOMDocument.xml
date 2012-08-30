@@ -10,7 +10,7 @@
      <timelines>
           <DOMTimeline name="场景 1">
                <layers>
-                    <DOMLayer name="图层 2" color="#9933CC" current="true" isSelected="true">
+                    <DOMLayer name="图层 2" color="#9933CC">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
@@ -22,7 +22,10 @@
                                                   <Point x="16" y="16"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="mcLifeBar" name="" selected="true" centerPoint3DX="16" centerPoint3DY="16">
+                                        <DOMSymbolInstance libraryItemName="mcLifeBar" name="" centerPoint3DX="146.95" centerPoint3DY="64.45">
+                                             <matrix>
+                                                  <Matrix tx="130.95" ty="48.45"/>
+                                             </matrix>
                                              <transformationPoint>
                                                   <Point x="16" y="16"/>
                                              </transformationPoint>
@@ -35,7 +38,10 @@
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="mcTankGun" name="" centerPoint3DX="22.25" centerPoint3DY="16">
+                                        <DOMSymbolInstance libraryItemName="mcTankGun" name="" centerPoint3DX="156.2" centerPoint3DY="124.45">
+                                             <matrix>
+                                                  <Matrix tx="133.95" ty="108.45"/>
+                                             </matrix>
                                              <transformationPoint>
                                                   <Point/>
                                              </transformationPoint>
@@ -44,11 +50,14 @@
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
-                    <DOMLayer name="图层 6" color="#808080">
+                    <DOMLayer name="图层 6" color="#808080" current="true" isSelected="true">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="tankBody01" name="" centerPoint3DX="13" centerPoint3DY="13">
+                                        <DOMSymbolInstance libraryItemName="tankBody01" name="" centerPoint3DX="146.95" centerPoint3DY="90.45">
+                                             <matrix>
+                                                  <Matrix tx="133.95" ty="77.45"/>
+                                             </matrix>
                                              <transformationPoint>
                                                   <Point x="13" y="13"/>
                                              </transformationPoint>

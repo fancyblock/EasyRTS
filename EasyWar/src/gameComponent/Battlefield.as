@@ -5,12 +5,10 @@ package gameComponent
 	import flash.display.Sprite;
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
-	import gameObj.IGameObject;
 	import map.GridInfo;
 	import map.GridMap;
 	import map.MapLoader;
 	import mapItem.MapItem;
-	import mapItem.MoveableItem;
 	
 	/**
 	 * ...
@@ -112,7 +110,7 @@ package gameComponent
 			m_mapCanvas = new Sprite();
 			m_canvas.addChild( m_mapCanvas );
 			
-			m_map = new GridMap( wid, hei );
+			m_map = MapLoader.SINGLETON.GenRandomMap( wid, hei );
 			m_mapBG = m_map.GetMapBitmap();
 			
 			m_mapCanvas.addChild( m_mapBG );
@@ -187,11 +185,19 @@ package gameComponent
 		 */
 		public function Update( elapsed:Number ):void
 		{
+			var deadList:Array = new Array();
+			
 			for ( var i:int = 0; i < m_unitList.length; i++ )
 			{
 				m_unitList[i].Update( elapsed );
+				
+				if ( ( m_unitList[i] as MapItem ).STATE == MapItem.STATE_DEAD )
+				{
+					deadList.push( m_unitList[i] );
+				}
 			}
 			
+			// clean the dead item
 			//TODO 
 		}
 		
@@ -216,11 +222,11 @@ package gameComponent
 			var i:int;
 			var j:int;
 			
-			var startGridX:int = rect.left / m_map.GRID_SIZE;
-			var startGridY:int = rect.top / m_map.GRID_SIZE;
+			var startGridX:int = ( rect.left - m_mapOffset.x ) / m_map.GRID_SIZE;
+			var startGridY:int = ( rect.top - m_mapOffset.y ) / m_map.GRID_SIZE;
 			
-			var endGridX:int = ( rect.left + rect.width ) / m_map.GRID_SIZE;
-			var endGridY:int = ( rect.top + rect.height ) / m_map.GRID_SIZE;
+			var endGridX:int = ( rect.left + rect.width - m_mapOffset.x ) / m_map.GRID_SIZE;
+			var endGridY:int = ( rect.top + rect.height - m_mapOffset.y ) / m_map.GRID_SIZE;
 			
 			for ( i = startGridX; i <= endGridX; i++ )
 			{
@@ -239,6 +245,39 @@ package gameComponent
 			}
 			
 			return selectCnt;
+		}
+		
+		
+		/**
+		 * @desc	send the command
+		 * @param	xPos
+		 * @param	yPos
+		 */
+		public function OrderSpot( xPos:Number, yPos:Number ):void
+		{
+			// judge if the any unit be selected 
+			if ( m_selectedUnit.length == 0 )
+			{
+				return;
+			}
+			
+			var mapX:Number = xPos - m_mapOffset.x;
+			var mapY:Number = yPos - m_mapOffset.y;
+			var command:Command = null;
+			
+			var gridInfo:GridInfo = m_map.GetPositionGrid( mapX, mapY );
+			
+			if ( gridInfo._type == GridInfo.BLANK )
+			{
+				//TODO 
+			}
+			
+			if ( gridInfo._type == GridInfo.UNIT )
+			{
+				//TODO 
+			}
+			
+			//TODO 
 		}
 		
 		//------------------------------ private function ----------------------------------
