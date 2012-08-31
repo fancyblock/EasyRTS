@@ -128,18 +128,10 @@ package mapItem
 				return;
 			}
 			
-			var i:int;
-			var j:int;
 			var gridInfo:GridInfo = null;
 			
 			// judge if can set this position or not ( only for cling item )
 			gridInfo = m_map.GetGridInfo( m_gridCoordinate.x, m_gridCoordinate.y );
-			
-			// the grid already be occupy
-			if ( gridInfo._type != GridInfo.BLANK )
-			{
-				return false;
-			}
 			
 			// set the new position
 			m_position.x = xPos;
@@ -148,22 +140,6 @@ package mapItem
 			// set the map flag & update the grid position
 			var newGridPosX:int = m_position.x / m_map.GRID_SIZE;
 			var newGridPosY:int = m_position.y / m_map.GRID_SIZE;
-			
-			/*
-			if ( newGridPosX != (int)(m_gridCoordinate.x) || newGridPosY != (int)(m_gridCoordinate.y) )
-			{
-				// clean the map first
-				gridInfo = m_map.GetGridInfo( m_gridCoordinate.x, m_gridCoordinate.y );
-				gridInfo.SetBlank();
-				
-				// set the new item info
-				gridInfo = m_map.GetGridInfo( newGridPosX, newGridPosY );
-				gridInfo.SetMapItem( this );
-				
-				m_gridCoordinate.x = newGridPosX;
-				m_gridCoordinate.y = newGridPosY;
-			}
-			*/
 			
 			m_gridCoordinate.x = newGridPosX;
 			m_gridCoordinate.y = newGridPosY;

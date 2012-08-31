@@ -1,6 +1,9 @@
 package gameObj.moveableObj 
 {
+	import flash.geom.Point;
+	import gameComponent.Command;
 	import gameComponent.LifeBar;
+	import map.GridInfo;
 	import mapItem.MoveableItem;
 	
 	/**
@@ -50,10 +53,28 @@ package gameObj.moveableObj
 		{
 			super.Update( elapsed );
 			
+			var i:int;
+			
 			// process the order
 			if ( m_command != null )
 			{
-				//TODO 
+				if ( m_command._type == Command.CMD_MOVE )
+				{
+					var orgPath:Array = this.findPath( new Point( m_command._destGrid._x, m_command._destGrid._y ) );
+					
+					var path:Vector.<GridInfo> = new Vector.<GridInfo>();
+					for ( i = 1; i < orgPath.length; i++ )					// exclude self
+					{
+						path.push( m_map.GetGridInfo( orgPath[i].x, orgPath[i].y ) );
+					}
+					
+					this.PATH = path;
+				}
+				
+				if ( m_command._type == Command.CMD_ATTACK )
+				{
+					//TODO 
+				}
 				
 				m_command = null;
 			}

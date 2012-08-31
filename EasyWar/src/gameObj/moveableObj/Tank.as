@@ -11,6 +11,8 @@ package gameObj.moveableObj
 	{
 		//------------------------------ static member -------------------------------------
 		
+		static protected const TANK_SPEED:Number = 2.33;
+		
 		//------------------------------ private member ------------------------------------
 		
 		protected var m_display:Sprite = null;
@@ -26,6 +28,7 @@ package gameObj.moveableObj
 		{
 			super();
 			
+			this.VELOCITY = TANK_SPEED;
 		}
 		
 		

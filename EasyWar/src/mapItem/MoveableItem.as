@@ -16,8 +16,6 @@ package mapItem
 		static protected const STATE_IDLE:int = 0;
 		static protected const STATE_MOVE:int = 1;
 		
-		static protected var PATH_FINDING:IPathFinder = null;
-		
 		//------------------------------ private member ------------------------------------
 		
 		protected var m_velocity:Number = 0;
@@ -44,11 +42,7 @@ package mapItem
 			m_path = new Vector.<GridInfo>();
 			m_curDestPosition = new Point();
 			
-			// inital the path finding component
-			if ( PATH_FINDING == null )
-			{
-				PATH_FINDING = new AStar();
-			}
+			m_moveState = STATE_IDLE;
 		}
 		
 		
@@ -69,17 +63,42 @@ package mapItem
 			
 			if ( m_moveState == STATE_MOVE )
 			{
-				//TODO 
+				var distance:Point = m_curDestPosition.subtract( m_position );
+				
+				// arrive the dest
+				if ( distance.length <= ( m_velocity * 0.5 ) )
+				{
+					m_curGrid.SetBlank();
+					this.SetPosition( m_position.x, m_position.y );
+					
+					if ( m_path.length == 0 )
+					{
+						this.PATH = null;
+					}
+					else
+					{
+						followPath();
+					}
+				}
+				// not arrive
+				else
+				{
+					var offsetX:Number = m_velocity * m_moveVector.x;
+					var offsetY:Number = m_velocity * m_moveVector.y;
+					
+					m_position.x += offsetX;
+					m_position.y += offsetY;
+				}
 			}
 			
 		}
 		
 		
 		/**
-		 * @desc	set the path
-		 * @param	path
+		 * @desc	getter & setter of the PATH
 		 */
-		public function SetPath( path:Vector.<GridInfo> ):void
+		public function get PATH():Vector.<GridInfo> { return m_path; }
+		public function set PATH( path:Vector.<GridInfo> ):void
 		{
 			m_path = path;
 			
@@ -124,6 +143,7 @@ package mapItem
 			
 			if ( moveSuccess == false )
 			{
+				m_moveState = STATE_IDLE;
 				onPathBeBlock();
 			}
 		}
@@ -166,7 +186,7 @@ package mapItem
 			
 			var path:Array = null;
 			
-			path = PATH_FINDING.GetPath( m_map, m_gridCoordinate, dest );
+			path = AStar.SINGLETON.GetPath( m_map, m_gridCoordinate, dest );
 			
 			return path;
 		}

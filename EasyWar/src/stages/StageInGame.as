@@ -7,6 +7,7 @@ package stages
 	import flash.geom.Rectangle;
 	import gameComponent.Battlefield;
 	import gameObj.moveableObj.Tank;
+	import map.GridInfo;
 	import mapItem.MapItem;
 	import Utility.MathCalculator;
 	

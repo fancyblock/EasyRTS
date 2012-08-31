@@ -12,6 +12,9 @@ package map.pathFinding
 	{
 		//------------------------------ static member -------------------------------------
 		
+		static private var s_flag:Boolean = false;
+		static private var s_instance:AStar = null;
+		
 		//------------------------------ private member ------------------------------------
 		
 		protected var m_openList:Vector.<GridInfo> = null;
@@ -20,11 +23,32 @@ package map.pathFinding
 		
 		//------------------------------ public function -----------------------------------
 		
+		
+		/**
+		* @desc	return the singleton of AStar
+		*/
+		static public function get SINGLETON():AStar
+		{
+			if ( s_instance == null )
+			{
+				s_flag = true;
+				s_instance = new AStar();
+				s_flag = false;
+			}
+			
+			return s_instance;
+		}
+		
+		
 		/**
 		 * @desc	constructor of AStar
 		 */
 		public function AStar() 
 		{
+			if ( s_flag == false )
+			{
+				throw new Error( "[Error] singleton can not be new directly" );
+			}
 		}
 		
 		/* INTERFACE IPathFinder */
