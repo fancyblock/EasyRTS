@@ -285,7 +285,7 @@ package map.pathFinding
 				
 				if ( i % 2 == 0 )
 				{
-					if ( pending[i]._list != GridInfo.CLOSE_LIST && pending[i]._type != GridInfo.TYPE_OBSTACLE )
+					if ( pending[i]._list != GridInfo.CLOSE_LIST && pending[i]._type == GridInfo.BLANK )
 					{
 						neighbors.push( pending[i] );
 						pending[i]._weight = 1.0;
@@ -293,11 +293,11 @@ package map.pathFinding
 				}
 				else
 				{
-					if ( pending[i]._list != GridInfo.CLOSE_LIST && pending[i]._type != GridInfo.TYPE_OBSTACLE && 
-						( pending[i - 1]._type != GridInfo.TYPE_OBSTACLE && pending[(i + 1)%8]._type != GridInfo.TYPE_OBSTACLE ) )
+					if ( pending[i]._list != GridInfo.CLOSE_LIST && pending[i]._type == GridInfo.BLANK && 
+						( pending[i - 1]._type == GridInfo.BLANK && pending[(i + 1)%8]._type == GridInfo.BLANK ) )
 					{
 						neighbors.push( pending[i] );
-						pending[i]._weight = 1.4;
+						pending[i]._weight = 1.414;
 					}
 				}
 			}

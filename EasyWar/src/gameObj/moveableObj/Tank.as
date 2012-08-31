@@ -37,6 +37,10 @@ package gameObj.moveableObj
 		{
 			super.Update( elapsed );
 			
+			// update the display stuff
+			m_display.x = this.POSITION.x;
+			m_display.y = this.POSITION.y;
+			
 			//TODO 
 		}
 		
@@ -48,6 +52,7 @@ package gameObj.moveableObj
 		{
 			super.onAdd();
 			
+			// initial the display stuff
 			m_display = new Sprite();
 			m_imgBody = new mcTankBody();
 			m_imgGun = new mcTankGun();
@@ -58,12 +63,10 @@ package gameObj.moveableObj
 			
 			this.m_canvas.addChild( m_display );
 			
-			m_display.x = this.m_pos.x;
-			m_display.y = this.m_pos.y;
+			m_display.x = this.POSITION.x;
+			m_display.y = this.POSITION.y;
 			
 			m_lifeBar.visible = false;
-			
-			//TODO 
 		}
 		
 		
