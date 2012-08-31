@@ -45,6 +45,7 @@ package mapItem
 			m_gridPos = new Point();
 			
 			m_pos = new Point();
+			m_state = STATE_NROMAL;
 		}
 		
 		

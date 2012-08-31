@@ -184,7 +184,7 @@ package gameComponent
 			unit.SetMap( m_map );
 			unit.SetCanvas( m_mapCanvas );
 			unit.GROUP = group;
-			unit.SetPosition( xPos * m_map.GRID_SIZE, yPos * m_map.GRID_SIZE );
+			unit.SetPosition( ( xPos + 0.5 ) * m_map.GRID_SIZE, ( yPos + 0.5 ) * m_map.GRID_SIZE );
 			unit.onAdd();
 			
 			m_unitList.push( unit );

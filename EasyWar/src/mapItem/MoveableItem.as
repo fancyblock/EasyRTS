@@ -2,6 +2,8 @@ package mapItem
 {
 	import flash.geom.Point;
 	import map.GridInfo;
+	import map.pathFinding.AStar;
+	import map.pathFinding.IPathFinder;
 	
 	/**
 	 * ...
@@ -13,6 +15,8 @@ package mapItem
 		
 		static protected const STATE_IDLE:int = 0;
 		static protected const STATE_MOVE:int = 1;
+		
+		static protected var PATH_FINDING:IPathFinder = null;
 		
 		//------------------------------ private member ------------------------------------
 		
@@ -33,6 +37,11 @@ package mapItem
 			super();
 			
 			m_path = new Vector.<GridInfo>();
+			
+			if ( PATH_FINDING == null )
+			{
+				PATH_FINDING = new AStar();
+			}
 		}
 		
 		
@@ -57,7 +66,20 @@ package mapItem
 			}
 		}
 		
+		
+		/**
+		 * @desc	set the path
+		 * @param	path
+		 */
+		public function SetPath( path:Vector.<GridInfo> ):void
+		{
+			m_path = path;
+		}
+		
+		
 		//------------------------------ private function ----------------------------------
+		
+		
 		
 		//------------------------------- event callback -----------------------------------
 		

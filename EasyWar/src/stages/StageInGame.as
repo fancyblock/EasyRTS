@@ -105,11 +105,11 @@ package stages
 			m_battlefield.SetViewport( VIEWPORT_WIDTH, VIEWPORT_HEIGHT );
 			m_battlefield.CANVAS = m_gameLayer;
 			
-			//[TEMP]
+			//[hack]
 			m_battlefield.RandomCreate( 50, 50 );
 			var tank:Tank = new Tank();
 			m_battlefield.AddGameObject( tank, 5, 5 );
-			//[TEMP]
+			//[hack]
 			
 			// set game state
 			m_state = STATE_NORMAL;
