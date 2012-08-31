@@ -1,5 +1,8 @@
 package gameComponent 
 {
+	import flash.geom.Point;
+	import map.GridInfo;
+	import mapItem.MapItem;
 	/**
 	 * ...
 	 * @author Hejiabin
@@ -8,9 +11,17 @@ package gameComponent
 	{
 		//------------------------------ static member -------------------------------------
 		
+		static public const CMD_NONE:int = 0;		// default command , no command
+		static public const CMD_MOVE:int = 1;
+		static public const CMD_ATTACK:int = 2;
+		static public const CMD_PRODUCE:int = 3;
+		
 		//------------------------------ private member ------------------------------------
 		
 		public var _type:int = 0;
+		public var _destGrid:GridInfo = null;
+		public var _aim:MapItem = null;
+		public var _unitType:int = 0;
 		
 		//------------------------------ public function -----------------------------------
 		
@@ -19,7 +30,7 @@ package gameComponent
 		 */
 		public function Command() 
 		{
-			//TODO 
+			this._type = CMD_NONE;
 		}
 		
 		//------------------------------ private function ----------------------------------

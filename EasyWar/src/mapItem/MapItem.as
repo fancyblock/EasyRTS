@@ -2,6 +2,7 @@ package mapItem
 {
 	import flash.display.DisplayObjectContainer;
 	import flash.geom.Point;
+	import gameComponent.Command;
 	import gameObj.IGameObject;
 	import map.GridInfo;
 	import map.GridMap;
@@ -29,6 +30,7 @@ package mapItem
 		protected var m_type:int = 0;
 		protected var m_state:int = 0;
 		protected var m_isSelected:Boolean = false;
+		protected var m_command:Command = null;
 		
 		protected var m_canvas:DisplayObjectContainer = null;
 		
@@ -102,6 +104,25 @@ package mapItem
 		{
 			m_gridPos.x = xPos;
 			m_gridPos.y = yPos;
+		}
+		
+		
+		/**
+		 * @desc	set the command of this object
+		 * @param	command
+		 */
+		public function SendCommand( command:Command ):void
+		{
+			m_command = command;
+		}
+		
+		
+		/**
+		 * @desc	getter of the position property
+		 */
+		public function get POSITION():Point
+		{
+			return m_pos;
 		}
 		
 		

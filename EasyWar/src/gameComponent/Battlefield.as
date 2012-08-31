@@ -33,6 +33,8 @@ package gameComponent
 		protected var m_mapOffset:Point = new Point();
 		protected var m_viewportSize:Point = new Point();
 		
+		protected var m_playerCommand:Command = null;
+		
 		//------------------------------ public function -----------------------------------
 		
 		/**
@@ -70,6 +72,15 @@ package gameComponent
 		public function get SELECTED_UNIT():Array
 		{ 
 			return m_selectedUnit;
+		}
+		
+		
+		/**
+		 * @desc	return the map offset
+		 */
+		public function get MAP_OFFSET():Point
+		{
+			return m_mapOffset;
 		}
 		
 		
@@ -168,10 +179,11 @@ package gameComponent
 		 * @desc	add game object	to the map ( grid coordinate )
 		 * @param	gameObj
 		 */
-		public function AddGameObject( unit:MapItem, xPos:int, yPos:int ):void
+		public function AddGameObject( unit:MapItem, xPos:int, yPos:int, group:int = 0 ):void
 		{
 			unit.SetMap( m_map );
 			unit.SetCanvas( m_mapCanvas );
+			unit.GROUP = group;
 			unit.SetPosition( xPos * m_map.GRID_SIZE, yPos * m_map.GRID_SIZE );
 			unit.onAdd();
 			
@@ -211,9 +223,10 @@ package gameComponent
 		/**
 		 * @desc	select the army or building
 		 * @param	rect
+		 * @param	group
 		 * @return
 		 */
-		public function SelectUnit( rect:Rectangle ):int
+		public function SelectUnits( rect:Rectangle, group:int ):int
 		{
 			var selectCnt:int = 0;
 			
@@ -236,15 +249,51 @@ package gameComponent
 					
 					if ( gridInfo._type == GridInfo.UNIT )
 					{
-						gridInfo._coverItem.SELECTED = true;
-						m_selectedUnit.push( gridInfo._coverItem );
-						
-						selectCnt++;
+						if ( gridInfo._coverItem.GROUP == group )
+						{
+							gridInfo._coverItem.SELECTED = true;
+							m_selectedUnit.push( gridInfo._coverItem );
+							
+							selectCnt++;
+						}
 					}
 				}
 			}
 			
 			return selectCnt;
+		}
+		
+		
+		/**
+		 * @desc	select single unit
+		 * @param	xPos
+		 * @param	yPos
+		 * @param	group
+		 * @return
+		 */
+		public function SelectUnit( xPos:Number, yPos:Number, group:int ):Boolean
+		{
+			var mapX:Number = xPos - m_mapOffset.x;
+			var mapY:Number = yPos - m_mapOffset.y;
+			
+			var unit:MapItem = m_map.GetPositionItem( mapX, mapY );
+			
+			if ( unit == null )
+			{
+				return false;
+			}
+			
+			if ( unit.GROUP != group )
+			{
+				return false;
+			}
+			
+			cleanCurrentSelect();
+			
+			unit.SELECTED = true;
+			m_selectedUnit.push( unit );
+			
+			return true;
 		}
 		
 		
@@ -263,21 +312,28 @@ package gameComponent
 			
 			var mapX:Number = xPos - m_mapOffset.x;
 			var mapY:Number = yPos - m_mapOffset.y;
-			var command:Command = null;
 			
+			var mapItem:mapItem.MapItem = m_map.GetPositionItem( mapX, mapY );
 			var gridInfo:GridInfo = m_map.GetPositionGrid( mapX, mapY );
 			
-			if ( gridInfo._type == GridInfo.BLANK )
+			var command:Command = new Command();
+			
+			if ( mapItem != null )
 			{
-				//TODO 
+				command._type = Command.CMD_ATTACK;
+				command._aim = mapItem;
+			}
+			else if ( gridInfo._type == GridInfo.BLANK )
+			{
+				command._type = Command.CMD_MOVE;
+				command._destGrid = gridInfo;
 			}
 			
-			if ( gridInfo._type == GridInfo.UNIT )
+			// send the command to all selected unit
+			for ( var i:int = 0; i < m_selectedUnit.length; i++ )
 			{
-				//TODO 
+				( m_selectedUnit[i] as MapItem ).SendCommand( command );
 			}
-			
-			//TODO 
 		}
 		
 		//------------------------------ private function ----------------------------------

@@ -1,5 +1,6 @@
 package map 
 {
+	import flash.display.ActionScriptVersion;
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
 	import flash.display.Sprite;
@@ -26,6 +27,10 @@ package map
 		protected var m_mapSize:Point = new Point();
 		
 		protected var m_mapData:Vector.<Vector.<GridInfo>> = null;
+		
+		protected var m_offsets:Array = new Array( new Point(0, 0), new Point(1, 0), new Point(1, 1), 
+													new Point(0, 1), new Point( -1, 1), new Point( -1, 0), 
+													new Point( -1, -1), new Point(0, -1), new Point(1, -1) );
 		
 		//------------------------------ public function -----------------------------------
 		
@@ -147,11 +152,42 @@ package map
 		{
 			var mapItem:MapItem = null;
 			
-			var gridInfo:GridInfo = this.GetPositionGrid( xPos, yPos );
+			var gridPosX:int = xPos / m_gridSize;
+			var gridPosY:int = yPos / m_gridSize;
 			
-			if ( gridInfo != null )
+			var i:int;
+			var unitList:Array = new Array();
+			
+			// get the grid unit in closed 9 grids
+			for ( i = 0; i < m_offsets.length; i++ )
 			{
-				mapItem = gridInfo._coverItem;
+				var gridInfo:GridInfo = this.GetGridInfo( gridPosX + m_offsets[i].x, gridPosY + m_offsets[i].y );
+				
+				if ( gridInfo != null )
+				{
+					if ( gridInfo._coverItem != null )
+					{
+						unitList.push( gridInfo._coverItem );
+					}
+				}
+			}
+			
+			var radius:Number = this.GRID_SIZE * 0.5;
+			var lenVec:Point = new Point();
+			
+			// get the close unit
+			for ( i = 0; i < unitList.length; i++ )
+			{
+				var unit:MapItem = unitList[i];
+				
+				lenVec.x = unit.POSITION.x - xPos;
+				lenVec.y = unit.POSITION.y - yPos;
+				
+				if ( lenVec.length <= radius )
+				{
+					mapItem = unit;
+					break;
+				}
 			}
 			
 			return mapItem;

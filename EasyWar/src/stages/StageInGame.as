@@ -7,6 +7,7 @@ package stages
 	import flash.geom.Rectangle;
 	import gameComponent.Battlefield;
 	import gameObj.moveableObj.Tank;
+	import mapItem.MapItem;
 	import Utility.MathCalculator;
 	
 	/**
@@ -139,11 +140,17 @@ package stages
 		
 		//--------------------------- private function ----------------------------
 		
-		// single select your troop
-		protected function selectUnit( rect:Rectangle ):void
+		// group select your troop
+		protected function selectUnits( rect:Rectangle ):void
 		{
-			var cnt:int = m_battlefield.SelectUnit( rect );
+			var cnt:int = m_battlefield.SelectUnits( rect, SELF_GROUP );
 			
+			//TODO 
+		}
+		
+		// single select your troop
+		protected function selectUnit( xPos:Number, yPos:Number ):void
+		{
 			//TODO 
 		}
 		
@@ -152,7 +159,7 @@ package stages
 		{
 			//TODO 
 			
-			//m_battlefield.
+			m_battlefield.OrderSpot( xPos, yPos );
 			
 			playAniMoveDest( xPos, yPos );
 		}
@@ -198,11 +205,16 @@ package stages
 			// no move
 			if ( rect.width == 0 && rect.height == 0 )
 			{
-				orderSpot( evt.localX, evt.localY );
+				var selected:Boolean = m_battlefield.SelectUnit( evt.localX, evt.localY, SELF_GROUP );
+				
+				if ( selected == false )
+				{
+					orderSpot( evt.localX, evt.localY );
+				}
 			}
 			else
 			{
-				selectUnit( rect );
+				selectUnits( rect );
 			}
 			
 			m_mouseArea.graphics.clear();
