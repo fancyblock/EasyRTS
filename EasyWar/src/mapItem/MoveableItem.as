@@ -38,6 +38,7 @@ package mapItem
 			
 			m_path = new Vector.<GridInfo>();
 			
+			// inital the path finding component
 			if ( PATH_FINDING == null )
 			{
 				PATH_FINDING = new AStar();
@@ -79,6 +80,24 @@ package mapItem
 		
 		//------------------------------ private function ----------------------------------
 		
+		/**
+		 * @desc	find the path
+		 * @param	dest
+		 * @return
+		 */
+		protected function findPath( dest:Point ):Array
+		{
+			if ( this.m_map == null )
+			{
+				throw new Error( "[MoveableItem]: Error, doesn't have owner map" );
+			}
+			
+			var path:Array = null;
+			
+			path = PATH_FINDING.GetPath( m_map, m_gridPos, dest );
+			
+			return path;
+		}
 		
 		
 		//------------------------------- event callback -----------------------------------
