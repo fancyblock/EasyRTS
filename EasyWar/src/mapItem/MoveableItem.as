@@ -115,6 +115,13 @@ package mapItem
 					throw new Error( "[MoveableItem]: error, the path length is 0" );
 				}
 				
+				if ( m_moveState == STATE_MOVE )
+				{
+					m_curGrid.SetBlank();
+					m_nextGrid.SetBlank();
+					this.SetPosition( m_position.x, m_position.y );
+				}
+				
 				followPath();
 			}
 		}
@@ -128,6 +135,16 @@ package mapItem
 		
 		
 		//------------------------------ private function ---------------------------------- 
+		
+		// stop move
+		protected function stopMove():void
+		{
+			m_curGrid.SetBlank();
+			m_nextGrid.SetBlank();
+			this.SetPosition( m_position.x, m_position.y );
+			
+			m_moveState = STATE_MOVE;
+		}
 		
 		// follow the path to move the unit
 		protected function followPath():void

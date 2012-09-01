@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="mcMiniMap" itemID="503d9550-00000019" sourceLibraryItemHRef="元件 1" lastModified="1346213200">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="mcMiniMap" itemID="503d9550-00000019" sourceLibraryItemHRef="元件 1" lastModified="1346512236">
   <timeline>
     <DOMTimeline name="mcMiniMap">
       <layers>
@@ -9,11 +9,11 @@
                 <DOMShape>
                   <fills>
                     <FillStyle index="1">
-                      <SolidColor/>
+                      <SolidColor color="#3399FF"/>
                     </FillStyle>
                   </fills>
                   <edges>
-                    <Edge fillStyle1="1" edges="!4340 3600S2|0 3600!0 3600|0 0!0 0|4340 0!4340 0|4340 3600"/>
+                    <Edge fillStyle1="1" edges="!3600 3600|0 3600!0 3600|0 0!0 0|3600 0!3600 0|3600 3600"/>
                   </edges>
                 </DOMShape>
               </elements>

@@ -1,6 +1,7 @@
 <DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" gridSpacingX="1" gridSpacingY="1" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
      <symbols>
           <Include href="lifeBarFrame.xml" loadImmediate="false"/>
+          <Include href="mcBlankTile.xml"/>
           <Include href="mcBlockTile.xml"/>
           <Include href="mcLifeBar.xml"/>
           <Include href="mcLifeInc.xml" loadImmediate="false"/>
@@ -10,11 +11,11 @@
      <timelines>
           <DOMTimeline name="场景 1">
                <layers>
-                    <DOMLayer name="图层 2" color="#9933CC">
+                    <DOMLayer name="图层 2" color="#9933CC" current="true" isSelected="true">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="mcBlockTile" name="" cacheAsBitmap="true" centerPoint3DX="48" centerPoint3DY="48">
+                                        <DOMSymbolInstance libraryItemName="mcBlankTile" name="" selected="true" cacheAsBitmap="true" centerPoint3DX="48" centerPoint3DY="48">
                                              <matrix>
                                                   <Matrix tx="32" ty="32"/>
                                              </matrix>
@@ -50,7 +51,7 @@
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
-                    <DOMLayer name="图层 6" color="#808080" current="true" isSelected="true">
+                    <DOMLayer name="图层 6" color="#808080">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
@@ -372,6 +373,16 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="2348" publishTime="1346513591"/>
+          <PublishItem publishSize="2347" publishTime="1346513483"/>
+          <PublishItem publishSize="2325" publishTime="1346513466"/>
+          <PublishItem publishSize="2286" publishTime="1346513399"/>
+          <PublishItem publishSize="2285" publishTime="1346513392"/>
+          <PublishItem publishSize="2284" publishTime="1346513355"/>
+          <PublishItem publishSize="2228" publishTime="1346513246"/>
+          <PublishItem publishSize="2210" publishTime="1346513112"/>
+          <PublishItem publishSize="2192" publishTime="1346512944"/>
+          <PublishItem publishSize="2397" publishTime="1346512301"/>
           <PublishItem publishSize="2333" publishTime="1346319623"/>
           <PublishItem publishSize="2334" publishTime="1346319553"/>
           <PublishItem publishSize="2319" publishTime="1346319222"/>
@@ -382,7 +393,5 @@
           <PublishItem publishSize="1986" publishTime="1346310383"/>
           <PublishItem publishSize="1932" publishTime="1346310232"/>
           <PublishItem publishSize="965" publishTime="1346258126"/>
-          <PublishItem publishSize="962" publishTime="1346256957"/>
-          <PublishItem publishSize="533" publishTime="1346056047"/>
      </publishHistory>
 </DOMDocument>

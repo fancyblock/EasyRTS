@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="mcTankGun" itemID="503f11f9-00000033" linkageExportForAS="true" linkageClassName="mcTankGun" sourceLibraryItemHRef="元件 1" lastModified="1346311048">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="mcTankGun" itemID="503f11f9-00000033" linkageExportForAS="true" linkageClassName="mcTankGun" sourceLibraryItemHRef="元件 1" lastModified="1346513106">
   <timeline>
     <DOMTimeline name="mcTankGun">
       <layers>
@@ -9,7 +9,7 @@
                 <DOMShape>
                   <fills>
                     <FillStyle index="1">
-                      <SolidColor color="#666666"/>
+                      <SolidColor color="#009900"/>
                     </FillStyle>
                   </fills>
                   <strokes>

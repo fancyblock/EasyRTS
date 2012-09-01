@@ -228,12 +228,9 @@ package gameComponent
 		 */
 		public function SelectUnits( rect:Rectangle, group:int ):int
 		{
-			var selectCnt:int = 0;
-			
-			cleanCurrentSelect();
-			
 			var i:int;
 			var j:int;
+			var unitList:Array = new Array();
 			
 			var startGridX:int = ( rect.left - m_mapOffset.x ) / m_map.GRID_SIZE;
 			var startGridY:int = ( rect.top - m_mapOffset.y ) / m_map.GRID_SIZE;
@@ -251,16 +248,26 @@ package gameComponent
 					{
 						if ( gridInfo._coverItem.GROUP == group )
 						{
-							gridInfo._coverItem.SELECTED = true;
-							m_selectedUnit.push( gridInfo._coverItem );
-							
-							selectCnt++;
+							unitList.push( gridInfo._coverItem );
 						}
 					}
 				}
 			}
 			
-			return selectCnt;
+			if ( unitList.length > 0 )
+			{
+				cleanCurrentSelect();
+				m_selectedUnit = unitList;
+				
+				for ( i = 0; i < m_selectedUnit.length; i++ )
+				{
+					m_selectedUnit[i].SELECTED = true;
+				}
+				
+				return m_selectedUnit.length;
+			}
+			
+			return 0;
 		}
 		
 		

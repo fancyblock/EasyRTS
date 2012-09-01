@@ -108,8 +108,12 @@ package stages
 			
 			//[hack]
 			m_battlefield.RandomCreate( 50, 50 );
-			var tank:Tank = new Tank();
-			m_battlefield.AddGameObject( tank, 5, 5 );
+			m_battlefield.AddGameObject( new Tank(), 5, 5 );
+			m_battlefield.AddGameObject( new Tank(), 5, 6 );
+			m_battlefield.AddGameObject( new Tank(), 5, 7 );
+			m_battlefield.AddGameObject( new Tank(), 7, 5 );
+			m_battlefield.AddGameObject( new Tank(), 8, 8 );
+			m_battlefield.AddGameObject( new Tank(), 8, 9 );
 			//[hack]
 			
 			// set game state
@@ -146,12 +150,6 @@ package stages
 		{
 			var cnt:int = m_battlefield.SelectUnits( rect, SELF_GROUP );
 			
-			//TODO 
-		}
-		
-		// single select your troop
-		protected function selectUnit( xPos:Number, yPos:Number ):void
-		{
 			//TODO 
 		}
 		

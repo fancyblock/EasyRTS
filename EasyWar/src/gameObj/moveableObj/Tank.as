@@ -2,6 +2,8 @@ package gameObj.moveableObj
 {
 	import flash.display.MovieClip;
 	import flash.display.Sprite;
+	import flash.geom.Point;
+	import Utility.MathCalculator;
 	
 	/**
 	 * ...
@@ -69,6 +71,8 @@ package gameObj.moveableObj
 			m_display.x = this.POSITION.x;
 			m_display.y = this.POSITION.y;
 			
+			m_imgGun.rotation = 10;
+			
 			m_lifeBar.visible = false;
 		}
 		
@@ -86,7 +90,19 @@ package gameObj.moveableObj
 		}
 		
 		
+		/**
+		 * @desc	unit changed the direction
+		 * @param	newDir
+		 */
+		override public function onDirectionChanged( newDir:Point ):void
+		{
+			// update the tank body rotation
+			m_imgBody.rotation = MathCalculator.VectorToAngle( newDir );
+		}
+		
+		
 		//------------------------------ private function ----------------------------------
+		
 		
 		//------------------------------- event callback -----------------------------------
 		

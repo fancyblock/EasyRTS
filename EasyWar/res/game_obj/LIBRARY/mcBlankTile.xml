@@ -1,0 +1,42 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="mcBlankTile" itemID="50422a20-00000027" linkageExportForAS="true" linkageClassName="mcBlankTile" sourceLibraryItemHRef="元件 1" lastModified="1346513587" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="mcBlankTile">
+      <layers>
+        <DOMLayer name="图层 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFCC99"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!0 0|0 640!0 640|640 640!640 640|640 0!640 0|0 0"/>
+                    <Edge cubics="!0 0(;0,0 320,320 320,320q0 0 320 320);"/>
+                    <Edge cubics="!320 320(;320,320 640,640 640,640q320 320 640 640);"/>
+                    <Edge cubics="!640 640(;640,640 640,0 640,0q640 640 640 0);"/>
+                    <Edge cubics="!640 0(;640,0 0,0 0,0q640 0 0 0);"/>
+                    <Edge cubics="!0 640(;0,640 320,320 320,320q0 640 320 320);"/>
+                    <Edge cubics="!320 320(;320,320 640,0 640,0q320 320 640 0);"/>
+                    <Edge cubics="!0 0(0,0;0,0 0,640 0,640q0 0 0 640);"/>
+                    <Edge cubics="!0 640(;0,640 640,640 640,640q0 640 640 640)640,640;"/>
+                  </edges>
+                </DOMShape>
+                <DOMSymbolInstance libraryItemName="mcBlockTile" name="" selected="true" centerPoint3DX="17.35" centerPoint3DY="68.35">
+                  <matrix>
+                    <Matrix tx="1.35" ty="52.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="16" y="16"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

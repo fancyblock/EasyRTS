@@ -1,5 +1,6 @@
 package Utility 
 {
+	import flash.geom.Point;
 	import flash.geom.Rectangle;
 	/**
 	 * ...
@@ -26,6 +27,24 @@ package Utility
 			var rect:Rectangle = new Rectangle( left, top, width, height );
 			
 			return rect;
+		}
+		
+		
+		/**
+		 * @desc	convert the vector to the angle ( in degree )
+		 * @param	vec
+		 * @return
+		 */
+		static public function VectorToAngle( vec:Point ):Number
+		{
+			var angle:Number = 0;
+			
+			angle = Math.atan2( vec.y, vec.x );
+			
+			// convert to degree
+			angle = angle / Math.PI * 180.0;
+			
+			return angle;
 		}
 	}
 

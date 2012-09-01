@@ -207,18 +207,23 @@ package map
 			
 			var bitmapData:BitmapData = new BitmapData( wid, hei, true, 0xffffff );
 			var blockTile:Sprite = new mcBlockTile();
+			var blankTile:Sprite = new mcBlankTile();
 			var translate:Matrix = new Matrix();
 			
 			for ( var i:int = 0; i < m_width; i++ )
 			{
 				for ( var j:int = 0; j < m_height; j++ )
 				{
+					translate.tx = i * GRID_SIZE;
+					translate.ty = j * GRID_SIZE;
+						
 					if ( m_mapData[i][j]._type == GridInfo.BLOCK )
 					{
-						translate.tx = i * GRID_SIZE;
-						translate.ty = j * GRID_SIZE;
-						
 						bitmapData.draw( blockTile, translate );
+					}
+					else
+					{
+						bitmapData.draw( blankTile, translate );
 					}
 				}
 			}

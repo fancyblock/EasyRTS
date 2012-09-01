@@ -60,15 +60,27 @@ package gameObj.moveableObj
 			{
 				if ( m_command._type == Command.CMD_MOVE )
 				{
-					var orgPath:Array = this.findPath( new Point( m_command._destGrid._x, m_command._destGrid._y ) );
-					
-					var path:Vector.<GridInfo> = new Vector.<GridInfo>();
-					for ( i = 1; i < orgPath.length; i++ )					// exclude self
+					if ( this.m_moveState == STATE_MOVE )
 					{
-						path.push( m_map.GetGridInfo( orgPath[i].x, orgPath[i].y ) );
+						this.stopMove();
 					}
 					
-					this.PATH = path;
+					var orgPath:Array = this.findPath( new Point( m_command._destGrid._x, m_command._destGrid._y ) );
+					
+					if ( orgPath != null )
+					{
+						var path:Vector.<GridInfo> = new Vector.<GridInfo>();
+						for ( i = 1; i < orgPath.length; i++ )					// exclude self
+						{
+							path.push( m_map.GetGridInfo( orgPath[i].x, orgPath[i].y ) );
+						}
+						
+						this.PATH = path;
+					}
+					else
+					{
+						//TODO [maybe bug]
+					}
 				}
 				
 				if ( m_command._type == Command.CMD_ATTACK )
