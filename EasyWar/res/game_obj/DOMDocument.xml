@@ -6,26 +6,36 @@
           <Include href="mcLifeBar.xml"/>
           <Include href="mcLifeInc.xml" loadImmediate="false"/>
           <Include href="mcTankGun.xml"/>
+          <Include href="mcTankGun02.xml"/>
           <Include href="tankBody01.xml"/>
+          <Include href="tankBody02.xml"/>
      </symbols>
      <timelines>
           <DOMTimeline name="场景 1">
                <layers>
-                    <DOMLayer name="图层 2" color="#9933CC" current="true" isSelected="true">
+                    <DOMLayer name="图层 2" color="#9933CC">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="mcBlankTile" name="" selected="true" cacheAsBitmap="true" centerPoint3DX="48" centerPoint3DY="48">
+                                        <DOMSymbolInstance libraryItemName="mcBlankTile" name="" cacheAsBitmap="true" centerPoint3DX="25" centerPoint3DY="25">
                                              <matrix>
-                                                  <Matrix tx="32" ty="32"/>
+                                                  <Matrix tx="9" ty="9"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="16" y="16"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="mcLifeBar" name="" centerPoint3DX="146.95" centerPoint3DY="64.45">
+                                        <DOMSymbolInstance libraryItemName="mcLifeBar" name="" centerPoint3DX="146.95" centerPoint3DY="46.45">
                                              <matrix>
-                                                  <Matrix tx="130.95" ty="48.45"/>
+                                                  <Matrix tx="130.95" ty="30.45"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="16" y="16"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="mcBlockTile" name="" centerPoint3DX="73.35" centerPoint3DY="25">
+                                             <matrix>
+                                                  <Matrix tx="57.35" ty="9"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="16" y="16"/>
@@ -35,13 +45,21 @@
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
-                    <DOMLayer name="图层 7" color="#4F80FF">
+                    <DOMLayer name="图层 7" color="#4F80FF" current="true" isSelected="true">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="mcTankGun" name="" centerPoint3DX="156.2" centerPoint3DY="124.45">
+                                        <DOMSymbolInstance libraryItemName="mcTankGun" name="" centerPoint3DX="51.2" centerPoint3DY="124.45">
                                              <matrix>
-                                                  <Matrix tx="133.95" ty="108.45"/>
+                                                  <Matrix tx="28.95" ty="108.45"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="mcTankGun02" name="" centerPoint3DX="108.25" centerPoint3DY="124.6">
+                                             <matrix>
+                                                  <Matrix tx="86" ty="108.6"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point/>
@@ -55,9 +73,17 @@
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="tankBody01" name="" centerPoint3DX="146.95" centerPoint3DY="90.45">
+                                        <DOMSymbolInstance libraryItemName="tankBody01" name="" centerPoint3DX="41.95" centerPoint3DY="90.45">
                                              <matrix>
-                                                  <Matrix tx="133.95" ty="77.45"/>
+                                                  <Matrix tx="28.95" ty="77.45"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="13" y="13"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="tankBody02" name="" centerPoint3DX="97.75" centerPoint3DY="90.45">
+                                             <matrix>
+                                                  <Matrix tx="84.75" ty="77.45"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="13" y="13"/>
@@ -373,6 +399,12 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="3211" publishTime="1346519411"/>
+          <PublishItem publishSize="3213" publishTime="1346519390"/>
+          <PublishItem publishSize="3210" publishTime="1346519369"/>
+          <PublishItem publishSize="2509" publishTime="1346519331"/>
+          <PublishItem publishSize="2386" publishTime="1346514668"/>
+          <PublishItem publishSize="2388" publishTime="1346513648"/>
           <PublishItem publishSize="2348" publishTime="1346513591"/>
           <PublishItem publishSize="2347" publishTime="1346513483"/>
           <PublishItem publishSize="2325" publishTime="1346513466"/>
@@ -387,11 +419,5 @@
           <PublishItem publishSize="2334" publishTime="1346319553"/>
           <PublishItem publishSize="2319" publishTime="1346319222"/>
           <PublishItem publishSize="2262" publishTime="1346319037"/>
-          <PublishItem publishSize="2215" publishTime="1346318787"/>
-          <PublishItem publishSize="2215" publishTime="1346311051"/>
-          <PublishItem publishSize="2063" publishTime="1346310457"/>
-          <PublishItem publishSize="1986" publishTime="1346310383"/>
-          <PublishItem publishSize="1932" publishTime="1346310232"/>
-          <PublishItem publishSize="965" publishTime="1346258126"/>
      </publishHistory>
 </DOMDocument>

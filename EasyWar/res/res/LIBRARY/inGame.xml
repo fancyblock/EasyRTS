@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="inGame" itemID="50390172-00000014" linkageExportForAS="true" linkageClassName="inGameUI" sourceLibraryItemHRef="元件 1" lastModified="1346512158">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="inGame" itemID="50390172-00000014" linkageExportForAS="true" linkageClassName="inGameUI" sourceLibraryItemHRef="元件 1" lastModified="1346517564">
   <timeline>
     <DOMTimeline name="inGame">
       <layers>
@@ -45,7 +45,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="mcMiniMap" name="mcMiniMapFrame" selected="true" centerPoint3DX="936.45" centerPoint3DY="664.95">
+                <DOMSymbolInstance libraryItemName="mcMiniMap" name="mcMiniMapFrame" centerPoint3DX="936.45" centerPoint3DY="664.95">
                   <matrix>
                     <Matrix tx="827.95" ty="574.95"/>
                   </matrix>

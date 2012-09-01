@@ -13,7 +13,7 @@ package gameObj.moveableObj
 	{
 		//------------------------------ static member -------------------------------------
 		
-		static protected const TANK_SPEED:Number = 2.33;
+		static protected const TANK_SPEED:Number = 5.0;
 		
 		//------------------------------ private member ------------------------------------
 		

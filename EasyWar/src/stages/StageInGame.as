@@ -8,6 +8,7 @@ package stages
 	import gameComponent.Battlefield;
 	import gameObj.moveableObj.Tank;
 	import map.GridInfo;
+	import map.MiniMap;
 	import mapItem.MapItem;
 	import Utility.MathCalculator;
 	
@@ -34,7 +35,7 @@ package stages
 		static protected const VIEWPORT_WIDTH:int = 1024;
 		static protected const VIEWPORT_HEIGHT:int = 558;
 		
-		static protected const SELECT_FRAME_COLOR:uint = 0x070bea;
+		static protected const SELECT_FRAME_COLOR:uint = 0xfa3399;
 		
 		//---------------------------- private member ----------------------------- 
 		
@@ -45,6 +46,7 @@ package stages
 		
 		// mini map
 		protected var m_miniMapFrame:Sprite = null;
+		protected var m_miniMap:MiniMap = null;
 		
 		// for mouse action
 		protected var m_mouseArea:Sprite = null;
@@ -100,6 +102,10 @@ package stages
 			
 			// mini map
 			m_miniMapFrame = m_ui.getChildByName( "mcMiniMapFrame" ) as Sprite;
+			m_miniMap = new MiniMap( 90, 90 );
+			m_miniMap.width = m_miniMapFrame.width;
+			m_miniMap.height = m_miniMapFrame.height;
+			m_miniMapFrame.addChild( m_miniMap );
 			
 			// create the game stuff
 			m_battlefield = new Battlefield();
@@ -107,7 +113,7 @@ package stages
 			m_battlefield.CANVAS = m_gameLayer;
 			
 			//[hack]
-			m_battlefield.RandomCreate( 50, 50 );
+			m_battlefield.RandomCreate( 90, 90 );
 			m_battlefield.AddGameObject( new Tank(), 5, 5 );
 			m_battlefield.AddGameObject( new Tank(), 5, 6 );
 			m_battlefield.AddGameObject( new Tank(), 5, 7 );
@@ -115,6 +121,13 @@ package stages
 			m_battlefield.AddGameObject( new Tank(), 8, 8 );
 			m_battlefield.AddGameObject( new Tank(), 8, 9 );
 			//[hack]
+			
+			// set the mini map
+			m_battlefield.MAP.MINI_MAP = m_miniMap;
+			m_miniMap.SetViewPort( -m_battlefield.MAP_OFFSET.x / m_battlefield.MAP.MAP_SIZE_WIDTH,
+									-m_battlefield.MAP_OFFSET.y / m_battlefield.MAP.MAP_SIZE_HEIGHT,
+									VIEWPORT_WIDTH / m_battlefield.MAP.MAP_SIZE_WIDTH,
+									VIEWPORT_HEIGHT / m_battlefield.MAP.MAP_SIZE_HEIGHT );
 			
 			// set game state
 			m_state = STATE_NORMAL;
@@ -131,6 +144,11 @@ package stages
 				var offsetY:Number = m_scrollMapVec.y * SCROLL_VELOCITY;
 				
 				m_battlefield.MoveMap( offsetX, offsetY );
+				
+				m_miniMap.SetViewPort( -m_battlefield.MAP_OFFSET.x / m_battlefield.MAP.MAP_SIZE_WIDTH,
+									-m_battlefield.MAP_OFFSET.y / m_battlefield.MAP.MAP_SIZE_HEIGHT,
+									VIEWPORT_WIDTH / m_battlefield.MAP.MAP_SIZE_WIDTH,
+									VIEWPORT_HEIGHT / m_battlefield.MAP.MAP_SIZE_HEIGHT );
 			}
 		}
 		

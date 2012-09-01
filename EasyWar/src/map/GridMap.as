@@ -16,7 +16,7 @@ package map
 	{
 		//------------------------------ static member -------------------------------------
 		
-		static public const MAX_SIZE:int = 160;
+		static public const MAX_SIZE:int = 120;
 		static public const DEFAULT_GRID_SIZE:Number = 32;
 		
 		//------------------------------ private member ------------------------------------
@@ -31,6 +31,8 @@ package map
 		protected var m_offsets:Array = new Array( new Point(0, 0), new Point(1, 0), new Point(1, 1), 
 													new Point(0, 1), new Point( -1, 1), new Point( -1, 0), 
 													new Point( -1, -1), new Point(0, -1), new Point(1, -1) );
+													
+		protected var m_miniMap:MiniMap = null;
 		
 		//------------------------------ public function -----------------------------------
 		
@@ -74,6 +76,21 @@ package map
 		 */
 		public function get WIDTH():int	{ return m_width; }
 		public function get HEIGHT():int { return m_height; }
+		
+		
+		/**
+		 * @desc	getter & setter of the minimap
+		 */
+		public function get MINI_MAP():MiniMap { return m_miniMap; }
+		public function set MINI_MAP( value:MiniMap ):void 
+		{ 
+			m_miniMap = value;
+			
+			if ( m_miniMap != null )
+			{
+				m_miniMap.CreateMapBG( this );
+			}
+		}
 		
 		
 		/**

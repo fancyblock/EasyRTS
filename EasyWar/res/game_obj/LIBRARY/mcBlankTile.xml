@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="mcBlankTile" itemID="50422a20-00000027" linkageExportForAS="true" linkageClassName="mcBlankTile" sourceLibraryItemHRef="元件 1" lastModified="1346513587" lastUniqueIdentifier="1">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="mcBlankTile" itemID="50422a20-00000027" linkageExportForAS="true" linkageClassName="mcBlankTile" sourceLibraryItemHRef="元件 1" lastModified="1346514656" lastUniqueIdentifier="1">
   <timeline>
     <DOMTimeline name="mcBlankTile">
       <layers>
@@ -24,14 +24,6 @@
                     <Edge cubics="!0 640(;0,640 640,640 640,640q0 640 640 640)640,640;"/>
                   </edges>
                 </DOMShape>
-                <DOMSymbolInstance libraryItemName="mcBlockTile" name="" selected="true" centerPoint3DX="17.35" centerPoint3DY="68.35">
-                  <matrix>
-                    <Matrix tx="1.35" ty="52.35"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point x="16" y="16"/>
-                  </transformationPoint>
-                </DOMSymbolInstance>
               </elements>
             </DOMFrame>
           </frames>
