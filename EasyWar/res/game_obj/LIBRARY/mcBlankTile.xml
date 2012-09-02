@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="mcBlankTile" itemID="50422a20-00000027" linkageExportForAS="true" linkageClassName="mcBlankTile" sourceLibraryItemHRef="元件 1" lastModified="1346514656" lastUniqueIdentifier="1">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="mcBlankTile" itemID="50422a20-00000027" linkageExportForAS="true" linkageClassName="mcBlankTile" sourceLibraryItemHRef="元件 1" lastModified="1346571011" lastUniqueIdentifier="1">
   <timeline>
     <DOMTimeline name="mcBlankTile">
       <layers>
@@ -9,7 +9,7 @@
                 <DOMShape>
                   <fills>
                     <FillStyle index="1">
-                      <SolidColor color="#FFCC99"/>
+                      <SolidColor color="#FFFFCC"/>
                     </FillStyle>
                   </fills>
                   <edges>

@@ -1,5 +1,6 @@
 <DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" gridSpacingX="1" gridSpacingY="1" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
      <symbols>
+          <Include href="bullet.xml"/>
           <Include href="lifeBarFrame.xml" loadImmediate="false"/>
           <Include href="mcBlankTile.xml"/>
           <Include href="mcBlockTile.xml"/>
@@ -13,7 +14,7 @@
      <timelines>
           <DOMTimeline name="场景 1">
                <layers>
-                    <DOMLayer name="图层 2" color="#9933CC">
+                    <DOMLayer name="图层 2" color="#9933CC" current="true" isSelected="true">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
@@ -41,11 +42,19 @@
                                                   <Point x="16" y="16"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="bullet" name="" centerPoint3DX="112.7" centerPoint3DY="107.65">
+                                             <matrix>
+                                                  <Matrix tx="111.5" ty="106.45"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="1.2" y="1.2"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
                                    </elements>
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
-                    <DOMLayer name="图层 7" color="#4F80FF" current="true" isSelected="true">
+                    <DOMLayer name="图层 7" color="#4F80FF">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
@@ -399,6 +408,10 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="2819" publishTime="1346582179"/>
+          <PublishItem publishSize="2816" publishTime="1346582163"/>
+          <PublishItem publishSize="2752" publishTime="1346571014"/>
+          <PublishItem publishSize="2746" publishTime="1346570935"/>
           <PublishItem publishSize="3211" publishTime="1346519411"/>
           <PublishItem publishSize="3213" publishTime="1346519390"/>
           <PublishItem publishSize="3210" publishTime="1346519369"/>
@@ -415,9 +428,5 @@
           <PublishItem publishSize="2210" publishTime="1346513112"/>
           <PublishItem publishSize="2192" publishTime="1346512944"/>
           <PublishItem publishSize="2397" publishTime="1346512301"/>
-          <PublishItem publishSize="2333" publishTime="1346319623"/>
-          <PublishItem publishSize="2334" publishTime="1346319553"/>
-          <PublishItem publishSize="2319" publishTime="1346319222"/>
-          <PublishItem publishSize="2262" publishTime="1346319037"/>
      </publishHistory>
 </DOMDocument>

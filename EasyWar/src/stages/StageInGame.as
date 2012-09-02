@@ -103,6 +103,9 @@ package stages
 			m_miniMapFrame = m_ui.getChildByName( "mcMiniMapFrame" ) as Sprite;
 			m_miniMapMouseArea = m_ui.getChildByName( "mcMiniMapMouseArea" ) as Sprite;
 			m_miniMapMouseArea.addEventListener( MouseEvent.CLICK, onClkMiniMap );
+			m_miniMapMouseArea.addEventListener( MouseEvent.MOUSE_DOWN, onStartDragMiniMap );
+			m_miniMapMouseArea.addEventListener( MouseEvent.MOUSE_MOVE, onDragMiniMap );
+			m_miniMapMouseArea.addEventListener( MouseEvent.MOUSE_UP, onStopDragMiniMap );
 			m_miniMap = new MiniMap( 90, 90 );
 			m_miniMap.width = m_miniMapFrame.width;
 			m_miniMap.height = m_miniMapFrame.height;
@@ -276,10 +279,27 @@ package stages
 			m_inScrollMap = false;
 		}
 		
+		//----------------------------------------------- mini map stuff ------------------------------------------
+		
 		protected function onClkMiniMap( evt:MouseEvent ):void
 		{
 			m_battlefield.OrderSpotGrid( evt.localX * m_battlefield.MAP.WIDTH / m_miniMapMouseArea.width,
 										evt.localY * m_battlefield.MAP.HEIGHT / m_miniMapMouseArea.height );
+		}
+		
+		protected function onStartDragMiniMap( evt:MouseEvent ):void
+		{
+			//TODO 
+		}
+		
+		protected function onDragMiniMap( evt:MouseEvent ):void
+		{
+			//TODO 
+		}
+		
+		protected function onStopDragMiniMap( evt:MouseEvent ):void
+		{
+			//TODO 
 		}
 		
 	}

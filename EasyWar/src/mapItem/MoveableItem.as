@@ -68,7 +68,8 @@ package mapItem
 				// arrive the dest
 				if ( distance.length <= ( m_velocity * 0.5 ) )
 				{
-					setToPosition();
+					m_curGrid.SetBlank();
+					this.SetPosition( m_position.x, m_position.y );
 					
 					if ( m_path.length == 0 )
 					{
@@ -143,7 +144,9 @@ package mapItem
 		
 		// stop move
 		protected function stopMove():void
-		{	
+		{
+			setToPosition();
+			
 			m_moveState = STATE_MOVE;
 		}
 		

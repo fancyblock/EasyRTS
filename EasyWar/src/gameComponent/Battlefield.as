@@ -5,6 +5,7 @@ package gameComponent
 	import flash.display.Sprite;
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
+	import gameObj.Unit;
 	import map.GridInfo;
 	import map.GridMap;
 	import map.MapLoader;
@@ -203,7 +204,7 @@ package gameComponent
 			{
 				m_unitList[i].Update( elapsed );
 				
-				if ( ( m_unitList[i] as MapItem ).STATE == MapItem.STATE_DEAD )
+				if ( ( m_unitList[i] as MapItem ).STATE == Unit.STATE_DEAD )
 				{
 					deadList.push( m_unitList[i] );
 				}

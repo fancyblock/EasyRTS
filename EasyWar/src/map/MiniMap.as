@@ -12,11 +12,11 @@ package map
 	{
 		//------------------------------ static member -------------------------------------
 		
-		static protected const COLOR_BLANK:uint = 0xeaa477;
-		static protected const COLOR_BLOCK:uint = 0x123456;
+		static protected const COLOR_BLANK:uint = 0xffffcc;
+		static protected const COLOR_BLOCK:uint = 0xff6600;
 		
-		static protected const COLOR_SELF_GROUP:uint = 0xff00ff00;
-		static protected const COLOR_ENEMY_GROUP:uint = 0xffff0000;
+		static protected const COLOR_SELF_GROUP:uint = 0x00aa00;
+		static protected const COLOR_ENEMY_GROUP:uint = 0x0000ff;
 		
 		//------------------------------ private member ------------------------------------
 		
