@@ -63,6 +63,7 @@ package map
 				for ( var j:int = 0; j < hei; j++ )
 				{
 					m_mapData[i][j] = new GridInfo();
+					m_mapData[i][j]._map = this;
 					m_mapData[i][j]._x = i;
 					m_mapData[i][j]._y = j;
 				}

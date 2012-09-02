@@ -34,6 +34,8 @@ package map
 		public var _type:int = 0;
 		public var _coverItem:MapItem = null;
 		
+		public var _map:GridMap = null;
+		
 		//------------------------------ public functions -----------------------------------
 		
 		
@@ -44,6 +46,11 @@ package map
 		{
 			this._type = BLANK;
 			this._coverItem = null;
+			
+			if ( _map.MINI_MAP != null )
+			{
+				_map.MINI_MAP.CleanTroop( _x, _y );
+			}
 		}
 		
 		
@@ -76,6 +83,12 @@ package map
 		{
 			this._type = UNIT;
 			this._coverItem = item;
+			
+			// update the miniMap display
+			if ( _map.MINI_MAP != null )
+			{
+				_map.MINI_MAP.SetTroop( _x, _y, item.GROUP );
+			}
 		}
 		
 	}

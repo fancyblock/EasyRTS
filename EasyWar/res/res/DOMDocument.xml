@@ -333,6 +333,7 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="7849" publishTime="1346558098"/>
           <PublishItem publishSize="7903" publishTime="1346517039"/>
           <PublishItem publishSize="7892" publishTime="1346512240"/>
           <PublishItem publishSize="7860" publishTime="1346512165"/>
@@ -352,6 +353,5 @@
           <PublishItem publishSize="7541" publishTime="1346262235"/>
           <PublishItem publishSize="7531" publishTime="1346262164"/>
           <PublishItem publishSize="7470" publishTime="1346225213"/>
-          <PublishItem publishSize="7464" publishTime="1346213228"/>
      </publishHistory>
 </DOMDocument>

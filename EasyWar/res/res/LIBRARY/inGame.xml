@@ -1,8 +1,8 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="inGame" itemID="50390172-00000014" linkageExportForAS="true" linkageClassName="inGameUI" sourceLibraryItemHRef="元件 1" lastModified="1346517564">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="inGame" itemID="50390172-00000014" linkageExportForAS="true" linkageClassName="inGameUI" sourceLibraryItemHRef="元件 1" lastModified="1346559610" lastUniqueIdentifier="2">
   <timeline>
     <DOMTimeline name="inGame">
       <layers>
-        <DOMLayer name="uiframe" color="#4FFF4F" autoNamed="false">
+        <DOMLayer name="uiframe" color="#4FFF4F" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -41,13 +41,32 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="minMap" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+        <DOMLayer name="miniMapMouseArea" color="#9933CC" locked="true" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="mcMiniMap" name="mcMiniMapFrame" centerPoint3DX="936.45" centerPoint3DY="664.95">
+                <DOMSymbolInstance libraryItemName="mcMiniMap" name="mcMiniMapMouseArea" selected="true" centerPoint3DX="936.5" centerPoint3DY="663">
                   <matrix>
-                    <Matrix tx="827.95" ty="574.95"/>
+                    <Matrix tx="828" ty="573"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="108.5" y="90"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.05078125"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="minMap" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="mcMiniMap" name="mcMiniMapFrame" centerPoint3DX="936.5" centerPoint3DY="663">
+                  <matrix>
+                    <Matrix tx="828" ty="573"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="108.5" y="90"/>
@@ -57,7 +76,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="uibg" color="#FF800A" autoNamed="false">
+        <DOMLayer name="uibg" color="#FF800A" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -75,7 +94,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="scrollBar2" color="#FF800A" autoNamed="false">
+        <DOMLayer name="scrollBar2" color="#FF800A" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -105,7 +124,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="scrollBar" color="#9933CC" autoNamed="false">
+        <DOMLayer name="scrollBar" color="#9933CC" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -135,7 +154,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="mouseArea" color="#9933CC" autoNamed="false">
+        <DOMLayer name="mouseArea" color="#9933CC" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>

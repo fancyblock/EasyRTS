@@ -7,9 +7,7 @@ package stages
 	import flash.geom.Rectangle;
 	import gameComponent.Battlefield;
 	import gameObj.moveableObj.Tank;
-	import map.GridInfo;
 	import map.MiniMap;
-	import mapItem.MapItem;
 	import Utility.MathCalculator;
 	
 	/**
@@ -47,6 +45,7 @@ package stages
 		// mini map
 		protected var m_miniMapFrame:Sprite = null;
 		protected var m_miniMap:MiniMap = null;
+		protected var m_miniMapMouseArea:Sprite = null;
 		
 		// for mouse action
 		protected var m_mouseArea:Sprite = null;
@@ -102,6 +101,8 @@ package stages
 			
 			// mini map
 			m_miniMapFrame = m_ui.getChildByName( "mcMiniMapFrame" ) as Sprite;
+			m_miniMapMouseArea = m_ui.getChildByName( "mcMiniMapMouseArea" ) as Sprite;
+			m_miniMapMouseArea.addEventListener( MouseEvent.CLICK, onClkMiniMap );
 			m_miniMap = new MiniMap( 90, 90 );
 			m_miniMap.width = m_miniMapFrame.width;
 			m_miniMap.height = m_miniMapFrame.height;
@@ -114,12 +115,6 @@ package stages
 			
 			//[hack]
 			m_battlefield.RandomCreate( 90, 90 );
-			m_battlefield.AddGameObject( new Tank(), 5, 5 );
-			m_battlefield.AddGameObject( new Tank(), 5, 6 );
-			m_battlefield.AddGameObject( new Tank(), 5, 7 );
-			m_battlefield.AddGameObject( new Tank(), 7, 5 );
-			m_battlefield.AddGameObject( new Tank(), 8, 8 );
-			m_battlefield.AddGameObject( new Tank(), 8, 9 );
 			//[hack]
 			
 			// set the mini map
@@ -128,6 +123,15 @@ package stages
 									-m_battlefield.MAP_OFFSET.y / m_battlefield.MAP.MAP_SIZE_HEIGHT,
 									VIEWPORT_WIDTH / m_battlefield.MAP.MAP_SIZE_WIDTH,
 									VIEWPORT_HEIGHT / m_battlefield.MAP.MAP_SIZE_HEIGHT );
+			
+			//[hack]
+			m_battlefield.AddGameObject( new Tank(), 5, 5 );
+			m_battlefield.AddGameObject( new Tank(), 5, 6 );
+			m_battlefield.AddGameObject( new Tank(), 5, 7 );
+			m_battlefield.AddGameObject( new Tank(), 7, 5 );
+			m_battlefield.AddGameObject( new Tank(), 8, 8 );
+			m_battlefield.AddGameObject( new Tank(), 8, 9 );
+			//[hack]
 			
 			// set game state
 			m_state = STATE_NORMAL;
@@ -270,6 +274,12 @@ package stages
 		protected function onEndScrollMap( evt:MouseEvent ):void
 		{
 			m_inScrollMap = false;
+		}
+		
+		protected function onClkMiniMap( evt:MouseEvent ):void
+		{
+			m_battlefield.OrderSpotGrid( evt.localX * m_battlefield.MAP.WIDTH / m_miniMapMouseArea.width,
+										evt.localY * m_battlefield.MAP.HEIGHT / m_miniMapMouseArea.height );
 		}
 		
 	}

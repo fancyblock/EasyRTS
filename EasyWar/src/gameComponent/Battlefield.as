@@ -323,6 +323,35 @@ package gameComponent
 			var mapItem:mapItem.MapItem = m_map.GetPositionItem( mapX, mapY );
 			var gridInfo:GridInfo = m_map.GetPositionGrid( mapX, mapY );
 			
+			sendOrderByClickGrid( mapItem, gridInfo );
+		}
+		
+		
+		/**
+		 * @desc	send the command by grid coordinate
+		 * @param	xPos
+		 * @param	yPos
+		 */
+		public function OrderSpotGrid( xPos:int, yPos:int ):void
+		{
+			// judge if the any unit be selected 
+			if ( m_selectedUnit.length == 0 )
+			{
+				return;
+			}
+			
+			var gridInfo:GridInfo = m_map.GetGridInfo( xPos, yPos );
+			var mapItem:MapItem = gridInfo._coverItem;
+			
+			sendOrderByClickGrid( mapItem, gridInfo );
+		}
+		
+		//------------------------------ private function ----------------------------------
+		
+		
+		// send order
+		protected function sendOrderByClickGrid( mapItem:MapItem, gridInfo:GridInfo ):void
+		{
 			var command:Command = new Command();
 			
 			if ( mapItem != null )
@@ -342,8 +371,6 @@ package gameComponent
 				( m_selectedUnit[i] as MapItem ).SendCommand( command );
 			}
 		}
-		
-		//------------------------------ private function ----------------------------------
 		
 		// clean the current selected unit
 		protected function cleanCurrentSelect():void

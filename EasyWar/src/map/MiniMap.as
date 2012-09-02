@@ -15,6 +15,9 @@ package map
 		static protected const COLOR_BLANK:uint = 0xeaa477;
 		static protected const COLOR_BLOCK:uint = 0x123456;
 		
+		static protected const COLOR_SELF_GROUP:uint = 0xff00ff00;
+		static protected const COLOR_ENEMY_GROUP:uint = 0xffff0000;
+		
 		//------------------------------ private member ------------------------------------
 		
 		protected var m_width:Number = 0;
@@ -45,7 +48,7 @@ package map
 			m_mapLayer = new Bitmap( m_mapData );
 			
 			// unit layer
-			m_unitData = new BitmapData( wid, hei, true, 0xffffffff );
+			m_unitData = new BitmapData( wid, hei );
 			m_unitLayer = new Bitmap( m_unitData );
 			
 			// viewport layer
@@ -96,6 +99,37 @@ package map
 			
 			m_viewportLayer.graphics.drawRect( m_width * u1, m_height * v1, m_width * uh, m_height * vh );
 		}
+		
+		
+		/**
+		 * @desc	set the troop
+		 * @param	xPos
+		 * @param	yPos
+		 * @param	group
+		 */
+		public function SetTroop( xPos:int, yPos:int, group:int ):void
+		{
+			if ( group == 0 )		//[hack]
+			{
+				m_unitData.setPixel( xPos, yPos, COLOR_SELF_GROUP );
+			}
+			else
+			{
+				m_unitData.setPixel( xPos, yPos, COLOR_ENEMY_GROUP );
+			}
+		}
+		
+		
+		/**
+		 * @desc	clean the troop
+		 * @param	xPos
+		 * @param	yPos
+		 */
+		public function CleanTroop( xPos:int, yPos:int ):void
+		{
+			m_unitData.setPixel( xPos, yPos, COLOR_BLANK );
+		}
+		
 		
 		//------------------------------ private function ----------------------------------
 		
