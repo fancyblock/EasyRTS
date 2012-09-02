@@ -6,6 +6,7 @@ package map
 	import flash.display.Sprite;
 	import flash.geom.Matrix;
 	import flash.geom.Point;
+	import flash.geom.Rectangle;
 	import mapItem.MapItem;
 	
 	/**
@@ -249,6 +250,57 @@ package map
 			bmp.bitmapData = bitmapData;
 			
 			return bmp;
+		}
+		
+		
+		/**
+		 * @desc	[For Debug]
+		 * @param	bmp
+		 * @param	region
+		 */
+		public function UpdateMapBitmap( bmp:Bitmap, region:Rectangle ):void
+		{
+			var bitmapData:BitmapData = bmp.bitmapData;
+			
+			var translate:Matrix = new Matrix();
+			
+			var startPosX:int = region.x / m_gridSize;
+			var startPosY:int = region.y / m_gridSize;
+			var endPosX:int = region.right / m_gridSize;
+			var endPosY:int = region.bottom / m_gridSize;
+			
+			var blockTile:Sprite = new mcBlockTile();
+			var blankTile:Sprite = new mcBlankTile();
+			var holdTile:Sprite = new mcHoldTile();
+			
+			for ( var i:int = startPosX; i <= endPosX; i++ )
+			{
+				for ( var j:int = startPosY; j <= endPosY; j++ )
+				{
+					translate.tx = i * GRID_SIZE;
+					translate.ty = j * GRID_SIZE;
+					
+					if ( m_mapData[i][j]._type == GridInfo.BLOCK )
+					{
+						bitmapData.draw( blockTile, translate );
+					}
+					
+					if( m_mapData[i][j]._type == GridInfo.BLANK )
+					{
+						bitmapData.draw( blankTile, translate );
+					}
+					
+					if ( m_mapData[i][j]._type == GridInfo.HOLD )
+					{
+						bitmapData.draw( holdTile, translate );
+					}
+					
+					if ( m_mapData[i][j]._type == GridInfo.UNIT )
+					{
+						bitmapData.draw( blankTile, translate );
+					}
+				}
+			}
 		}
 		
 		//------------------------------ private function ----------------------------------

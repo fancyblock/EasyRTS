@@ -3,7 +3,6 @@ package mapItem
 	import flash.geom.Point;
 	import map.GridInfo;
 	import map.pathFinding.AStar;
-	import map.pathFinding.IPathFinder;
 	
 	/**
 	 * ...
@@ -15,6 +14,7 @@ package mapItem
 		
 		static protected const STATE_IDLE:int = 0;
 		static protected const STATE_MOVE:int = 1;
+		static protected const STATE_BLOCK:int = 2;
 		
 		//------------------------------ private member ------------------------------------
 		
@@ -68,19 +68,19 @@ package mapItem
 				// arrive the dest
 				if ( distance.length <= ( m_velocity * 0.5 ) )
 				{
-					m_curGrid.SetBlank();
-					this.SetPosition( m_position.x, m_position.y );
+					setToPosition();
 					
 					if ( m_path.length == 0 )
 					{
-						this.PATH = null;
+						m_moveState = STATE_IDLE;
+						onArriveDest();
 					}
-					else
+					else 
 					{
 						followPath();
 					}
 				}
-				// not arrive
+				// not arrive 
 				else
 				{
 					var offsetX:Number = m_velocity * m_moveVector.x;
@@ -102,10 +102,10 @@ package mapItem
 		{
 			m_path = path;
 			
-			// stop move
+			// error
 			if ( m_path == null )
 			{
-				m_moveState = STATE_IDLE; 
+				throw new Error( "[MoveableItem]: the path can not be null" );
 			}
 			
 			if ( m_path != null )
@@ -129,7 +129,8 @@ package mapItem
 		 * @desc	some callback functions ( should be override )
 		 */
 		public function onDirectionChanged( newDir:Point ):void { }
-		public function onPathBeBlock():void {}
+		public function onPathBeBlock():void { }
+		public function onArriveDest():void { }
 		
 		
 		//------------------------------ private function ---------------------------------- 
@@ -146,8 +147,7 @@ package mapItem
 		protected function stopMove():void
 		{
 			setToPosition();
-			
-			m_moveState = STATE_MOVE;
+			m_moveState = STATE_IDLE;
 		}
 		
 		// follow the path to move the unit
@@ -164,7 +164,8 @@ package mapItem
 			
 			if ( moveSuccess == false )
 			{
-				m_moveState = STATE_IDLE;
+				stopMove();
+				m_moveState = STATE_BLOCK;
 				onPathBeBlock();
 			}
 		}

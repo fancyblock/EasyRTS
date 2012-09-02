@@ -15,6 +15,7 @@ package gameObj
 		
 		static public var STATE_NROMAL:int = 0;
 		static public var STATE_DEAD:int = 1;
+		static public var STATE_REMOVE:int = 2;
 		
 		//------------------------------ private member ------------------------------------
 		

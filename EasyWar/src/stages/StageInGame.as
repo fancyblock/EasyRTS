@@ -22,6 +22,7 @@ package stages
 		//TODO
 		
 		static protected const SELF_GROUP:int = 0;
+		static protected const ENEMY_GROUP:int = 1;
 		
 		static protected const SCROLL_UP:int = 0;
 		static protected const SCROLL_DOWN:int = 1;
@@ -134,6 +135,7 @@ package stages
 			m_battlefield.AddGameObject( new Tank(), 7, 5 );
 			m_battlefield.AddGameObject( new Tank(), 8, 8 );
 			m_battlefield.AddGameObject( new Tank(), 8, 9 );
+			m_battlefield.AddGameObject( new Tank(), 13, 5, ENEMY_GROUP );
 			//[hack]
 			
 			// set game state

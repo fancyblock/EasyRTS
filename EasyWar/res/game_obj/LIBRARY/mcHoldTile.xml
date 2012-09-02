@@ -1,0 +1,38 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="mcHoldTile" itemID="50437f86-00000020" linkageExportForAS="true" linkageClassName="mcHoldTile" sourceLibraryItemHRef="元件 1" lastModified="1346601254" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="mcHoldTile">
+      <layers>
+        <DOMLayer name="图层 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFCC"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!408 483|326 483!326 483|326 350!326 350|302 350!302 350|302 483!302 483|219 483!219 483|219 167!219 167|302 167!302 167|302 280!302 280|326 280!326 280|326 167!326 167|408 167!408 167|408 483"/>
+                    <Edge fillStyle0="1" edges="!0 640|640 640!640 640|640 0!640 0|0 0!0 0|0 640"/>
+                    <Edge cubics="!0 0(;0,0 320,320 320,320q0 0 320 320);"/>
+                    <Edge cubics="!320 320(;320,320 640,640 640,640q320 320 640 640);"/>
+                    <Edge cubics="!640 640(;640,640 640,0 640,0q640 640 640 0);"/>
+                    <Edge cubics="!640 0(;640,0 0,0 0,0q640 0 0 0);"/>
+                    <Edge cubics="!0 640(;0,640 320,320 320,320q0 640 320 320);"/>
+                    <Edge cubics="!320 320(;320,320 640,0 640,0q320 320 640 0);"/>
+                    <Edge cubics="!0 0(0,0;0,0 0,640 0,640q0 0 0 640);"/>
+                    <Edge cubics="!0 640(;0,640 640,640 640,640q0 640 640 640)640,640;"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

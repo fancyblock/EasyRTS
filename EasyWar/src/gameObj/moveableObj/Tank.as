@@ -58,9 +58,7 @@ package gameObj.moveableObj
 			super.onAdd();
 			
 			// initial the display stuff
-			m_display = new Sprite();
-			m_imgBody = new mcTankBody();
-			m_imgGun = new mcTankGun();
+			setTankDisplay();
 			
 			m_display.addChild( m_imgBody );
 			m_display.addChild( m_imgGun );
@@ -96,12 +94,32 @@ package gameObj.moveableObj
 		 */
 		override public function onDirectionChanged( newDir:Point ):void
 		{
+			super.onDirectionChanged( newDir );
+			
 			// update the tank body rotation
 			m_imgBody.rotation = MathCalculator.VectorToAngle( newDir );
 		}
 		
 		
 		//------------------------------ private function ----------------------------------
+		
+		
+		// set tank display
+		protected function setTankDisplay():void
+		{
+			m_display = new Sprite();
+			
+			if ( m_group == 0 )
+			{
+				m_imgBody = new mcTankBody();
+				m_imgGun = new mcTankGun();
+			}
+			else
+			{
+				m_imgBody = new mcTankBody02();
+				m_imgGun = new mcTankGun02();
+			}
+		}
 		
 		
 		//------------------------------- event callback -----------------------------------

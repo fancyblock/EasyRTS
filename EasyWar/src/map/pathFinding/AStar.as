@@ -348,7 +348,7 @@ package map.pathFinding
 		
 		protected function calculateH( node:GridInfo, dest:Point ):int
 		{
-			return 10 * ( Math.abs( node._x - dest.x ) + Math.abs( node._y - dest.y ) );
+			return ( Math.abs( node._x - dest.x ) + Math.abs( node._y - dest.y ) );
 		}
 		
 		//------------------------------- event callback -----------------------------------

@@ -204,14 +204,31 @@ package gameComponent
 			{
 				m_unitList[i].Update( elapsed );
 				
-				if ( ( m_unitList[i] as MapItem ).STATE == Unit.STATE_DEAD )
+				if ( ( m_unitList[i] as Unit ).STATE == Unit.STATE_DEAD )
+				{
+					( m_unitList[i] as Unit ).STATE = Unit.STATE_REMOVE;
+				}
+				
+				if ( ( m_unitList[i] as Unit ).STATE == Unit.STATE_REMOVE )
 				{
 					deadList.push( m_unitList[i] );
 				}
+				
+				//TODO  ( remove the unit that should be remove )
 			}
 			
 			// clean the dead item
 			//TODO 
+			
+			
+			//----------------- debug code -------------------
+			
+			if ( GlobalWork.DEBUG_MODE == true )
+			{
+				m_map.UpdateMapBitmap( m_mapBG, new Rectangle( -m_mapOffset.x, -m_mapOffset.y, m_viewportSize.x, m_viewportSize.y ) );
+			}
+			
+			//----------------- debug code -------------------
 		}
 		
 		

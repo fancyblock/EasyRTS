@@ -4,6 +4,7 @@
           <Include href="lifeBarFrame.xml" loadImmediate="false"/>
           <Include href="mcBlankTile.xml"/>
           <Include href="mcBlockTile.xml"/>
+          <Include href="mcHoldTile.xml"/>
           <Include href="mcLifeBar.xml"/>
           <Include href="mcLifeInc.xml" loadImmediate="false"/>
           <Include href="mcTankGun.xml"/>
@@ -48,6 +49,14 @@
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="1.2" y="1.2"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="mcHoldTile" name="" selected="true" cacheAsBitmap="true" centerPoint3DX="221.95" centerPoint3DY="30">
+                                             <matrix>
+                                                  <Matrix tx="205.95" ty="14"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="16" y="16"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
                                    </elements>
@@ -408,6 +417,7 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="2918" publishTime="1346600893"/>
           <PublishItem publishSize="2819" publishTime="1346582179"/>
           <PublishItem publishSize="2816" publishTime="1346582163"/>
           <PublishItem publishSize="2752" publishTime="1346571014"/>
@@ -427,6 +437,5 @@
           <PublishItem publishSize="2228" publishTime="1346513246"/>
           <PublishItem publishSize="2210" publishTime="1346513112"/>
           <PublishItem publishSize="2192" publishTime="1346512944"/>
-          <PublishItem publishSize="2397" publishTime="1346512301"/>
      </publishHistory>
 </DOMDocument>
