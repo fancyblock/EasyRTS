@@ -43,12 +43,11 @@ package mapItem
 		 * @param	yPos
 		 * @return	success or fail
 		 */
-		public function SetPosition( xPos:Number, yPos:Number ):Boolean
+		override public function SetPosition( xPos:Number, yPos:Number ):void
 		{
 			if ( m_map == null )
 			{
 				throw new Error( "[MapItem]: can not set the position, owner map doesn't exist" );
-				return;
 			}
 			
 			var gridInfo:GridInfo = null;
@@ -74,8 +73,6 @@ package mapItem
 				throw new Error( "[MapItem]: Error Can not put on an anti-blank grid" );
 			}
 			gridInfo.SetMapItem( this );
-			
-			return true;
 		}
 		
 		

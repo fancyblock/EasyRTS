@@ -1,8 +1,10 @@
 package gameObj 
 {
 	import flash.display.DisplayObjectContainer;
+	import flash.display.Sprite;
 	import flash.geom.Point;
 	import gameComponent.Command;
+	import gameComponent.IUnitHost;
 	import map.GridMap;
 	
 	/**
@@ -19,7 +21,11 @@ package gameObj
 		
 		//------------------------------ private member ------------------------------------
 		
+		protected var m_unitHost:IUnitHost = null;
+		
 		protected var m_position:Point = null;
+		protected var m_display:Sprite = null;
+		protected var m_velocity:Number = 0;
 		
 		protected var m_map:GridMap = null;
 		protected var m_group:int = 0;
@@ -39,6 +45,18 @@ package gameObj
 		{
 			m_position = new Point();
 			m_state = STATE_NROMAL;
+			
+			m_display = new Sprite();
+		}
+		
+		
+		/**
+		 * @desc	set unithoset
+		 * @param	unitHost
+		 */
+		public function SetUnitHost( unitHost:IUnitHost ):void
+		{
+			m_unitHost = unitHost;
 		}
 		
 		
@@ -99,18 +117,39 @@ package gameObj
 		}
 		
 		
+		/**
+		 * @desc	set the position
+		 * @param	xPos
+		 * @param	yPos
+		 * @return
+		 */
+		public function SetPosition( xPos:Number, yPos:Number ):void
+		{
+			m_position.x = xPos;
+			m_position.y = yPos;
+		}
+		
+		
 		/* INTERFACE gameObj.IGameObject */
 		
 		public function Update(elapsed:Number):void 
 		{
+			// update the display stuff
+			m_display.x = this.POSITION.x;
+			m_display.y = this.POSITION.y;
 		}
 		
 		public function onAdd():void 
 		{
+			m_display.x = m_position.x;
+			m_display.y = m_position.y;
+			
+			m_canvas.addChild( m_display );
 		}
 		
 		public function onRemove():void 
 		{
+			m_canvas.removeChild( m_display );
 		}
 		
 		

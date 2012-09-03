@@ -3,6 +3,8 @@ package gameObj.moveableObj
 	import flash.display.MovieClip;
 	import flash.display.Sprite;
 	import flash.geom.Point;
+	import gameObj.Unit;
+	import gameObj.weapons.Cannonball;
 	import Utility.MathCalculator;
 	
 	/**
@@ -13,11 +15,10 @@ package gameObj.moveableObj
 	{
 		//------------------------------ static member -------------------------------------
 		
-		static protected const TANK_SPEED:Number = 5.0;
+		static protected const TANK_SPEED:Number = 6.0;
 		
 		//------------------------------ private member ------------------------------------
 		
-		protected var m_display:Sprite = null;
 		protected var m_imgBody:MovieClip = null;
 		protected var m_imgGun:Sprite = null;
 		
@@ -31,6 +32,7 @@ package gameObj.moveableObj
 			super();
 			
 			this.VELOCITY = TANK_SPEED;
+			m_firingRange = 180;
 		}
 		
 		
@@ -41,10 +43,6 @@ package gameObj.moveableObj
 		override public function Update( elapsed:Number ):void
 		{
 			super.Update( elapsed );
-			
-			// update the display stuff
-			m_display.x = this.POSITION.x;
-			m_display.y = this.POSITION.y;
 			
 			//TODO 
 		}
@@ -64,8 +62,6 @@ package gameObj.moveableObj
 			m_display.addChild( m_imgGun );
 			m_display.addChild( m_lifeBar );
 			
-			this.m_canvas.addChild( m_display );
-			
 			m_display.x = this.POSITION.x;
 			m_display.y = this.POSITION.y;
 			
@@ -81,8 +77,6 @@ package gameObj.moveableObj
 		override public function onRemove():void
 		{
 			super.onRemove();
-			
-			this.m_canvas.removeChild( m_display );
 			
 			//TODO
 		}
@@ -101,14 +95,31 @@ package gameObj.moveableObj
 		}
 		
 		
+		/**
+		 * @desc	fire to the enemy
+		 * @param	unit
+		 */
+		override public function onFire( unit:Unit ):void 
+		{
+			super.onFire( unit );
+			
+			// set the tank gun angle
+			m_imgGun.rotation = MathCalculator.VectorToAngle( new Point( unit.POSITION.x - m_position.x, unit.POSITION.y - m_position.y ) );
+			
+			// shoot to the enemy
+			var cannonBall:Cannonball = new Cannonball();
+			cannonBall.SetDest( unit.POSITION.x, unit.POSITION.y );
+			
+			m_unitHost.AddGameObject( cannonBall, m_position.x, m_position.y, this.GROUP );
+		}
+		
+		
 		//------------------------------ private function ----------------------------------
 		
 		
 		// set tank display
 		protected function setTankDisplay():void
 		{
-			m_display = new Sprite();
-			
 			if ( m_group == 0 )
 			{
 				m_imgBody = new mcTankBody();

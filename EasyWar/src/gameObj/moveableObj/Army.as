@@ -3,6 +3,7 @@ package gameObj.moveableObj
 	import flash.geom.Point;
 	import gameComponent.Command;
 	import gameComponent.LifeBar;
+	import gameObj.Unit;
 	import map.GridInfo;
 	import mapItem.MapItem;
 	import mapItem.MoveableItem;
@@ -15,6 +16,11 @@ package gameObj.moveableObj
 	{
 		//------------------------------ static member -------------------------------------
 		
+		static protected const STATE_ARMY_IDLE:int = 0;
+		static protected const STATE_ARMY_MOVE:int = 1;
+		static protected const STATE_ARMY_ATTACK:int = 2;
+		static protected const STATE_ARMY_ALERT:int = 3;
+		
 		static protected const BLOCK_WAIT_TIME:int = 13;				// magic number
 		
 		//------------------------------ private member ------------------------------------
@@ -26,6 +32,12 @@ package gameObj.moveableObj
 		
 		protected var m_pathBlocked:Boolean = false;
 		protected var m_waitCounter:int = 0;
+		
+		protected var m_armyState:int = 0;
+		
+		protected var m_firingRange:Number = 100;
+		protected var m_fireColdDownTime:int = 30;
+		protected var m_fireColdDownCounter:int = 0;
 		
 		//------------------------------ public function -----------------------------------
 		
@@ -40,6 +52,9 @@ package gameObj.moveableObj
 			m_lifeBar = new LifeBar();
 			m_lifeBar.x = 0;
 			m_lifeBar.y = 0;
+			
+			// initial state
+			m_armyState = STATE_ARMY_IDLE;
 		}
 		
 		
@@ -86,24 +101,68 @@ package gameObj.moveableObj
 						}
 						
 						this.PATH = path;
+						
+						m_armyState = STATE_ARMY_MOVE;
 					}
 					else
 					{
-						//TODO [maybe bug]
+						//TODO
+						
+						trace( "[Army]: can not find the path" );
 					}
 				}
 				
 				// attack an enemy
 				if ( m_command._type == Command.CMD_ATTACK )
 				{
+					m_pathBlocked = false;
+					this.stopMove();
+					
 					m_enemyUnit = m_command._aim;
 					
 					//TODO 
+					
+					m_armyState = STATE_ARMY_ATTACK;
 				}
 				
 				m_command = null;
 			}
 			
+			// attack behavior
+			if ( m_armyState == STATE_ARMY_ATTACK )
+			{
+				if ( m_enemyUnit.STATE == Unit.STATE_DEAD || m_enemyUnit.STATE == Unit.STATE_REMOVE )
+				{
+					m_enemyUnit = null;
+					
+					m_pathBlocked = false;
+					this.stopMove();
+					m_armyState = STATE_ARMY_IDLE;
+				}
+				else
+				{
+					if ( isUnitInFiringRange( m_enemyUnit ) == true )
+					{
+						if ( m_fireColdDownCounter == 0 )
+						{
+							onFire( m_enemyUnit );
+							m_fireColdDownCounter = m_fireColdDownTime;
+						}
+					}
+					else
+					{
+						//TODO 
+					}
+				}
+			}
+			
+			// fire colddown
+			if ( m_fireColdDownCounter > 0 )
+			{
+				m_fireColdDownCounter--;
+			}
+			
+			// move block 
 			if ( m_pathBlocked == true )
 			{
 				m_waitCounter++;
@@ -116,7 +175,7 @@ package gameObj.moveableObj
 				}
 			}
 			
-			//TODO 
+			// 
 		}
 		
 		
@@ -141,7 +200,30 @@ package gameObj.moveableObj
 		}
 		
 		
+		/**
+		 * @desc	behavior callback functions
+		 * @param	unit
+		 * @return
+		 */
+		public function onFire( unit:Unit ):void { }
+		
+		
 		//------------------------------ private function ----------------------------------
+		
+		// judge if the unit is in firing range
+		protected function isUnitInFiringRange( unit:Unit ):Boolean
+		{
+			var xOffset:Number = unit.POSITION.x - m_position.x;
+			var yOffset:Number = unit.POSITION.y - m_position.y;
+			var distance:Number = Math.sqrt( ( xOffset * xOffset ) + ( yOffset * yOffset ) );
+			
+			if ( distance <= m_firingRange )
+			{
+				return true;
+			}
+			
+			return false;
+		}
 		
 		//------------------------------- event callback -----------------------------------
 		

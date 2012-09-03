@@ -75,13 +75,6 @@ package map
 				var randX:int = Math.random() * wid;
 				var randY:int = Math.random() * hei;
 				
-				//[hack]
-				if ( randX == 5 && randY == 5 )
-				{
-					continue;
-				}
-				//[hack]
-				
 				addBlock( gridMap, randX, randY, Math.random() * 5 + 3 );
 			}
 			

@@ -14,7 +14,8 @@ package gameComponent
 		static public const CMD_NONE:int = 0;		// default command , no command
 		static public const CMD_MOVE:int = 1;
 		static public const CMD_ATTACK:int = 2;
-		static public const CMD_PRODUCE:int = 3;
+		static public const CMD_OCCUPY:int = 3;
+		static public const CMD_PRODUCE:int = 4;
 		
 		//------------------------------ private member ------------------------------------
 		

@@ -15,7 +15,7 @@ package gameComponent
 	 * ...
 	 * @author Hejiabin
 	 */
-	public class Battlefield 
+	public class Battlefield implements IUnitHost
 	{
 		//------------------------------ static member -------------------------------------
 		
@@ -180,12 +180,13 @@ package gameComponent
 		 * @desc	add game object	to the map ( grid coordinate )
 		 * @param	gameObj
 		 */
-		public function AddGameObject( unit:MapItem, xPos:int, yPos:int, group:int = 0 ):void
+		public function AddGameObject( unit:Unit, xPos:Number, yPos:Number, group:int ):void
 		{
+			unit.SetUnitHost( this );
 			unit.SetMap( m_map );
 			unit.SetCanvas( m_mapCanvas );
 			unit.GROUP = group;
-			unit.SetPosition( ( xPos + 0.5 ) * m_map.GRID_SIZE, ( yPos + 0.5 ) * m_map.GRID_SIZE );
+			unit.SetPosition( xPos, yPos );
 			unit.onAdd();
 			
 			m_unitList.push( unit );
@@ -198,9 +199,10 @@ package gameComponent
 		 */
 		public function Update( elapsed:Number ):void
 		{
-			var deadList:Array = new Array();
+			var i:int;
+			var removeList:Array = new Array();
 			
-			for ( var i:int = 0; i < m_unitList.length; i++ )
+			for ( i = 0; i < m_unitList.length; i++ )
 			{
 				m_unitList[i].Update( elapsed );
 				
@@ -208,17 +210,19 @@ package gameComponent
 				{
 					( m_unitList[i] as Unit ).STATE = Unit.STATE_REMOVE;
 				}
-				
-				if ( ( m_unitList[i] as Unit ).STATE == Unit.STATE_REMOVE )
+				else if ( ( m_unitList[i] as Unit ).STATE == Unit.STATE_REMOVE )
 				{
-					deadList.push( m_unitList[i] );
+					removeList.push( m_unitList[i] );
 				}
 				
-				//TODO  ( remove the unit that should be remove )
 			}
 			
-			// clean the dead item
-			//TODO 
+			// remove the unit
+			for ( i = 0; i < removeList.length; i++ )
+			{
+				removeList[i].onRemove();
+				m_unitList.splice( m_unitList.indexOf( removeList[i] ), 1 );
+			}
 			
 			
 			//----------------- debug code -------------------
@@ -379,6 +383,19 @@ package gameComponent
 			}
 			else if ( gridInfo._type == GridInfo.BLANK )
 			{
+				/*
+				// move command 
+				if ( m_selectedUnit.length > 1 )
+				{
+					//TODO 
+				}
+				else
+				{
+					command._type = Command.CMD_MOVE;
+					command._destGrid = gridInfo;
+				}
+				*/
+				
 				command._type = Command.CMD_MOVE;
 				command._destGrid = gridInfo;
 			}

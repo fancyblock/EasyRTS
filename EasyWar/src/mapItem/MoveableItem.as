@@ -17,7 +17,6 @@ package mapItem
 		
 		//------------------------------ private member ------------------------------------
 		
-		protected var m_velocity:Number = 0;
 		protected var m_moveVector:Point = null;
 		
 		protected var m_path:Vector.<GridInfo> = null;

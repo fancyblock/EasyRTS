@@ -129,13 +129,13 @@ package stages
 									VIEWPORT_HEIGHT / m_battlefield.MAP.MAP_SIZE_HEIGHT );
 			
 			//[hack]
-			m_battlefield.AddGameObject( new Tank(), 5, 5 );
-			m_battlefield.AddGameObject( new Tank(), 5, 6 );
-			m_battlefield.AddGameObject( new Tank(), 5, 7 );
-			m_battlefield.AddGameObject( new Tank(), 7, 5 );
-			m_battlefield.AddGameObject( new Tank(), 8, 5 );
-			m_battlefield.AddGameObject( new Tank(), 5, 8 );
-			m_battlefield.AddGameObject( new Tank(), 13, 5, ENEMY_GROUP );
+			m_battlefield.AddGameObject( new Tank(), 5.5*m_battlefield.MAP.GRID_SIZE, 5.5*m_battlefield.MAP.GRID_SIZE, SELF_GROUP );
+			m_battlefield.AddGameObject( new Tank(), 5.5*m_battlefield.MAP.GRID_SIZE, 6.5*m_battlefield.MAP.GRID_SIZE, SELF_GROUP );
+			m_battlefield.AddGameObject( new Tank(), 5.5*m_battlefield.MAP.GRID_SIZE, 7.5*m_battlefield.MAP.GRID_SIZE, SELF_GROUP );
+			m_battlefield.AddGameObject( new Tank(), 7.5*m_battlefield.MAP.GRID_SIZE, 5.5*m_battlefield.MAP.GRID_SIZE, SELF_GROUP );
+			m_battlefield.AddGameObject( new Tank(), 8.5*m_battlefield.MAP.GRID_SIZE, 5.5*m_battlefield.MAP.GRID_SIZE, SELF_GROUP );
+			m_battlefield.AddGameObject( new Tank(), 5.5*m_battlefield.MAP.GRID_SIZE, 8.5*m_battlefield.MAP.GRID_SIZE, SELF_GROUP );
+			m_battlefield.AddGameObject( new Tank(), 13.5*m_battlefield.MAP.GRID_SIZE, 5.5*m_battlefield.MAP.GRID_SIZE, ENEMY_GROUP );
 			//[hack]
 			
 			// set game state
