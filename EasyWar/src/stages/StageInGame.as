@@ -133,8 +133,8 @@ package stages
 			m_battlefield.AddGameObject( new Tank(), 5, 6 );
 			m_battlefield.AddGameObject( new Tank(), 5, 7 );
 			m_battlefield.AddGameObject( new Tank(), 7, 5 );
-			m_battlefield.AddGameObject( new Tank(), 8, 8 );
-			m_battlefield.AddGameObject( new Tank(), 8, 9 );
+			m_battlefield.AddGameObject( new Tank(), 8, 5 );
+			m_battlefield.AddGameObject( new Tank(), 5, 8 );
 			m_battlefield.AddGameObject( new Tank(), 13, 5, ENEMY_GROUP );
 			//[hack]
 			

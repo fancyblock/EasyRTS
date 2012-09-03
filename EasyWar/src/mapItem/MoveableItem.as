@@ -14,7 +14,6 @@ package mapItem
 		
 		static protected const STATE_IDLE:int = 0;
 		static protected const STATE_MOVE:int = 1;
-		static protected const STATE_BLOCK:int = 2;
 		
 		//------------------------------ private member ------------------------------------
 		
@@ -138,9 +137,19 @@ package mapItem
 		// set to position
 		protected function setToPosition():void
 		{
-			m_curGrid.SetBlank();
-			m_nextGrid.SetBlank();
-			this.SetPosition( m_position.x, m_position.y );
+			if ( m_curGrid != null )
+			{
+				m_curGrid.SetBlank();
+				m_curGrid = null;
+			}
+			
+			if ( m_nextGrid != null )
+			{
+				m_nextGrid.SetBlank();
+				m_nextGrid = null;
+			}
+			
+			SetPosition( m_position.x, m_position.y );
 		}
 		
 		// stop move
@@ -165,7 +174,6 @@ package mapItem
 			if ( moveSuccess == false )
 			{
 				stopMove();
-				m_moveState = STATE_BLOCK;
 				onPathBeBlock();
 			}
 		}

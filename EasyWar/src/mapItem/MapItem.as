@@ -69,6 +69,10 @@ package mapItem
 			
 			// set the new item info
 			gridInfo = m_map.GetGridInfo( newGridPosX, newGridPosY );
+			if ( gridInfo._coverItem != null && gridInfo._coverItem != this )
+			{
+				throw new Error( "[MapItem]: Error Can not put on an anti-blank grid" );
+			}
 			gridInfo.SetMapItem( this );
 			
 			return true;

@@ -70,11 +70,8 @@ package gameObj.moveableObj
 				// move to a dest
 				if ( m_command._type == Command.CMD_MOVE )
 				{
-					if ( m_moveState == STATE_MOVE || m_moveState == STATE_BLOCK )
-					{
-						m_pathBlocked = false;
-						this.stopMove();
-					}
+					m_pathBlocked = false;
+					this.stopMove();
 					
 					var orgPath:Array = this.findPath( new Point( m_command._destGrid._x, m_command._destGrid._y ) );
 					
