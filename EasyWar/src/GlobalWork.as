@@ -6,7 +6,7 @@ package
 	 */
 	public class GlobalWork 
 	{
-		static public const DEBUG_MODE:Boolean = false;
+		static public const DEBUG_MODE:Boolean = true;
 		
 		//TODO 
 	}

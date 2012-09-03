@@ -272,6 +272,7 @@ package map
 			var blockTile:Sprite = new mcBlockTile();
 			var blankTile:Sprite = new mcBlankTile();
 			var holdTile:Sprite = new mcHoldTile();
+			var unitTile:Sprite = new mcUnitTile();
 			
 			for ( var i:int = startPosX; i <= endPosX; i++ )
 			{
@@ -297,7 +298,7 @@ package map
 					
 					if ( m_mapData[i][j]._type == GridInfo.UNIT )
 					{
-						bitmapData.draw( blankTile, translate );
+						bitmapData.draw( unitTile, translate );
 					}
 				}
 			}

@@ -26,12 +26,13 @@
                     <Edge fillStyle0="1" strokeStyle="1" edges="!635 0|0 0"/>
                     <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!635 5|640 0"/>
                     <Edge fillStyle0="1" strokeStyle="1" edges="!640 0|635 0"/>
-                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!0 635|5 635!5 635|320 320"/>
-                    <Edge fillStyle0="1" strokeStyle="1" edges="!0 635|0 640"/>
-                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!0 640|5 635!635 640|635 635!635 635|5 635!640 640|635 635"/>
-                    <Edge fillStyle0="1" strokeStyle="1" edges="!635 640|640 640!0 0|0 635"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!0 640|5 635!5 635|0 635"/>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!0 635|0 640!635 640|640 640"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!640 640|635 635!635 635|635 640"/>
+                    <Edge fillStyle0="1" edges="!0 640|635 640!640 640|640 0"/>
                     <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!320 320|635 635!635 635|635 5"/>
-                    <Edge fillStyle0="1" edges="!640 640|640 0!0 640|635 640"/>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!0 0|0 635"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!635 635|5 635!5 635|320 320"/>
                     <Edge cubics="!0 0(;0,0 320,320 320,320q0 0 320 320);"/>
                     <Edge cubics="!320 320(;320,320 635,635 635,635q320 320 635 635);"/>
                     <Edge cubics="!635 635(;635,635 640,640 640,640q635 635 640 640)640,640;"/>
