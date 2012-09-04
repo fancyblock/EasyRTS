@@ -1,6 +1,7 @@
 package mapItem 
 {
 	import flash.geom.Point;
+	import gameComponent.LifeBar;
 	import gameObj.Unit;
 	import map.GridInfo;
 	
@@ -16,6 +17,8 @@ package mapItem
 		
 		protected var m_gridCoordinate:Point = null;
 		
+		protected var m_lifeBar:LifeBar = null;
+		
 		//------------------------------ public function -----------------------------------
 		
 		
@@ -25,6 +28,12 @@ package mapItem
 		public function MapItem() 
 		{
 			m_gridCoordinate = new Point();
+			
+			// initial the lifebar
+			m_lifeBar = new LifeBar();
+			m_lifeBar.x = 0;
+			m_lifeBar.y = 0;
+			m_lifeBar.visible = false;
 		}
 		
 		
@@ -34,6 +43,28 @@ package mapItem
 		public function get GRID_COORDINATE():Point
 		{
 			return m_gridCoordinate;
+		}
+		
+		
+		/**
+		 * @desc	getter & setter of the life
+		 */
+		override public function set LIFE( value:Number ):void 
+		{
+			super.LIFE = value;
+			
+			m_lifeBar.SetLife( m_lifeValue / m_maxLifeValue );
+		}
+		
+		
+		/**
+		 * @desc	select
+		 */
+		override public function set SELECTED( value:Boolean ):void
+		{ 
+			super.SELECTED = value;
+			
+			m_lifeBar.visible = this.SELECTED;
 		}
 		
 		
@@ -73,6 +104,29 @@ package mapItem
 				throw new Error( "[MapItem]: Error Can not put on an anti-blank grid" );
 			}
 			gridInfo.SetMapItem( this );
+		}
+		
+		
+		/**
+		 * @desc	callback when add to map
+		 */
+		override public function onAdd():void 
+		{
+			super.onAdd();
+			
+			//TODO 
+		}
+		
+		
+		/**
+		 * @desc	callback when remove from map
+		 */
+		override public function onRemove():void 
+		{	
+			// remove from map
+			m_map.GetGridInfo( m_gridCoordinate.x, m_gridCoordinate.y ).SetBlank();
+			
+			super.onRemove();
 		}
 		
 		

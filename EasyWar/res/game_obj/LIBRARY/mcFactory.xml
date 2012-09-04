@@ -1,0 +1,82 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="mcFactory" itemID="5045c3fc-000001f2" linkageExportForAS="true" linkageClassName="mcFactory01" sourceLibraryItemHRef="元件 1" lastModified="1346752973">
+  <timeline>
+    <DOMTimeline name="mcFactory">
+      <layers>
+        <DOMLayer name="图层 2" color="#9933CC" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!29 -76[22 -66 9 -66!9 -66[-5 -66 -12 -78!-12 -78[-16 -85 -16 -92!-16 -92[-16 -118 9 -116!9 -116[34 -114 34 -91!34 -91[34 -84 29 -76!189 -121[214 -119 214 -96!214 -96[214 -89 209 -81!209 -81[202 -71 189 -71!189 -71[175 -71 168 -83!168
+ -83[164 -90 164 -97!164 -97[164 -123 189 -121"/>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="
+!92 -336|-88 -156!-88 -156|-88 -336!-88 -336|-268 -156!-268 -156|-268 304!-268 304|272 304!272 304|272 -316!272 -316|92 -156!92 -156|92 -336"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="
+!-148 -83[-148 -76 -153 -68!-153 -68[-160 -58 -173 -58!-173 -58[-187 -58 -194 -70!-194 -70[-198 -82 -198 -83!-198 -83[-198 -109 -173 -109!-173 -109[-148 -109 -148 -83"/>
+                    <Edge cubics="!272 304(;272,304 272,-316 272,-316q272 304p272 -316);"/>
+                    <Edge cubics="!272 -316(;272,-316 92,-156 92,-156q272 -316 92 -156);"/>
+                    <Edge cubics="!92 -156(;92,-156 92,-336 92,-336q92 -156 92 -336);"/>
+                    <Edge cubics="!92 -336(;92,-336 -88,-156 -88,-156q92 -336 -88 -156);"/>
+                    <Edge cubics="!-88 -156(;-88,-156 -88,-336 -88,-336q-88 -156 -88 -336);"/>
+                    <Edge cubics="!-88 -336(;-88,-336 -268,-156 -268,-156q-88 -336 -268 -156);"/>
+                    <Edge cubics="!-268 -156(;-268,-156 -268,304 -268,304q-268 -156 -268 304);"/>
+                    <Edge cubics="!-268 304(;-268,304 272,304 272,304q-268 304 272 304);"/>
+                    <Edge cubics="!-148 -83(;-148,-77 -153,-58 -173,-58q-148 -83Q-148 -76q-153 -68Q-160 -58q-173 -58);"/>
+                    <Edge cubics="!-173 -58(;-196,-58 -198,-82 -198,-83q-173 -58Q-187 -58q-194 -70Q-198 -82q-198 -83);"/>
+                    <Edge cubics="!-198 -83(;-198,-118 -148,-118 -148,-83q-198 -83Q-198 -109q-173 -109Q-148 -109q-148 -83);"/>
+                    <Edge cubics="!34 -91(;34,-85 29,-66 9,-66q34 -91Q34 -84q29 -76Q22 -66q9 -66);"/>
+                    <Edge cubics="!9 -66(;-14,-66 -16,-90 -16,-92q9 -66Q-5 -66q-12 -78Q-16 -85q-16 -92)-16,-92;"/>
+                    <Edge cubics="!-16 -92(-16,-92;-16,-128 34,-120 34,-91q-16 -92Q-16 -118q9 -116Q34 -114q34 -91);"/>
+                    <Edge cubics="!214 -96(;214,-90 209,-71 189,-71q214 -96Q214 -89q209 -81Q202 -71q189 -71);"/>
+                    <Edge cubics="!189 -71(;166,-71 164,-95 164,-97q189 -71Q175 -71q168 -83Q164 -90q164 -97);"/>
+                    <Edge cubics="!164 -97(;164,-133 214,-125 214,-96q164 -97Q164 -123q189 -121Q214 -119q214 -96);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bg" color="#4FFF4F" locked="true" autoNamed="false" layerType="guide">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isFloating="true">
+                  <matrix>
+                    <Matrix tx="-16" ty="-16"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFCC33"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!0 0S2|640 0!640 0|640 640!640 640|0 640!0 640|0 0"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -6,6 +6,7 @@ package stages
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
 	import gameComponent.Battlefield;
+	import gameObj.building.Arsenal;
 	import gameObj.moveableObj.Tank;
 	import map.MiniMap;
 	import Utility.MathCalculator;
@@ -129,6 +130,7 @@ package stages
 									VIEWPORT_HEIGHT / m_battlefield.MAP.MAP_SIZE_HEIGHT );
 			
 			//[hack]
+			m_battlefield.AddGameObject( new Arsenal(), 3.5 * m_battlefield.MAP.GRID_SIZE, 3.5 * m_battlefield.MAP.GRID_SIZE, SELF_GROUP );
 			m_battlefield.AddGameObject( new Tank(), 5.5*m_battlefield.MAP.GRID_SIZE, 5.5*m_battlefield.MAP.GRID_SIZE, SELF_GROUP );
 			m_battlefield.AddGameObject( new Tank(), 5.5*m_battlefield.MAP.GRID_SIZE, 6.5*m_battlefield.MAP.GRID_SIZE, SELF_GROUP );
 			m_battlefield.AddGameObject( new Tank(), 5.5*m_battlefield.MAP.GRID_SIZE, 7.5*m_battlefield.MAP.GRID_SIZE, SELF_GROUP );

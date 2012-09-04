@@ -1,4 +1,4 @@
-<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" gridSpacingX="1" gridSpacingY="1" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" gridSpacingX="1" gridSpacingY="1" gridSnapTo="true" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
      <symbols>
           <Include href="boost.xml"/>
           <Include href="bullet.xml"/>
@@ -6,6 +6,7 @@
           <Include href="lifeBarFrame.xml" loadImmediate="false"/>
           <Include href="mcBlankTile.xml"/>
           <Include href="mcBlockTile.xml"/>
+          <Include href="mcFactory.xml"/>
           <Include href="mcHoldTile.xml"/>
           <Include href="mcLifeBar.xml"/>
           <Include href="mcLifeInc.xml" loadImmediate="false"/>
@@ -22,25 +23,25 @@
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="mcBlankTile" name="" cacheAsBitmap="true" centerPoint3DX="25" centerPoint3DY="25">
+                                        <DOMSymbolInstance libraryItemName="mcBlankTile" name="" cacheAsBitmap="true" centerPoint3DX="98" centerPoint3DY="25">
                                              <matrix>
-                                                  <Matrix tx="9" ty="9"/>
+                                                  <Matrix tx="82" ty="9"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="16" y="16"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="mcLifeBar" name="" centerPoint3DX="146.95" centerPoint3DY="46.45">
+                                        <DOMSymbolInstance libraryItemName="mcLifeBar" name="" centerPoint3DX="215.45" centerPoint3DY="46.45">
                                              <matrix>
-                                                  <Matrix tx="130.95" ty="30.45"/>
+                                                  <Matrix tx="199.45" ty="30.45"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="16" y="16"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="mcBlockTile" name="" centerPoint3DX="73.35" centerPoint3DY="25">
+                                        <DOMSymbolInstance libraryItemName="mcBlockTile" name="" centerPoint3DX="146.85" centerPoint3DY="25">
                                              <matrix>
-                                                  <Matrix tx="57.35" ty="9"/>
+                                                  <Matrix tx="130.85" ty="9"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="16" y="16"/>
@@ -54,17 +55,17 @@
                                                   <Point x="1.2" y="1.2"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="mcHoldTile" name="" cacheAsBitmap="true" centerPoint3DX="221.95" centerPoint3DY="30">
+                                        <DOMSymbolInstance libraryItemName="mcHoldTile" name="" cacheAsBitmap="true" centerPoint3DX="382.45" centerPoint3DY="30">
                                              <matrix>
-                                                  <Matrix tx="205.95" ty="14"/>
+                                                  <Matrix tx="366.45" ty="14"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="16" y="16"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="mcUnitTile" name="" cacheAsBitmap="true" centerPoint3DX="274.95" centerPoint3DY="28.95">
+                                        <DOMSymbolInstance libraryItemName="mcUnitTile" name="" cacheAsBitmap="true" centerPoint3DX="434.9" centerPoint3DY="28.95">
                                              <matrix>
-                                                  <Matrix tx="258.95" ty="12.95"/>
+                                                  <Matrix tx="418.9" ty="12.95"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="16" y="16"/>
@@ -84,6 +85,14 @@
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="3.5" y="3.5"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="mcFactory" name="" centerPoint3DX="52.9" centerPoint3DY="41.8">
+                                             <matrix>
+                                                  <Matrix tx="36.9" ty="25.8"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="16" y="16"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
                                    </elements>
@@ -444,25 +453,9 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
-          <PublishItem publishSize="5517" publishTime="1346735503"/>
-          <PublishItem publishSize="3619" publishTime="1346735363"/>
-          <PublishItem publishSize="3624" publishTime="1346735297"/>
-          <PublishItem publishSize="3569" publishTime="1346732438"/>
-          <PublishItem publishSize="3377" publishTime="1346732405"/>
-          <PublishItem publishSize="3189" publishTime="1346732357"/>
-          <PublishItem publishSize="3183" publishTime="1346728007"/>
-          <PublishItem publishSize="3183" publishTime="1346669824"/>
-          <PublishItem publishSize="3026" publishTime="1346669636"/>
-          <PublishItem publishSize="3026" publishTime="1346669627"/>
-          <PublishItem publishSize="3004" publishTime="1346669610"/>
-          <PublishItem publishSize="3106" publishTime="1346644535"/>
-          <PublishItem publishSize="3101" publishTime="1346640849"/>
-          <PublishItem publishSize="2918" publishTime="1346600893"/>
-          <PublishItem publishSize="2819" publishTime="1346582179"/>
-          <PublishItem publishSize="2816" publishTime="1346582163"/>
-          <PublishItem publishSize="2752" publishTime="1346571014"/>
-          <PublishItem publishSize="2746" publishTime="1346570935"/>
-          <PublishItem publishSize="3211" publishTime="1346519411"/>
-          <PublishItem publishSize="3213" publishTime="1346519390"/>
+          <PublishItem publishSize="5699" publishTime="1346752978"/>
+          <PublishItem publishSize="5697" publishTime="1346750201"/>
+          <PublishItem publishSize="5697" publishTime="1346750198"/>
+          <PublishItem publishSize="5688" publishTime="1346750176"/>
      </publishHistory>
 </DOMDocument>

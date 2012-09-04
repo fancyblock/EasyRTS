@@ -2,6 +2,7 @@ package gameObj.weapons
 {
 	import flash.display.MovieClip;
 	import gameObj.Unit;
+	import gameObj.UnitTypes;
 	import mapItem.MapItem;
 	
 	/**
@@ -31,6 +32,8 @@ package gameObj.weapons
 		public function DeadArea() 
 		{
 			super();
+			
+			m_type = UnitTypes.TYPE_DEAD_AREA;
 		}
 		
 		
@@ -80,9 +83,9 @@ package gameObj.weapons
 		
 		override public function onRemove():void
 		{
-			super.onRemove();
-			
 			//TODO 
+			
+			super.onRemove();
 		}
 		
 		

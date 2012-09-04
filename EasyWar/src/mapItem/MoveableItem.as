@@ -141,12 +141,9 @@ package mapItem
 		
 		override public function onRemove():void
 		{
-			super.onRemove();
-			
 			stopMove();
 			
-			// remove from map
-			m_map.GetGridInfo( m_gridCoordinate.x, m_gridCoordinate.y ).SetBlank();
+			super.onRemove();
 		}
 		
 		

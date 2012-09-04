@@ -2,7 +2,6 @@ package gameObj.moveableObj
 {
 	import flash.geom.Point;
 	import gameComponent.Command;
-	import gameComponent.LifeBar;
 	import gameObj.Unit;
 	import map.GridInfo;
 	import mapItem.MapItem;
@@ -25,8 +24,6 @@ package gameObj.moveableObj
 		static protected const MAX_RETRACE_DISTANCE:Number = 60.0;		// THIS NUMBER IS FOR IF YOUR ENEMY ESCAPE FORM THE ORIGIN POSITION, RE FIND THE PATH TO TRACE IT
 		
 		//------------------------------ private member ------------------------------------
-		
-		protected var m_lifeBar:LifeBar = null;
 		
 		protected var m_destGrid:Point = null;
 		protected var m_enemyUnit:MapItem = null;
@@ -52,37 +49,10 @@ package gameObj.moveableObj
 		{
 			super();
 			
-			// initial the lifebar
-			m_lifeBar = new LifeBar();
-			m_lifeBar.x = 0;
-			m_lifeBar.y = 0;
-			
 			// initial state
 			m_armyState = STATE_ARMY_IDLE;
 			
 			m_currentTraceDest = new Point();
-		}
-		
-		
-		/**
-		 * @desc	getter & setter of the life
-		 */
-		override public function set LIFE( value:Number ):void 
-		{
-			super.LIFE = value;
-			
-			m_lifeBar.SetLife( m_lifeValue / m_maxLifeValue );
-		}
-		
-		
-		/**
-		 * @desc	select
-		 */
-		override public function set SELECTED( value:Boolean ):void
-		{ 
-			super.SELECTED = value;
-			
-			m_lifeBar.visible = this.SELECTED;
 		}
 		
 		

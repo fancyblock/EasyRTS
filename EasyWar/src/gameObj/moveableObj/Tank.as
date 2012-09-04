@@ -4,6 +4,7 @@ package gameObj.moveableObj
 	import flash.display.Sprite;
 	import flash.geom.Point;
 	import gameObj.Unit;
+	import gameObj.UnitTypes;
 	import gameObj.weapons.Cannonball;
 	import Utility.MathCalculator;
 	
@@ -37,6 +38,8 @@ package gameObj.moveableObj
 			m_firingRange = TANK_FIRINGRANGE;
 			m_maxLifeValue = TANK_LIFE_VALUE;
 			m_lifeValue = m_maxLifeValue;
+			
+			m_type = UnitTypes.TYPE_TANK;
 		}
 		
 		
@@ -71,8 +74,6 @@ package gameObj.moveableObj
 			
 			m_imgGun.rotation = 10;
 			
-			m_lifeBar.visible = false;
-			
 			// enemy always show the life bar
 			if ( this.GROUP != 0 )
 			{
@@ -85,14 +86,15 @@ package gameObj.moveableObj
 		 * @desc	callback when object be removed
 		 */
 		override public function onRemove():void
-		{
-			super.onRemove();
-			
+		{	
+			// play a boost animation on the map
 			var boostAni:MovieClip = new mcBoost();
 			boostAni.x = m_position.x;
 			boostAni.y = m_position.y;
 			m_canvas.addChild( boostAni );
 			boostAni.play();
+			
+			super.onRemove();
 		}
 		
 		

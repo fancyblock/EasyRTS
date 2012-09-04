@@ -3,6 +3,7 @@ package gameObj.weapons
 	import flash.display.Sprite;
 	import flash.geom.Point;
 	import gameObj.Unit;
+	import gameObj.UnitTypes;
 	
 	/**
 	 * ...
@@ -39,6 +40,8 @@ package gameObj.weapons
 			m_dest = new Point();
 			m_moveOffset = new Point();
 			m_velocity = VELOCITY;
+			
+			m_type = UnitTypes.TYPE_CANNONBALL;
 		}
 		
 		
@@ -118,9 +121,9 @@ package gameObj.weapons
 		
 		override public function onRemove():void 
 		{
-			super.onRemove();
-			
 			//TODO 
+			
+			super.onRemove();
 		}
 		
 		
