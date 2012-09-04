@@ -1,6 +1,6 @@
 <DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" gridSpacingX="1" gridSpacingY="1" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
-     <media/>
      <symbols>
+          <Include href="boost.xml"/>
           <Include href="bullet.xml"/>
           <Include href="deadArea.xml"/>
           <Include href="lifeBarFrame.xml" loadImmediate="false"/>
@@ -76,6 +76,14 @@
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="5" y="5"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="boost" name="" centerPoint3DX="172.95" centerPoint3DY="154.45">
+                                             <matrix>
+                                                  <Matrix tx="169.45" ty="150.95"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="3.5" y="3.5"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
                                    </elements>
@@ -436,6 +444,13 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="5517" publishTime="1346735503"/>
+          <PublishItem publishSize="3619" publishTime="1346735363"/>
+          <PublishItem publishSize="3624" publishTime="1346735297"/>
+          <PublishItem publishSize="3569" publishTime="1346732438"/>
+          <PublishItem publishSize="3377" publishTime="1346732405"/>
+          <PublishItem publishSize="3189" publishTime="1346732357"/>
+          <PublishItem publishSize="3183" publishTime="1346728007"/>
           <PublishItem publishSize="3183" publishTime="1346669824"/>
           <PublishItem publishSize="3026" publishTime="1346669636"/>
           <PublishItem publishSize="3026" publishTime="1346669627"/>
@@ -449,12 +464,5 @@
           <PublishItem publishSize="2746" publishTime="1346570935"/>
           <PublishItem publishSize="3211" publishTime="1346519411"/>
           <PublishItem publishSize="3213" publishTime="1346519390"/>
-          <PublishItem publishSize="3210" publishTime="1346519369"/>
-          <PublishItem publishSize="2509" publishTime="1346519331"/>
-          <PublishItem publishSize="2386" publishTime="1346514668"/>
-          <PublishItem publishSize="2388" publishTime="1346513648"/>
-          <PublishItem publishSize="2348" publishTime="1346513591"/>
-          <PublishItem publishSize="2347" publishTime="1346513483"/>
-          <PublishItem publishSize="2325" publishTime="1346513466"/>
      </publishHistory>
 </DOMDocument>

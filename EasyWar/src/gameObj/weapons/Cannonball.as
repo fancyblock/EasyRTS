@@ -129,7 +129,11 @@ package gameObj.weapons
 		// boost
 		protected function boost():void
 		{
-			//TODO 
+			// boost the cannonball
+			var boost:DeadArea = new DeadArea();
+			boost.SetForce( m_force );
+			
+			m_unitHost.AddGameObject( boost, m_position.x, m_position.y, this.GROUP );
 		}
 		
 		//------------------------------- event callback -----------------------------------

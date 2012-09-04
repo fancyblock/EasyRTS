@@ -36,6 +36,9 @@ package gameObj
 		
 		protected var m_canvas:DisplayObjectContainer = null;
 		
+		protected var m_lifeValue:Number = 0;
+		protected var m_maxLifeValue:Number = 0;
+		
 		//------------------------------ public function -----------------------------------
 		
 		/**
@@ -96,6 +99,24 @@ package gameObj
 		 */
 		public function set SELECTED( value:Boolean ):void { m_isSelected = value; }
 		public function get SELECTED():Boolean { return m_isSelected; }
+		
+		
+		/**
+		 * @desc	getter & setter of the life
+		 */
+		public function get LIFE():Number { return m_lifeValue; }
+		public function set LIFE( value:Number ):void 
+		{
+			if ( value <= 0 )
+			{
+				m_lifeValue = 0;
+				m_state = STATE_DEAD;
+			}
+			else
+			{
+				m_lifeValue = value;
+			}
+		}
 		
 		
 		/**

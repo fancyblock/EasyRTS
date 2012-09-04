@@ -9,7 +9,7 @@ package map.pathFinding
 	 */
 	public interface IPathFinder 
 	{
-		function GetPath(map:GridMap, src:Point, dest:Point):Array; 
+		function GetPath(map:GridMap, src:Point, dest:Point, omitDest:Boolean = false ):Array; 
 	}
 	
 }

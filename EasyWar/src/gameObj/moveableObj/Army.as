@@ -22,6 +22,7 @@ package gameObj.moveableObj
 		static protected const STATE_ARMY_ALERT:int = 3;
 		
 		static protected const BLOCK_WAIT_TIME:int = 13;				// magic number
+		static protected const MAX_RETRACE_DISTANCE:Number = 60.0;		// THIS NUMBER IS FOR IF YOUR ENEMY ESCAPE FORM THE ORIGIN POSITION, RE FIND THE PATH TO TRACE IT
 		
 		//------------------------------ private member ------------------------------------
 		
@@ -39,7 +40,10 @@ package gameObj.moveableObj
 		protected var m_fireColdDownTime:int = 30;
 		protected var m_fireColdDownCounter:int = 0;
 		
+		protected var m_currentTraceDest:Point = null;
+		
 		//------------------------------ public function -----------------------------------
+		
 		
 		/**
 		 * @desc	constructor of Army
@@ -55,6 +59,19 @@ package gameObj.moveableObj
 			
 			// initial state
 			m_armyState = STATE_ARMY_IDLE;
+			
+			m_currentTraceDest = new Point();
+		}
+		
+		
+		/**
+		 * @desc	getter & setter of the life
+		 */
+		override public function set LIFE( value:Number ):void 
+		{
+			super.LIFE = value;
+			
+			m_lifeBar.SetLife( m_lifeValue / m_maxLifeValue );
 		}
 		
 		
@@ -78,6 +95,8 @@ package gameObj.moveableObj
 			super.Update( elapsed );
 			
 			var i:int;
+			var orgPath:Array = null;
+			var path:Vector.<GridInfo> = null;
 			
 			// process the order
 			if ( m_command != null )
@@ -85,31 +104,7 @@ package gameObj.moveableObj
 				// move to a dest
 				if ( m_command._type == Command.CMD_MOVE )
 				{
-					m_pathBlocked = false;
-					this.stopMove();
-					
-					var orgPath:Array = this.findPath( new Point( m_command._destGrid._x, m_command._destGrid._y ) );
-					
-					if ( orgPath != null )
-					{
-						m_destGrid = new Point( m_command._destGrid._x, m_command._destGrid._y );
-						
-						var path:Vector.<GridInfo> = new Vector.<GridInfo>();
-						for ( i = 1; i < orgPath.length; i++ )					// exclude self
-						{
-							path.push( m_map.GetGridInfo( orgPath[i].x, orgPath[i].y ) );
-						}
-						
-						this.PATH = path;
-						
-						m_armyState = STATE_ARMY_MOVE;
-					}
-					else
-					{
-						//TODO
-						
-						trace( "[Army]: can not find the path" );
-					}
+					moveTo( m_command._destGrid._x, m_command._destGrid._y );
 				}
 				
 				// attack an enemy
@@ -119,8 +114,8 @@ package gameObj.moveableObj
 					this.stopMove();
 					
 					m_enemyUnit = m_command._aim;
-					
-					//TODO 
+					m_currentTraceDest.x = -100;
+					m_currentTraceDest.y = -100;
 					
 					m_armyState = STATE_ARMY_ATTACK;
 				}
@@ -131,27 +126,62 @@ package gameObj.moveableObj
 			// attack behavior
 			if ( m_armyState == STATE_ARMY_ATTACK )
 			{
+				// enemy already be killed
 				if ( m_enemyUnit.STATE == Unit.STATE_DEAD || m_enemyUnit.STATE == Unit.STATE_REMOVE )
 				{
 					m_enemyUnit = null;
 					
 					m_pathBlocked = false;
 					this.stopMove();
+					
 					m_armyState = STATE_ARMY_IDLE;
 				}
+				// enemy still alive
 				else
 				{
+					// stop for firing
 					if ( isUnitInFiringRange( m_enemyUnit ) == true )
 					{
+						m_pathBlocked = false;
+						this.stopMove();
+						
 						if ( m_fireColdDownCounter == 0 )
 						{
 							onFire( m_enemyUnit );
 							m_fireColdDownCounter = m_fireColdDownTime;
 						}
 					}
+					// trace the enemy
 					else
 					{
-						//TODO 
+						var escapeDistance:Number = m_enemyUnit.POSITION.subtract( m_currentTraceDest ).length;
+						
+						if ( escapeDistance > MAX_RETRACE_DISTANCE )
+						{
+							m_pathBlocked = false;
+							this.stopMove();
+							
+							// refinding the path to trace
+							orgPath = this.findPathToUnit( m_enemyUnit );
+							
+							if ( orgPath != null )
+							{
+								path = new Vector.<GridInfo>();
+								for ( i = 1; i < orgPath.length; i++ )					// exclude self
+								{
+									path.push( m_map.GetGridInfo( orgPath[i].x, orgPath[i].y ) );
+								}
+								
+								this.PATH = path;
+								
+								m_currentTraceDest.x = m_enemyUnit.POSITION.x;
+								m_currentTraceDest.y = m_enemyUnit.POSITION.y;
+							}
+							else
+							{
+								trace( "[Army]: can not find the path to the unit: " + m_enemyUnit );
+							}
+						}
 					}
 				}
 			}
@@ -175,7 +205,6 @@ package gameObj.moveableObj
 				}
 			}
 			
-			// 
 		}
 		
 		
@@ -196,7 +225,6 @@ package gameObj.moveableObj
 		
 		override public function onArriveDest():void 
 		{
-			//TODO 
 		}
 		
 		
@@ -223,6 +251,39 @@ package gameObj.moveableObj
 			}
 			
 			return false;
+		}
+		
+		protected function moveTo( gridX:int, gridY:int ):void
+		{
+			var i:int;
+			var orgPath:Array = null;
+			var path:Vector.<GridInfo> = null;
+			
+			m_pathBlocked = false;
+			this.stopMove();
+			
+			orgPath = this.findPath( new Point( gridX, gridY ) );
+			
+			if ( orgPath != null )
+			{
+				m_destGrid = new Point( gridX, gridY );
+				
+				path = new Vector.<GridInfo>();
+				for ( i = 1; i < orgPath.length; i++ )					// exclude self
+				{
+					path.push( m_map.GetGridInfo( orgPath[i].x, orgPath[i].y ) );
+				}
+				
+				this.PATH = path;
+				
+				m_armyState = STATE_ARMY_MOVE;
+			}
+			else
+			{
+				//TODO 
+				
+				trace( "[Army]: can not find the path" );
+			}
 		}
 		
 		//------------------------------- event callback -----------------------------------

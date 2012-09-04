@@ -1,6 +1,7 @@
 package mapItem 
 {
 	import flash.geom.Point;
+	import gameObj.Unit;
 	import map.GridInfo;
 	import map.pathFinding.AStar;
 	
@@ -131,6 +132,24 @@ package mapItem
 		public function onArriveDest():void { }
 		
 		
+		override public function onAdd():void
+		{
+			super.onAdd();
+			
+			//TODO
+		}
+		
+		override public function onRemove():void
+		{
+			super.onRemove();
+			
+			stopMove();
+			
+			// remove from map
+			m_map.GetGridInfo( m_gridCoordinate.x, m_gridCoordinate.y ).SetBlank();
+		}
+		
+		
 		//------------------------------ private function ---------------------------------- 
 		
 		// set to position
@@ -216,6 +235,22 @@ package mapItem
 			var path:Array = null;
 			
 			path = AStar.SINGLETON.GetPath( m_map, m_gridCoordinate, dest );
+			
+			return path;
+		}
+		
+		
+		// find the path ommit the destination spot
+		protected function findPathToUnit( unit:Unit ):Array
+		{
+			if ( this.m_map == null )
+			{
+				throw new Error( "[MoveableItem]: Error, doesn't have owner map" );
+			}
+			
+			var path:Array = null;
+			
+			path = AStar.SINGLETON.GetPath( m_map, m_gridCoordinate, new Point( (int)(unit.POSITION.x / m_map.GRID_SIZE), (int)(unit.POSITION.y / m_map.GRID_SIZE) ), true );
 			
 			return path;
 		}

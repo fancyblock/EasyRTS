@@ -1,0 +1,698 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="boost" itemID="50458cb6-000001ed" linkageExportForAS="true" linkageClassName="mcBoost" sourceLibraryItemHRef="元件 1" lastModified="1346735501">
+  <timeline>
+    <DOMTimeline name="boost" currentFrame="9">
+      <layers>
+        <DOMLayer name="图层 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" duration="4" tweenType="shape" keyMode="17922">
+              <MorphShape>
+                <morphSegments>
+                  <MorphSegment startPointA="-0.2734375, 0" startPointB="-0.46875, 0" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.2734375, #FFFFFF.E3" anchorPointA="-0.1953125, -0.1953125" controlPointB="-0.46875, -0.1953125" anchorPointB="-0.3359375, -0.3359375"/>
+                    <MorphCurves controlPointA="#FFFFFF.E3, -0.2734375" anchorPointA="0, -0.2734375" controlPointB="-0.1953125, -0.46875" anchorPointB="0, -0.46875"/>
+                    <MorphCurves controlPointA="#0.1D, -0.2734375" anchorPointA="#0.31, -0.1953125" controlPointB="#0.32, -0.46875" anchorPointB="#0.54, -0.3359375"/>
+                    <MorphCurves controlPointA="#0.46, #FFFFFF.E3" anchorPointA="#0.46, 0" controlPointB="#0.78, -0.1953125" anchorPointB="#0.78, 0"/>
+                    <MorphCurves controlPointA="#0.46, #0.1D" anchorPointA="#0.31, #0.31" controlPointB="#0.78, #0.32" anchorPointB="#0.54, #0.54"/>
+                    <MorphCurves controlPointA="#0.1D, #0.46" anchorPointA="0, #0.46" controlPointB="#0.32, #0.78" anchorPointB="0, #0.78"/>
+                    <MorphCurves controlPointA="#FFFFFF.E3, #0.46" anchorPointA="-0.1953125, #0.31" controlPointB="-0.1953125, #0.78" anchorPointB="-0.3359375, #0.54"/>
+                    <MorphCurves controlPointA="-0.2734375, #0.1D" anchorPointA="-0.2734375, 0" controlPointB="-0.46875, #0.32" anchorPointB="-0.46875, 0"/>
+                  </MorphSegment>
+                </morphSegments>
+                <morphHintsList/>
+              </MorphShape>
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFCC33"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!49 -50[70 -29 70 0!70 0[70 29 49 49!49 49[29 70 0 70!0 70[-29 70 -50 49!-50 49[-70 29 -70 0!-70 0[-70 -29 -50 -50!-50 -50[-29 -70 0 -70!0 -70[29 -70 49 -50"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="4" duration="3" tweenType="shape" keyMode="17922">
+              <MorphShape>
+                <morphSegments>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#FFFFFF.15, #0.28" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1953125" anchorPointA="-0.3359375, -0.3359375" controlPointB="#FFFFFF.1B, #0.21" anchorPointB="#FFFFFF.25, #0.1E"/>
+                    <MorphCurves controlPointA="-0.1953125, -0.46875" anchorPointA="0, -0.46875" controlPointB="#FFFFFF.2D, #0.1C" anchorPointB="-0.78125, #0.1D"/>
+                    <MorphCurves controlPointA="#0.14, -0.46875" anchorPointA="#0.26, -0.4453125" controlPointB="#FFFFFF.3D, #0.1D" anchorPointB="-0.7421875, #0.1E"/>
+                    <MorphCurves controlPointA="#0.2B, -0.4375" anchorPointA="#0.3, -0.4296875" controlPointB="-0.7421875, #0.1F" anchorPointB="#FFFFFF.45, #0.1F"/>
+                    <MorphCurves controlPointA="#0.44, -0.3984375" anchorPointA="#0.54, -0.3359375" controlPointB="#FFFFFF.47, #0.2" anchorPointB="#FFFFFF.47, #0.28"/>
+                    <MorphCurves controlPointA="#0.62, -0.28125" anchorPointA="#0.6B, -0.21875" controlPointB="#FFFFFF.47, #0.2B" anchorPointB="#FFFFFF.47, #0.2F"/>
+                    <MorphCurves controlPointA="#0.78, -0.1171875" anchorPointA="#0.78, 0" controlPointB="#FFFFFF.47, #0.37" anchorPointB="#FFFFFF.47, #0.3B"/>
+                    <MorphCurves controlPointA="#0.78, #0.1A" anchorPointA="#0.6E, #0.3" controlPointB="-0.7265625, #0.44" anchorPointB="#FFFFFF.45, #0.3C"/>
+                    <MorphCurves controlPointA="#0.65, #0.44" anchorPointA="#0.54, #0.54" controlPointB="-0.7421875, 0.25" anchorPointB="#FFFFFF.3D, #0.44"/>
+                    <MorphCurves controlPointA="#0.3A, #0.6F" anchorPointA="#0.17, #0.76" controlPointB="#FFFFFF.37, #0.48" anchorPointB="-0.8203125, #0.4B"/>
+                    <MorphCurves controlPointA="#0.0C, #0.78" anchorPointA="0, #0.78" controlPointB="-0.828125, #0.4A" anchorPointB="-0.8359375, #0.49"/>
+                    <MorphCurves controlPointA="-0.1953125, #0.78" anchorPointA="-0.3359375, #0.54" controlPointB="-0.875, #0.45" anchorPointB="#FFFFFF.1B, #0.3E"/>
+                    <MorphCurves controlPointA="-0.46875, #0.32" anchorPointA="-0.46875, 0" controlPointB="#FFFFFF.15, #0.35" anchorPointB="#FFFFFF.15, #0.28"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#FFFFFF.29, -0.7109375" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1640625" anchorPointA="#FFFFFF.9F, -0.2890625" controlPointB="#FFFFFF.29, -0.734375" anchorPointB="-0.8046875, #FFFFFF.3D"/>
+                    <MorphCurves controlPointA="#FFFFFF.C5, #FFFFFF.91" anchorPointA="-0.09375, -0.4609375" controlPointB="-0.765625, #FFFFFF.35" anchorPointB="-0.7421875, #FFFFFF.33"/>
+                    <MorphCurves controlPointA="#0.32, -0.46875" anchorPointA="#0.54, -0.3359375" controlPointB="-0.6875, -0.7734375" anchorPointB="-0.6640625, #FFFFFF.41"/>
+                    <MorphCurves controlPointA="#0.78, #FFFFFF.D9" anchorPointA="#0.78, 0" controlPointB="#FFFFFF.5B, #FFFFFF.4F" anchorPointB="-0.65625, #FFFFFF.55"/>
+                    <MorphCurves controlPointA="#0.78, #0.32" anchorPointA="#0.54, #0.54" controlPointB="-0.671875, #FFFFFF.5D" anchorPointB="-0.7109375, -0.6171875"/>
+                    <MorphCurves controlPointA="#0.3E, #0.6B" anchorPointA="#0.22, #0.73" controlPointB="-0.7265625, -0.609375" anchorPointB="-0.7421875, #FFFFFF.65"/>
+                    <MorphCurves controlPointA="#0.12, #0.78" anchorPointA="0, #0.78" controlPointB="#FFFFFF.3F, -0.609375" anchorPointB="-0.765625, #FFFFFF.63"/>
+                    <MorphCurves controlPointA="-0.03125, #0.78" anchorPointA="#FFFFFF.F1, #0.77" controlPointB="#FFFFFF.3B, #FFFFFF.63" anchorPointB="-0.7734375, -0.6171875"/>
+                    <MorphCurves controlPointA="-0.21875, #0.72" anchorPointA="-0.3359375, #0.54" controlPointB="-0.8046875, -0.6328125" anchorPointB="-0.8203125, #FFFFFF.5B"/>
+                    <MorphCurves controlPointA="-0.34375, #0.52" anchorPointA="#FFFFFF.A7, #0.5" controlPointB="#FFFFFF.2D, -0.6484375" anchorPointB="-0.828125, #FFFFFF.59"/>
+                    <MorphCurves controlPointA="-0.4609375, #0.32" anchorPointA="-0.46875, #0.04" controlPointB="#FFFFFF.2B, -0.6796875" anchorPointB="#FFFFFF.29, -0.7109375"/>
+                    <MorphCurves controlPointA="-0.46875, #0.04" anchorPointA="-0.46875, 0" controlPointB="#FFFFFF.29, -0.7109375" anchorPointB="#FFFFFF.29, -0.7109375" isLine="true"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#FFFFFF.29, -0.28125" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1640625" anchorPointA="#FFFFFF.9F, -0.2890625" controlPointB="#FFFFFF.29, -0.3046875" anchorPointB="-0.8046875, #FFFFFF.AB"/>
+                    <MorphCurves controlPointA="#FFFFFF.C5, #FFFFFF.91" anchorPointA="-0.09375, -0.4609375" controlPointB="-0.765625, #FFFFFF.A3" anchorPointB="-0.7421875, #FFFFFF.A1"/>
+                    <MorphCurves controlPointA="#0.32, -0.46875" anchorPointA="#0.54, -0.3359375" controlPointB="-0.6875, -0.34375" anchorPointB="-0.6640625, #FFFFFF.AF"/>
+                    <MorphCurves controlPointA="#0.78, #FFFFFF.D9" anchorPointA="#0.78, 0" controlPointB="#FFFFFF.5B, #FFFFFF.BD" anchorPointB="-0.65625, #FFFFFF.C3"/>
+                    <MorphCurves controlPointA="#0.78, #0.32" anchorPointA="#0.54, #0.54" controlPointB="-0.671875, #FFFFFF.CB" anchorPointB="-0.7109375, -0.1875"/>
+                    <MorphCurves controlPointA="#0.3E, #0.6B" anchorPointA="#0.22, #0.73" controlPointB="-0.7265625, -0.1796875" anchorPointB="-0.7421875, #FFFFFF.D3"/>
+                    <MorphCurves controlPointA="#0.12, #0.78" anchorPointA="0, #0.78" controlPointB="#FFFFFF.3F, -0.1796875" anchorPointB="-0.765625, #FFFFFF.D1"/>
+                    <MorphCurves controlPointA="-0.03125, #0.78" anchorPointA="#FFFFFF.F1, #0.77" controlPointB="#FFFFFF.3B, #FFFFFF.D1" anchorPointB="-0.7734375, -0.1875"/>
+                    <MorphCurves controlPointA="-0.21875, #0.72" anchorPointA="-0.3359375, #0.54" controlPointB="-0.8046875, -0.203125" anchorPointB="-0.8203125, #FFFFFF.C9"/>
+                    <MorphCurves controlPointA="-0.34375, #0.52" anchorPointA="#FFFFFF.A7, #0.5" controlPointB="#FFFFFF.2D, -0.21875" anchorPointB="-0.828125, #FFFFFF.C7"/>
+                    <MorphCurves controlPointA="-0.4609375, #0.32" anchorPointA="-0.46875, #0.04" controlPointB="#FFFFFF.2B, -0.25" anchorPointB="#FFFFFF.29, -0.28125"/>
+                    <MorphCurves controlPointA="-0.46875, #0.04" anchorPointA="-0.46875, 0" controlPointB="#FFFFFF.29, -0.28125" anchorPointB="#FFFFFF.29, -0.28125" isLine="true"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#FFFFFF.33, #0.96" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1953125" anchorPointA="-0.3359375, -0.3359375" controlPointB="#FFFFFF.39, #0.8F" anchorPointB="#FFFFFF.43, #0.8C"/>
+                    <MorphCurves controlPointA="-0.1953125, -0.46875" anchorPointA="0, -0.46875" controlPointB="#FFFFFF.4B, #0.8A" anchorPointB="-0.6640625, #0.8B"/>
+                    <MorphCurves controlPointA="#0.2C, -0.4375" anchorPointA="#0.31, -0.4296875" controlPointB="-0.625, #0.8D" anchorPointB="#FFFFFF.63, #0.8D"/>
+                    <MorphCurves controlPointA="#0.44, -0.3984375" anchorPointA="#0.54, -0.3359375" controlPointB="#FFFFFF.65, #0.8E" anchorPointB="#FFFFFF.65, #0.96"/>
+                    <MorphCurves controlPointA="#0.62, -0.28125" anchorPointA="#0.6B, #FFFFFF.C9" controlPointB="#FFFFFF.65, #0.99" anchorPointB="#FFFFFF.65, #0.9D"/>
+                    <MorphCurves controlPointA="#0.78, -0.1171875" anchorPointA="#0.78, 0" controlPointB="#FFFFFF.65, #0.A5" anchorPointB="#FFFFFF.65, #0.A9"/>
+                    <MorphCurves controlPointA="#0.78, #0.1B" anchorPointA="#0.6E, #0.31" controlPointB="-0.609375, #0.B2" anchorPointB="#FFFFFF.63, #0.AA"/>
+                    <MorphCurves controlPointA="#0.65, #0.44" anchorPointA="#0.54, #0.54" controlPointB="-0.625, #0.AE" anchorPointB="#FFFFFF.5B, #0.B2"/>
+                    <MorphCurves controlPointA="#0.39, #0.71" anchorPointA="#0.13, #0.77" controlPointB="#FFFFFF.55, #0.B6" anchorPointB="-0.703125, #0.B9"/>
+                    <MorphCurves controlPointA="#FFFFFF.D5, #0.78" anchorPointA="#FFFFFF.B5, #0.5E" controlPointB="-0.75, #0.B3" anchorPointB="-0.7734375, #0.AB"/>
+                    <MorphCurves controlPointA="#FFFFFF.AF, #0.59" anchorPointA="-0.3359375, #0.54" controlPointB="#FFFFFF.39, #0.AA" anchorPointB="-0.78125, #0.A9"/>
+                    <MorphCurves controlPointA="-0.453125, #0.36" anchorPointA="-0.46875, #0.0A" controlPointB="#FFFFFF.33, #0.A" anchorPointB="#FFFFFF.33, #0.96"/>
+                    <MorphCurves controlPointA="-0.46875, #0.0A" anchorPointA="-0.46875, 0" controlPointB="#FFFFFF.33, #0.96" anchorPointB="#FFFFFF.33, #0.96" isLine="true"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#FFFFFF.51, -1.0625" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1640625" anchorPointA="#FFFFFF.9F, -0.2890625" controlPointB="#FFFFFF.51, -1.0859375" anchorPointB="-0.6484375, #FFFFFE.E3"/>
+                    <MorphCurves controlPointA="#FFFFFF.C5, #FFFFFF.91" anchorPointA="#FFFFFF.E7, -0.4609375" controlPointB="-0.609375, #FFFFFE.DB" anchorPointB="-0.5859375, #FFFFFE.D9"/>
+                    <MorphCurves controlPointA="#0.32, -0.46875" anchorPointA="#0.54, -0.3359375" controlPointB="-0.53125, -1.125" anchorPointB="-0.5078125, #FFFFFE.E7"/>
+                    <MorphCurves controlPointA="#0.78, #FFFFFF.D9" anchorPointA="#0.78, 0" controlPointB="#FFFFFF.83, #FFFFFE.F5" anchorPointB="-0.5, #FFFFFE.FB"/>
+                    <MorphCurves controlPointA="#0.78, #0.32" anchorPointA="#0.54, #0.54" controlPointB="-0.515625, #FFFFFF.03" anchorPointB="-0.5546875, -0.96875"/>
+                    <MorphCurves controlPointA="#0.3E, #0.6B" anchorPointA="#0.22, #0.73" controlPointB="-0.5703125, -0.9609375" anchorPointB="-0.5859375, #FFFFFF.0B"/>
+                    <MorphCurves controlPointA="#0.12, #0.78" anchorPointA="0, #0.78" controlPointB="#FFFFFF.67, -0.9609375" anchorPointB="-0.609375, #FFFFFF.09"/>
+                    <MorphCurves controlPointA="-0.1953125, #0.78" anchorPointA="-0.3359375, #0.54" controlPointB="#FFFFFF.5D, #FFFFFF.05" anchorPointB="-0.6640625, #FFFFFF.01"/>
+                    <MorphCurves controlPointA="-0.3515625, #0.5" anchorPointA="#FFFFFF.A3, #0.4C" controlPointB="#FFFFFF.55, -1" anchorPointB="-0.671875, #FFFFFE.FF"/>
+                    <MorphCurves controlPointA="#FFFFFF.89, #0.2E" anchorPointA="-0.46875, #0.02" controlPointB="#FFFFFF.53, -1.03125" anchorPointB="#FFFFFF.51, -1.0625"/>
+                    <MorphCurves controlPointA="-0.46875, #0.02" anchorPointA="-0.46875, 0" controlPointB="#FFFFFF.51, -1.0625" anchorPointB="#FFFFFF.51, -1.0625" isLine="true"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#FFFFFF.5B, #0.DC" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1953125" anchorPointA="-0.3359375, -0.3359375" controlPointB="#FFFFFF.61, #0.D5" anchorPointB="#FFFFFF.6B, #0.D2"/>
+                    <MorphCurves controlPointA="-0.1953125, -0.46875" anchorPointA="0, -0.46875" controlPointB="#FFFFFF.73, #0.D" anchorPointB="-0.5078125, #0.D1"/>
+                    <MorphCurves controlPointA="#0.2C, -0.4375" anchorPointA="#0.31, -0.4296875" controlPointB="-0.46875, #0.D3" anchorPointB="#FFFFFF.8B, #0.D3"/>
+                    <MorphCurves controlPointA="#0.44, -0.3984375" anchorPointA="#0.54, -0.3359375" controlPointB="#FFFFFF.8D, #0.D4" anchorPointB="#FFFFFF.8D, #0.DC"/>
+                    <MorphCurves controlPointA="#0.62, -0.28125" anchorPointA="#0.6B, #FFFFFF.C9" controlPointB="#FFFFFF.8D, #0.DF" anchorPointB="#FFFFFF.8D, #0.E3"/>
+                    <MorphCurves controlPointA="#0.78, -0.1171875" anchorPointA="#0.78, 0" controlPointB="#FFFFFF.8D, #0.EB" anchorPointB="#FFFFFF.8D, #0.EF"/>
+                    <MorphCurves controlPointA="#0.78, #0.1B" anchorPointA="#0.6E, #0.31" controlPointB="-0.453125, #0.F8" anchorPointB="#FFFFFF.8B, #0.F"/>
+                    <MorphCurves controlPointA="#0.65, #0.44" anchorPointA="#0.54, #0.54" controlPointB="-0.46875, #0.F4" anchorPointB="#FFFFFF.83, #0.F8"/>
+                    <MorphCurves controlPointA="#0.39, #0.71" anchorPointA="#0.13, #0.77" controlPointB="#FFFFFF.7D, #0.FC" anchorPointB="-0.546875, #0.FF"/>
+                    <MorphCurves controlPointA="#FFFFFF.D5, #0.78" anchorPointA="#FFFFFF.B5, #0.5E" controlPointB="-0.59375, #0.F9" anchorPointB="-0.6171875, #0.F1"/>
+                    <MorphCurves controlPointA="#FFFFFF.AF, #0.59" anchorPointA="-0.3359375, #0.54" controlPointB="#FFFFFF.61, #0.F" anchorPointB="-0.625, #0.EF"/>
+                    <MorphCurves controlPointA="-0.453125, #0.36" anchorPointA="-0.46875, #0.0A" controlPointB="#FFFFFF.5B, #0.E6" anchorPointB="#FFFFFF.5B, #0.DC"/>
+                    <MorphCurves controlPointA="-0.46875, #0.0A" anchorPointA="-0.46875, 0" controlPointB="#FFFFFF.5B, #0.DC" anchorPointB="#FFFFFF.5B, #0.DC" isLine="true"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#FFFFFF.83, -0.5546875" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1640625" anchorPointA="#FFFFFF.9F, -0.2890625" controlPointB="#FFFFFF.83, -0.578125" anchorPointB="-0.453125, #FFFFFF.65"/>
+                    <MorphCurves controlPointA="#FFFFFF.C5, #FFFFFF.91" anchorPointA="-0.09375, -0.4609375" controlPointB="-0.4140625, #FFFFFF.5D" anchorPointB="-0.390625, #FFFFFF.5B"/>
+                    <MorphCurves controlPointA="#0.32, -0.46875" anchorPointA="#0.54, -0.3359375" controlPointB="-0.3359375, -0.6171875" anchorPointB="-0.3125, #FFFFFF.69"/>
+                    <MorphCurves controlPointA="#0.78, #FFFFFF.D9" anchorPointA="#0.78, 0" controlPointB="#FFFFFF.B5, #FFFFFF.77" anchorPointB="-0.3046875, #FFFFFF.7D"/>
+                    <MorphCurves controlPointA="#0.78, #0.32" anchorPointA="#0.54, #0.54" controlPointB="-0.3203125, #FFFFFF.85" anchorPointB="-0.359375, -0.4609375"/>
+                    <MorphCurves controlPointA="#0.3E, #0.6B" anchorPointA="#0.22, #0.73" controlPointB="-0.375, -0.453125" anchorPointB="-0.390625, #FFFFFF.8D"/>
+                    <MorphCurves controlPointA="#0.12, #0.78" anchorPointA="0, #0.78" controlPointB="#FFFFFF.99, -0.453125" anchorPointB="-0.4140625, #FFFFFF.8B"/>
+                    <MorphCurves controlPointA="-0.03125, #0.78" anchorPointA="#FFFFFF.F1, #0.77" controlPointB="#FFFFFF.95, #FFFFFF.8B" anchorPointB="-0.421875, -0.4609375"/>
+                    <MorphCurves controlPointA="-0.21875, #0.72" anchorPointA="-0.3359375, #0.54" controlPointB="-0.453125, -0.4765625" anchorPointB="-0.46875, #FFFFFF.83"/>
+                    <MorphCurves controlPointA="-0.34375, #0.52" anchorPointA="#FFFFFF.A7, #0.5" controlPointB="#FFFFFF.87, -0.4921875" anchorPointB="-0.4765625, #FFFFFF.81"/>
+                    <MorphCurves controlPointA="-0.4609375, #0.32" anchorPointA="-0.46875, #0.04" controlPointB="#FFFFFF.85, -0.5234375" anchorPointB="#FFFFFF.83, -0.5546875"/>
+                    <MorphCurves controlPointA="-0.46875, #0.04" anchorPointA="-0.46875, 0" controlPointB="#FFFFFF.83, -0.5546875" anchorPointB="#FFFFFF.83, -0.5546875" isLine="true"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#FFFFFF.A1, -0.9453125" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1640625" anchorPointA="#FFFFFF.9F, -0.2890625" controlPointB="#FFFFFF.A1, -0.96875" anchorPointB="-0.3359375, #FFFFFF.01"/>
+                    <MorphCurves controlPointA="#FFFFFF.C5, #FFFFFF.91" anchorPointA="-0.09375, -0.4609375" controlPointB="-0.296875, #FFFFFE.F9" anchorPointB="-0.2734375, #FFFFFE.F7"/>
+                    <MorphCurves controlPointA="#0.32, -0.46875" anchorPointA="#0.54, -0.3359375" controlPointB="-0.21875, -1.0078125" anchorPointB="-0.1953125, #FFFFFF.05"/>
+                    <MorphCurves controlPointA="#0.78, #FFFFFF.D9" anchorPointA="#0.78, 0" controlPointB="#FFFFFF.D3, #FFFFFF.13" anchorPointB="-0.1875, #FFFFFF.19"/>
+                    <MorphCurves controlPointA="#0.78, #0.32" anchorPointA="#0.54, #0.54" controlPointB="-0.203125, #FFFFFF.21" anchorPointB="-0.2421875, -0.8515625"/>
+                    <MorphCurves controlPointA="#0.3E, #0.6B" anchorPointA="#0.22, #0.73" controlPointB="-0.2578125, -0.84375" anchorPointB="-0.2734375, #FFFFFF.29"/>
+                    <MorphCurves controlPointA="#0.12, #0.78" anchorPointA="0, #0.78" controlPointB="#FFFFFF.B7, -0.84375" anchorPointB="-0.296875, #FFFFFF.27"/>
+                    <MorphCurves controlPointA="-0.03125, #0.78" anchorPointA="#FFFFFF.F1, #0.77" controlPointB="#FFFFFF.B3, #FFFFFF.27" anchorPointB="-0.3046875, -0.8515625"/>
+                    <MorphCurves controlPointA="-0.21875, #0.72" anchorPointA="-0.3359375, #0.54" controlPointB="-0.3359375, -0.8671875" anchorPointB="-0.3515625, #FFFFFF.1F"/>
+                    <MorphCurves controlPointA="-0.34375, #0.52" anchorPointA="#FFFFFF.A7, #0.5" controlPointB="#FFFFFF.A5, -0.8828125" anchorPointB="-0.359375, #FFFFFF.1D"/>
+                    <MorphCurves controlPointA="-0.4609375, #0.32" anchorPointA="-0.46875, #0.04" controlPointB="#FFFFFF.A3, -0.9140625" anchorPointB="#FFFFFF.A1, -0.9453125"/>
+                    <MorphCurves controlPointA="-0.46875, #0.04" anchorPointA="-0.46875, 0" controlPointB="#FFFFFF.A1, -0.9453125" anchorPointB="#FFFFFF.A1, -0.9453125" isLine="true"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#FFFFFF.A1, #0.46" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1953125" anchorPointA="-0.3359375, -0.3359375" controlPointB="#FFFFFF.A7, #0.3F" anchorPointB="#FFFFFF.B1, #0.3C"/>
+                    <MorphCurves controlPointA="-0.1953125, -0.46875" anchorPointA="0, -0.46875" controlPointB="#FFFFFF.B9, #0.3A" anchorPointB="-0.234375, #0.3B"/>
+                    <MorphCurves controlPointA="#0.2B, -0.4375" anchorPointA="#0.3, -0.4296875" controlPointB="-0.1953125, #0.3D" anchorPointB="#FFFFFF.D1, #0.3D"/>
+                    <MorphCurves controlPointA="#0.44, -0.3984375" anchorPointA="#0.54, -0.3359375" controlPointB="#FFFFFF.D3, #0.3E" anchorPointB="#FFFFFF.D3, #0.46"/>
+                    <MorphCurves controlPointA="#0.62, -0.28125" anchorPointA="#0.6B, -0.21875" controlPointB="#FFFFFF.D3, #0.49" anchorPointB="#FFFFFF.D3, #0.4D"/>
+                    <MorphCurves controlPointA="#0.78, -0.1171875" anchorPointA="#0.78, 0" controlPointB="#FFFFFF.D3, #0.55" anchorPointB="#FFFFFF.D3, #0.59"/>
+                    <MorphCurves controlPointA="#0.78, #0.1A" anchorPointA="#0.6E, #0.3" controlPointB="-0.1796875, #0.62" anchorPointB="#FFFFFF.D1, #0.5A"/>
+                    <MorphCurves controlPointA="#0.65, #0.44" anchorPointA="#0.54, #0.54" controlPointB="-0.1953125, #0.5E" anchorPointB="#FFFFFF.C9, #0.62"/>
+                    <MorphCurves controlPointA="#0.3A, #0.6F" anchorPointA="#0.17, #0.76" controlPointB="#FFFFFF.C3, #0.66" anchorPointB="-0.2734375, #0.69"/>
+                    <MorphCurves controlPointA="-0.1953125, #0.78" anchorPointA="-0.3359375, #0.54" controlPointB="-0.328125, #0.63" anchorPointB="#FFFFFF.A7, #0.5C"/>
+                    <MorphCurves controlPointA="-0.46875, #0.32" anchorPointA="-0.46875, 0" controlPointB="#FFFFFF.A1, #0.53" anchorPointB="#FFFFFF.A1, #0.46"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#FFFFFF.AB, #0.A" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1953125" anchorPointA="-0.3359375, -0.3359375" controlPointB="#FFFFFF.B1, #0.99" anchorPointB="#FFFFFF.BB, #0.96"/>
+                    <MorphCurves controlPointA="-0.1953125, -0.46875" anchorPointA="0, -0.46875" controlPointB="#FFFFFF.C3, #0.94" anchorPointB="-0.1953125, #0.95"/>
+                    <MorphCurves controlPointA="#0.2B, -0.4375" anchorPointA="#0.3, -0.4296875" controlPointB="-0.15625, #0.97" anchorPointB="#FFFFFF.DB, #0.97"/>
+                    <MorphCurves controlPointA="#0.44, -0.3984375" anchorPointA="#0.54, -0.3359375" controlPointB="#FFFFFF.DD, #0.98" anchorPointB="#FFFFFF.DD, #0.A"/>
+                    <MorphCurves controlPointA="#0.62, -0.28125" anchorPointA="#0.6B, -0.21875" controlPointB="#FFFFFF.DD, #0.A3" anchorPointB="#FFFFFF.DD, #0.A7"/>
+                    <MorphCurves controlPointA="#0.78, -0.1171875" anchorPointA="#0.78, 0" controlPointB="#FFFFFF.DD, #0.AF" anchorPointB="#FFFFFF.DD, #0.B3"/>
+                    <MorphCurves controlPointA="#0.78, #0.1A" anchorPointA="#0.6E, #0.3" controlPointB="-0.140625, #0.BC" anchorPointB="#FFFFFF.DB, #0.B4"/>
+                    <MorphCurves controlPointA="#0.65, #0.44" anchorPointA="#0.54, #0.54" controlPointB="-0.15625, #0.B8" anchorPointB="#FFFFFF.D3, #0.BC"/>
+                    <MorphCurves controlPointA="#0.3A, #0.6F" anchorPointA="#0.17, #0.76" controlPointB="#FFFFFF.CD, 0.75" anchorPointB="-0.234375, #0.C3"/>
+                    <MorphCurves controlPointA="-0.1953125, #0.78" anchorPointA="-0.3359375, #0.54" controlPointB="-0.2890625, #0.BD" anchorPointB="#FFFFFF.B1, #0.B6"/>
+                    <MorphCurves controlPointA="-0.46875, #0.32" anchorPointA="-0.46875, 0" controlPointB="#FFFFFF.AB, #0.AD" anchorPointB="#FFFFFF.AB, #0.A"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#FFFFFF.AB, #0.11" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1953125" anchorPointA="-0.3359375, -0.3359375" controlPointB="#FFFFFF.AB, #0.07" anchorPointB="#FFFFFF.AF, #0.02"/>
+                    <MorphCurves controlPointA="-0.140625, -0.46875" anchorPointA="0, -0.46875" controlPointB="#FFFFFF.BF, #FFFFFF.FD" anchorPointB="-0.234375, #FFFFFF.FB"/>
+                    <MorphCurves controlPointA="#0.32, -0.46875" anchorPointA="#0.54, -0.3359375" controlPointB="#FFFFFF.CD, #FFFFFF.FF" anchorPointB="-0.171875, #0.04"/>
+                    <MorphCurves controlPointA="#0.72, -0.21875" anchorPointA="#0.77, -0.0625" controlPointB="-0.1484375, #0.09" anchorPointB="#FFFFFF.DD, #0.0F"/>
+                    <MorphCurves controlPointA="#0.78, #0.1C" anchorPointA="#0.6D, #0.33" controlPointB="-0.140625, #0.17" anchorPointB="#FFFFFF.D7, #0.1D"/>
+                    <MorphCurves controlPointA="#0.64, #0.45" anchorPointA="#0.54, #0.54" controlPointB="-0.171875, #0.21" anchorPointB="#FFFFFF.D1, #0.24"/>
+                    <MorphCurves controlPointA="#0.33, #0.77" anchorPointA="#0.04, #0.78" controlPointB="-0.203125, #0.29" anchorPointB="-0.234375, #0.2D"/>
+                    <MorphCurves controlPointA="-0.1953125, #0.78" anchorPointA="-0.3359375, #0.54" controlPointB="-0.2734375, #0.2A" anchorPointB="#FFFFFF.B3, #0.25"/>
+                    <MorphCurves controlPointA="#FFFFFF.A3, #0.4D" anchorPointA="-0.3828125, #0.46" controlPointB="-0.3125, #0.22" anchorPointB="-0.3203125, #0.1F"/>
+                    <MorphCurves controlPointA="-0.46875, #0.28" anchorPointA="-0.46875, 0" controlPointB="#FFFFFF.AB, #0.29" anchorPointB="#FFFFFF.AB, #0.14"/>
+                    <MorphCurves controlPointA="-0.46875, 0" anchorPointA="-0.46875, 0" controlPointB="#FFFFFF.AB, #0.14" anchorPointB="#FFFFFF.AB, #0.11" isLine="true"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#FFFFFF.BF, -0.2421875" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1640625" anchorPointA="#FFFFFF.9F, -0.2890625" controlPointB="#FFFFFF.BF, -0.265625" anchorPointB="-0.21875, #FFFFFF.B5"/>
+                    <MorphCurves controlPointA="#FFFFFF.C5, #FFFFFF.91" anchorPointA="-0.09375, -0.4609375" controlPointB="-0.1796875, #FFFFFF.AD" anchorPointB="-0.15625, #FFFFFF.AB"/>
+                    <MorphCurves controlPointA="#0.32, -0.46875" anchorPointA="#0.54, -0.3359375" controlPointB="-0.1015625, -0.3046875" anchorPointB="-0.078125, #FFFFFF.B9"/>
+                    <MorphCurves controlPointA="#0.78, #FFFFFF.D9" anchorPointA="#0.78, 0" controlPointB="#FFFFFF.F1, #FFFFFF.C7" anchorPointB="-0.0703125, #FFFFFF.CD"/>
+                    <MorphCurves controlPointA="#0.78, #0.32" anchorPointA="#0.54, #0.54" controlPointB="-0.0859375, #FFFFFF.D5" anchorPointB="-0.125, -0.1484375"/>
+                    <MorphCurves controlPointA="#0.3E, #0.6B" anchorPointA="#0.22, #0.73" controlPointB="-0.140625, -0.140625" anchorPointB="-0.15625, #FFFFFF.DD"/>
+                    <MorphCurves controlPointA="#0.12, #0.78" anchorPointA="0, #0.78" controlPointB="#FFFFFF.D5, -0.140625" anchorPointB="-0.1796875, #FFFFFF.DB"/>
+                    <MorphCurves controlPointA="-0.03125, #0.78" anchorPointA="#FFFFFF.F1, #0.77" controlPointB="#FFFFFF.D1, #FFFFFF.DB" anchorPointB="-0.1875, -0.1484375"/>
+                    <MorphCurves controlPointA="-0.21875, #0.72" anchorPointA="-0.3359375, #0.54" controlPointB="-0.21875, -0.1640625" anchorPointB="-0.234375, #FFFFFF.D3"/>
+                    <MorphCurves controlPointA="-0.34375, #0.52" anchorPointA="#FFFFFF.A7, #0.5" controlPointB="#FFFFFF.C3, -0.1796875" anchorPointB="-0.2421875, #FFFFFF.D1"/>
+                    <MorphCurves controlPointA="-0.4609375, #0.32" anchorPointA="-0.46875, #0.04" controlPointB="#FFFFFF.C1, -0.2109375" anchorPointB="#FFFFFF.BF, -0.2421875"/>
+                    <MorphCurves controlPointA="-0.46875, #0.04" anchorPointA="-0.46875, 0" controlPointB="#FFFFFF.BF, -0.2421875" anchorPointB="#FFFFFF.BF, -0.2421875" isLine="true"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#FFFFFF.F1, #0.2F" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1953125" anchorPointA="-0.3359375, -0.3359375" controlPointB="#FFFFFF.F1, #0.2" anchorPointB="0, #0.1B"/>
+                    <MorphCurves controlPointA="-0.1953125, -0.46875" anchorPointA="0, -0.46875" controlPointB="#0.0E, #0.17" anchorPointB="#0.1E, #0.1E"/>
+                    <MorphCurves controlPointA="#0.32, -0.46875" anchorPointA="#0.54, -0.3359375" controlPointB="#0.1E, #0.1F" anchorPointB="#0.21, #0.1F"/>
+                    <MorphCurves controlPointA="#0.78, -0.1953125" anchorPointA="#0.78, 0" controlPointB="#0.23, #0.2" anchorPointB="#0.23, #0.2F"/>
+                    <MorphCurves controlPointA="#0.78, #0.32" anchorPointA="#0.54, #0.54" controlPointB="#0.23, #0.48" anchorPointB="#0.1F, #0.42"/>
+                    <MorphCurves controlPointA="#0.32, #0.78" anchorPointA="0, #0.78" controlPointB="#0.14, #0.47" anchorPointB="#0.0A, #0.4B"/>
+                    <MorphCurves controlPointA="-0.1953125, #0.78" anchorPointA="-0.3359375, #0.54" controlPointB="#FFFFFF.F9, #0.45" anchorPointB="-0.03125, #0.45"/>
+                    <MorphCurves controlPointA="-0.46875, #0.32" anchorPointA="-0.46875, 0" controlPointB="#FFFFFF.F1, #0.3F" anchorPointB="#FFFFFF.F1, #0.2F"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#FFFFFF.F1, -1.0234375" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1953125" anchorPointA="-0.3359375, -0.3359375" controlPointB="#FFFFFF.F1, -1.046875" anchorPointB="-0.0234375, #FFFFFE.ED"/>
+                    <MorphCurves controlPointA="-0.1953125, -0.46875" anchorPointA="0, -0.46875" controlPointB="#0.02, #FFFFFE.E5" anchorPointB="#0.0A, #FFFFFE.E3"/>
+                    <MorphCurves controlPointA="#0.32, -0.46875" anchorPointA="#0.54, -0.3359375" controlPointB="#0.1A, -1.0859375" anchorPointB="#0.23, #FFFFFE.F7"/>
+                    <MorphCurves controlPointA="#0.78, -0.1953125" anchorPointA="#0.78, 0" controlPointB="#0.23, -1.0078125" anchorPointB="#0.1D, -0.9765625"/>
+                    <MorphCurves controlPointA="#0.78, #0.32" anchorPointA="#0.54, #0.54" controlPointB="#0.15, -0.9375" anchorPointB="#0.0A, #FFFFFF.15"/>
+                    <MorphCurves controlPointA="#0.32, #0.78" anchorPointA="0, #0.78" controlPointB="#0.06, -0.921875" anchorPointB="#0.02, -0.9296875"/>
+                    <MorphCurves controlPointA="-0.1953125, #0.78" anchorPointA="-0.3359375, #0.54" controlPointB="-0.03125, #FFFFFF.0D" anchorPointB="-0.046875, #FFFFFF.09"/>
+                    <MorphCurves controlPointA="-0.46875, #0.32" anchorPointA="-0.46875, 0" controlPointB="#FFFFFF.F3, -0.9921875" anchorPointB="#FFFFFF.F1, -1.0234375"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#0.19, -0.7890625" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1953125" anchorPointA="-0.3359375, -0.3359375" controlPointB="#0.19, -0.8515625" anchorPointB="#0.22, -0.8671875"/>
+                    <MorphCurves controlPointA="-0.1953125, -0.46875" anchorPointA="0, -0.46875" controlPointB="#0.27, -0.875" anchorPointB="#0.32, #FFFFFF.1F"/>
+                    <MorphCurves controlPointA="#0.32, -0.46875" anchorPointA="#0.54, -0.3359375" controlPointB="#0.42, -0.8515625" anchorPointB="#0.4B, #FFFFFF.33"/>
+                    <MorphCurves controlPointA="#0.78, -0.1953125" anchorPointA="#0.78, 0" controlPointB="#0.4B, -0.7734375" anchorPointB="#0.45, -0.7421875"/>
+                    <MorphCurves controlPointA="#0.78, #0.32" anchorPointA="#0.54, #0.54" controlPointB="#0.3D, -0.703125" anchorPointB="#0.32, #FFFFFF.51"/>
+                    <MorphCurves controlPointA="#0.32, #0.78" anchorPointA="0, #0.78" controlPointB="#0.26, #FFFFFF.4B" anchorPointB="#0.1A, #FFFFFF.45"/>
+                    <MorphCurves controlPointA="-0.1953125, #0.78" anchorPointA="-0.3359375, #0.54" controlPointB="#0.1A, -0.7265625" anchorPointB="#0.1A, #FFFFFF.47"/>
+                    <MorphCurves controlPointA="-0.46875, #0.32" anchorPointA="-0.46875, 0" controlPointB="#0.19, -0.7265625" anchorPointB="#0.19, -0.7890625"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#0.2D, #0.E3" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1953125" anchorPointA="-0.3359375, -0.3359375" controlPointB="#0.2D, #0.D3" anchorPointB="#0.3B, #0.CF"/>
+                    <MorphCurves controlPointA="-0.1953125, -0.46875" anchorPointA="0, -0.46875" controlPointB="#0.47, #0.CC" anchorPointB="#0.5A, #0.D2"/>
+                    <MorphCurves controlPointA="#0.32, -0.46875" anchorPointA="#0.54, -0.3359375" controlPointB="#0.5A, #0.D3" anchorPointB="#0.5D, #0.D3"/>
+                    <MorphCurves controlPointA="#0.78, -0.1953125" anchorPointA="#0.78, 0" controlPointB="#0.5F, #0.D4" anchorPointB="#0.5F, #0.E3"/>
+                    <MorphCurves controlPointA="#0.78, #0.32" anchorPointA="#0.54, #0.54" controlPointB="#0.5F, #0.FC" anchorPointB="#0.5B, #0.F6"/>
+                    <MorphCurves controlPointA="#0.32, #0.78" anchorPointA="0, #0.78" controlPointB="#0.5, #0.FB" anchorPointB="#0.46, #0.FF"/>
+                    <MorphCurves controlPointA="-0.1953125, #0.78" anchorPointA="-0.3359375, #0.54" controlPointB="#0.35, #0.F9" anchorPointB="#0.34, #0.F9"/>
+                    <MorphCurves controlPointA="-0.46875, #0.32" anchorPointA="-0.46875, 0" controlPointB="#0.2D, #0.F3" anchorPointB="#0.2D, #0.E3"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#0.37, -0.3203125" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1953125" anchorPointA="-0.3359375, -0.3359375" controlPointB="#0.37, -0.3671875" anchorPointB="#0.3C, #FFFFFF.9D"/>
+                    <MorphCurves controlPointA="#FFFFFF.D9, -0.46875" anchorPointA="0, -0.46875" controlPointB="#0.44, -0.40625" anchorPointB="#0.4C, #FFFFFF.97"/>
+                    <MorphCurves controlPointA="#0.39, #FFFFFF.8F" anchorPointA="#0.54, -0.3359375" controlPointB="#0.57, -0.3984375" anchorPointB="#0.5D, -0.3828125"/>
+                    <MorphCurves controlPointA="#0.76, -0.203125" anchorPointA="#0.78, -0.0234375" controlPointB="#0.64, -0.359375" anchorPointB="#0.69, #FFFFFF.AB"/>
+                    <MorphCurves controlPointA="#0.78, #0.29" anchorPointA="#0.5F, #0.47" controlPointB="#0.68, #FFFFFF.B3" anchorPointB="#0.63, -0.2734375"/>
+                    <MorphCurves controlPointA="#0.5A, #0.4E" anchorPointA="#0.54, #0.54" controlPointB="#0.62, -0.265625" anchorPointB="#0.6, -0.2578125"/>
+                    <MorphCurves controlPointA="#0.3B, #0.6F" anchorPointA="#0.19, #0.76" controlPointB="#0.59, #FFFFFF.C5" anchorPointB="#0.5, #FFFFFF.C9"/>
+                    <MorphCurves controlPointA="#0.0D, #0.78" anchorPointA="0, #0.78" controlPointB="#0.4E, -0.21875" anchorPointB="#0.4C, #FFFFFF.C7"/>
+                    <MorphCurves controlPointA="-0.1953125, #0.78" anchorPointA="-0.3359375, #0.54" controlPointB="#0.41, #FFFFFF.C3" anchorPointB="#0.3A, #FFFFFF.BD"/>
+                    <MorphCurves controlPointA="-0.46875, #0.2D" anchorPointA="-0.46875, 0" controlPointB="#0.37, #FFFFFF.C7" anchorPointB="#0.37, -0.3125"/>
+                    <MorphCurves controlPointA="-0.46875, 0" anchorPointA="-0.46875, 0" controlPointB="#0.37, -0.3125" anchorPointB="#0.37, -0.3203125" isLine="true"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#0.55, #0.6B" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1953125" anchorPointA="-0.3359375, -0.3359375" controlPointB="#0.55, #0.5B" anchorPointB="#0.63, #0.57"/>
+                    <MorphCurves controlPointA="-0.1953125, -0.46875" anchorPointA="0, -0.46875" controlPointB="#0.6F, #0.54" anchorPointB="#0.82, #0.5A"/>
+                    <MorphCurves controlPointA="#0.32, -0.46875" anchorPointA="#0.54, -0.3359375" controlPointB="#0.82, #0.5B" anchorPointB="#0.85, #0.5B"/>
+                    <MorphCurves controlPointA="#0.78, -0.1953125" anchorPointA="#0.78, 0" controlPointB="#0.87, #0.5C" anchorPointB="#0.87, #0.6B"/>
+                    <MorphCurves controlPointA="#0.78, #0.32" anchorPointA="#0.54, #0.54" controlPointB="#0.87, #0.84" anchorPointB="#0.83, #0.7E"/>
+                    <MorphCurves controlPointA="#0.32, #0.78" anchorPointA="0, #0.78" controlPointB="#0.78, #0.83" anchorPointB="#0.6E, #0.87"/>
+                    <MorphCurves controlPointA="-0.1953125, #0.78" anchorPointA="-0.3359375, #0.54" controlPointB="#0.5D, #0.81" anchorPointB="#0.5C, #0.81"/>
+                    <MorphCurves controlPointA="-0.46875, #0.32" anchorPointA="-0.46875, 0" controlPointB="#0.55, #0.7B" anchorPointB="#0.55, #0.6B"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#0.7D, -0.9453125" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1953125" anchorPointA="-0.3359375, -0.3359375" controlPointB="#0.7D, -1.0078125" anchorPointB="#0.86, -1.0234375"/>
+                    <MorphCurves controlPointA="-0.1953125, -0.46875" anchorPointA="0, -0.46875" controlPointB="#0.8B, -1.03125" anchorPointB="#0.96, #FFFFFE.F7"/>
+                    <MorphCurves controlPointA="#0.32, -0.46875" anchorPointA="#0.54, -0.3359375" controlPointB="#0.A6, -1.0078125" anchorPointB="#0.AF, #FFFFFF.0B"/>
+                    <MorphCurves controlPointA="#0.78, -0.1953125" anchorPointA="#0.78, 0" controlPointB="#0.AF, -0.9296875" anchorPointB="#0.A9, -0.8984375"/>
+                    <MorphCurves controlPointA="#0.78, #0.32" anchorPointA="#0.54, #0.54" controlPointB="#0.A1, -0.859375" anchorPointB="#0.96, #FFFFFF.29"/>
+                    <MorphCurves controlPointA="#0.32, #0.78" anchorPointA="0, #0.78" controlPointB="#0.87, -0.859375" anchorPointB="#0.7E, #FFFFFF.1D"/>
+                    <MorphCurves controlPointA="-0.1953125, #0.78" anchorPointA="-0.3359375, #0.54" controlPointB="#0.7E, -0.8828125" anchorPointB="#0.7E, #FFFFFF.1F"/>
+                    <MorphCurves controlPointA="-0.46875, #0.32" anchorPointA="-0.46875, 0" controlPointB="#0.7D, -0.8828125" anchorPointB="#0.7D, -0.9453125"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#0.7D, #0.11" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1953125" anchorPointA="-0.3359375, -0.3359375" controlPointB="#0.7D, #0.01" anchorPointB="#0.8B, -0.0078125"/>
+                    <MorphCurves controlPointA="-0.1953125, -0.46875" anchorPointA="0, -0.46875" controlPointB="#0.92, #FFFFFF.FD" anchorPointB="#0.AA, 0"/>
+                    <MorphCurves controlPointA="#0.32, -0.46875" anchorPointA="#0.54, -0.3359375" controlPointB="#0.AA, #0.01" anchorPointB="#0.AD, #0.02"/>
+                    <MorphCurves controlPointA="#0.78, -0.1953125" anchorPointA="#0.78, 0" controlPointB="#0.AF, #0.03" anchorPointB="#0.AF, #0.11"/>
+                    <MorphCurves controlPointA="#0.78, #0.32" anchorPointA="#0.54, #0.54" controlPointB="#0.AF, #0.2A" anchorPointB="#0.AB, #0.24"/>
+                    <MorphCurves controlPointA="#0.32, #0.78" anchorPointA="0, #0.78" controlPointB="#0.A, #0.29" anchorPointB="#0.96, #0.2D"/>
+                    <MorphCurves controlPointA="-0.1953125, #0.78" anchorPointA="-0.3359375, #0.54" controlPointB="#0.85, #0.27" anchorPointB="#0.84, #0.27"/>
+                    <MorphCurves controlPointA="-0.46875, #0.32" anchorPointA="-0.46875, 0" controlPointB="#0.7D, #0.21" anchorPointB="#0.7D, #0.11"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#0.9B, -0.6328125" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1953125" anchorPointA="-0.3359375, -0.3359375" controlPointB="#0.9B, -0.6953125" anchorPointB="#0.A4, -0.7109375"/>
+                    <MorphCurves controlPointA="-0.1953125, -0.46875" anchorPointA="0, -0.46875" controlPointB="#0.A9, -0.71875" anchorPointB="#0.B4, #FFFFFF.47"/>
+                    <MorphCurves controlPointA="#0.32, -0.46875" anchorPointA="#0.54, -0.3359375" controlPointB="#0.C4, -0.6953125" anchorPointB="#0.CD, #FFFFFF.5B"/>
+                    <MorphCurves controlPointA="#0.78, -0.1953125" anchorPointA="#0.78, 0" controlPointB="#0.CD, -0.6171875" anchorPointB="#0.C7, -0.5859375"/>
+                    <MorphCurves controlPointA="#0.78, #0.32" anchorPointA="#0.54, #0.54" controlPointB="#0.BF, -0.546875" anchorPointB="#0.B4, #FFFFFF.79"/>
+                    <MorphCurves controlPointA="#0.32, #0.78" anchorPointA="0, #0.78" controlPointB="#0.A5, -0.546875" anchorPointB="#0.9C, #FFFFFF.6D"/>
+                    <MorphCurves controlPointA="-0.1953125, #0.78" anchorPointA="-0.3359375, #0.54" controlPointB="#0.9C, -0.5703125" anchorPointB="#0.9C, #FFFFFF.6F"/>
+                    <MorphCurves controlPointA="-0.46875, #0.32" anchorPointA="-0.46875, 0" controlPointB="#0.9B, -0.5703125" anchorPointB="#0.9B, -0.6328125"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#0.CD, -0.4765625" strokeIndex1="0" strokeIndex2="0" fillIndex1="0">
+                    <MorphCurves controlPointA="-0.46875, -0.1953125" anchorPointA="-0.3359375, -0.3359375" controlPointB="#0.CD, -0.5234375" anchorPointB="#0.D2, #FFFFFF.75"/>
+                    <MorphCurves controlPointA="#FFFFFF.D9, -0.46875" anchorPointA="0, -0.46875" controlPointB="#0.DA, -0.5625" anchorPointB="#0.E2, #FFFFFF.6F"/>
+                    <MorphCurves controlPointA="#0.39, #FFFFFF.8F" anchorPointA="#0.54, -0.3359375" controlPointB="#0.ED, -0.5546875" anchorPointB="#0.F3, -0.5390625"/>
+                    <MorphCurves controlPointA="#0.76, -0.203125" anchorPointA="#0.78, -0.0234375" controlPointB="#0.FA, -0.515625" anchorPointB="#0.FF, #FFFFFF.83"/>
+                    <MorphCurves controlPointA="#0.78, #0.29" anchorPointA="#0.5F, #0.47" controlPointB="#0.FE, #FFFFFF.8B" anchorPointB="#0.F9, -0.4296875"/>
+                    <MorphCurves controlPointA="#0.5A, #0.4E" anchorPointA="#0.54, #0.54" controlPointB="#0.F8, -0.421875" anchorPointB="#0.F6, -0.4140625"/>
+                    <MorphCurves controlPointA="#0.3B, #0.6F" anchorPointA="#0.19, #0.76" controlPointB="#0.EF, #FFFFFF.9D" anchorPointB="#0.E6, #FFFFFF.A1"/>
+                    <MorphCurves controlPointA="#0.0D, #0.78" anchorPointA="0, #0.78" controlPointB="#0.E4, -0.375" anchorPointB="#0.E2, #FFFFFF.9F"/>
+                    <MorphCurves controlPointA="-0.1953125, #0.78" anchorPointA="-0.3359375, #0.54" controlPointB="#0.D7, #FFFFFF.9B" anchorPointB="#0.D, #FFFFFF.95"/>
+                    <MorphCurves controlPointA="-0.46875, #0.2D" anchorPointA="-0.46875, 0" controlPointB="#0.CD, #FFFFFF.9F" anchorPointB="#0.CD, -0.46875"/>
+                    <MorphCurves controlPointA="-0.46875, 0" anchorPointA="-0.46875, 0" controlPointB="#0.CD, -0.46875" anchorPointB="#0.CD, -0.4765625" isLine="true"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#0.CD, -0.4765625" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1953125" anchorPointA="-0.3359375, -0.3359375" controlPointB="#0.CD, -0.5234375" anchorPointB="#0.D2, #FFFFFF.75"/>
+                    <MorphCurves controlPointA="#FFFFFF.D9, -0.46875" anchorPointA="0, -0.46875" controlPointB="#0.DA, -0.5625" anchorPointB="#0.E2, #FFFFFF.6F"/>
+                    <MorphCurves controlPointA="#0.39, #FFFFFF.8F" anchorPointA="#0.54, -0.3359375" controlPointB="#0.ED, -0.5546875" anchorPointB="#0.F3, -0.5390625"/>
+                    <MorphCurves controlPointA="#0.76, -0.203125" anchorPointA="#0.78, -0.0234375" controlPointB="#0.FA, -0.515625" anchorPointB="#0.FF, #FFFFFF.83"/>
+                    <MorphCurves controlPointA="#0.78, #0.29" anchorPointA="#0.5F, #0.47" controlPointB="#0.FE, #FFFFFF.8B" anchorPointB="#0.F9, -0.4296875"/>
+                    <MorphCurves controlPointA="#0.5A, #0.4E" anchorPointA="#0.54, #0.54" controlPointB="#0.F8, -0.421875" anchorPointB="#0.F6, -0.4140625"/>
+                    <MorphCurves controlPointA="#0.3B, #0.6F" anchorPointA="#0.19, #0.76" controlPointB="#0.EF, #FFFFFF.9D" anchorPointB="#0.E6, #FFFFFF.A1"/>
+                    <MorphCurves controlPointA="#0.0D, #0.78" anchorPointA="0, #0.78" controlPointB="#0.E4, -0.375" anchorPointB="#0.E2, #FFFFFF.9F"/>
+                    <MorphCurves controlPointA="-0.1953125, #0.78" anchorPointA="-0.3359375, #0.54" controlPointB="#0.D7, #FFFFFF.9B" anchorPointB="#0.D, #FFFFFF.95"/>
+                    <MorphCurves controlPointA="-0.46875, #0.2D" anchorPointA="-0.46875, 0" controlPointB="#0.CD, #FFFFFF.9F" anchorPointB="#0.CD, -0.46875"/>
+                    <MorphCurves controlPointA="-0.46875, 0" anchorPointA="-0.46875, 0" controlPointB="#0.CD, -0.46875" anchorPointB="#0.CD, -0.4765625" isLine="true"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#0.9B, -0.2421875" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1953125" anchorPointA="-0.3359375, -0.3359375" controlPointB="#0.9B, -0.2890625" anchorPointB="#0.A, #FFFFFF.B1"/>
+                    <MorphCurves controlPointA="#FFFFFF.D9, -0.46875" anchorPointA="0, -0.46875" controlPointB="#0.A8, -0.328125" anchorPointB="#0.B, #FFFFFF.AB"/>
+                    <MorphCurves controlPointA="#0.39, #FFFFFF.8F" anchorPointA="#0.54, -0.3359375" controlPointB="#0.BB, -0.3203125" anchorPointB="#0.C1, -0.3046875"/>
+                    <MorphCurves controlPointA="#0.76, -0.203125" anchorPointA="#0.78, -0.0234375" controlPointB="#0.C8, -0.28125" anchorPointB="#0.CD, #FFFFFF.BF"/>
+                    <MorphCurves controlPointA="#0.78, #0.29" anchorPointA="#0.5F, #0.47" controlPointB="#0.CC, #FFFFFF.C7" anchorPointB="#0.C7, -0.1953125"/>
+                    <MorphCurves controlPointA="#0.5A, #0.4E" anchorPointA="#0.54, #0.54" controlPointB="#0.C6, -0.1875" anchorPointB="#0.C4, -0.1796875"/>
+                    <MorphCurves controlPointA="#0.3B, #0.6F" anchorPointA="#0.19, #0.76" controlPointB="#0.BD, #FFFFFF.D9" anchorPointB="#0.B4, #FFFFFF.DD"/>
+                    <MorphCurves controlPointA="#0.0D, #0.78" anchorPointA="0, #0.78" controlPointB="#0.B2, -0.140625" anchorPointB="#0.B, #FFFFFF.DB"/>
+                    <MorphCurves controlPointA="-0.1953125, #0.78" anchorPointA="-0.3359375, #0.54" controlPointB="#0.A5, #FFFFFF.D7" anchorPointB="#0.9E, #FFFFFF.D1"/>
+                    <MorphCurves controlPointA="-0.46875, #0.2D" anchorPointA="-0.46875, 0" controlPointB="#0.9B, #FFFFFF.DB" anchorPointB="#0.9B, -0.234375"/>
+                    <MorphCurves controlPointA="-0.46875, 0" anchorPointA="-0.46875, 0" controlPointB="#0.9B, -0.234375" anchorPointB="#0.9B, -0.2421875" isLine="true"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#0.B9, #0.4D" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1953125" anchorPointA="-0.3359375, -0.3359375" controlPointB="#0.B9, #0.3D" anchorPointB="#0.C7, #0.39"/>
+                    <MorphCurves controlPointA="-0.1953125, -0.46875" anchorPointA="0, -0.46875" controlPointB="#0.D3, #0.36" anchorPointB="#0.E6, #0.3C"/>
+                    <MorphCurves controlPointA="#0.32, -0.46875" anchorPointA="#0.54, -0.3359375" controlPointB="#0.E6, #0.3D" anchorPointB="#0.E9, #0.3D"/>
+                    <MorphCurves controlPointA="#0.78, -0.1953125" anchorPointA="#0.78, 0" controlPointB="#0.EB, #0.3E" anchorPointB="#0.EB, #0.4D"/>
+                    <MorphCurves controlPointA="#0.78, #0.32" anchorPointA="#0.54, #0.54" controlPointB="#0.EB, #0.66" anchorPointB="#0.E7, #0.6"/>
+                    <MorphCurves controlPointA="#0.32, #0.78" anchorPointA="0, #0.78" controlPointB="#0.DC, #0.65" anchorPointB="#0.D2, #0.69"/>
+                    <MorphCurves controlPointA="-0.1953125, #0.78" anchorPointA="-0.3359375, #0.54" controlPointB="#0.C1, #0.63" anchorPointB="0.75, #0.63"/>
+                    <MorphCurves controlPointA="-0.46875, #0.32" anchorPointA="-0.46875, 0" controlPointB="#0.B9, #0.5D" anchorPointB="#0.B9, #0.4D"/>
+                  </MorphSegment>
+                  <MorphSegment startPointA="-0.46875, 0" startPointB="#0.C3, #0.89" strokeIndex1="0" strokeIndex2="0" fillIndex1="0" fillIndex2="1">
+                    <MorphCurves controlPointA="-0.46875, -0.1953125" anchorPointA="-0.3359375, -0.3359375" controlPointB="#0.C3, #0.79" anchorPointB="#0.D1, #0.75"/>
+                    <MorphCurves controlPointA="-0.1953125, -0.46875" anchorPointA="0, -0.46875" controlPointB="#0.DD, #0.72" anchorPointB="#0.F, #0.78"/>
+                    <MorphCurves controlPointA="#0.32, -0.46875" anchorPointA="#0.54, -0.3359375" controlPointB="#0.F, #0.79" anchorPointB="#0.F3, #0.79"/>
+                    <MorphCurves controlPointA="#0.78, -0.1953125" anchorPointA="#0.78, 0" controlPointB="#0.F5, #0.7A" anchorPointB="#0.F5, #0.89"/>
+                    <MorphCurves controlPointA="#0.78, #0.32" anchorPointA="#0.54, #0.54" controlPointB="#0.F5, #0.A2" anchorPointB="#0.F1, #0.9C"/>
+                    <MorphCurves controlPointA="#0.32, #0.78" anchorPointA="0, #0.78" controlPointB="#0.E6, #0.A1" anchorPointB="#0.DC, #0.A5"/>
+                    <MorphCurves controlPointA="-0.1953125, #0.78" anchorPointA="-0.3359375, #0.54" controlPointB="#0.CB, #0.9F" anchorPointB="#0.CA, #0.9F"/>
+                    <MorphCurves controlPointA="-0.46875, #0.32" anchorPointA="-0.46875, 0" controlPointB="#0.C3, #0.99" anchorPointB="#0.C3, #0.89"/>
+                  </MorphSegment>
+                </morphSegments>
+                <morphHintsList/>
+              </MorphShape>
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FF0000"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!84 -86[120 -50 120 0!120 0[120 50 84 84!84 84[50 120 0 120!0 120[-50 120 -86 84!-86 84[-120 50 -120 0!-120 0[-120 -50 -86 -86!-86 -86[-50 -120 0 -120!0 -120[50 -120 84 -86"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="7" duration="2" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FF0000"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!35 -265[35 -258 29 -250!29 -250[21 -240 10 -235!10 -235[6 -236 2 -238!2 -238[-8 -243 -12 -247!-12 -247|-15 -262!-15 -262[-15 -268 -6 -275!-6 -275[2 -283 10 -285!10 -285[26 -278 35 -265!150 -265[166 -258 175 -245!175 -245[175 -238 169
+ -230!169 -230[161 -220 150 -215!150 -215[135 -220 126 -227!126 -227|126 -225!126 -225[125 -226 125 -242!125 -242[125 -258 134 -262!134 -262[139 -264 150 -265!180 -185[196 -178 205 -165!205 -165[205 -158 199 -150!199 -150[191 -140 180
+ -135!180 -135[165 -140 156 -147!156 -147|156 -145!156 -145[155 -146 155 -162!155 -162[155 -178 164 -182!164 -182[169 -184 180 -185!69 -190[61 -180 50 -175!50 -175|26 -187!26 -187|26 -185!26 -185[25 -186 25 -202!25 -202[25 -218 34 -222
+!34 -222[39 -224 50 -225!50 -225[66 -218 75 -205!75 -205[75 -198 69 -190!80 -55[65 -60 56 -67!56 -67[55 -57 55 -82!55 -82[55 -98 64 -102!64 -102[69 -104 80 -105!80 -105[96 -98 105 -85!105 -85[105 -78 99 -70!99 -70[91 -60 80 -55!180 -35
+[165 -40 156 -47!156 -47[155 -37 155 -62!155 -62[155 -78 164 -82!164 -82[169 -84 180 -85!180 -85[196 -78 205 -65!205 -65[205 -58 199 -50!199 -50[191 -40 180 -35!255 -125[255 -118 249 -110!249 -110[241 -100 230 -95!230 -95[215 -100 206
+ -107!206 -107[205 -97 205 -122!205 -122[205 -138 214 -142!214 -142[219 -144 230 -145!230 -145[246 -138 255 -125!240 120[240 121 243 121!243 121[245 122 245 137!245 137[245 162 241 156!241 156[230 161 220 165!220 165[203 159 202 159!202
+ 159[195 153 195 137!195 137[195 121 209 117!209 117[221 114 240 120!210 105[193 99 192 99!192 99[185 93 185 77!185 77[185 61 199 57!199 57[211 54 230 60!230 60[230 61 233 61!233 61[235 62 235 77!235 77[235 102 231 96!231 96[220 101 210
+ 105!173 2[175 3 175 17!175 17[175 42 171 36!171 36[160 41 150 45!150 45[133 39 132 39!132 39[125 33 125 17!125 17[125 1 139 -2!139 -2[146 -3 170 0!170 0[170 1 173 2!135 107[135 132 131 126!131 126[120 131 110 135!110 135[93 129 92 129
+!92 129[85 123 85 107!85 107[85 91 99 87!99 87[111 84 130 90!130 90[130 91 133 91!133 91[135 92 135 107!33 31[35 32 35 47!35 47[35 72 31 66!31 66[20 71 10 75!10 75[-7 69 -8 69!-8 69[-15 63 -15 47!-15 47[-15 32 0 27!0 27[14 23 30 30!30
+ 30[30 31 33 31!93 211[95 212 95 227!95 227[95 252 91 246!91 246[80 251 70 255!70 255[53 249 52 249!52 249[45 243 45 227!45 227[45 211 59 207!59 207[71 204 90 210!90 210[90 211 93 211!-125 -275[-125 -255 -150 -245!-150 -245|-172 -257
+!-172 -257|-175 -272!-175 -272[-175 -278 -166 -285!-166 -285[-158 -293 -150 -295!-150 -295[-135 -289 -125 -275!-70 -265[-55 -259 -45 -245!-45 -245[-45 -225 -70 -215!-70 -215|-78 -218!-78 -218[-88 -223 -92 -227!-92 -227|-95 -242!-95 -242
+[-95 -248 -86 -255!-86 -255[-78 -263 -70 -265!-215 -72[-215 -78 -206 -85!-206 -85[-198 -93 -190 -95!-190 -95[-175 -89 -165 -75!-165 -75[-165 -55 -190 -45!-190 -45|-198 -48!-198 -48[-208 -53 -212 -57!-212 -57|-215 -72!-215 -182[-215 -188
+ -206 -195!-206 -195[-198 -203 -190 -205!-190 -205[-175 -199 -165 -185!-165 -185[-165 -165 -190 -155!-190 -155|-198 -158!-198 -158[-208 -163 -212 -167!-212 -167|-215 -182!-75 -145[-75 -125 -100 -115!-100 -115|-108 -118!-108 -118[-118
+ -123 -122 -127!-122 -127|-125 -142!-125 -142[-125 -148 -116 -155!-116 -155[-108 -163 -100 -165!-100 -165[-85 -159 -75 -145!-60 -5[-42 2 -35 15!-35 15[-35 21 -41 29!-41 29[-48 39 -60 45!-60 45[-75 40 -82 31!-82 31[-85 42 -85 17!-85 17
+[-85 2 -76 -2!-76 -2[-65 -3 -60 -5!-15 -65[-15 -45 -40 -35!-40 -35|-48 -38!-48 -38[-58 -43 -62 -47!-62 -47|-65 -62!-65 -62[-65 -68 -56 -75!-56 -75[-48 -83 -40 -85!-40 -85[-25 -79 -15 -65!-47 61[-45 62 -45 77!-45 77[-45 102 -47 90!-47
+ 90[-54 99 -70 105!-70 105[-95 97 -95 70!-95 70[-81 54 -50 60!-50 60[-50 61 -47 61!-187 31[-185 32 -185 47!-185 47[-185 72 -187 60!-187 60[-194 69 -210 75!-210 75[-235 67 -235 40!-235 40[-221 24 -190 30!-190 30[-190 31 -187 31!-198 171
+[-205 161 -205 150!-205 150[-191 134 -160 140!-160 140[-160 141 -157 141!-157 141[-155 142 -155 157!-155 157[-155 182 -157 170!-157 170[-164 179 -180 185!-180 185[-191 181 -198 171!-165 220[-151 204 -120 210!-120 210[-120 211 -117 211
+!-117 211[-115 212 -115 227!-115 227[-115 252 -117 240!-117 240[-124 249 -140 255!-140 255[-151 251 -158 241!-158 241[-165 231 -165 220!-40 150[-40 151 -37 151!-37 151[-35 152 -35 167!-35 167[-35 192 -37 180!-37 180[-44 189 -60 195!-60
+ 195[-85 187 -85 160!-85 160[-71 144 -40 150"/>
+                    <Edge cubics="!-190 -205(;-177,-200 -170,-192 -165,-185q-190 -205Q-175 -199q-165 -185);"/>
+                    <Edge cubics="!-165 -185(-165,-185;-165,-177 -172,-162 -190,-155q-165 -185Q-165 -165q-190 -155);"/>
+                    <Edge cubics="!-190 -155(;-190,-155 -205,-160 -212,-167q-190 -155Q-190 -155q-198 -158Q-208 -163q-212 -167);"/>
+                    <Edge cubics="!-212 -167(;-212,-167 -215,-182 -215,-182q-212 -167 -215 -182);"/>
+                    <Edge cubics="!-215 -182(;-215,-190 -200,-202 -190,-205q-215 -182Q-215 -188q-206 -195Q-198 -203q-190 -205);"/>
+                    <Edge cubics="!-70 -265(;-57,-260 -50,-252 -45,-245q-70 -265Q-55 -259q-45 -245);"/>
+                    <Edge cubics="!-45 -245(;-45,-237 -52,-222 -70,-215q-45 -245Q-45 -225q-70 -215);"/>
+                    <Edge cubics="!-70 -215(;-70,-215 -85,-220 -92,-227q-70 -215Q-70 -215q-78 -218Q-88 -223q-92 -227);"/>
+                    <Edge cubics="!-92 -227(;-92,-227 -95,-242 -95,-242q-92 -227 -95 -242);"/>
+                    <Edge cubics="!-95 -242(;-95,-250 -80,-262 -70,-265q-95 -242Q-95 -248q-86 -255Q-78 -263q-70 -265);"/>
+                    <Edge cubics="!-40 -85(;-27,-80 -20,-72 -15,-65q-40 -85Q-25 -79q-15 -65);"/>
+                    <Edge cubics="!-15 -65(;-15,-57 -22,-42 -40,-35q-15 -65Q-15 -45q-40 -35);"/>
+                    <Edge cubics="!-40 -35(;-40,-35 -55,-40 -62,-47q-40 -35Q-40 -35q-48 -38Q-58 -43q-62 -47);"/>
+                    <Edge cubics="!-62 -47(;-62,-47 -65,-62 -65,-62q-62 -47 -65 -62);"/>
+                    <Edge cubics="!-65 -62(;-65,-70 -50,-82 -40,-85q-65 -62Q-65 -68q-56 -75Q-48 -83q-40 -85);"/>
+                    <Edge cubics="!-190 -95(;-177,-90 -170,-82 -165,-75q-190 -95Q-175 -89q-165 -75);"/>
+                    <Edge cubics="!-165 -75(;-165,-67 -172,-52 -190,-45q-165 -75Q-165 -55q-190 -45);"/>
+                    <Edge cubics="!-190 -45(;-190,-45 -205,-50 -212,-57q-190 -45Q-190 -45q-198 -48Q-208 -53q-212 -57);"/>
+                    <Edge cubics="!-212 -57(;-212,-57 -215,-72 -215,-72q-212 -57 -215 -72);"/>
+                    <Edge cubics="!-215 -72(;-215,-80 -200,-92 -190,-95q-215 -72Q-215 -78q-206 -85Q-198 -93q-190 -95);"/>
+                    <Edge cubics="!-100 -165(;-87,-160 -80,-152 -75,-145q-100 -165Q-85 -159q-75 -145);"/>
+                    <Edge cubics="!-75 -145(;-75,-137 -82,-122 -100,-115q-75 -145Q-75 -125q-100 -115);"/>
+                    <Edge cubics="!-100 -115(;-100,-115 -115,-120 -122,-127q-100 -115Q-100 -115q-108 -118Q-118 -123q-122 -127);"/>
+                    <Edge cubics="!-122 -127(;-122,-127 -125,-142 -125,-142q-122 -127 -125 -142);"/>
+                    <Edge cubics="!-125 -142(;-125,-150 -110,-162 -100,-165q-125 -142Q-125 -148q-116 -155Q-108 -163q-100 -165);"/>
+                    <Edge cubics="!50 -225(;61,-220 70,-212 75,-205q50 -225Q66 -218q75 -205);"/>
+                    <Edge cubics="!75 -205(;75,-197 66,-182 50,-175q75 -205Q75 -198q69 -190Q61 -180q50 -175);"/>
+                    <Edge cubics="!50 -175(;50,-175 35,-180 26,-187q50 -175Q50 -175q26 -187);"/>
+                    <Edge cubics="!26 -187(;26,-187 25,-177 25,-202q26 -187Q26 -187q26 -185Q25 -186q25 -202);"/>
+                    <Edge cubics="!25 -202(;25,-227 40,-222 50,-225q25 -202Q25 -218q34 -222Q39 -224q50 -225);"/>
+                    <Edge cubics="!80 -105(;91,-100 100,-92 105,-85q80 -105Q96 -98q105 -85);"/>
+                    <Edge cubics="!105 -85(;105,-77 96,-62 80,-55q105 -85Q105 -78q99 -70Q91 -60q80 -55);"/>
+                    <Edge cubics="!80 -55(;80,-55 65,-60 56,-67q80 -55Q65 -60q56 -67);"/>
+                    <Edge cubics="!56 -67(;56,-67 55,-57 55,-82q56 -67Q55 -57q55 -82);"/>
+                    <Edge cubics="!55 -82(;55,-107 70,-102 80,-105q55 -82Q55 -98q64 -102Q69 -104q80 -105);"/>
+                    <Edge cubics="!180 -185(;191,-180 200,-172 205,-165q180 -185Q196 -178q205 -165);"/>
+                    <Edge cubics="!205 -165(;205,-157 196,-142 180,-135q205 -165Q205 -158q199 -150Q191 -140q180 -135);"/>
+                    <Edge cubics="!180 -135(;180,-135 165,-140 156,-147q180 -135Q165 -140q156 -147);"/>
+                    <Edge cubics="!156 -147(;156,-147 155,-137 155,-162q156 -147Q156 -147q156 -145Q155 -146q155 -162);"/>
+                    <Edge cubics="!155 -162(;155,-187 170,-182 180,-185q155 -162Q155 -178q164 -182Q169 -184q180 -185);"/>
+                    <Edge cubics="!150 -265(;161,-260 170,-252 175,-245q150 -265Q166 -258q175 -245);"/>
+                    <Edge cubics="!175 -245(;175,-237 166,-222 150,-215q175 -245Q175 -238q169 -230Q161 -220q150 -215);"/>
+                    <Edge cubics="!150 -215(;150,-215 135,-220 126,-227q150 -215Q135 -220q126 -227);"/>
+                    <Edge cubics="!126 -227(;126,-227 125,-217 125,-242q126 -227Q126 -227q126 -225Q125 -226q125 -242);"/>
+                    <Edge cubics="!125 -242(;125,-267 140,-262 150,-265q125 -242Q125 -258q134 -262Q139 -264q150 -265);"/>
+                    <Edge cubics="!170 0(;170,6 175,-7 175,17q170 0Q170 1q173 2Q175 3q175 17);"/>
+                    <Edge cubics="!175 17(;175,42 171,36 171,36q175 17Q175 42q171 36);"/>
+                    <Edge cubics="!171 36(;166,36 160,41 150,45q171 36Q160 41q150 45);"/>
+                    <Edge cubics="!150 45(;135,40 125,42 125,17q150 45Q133 39q132 39Q125 33q125 17);"/>
+                    <Edge cubics="!125 17(;125,-7 147,-3 170,0q125 17Q125 1q139 -2Q146 -3q170 0);"/>
+                    <Edge cubics="!130 90(;130,96 135,82 135,107q130 90Q130 91q133 91Q135 92q135 107);"/>
+                    <Edge cubics="!135 107(;135,132 131,126 131,126q135 107Q135 132q131 126);"/>
+                    <Edge cubics="!131 126(;126,126 120,131 110,135q131 126Q120 131q110 135);"/>
+                    <Edge cubics="!110 135(;95,130 85,132 85,107q110 135Q93 129q92 129Q85 123q85 107);"/>
+                    <Edge cubics="!85 107(;85,85 106,82 130,90q85 107Q85 91q99 87Q111 84q130 90);"/>
+                    <Edge cubics="!-40 150(;-40,156 -35,142 -35,167q-40 150Q-40 151q-37 151Q-35 152q-35 167);"/>
+                    <Edge cubics="!-35 167(;-35,192 -37,180 -37,180q-35 167Q-35 192q-37 180);"/>
+                    <Edge cubics="!-37 180(;-42,186 -50,191 -60,195q-37 180Q-44 189q-60 195);"/>
+                    <Edge cubics="!-60 195(;-75,190 -85,175 -85,160q-60 195Q-85 187q-85 160)-85,160;"/>
+                    <Edge cubics="!-85 160(;-77,151 -60,146 -40,150q-85 160Q-71 144q-40 150)-40,150;"/>
+                    <Edge cubics="!-50 60(;-50,66 -45,52 -45,77q-50 60Q-50 61q-47 61Q-45 62q-45 77);"/>
+                    <Edge cubics="!-45 77(-45,77;-45,102 -47,90 -47,90q-45 77Q-45 102q-47 90);"/>
+                    <Edge cubics="!-47 90(-47,90;-52,96 -60,101 -70,105q-47 90Q-54 99q-70 105);"/>
+                    <Edge cubics="!-70 105(-70,105;-85,100 -95,85 -95,70q-70 105Q-95 97q-95 70);"/>
+                    <Edge cubics="!-95 70(;-87,61 -70,56 -50,60q-95 70Q-81 54q-50 60)-50,60;"/>
+                    <Edge cubics="!-190 30(;-190,36 -185,22 -185,47q-190 30Q-190 31q-187 31Q-185 32q-185 47);"/>
+                    <Edge cubics="!-185 47(;-185,72 -187,60 -187,60q-185 47Q-185 72q-187 60)-187,60;"/>
+                    <Edge cubics="!-187 60(;-192,66 -200,71 -210,75q-187 60Q-194 69q-210 75)-210,75;"/>
+                    <Edge cubics="!-210 75(-210,75;-225,70 -235,55 -235,40q-210 75Q-235 67q-235 40);"/>
+                    <Edge cubics="!-235 40(;-227,31 -210,26 -190,30q-235 40Q-221 24q-190 30);"/>
+                    <Edge cubics="!-160 140(;-160,146 -155,132 -155,157q-160 140Q-160 141q-157 141Q-155 142q-155 157);"/>
+                    <Edge cubics="!-155 157(;-155,182 -157,170 -157,170q-155 157Q-155 182q-157 170);"/>
+                    <Edge cubics="!-157 170(-157,170;-162,176 -170,181 -180,185q-157 170Q-164 179q-180 185)-180,185;"/>
+                    <Edge cubics="!-180 185(;-195,180 -205,165 -205,150q-180 185Q-191 181q-198 171Q-205 161q-205 150)-205,150;"/>
+                    <Edge cubics="!-205 150(;-197,141 -180,136 -160,140q-205 150Q-191 134q-160 140)-160,140;"/>
+                    <Edge cubics="!90 210(;90,216 95,202 95,227q90 210Q90 211q93 211Q95 212q95 227);"/>
+                    <Edge cubics="!95 227(;95,252 91,246 91,246q95 227Q95 252q91 246)91,246;"/>
+                    <Edge cubics="!91 246(;86,246 80,251 70,255q91 246Q80 251q70 255);"/>
+                    <Edge cubics="!70 255(70,255;55,250 45,252 45,227q70 255Q53 249q52 249Q45 243q45 227)45,227;"/>
+                    <Edge cubics="!45 227(45,227;45,205 66,202 90,210q45 227Q45 211q59 207Q71 204q90 210);"/>
+                    <Edge cubics="!240 120(;240,126 245,112 245,137q240 120Q240 121q243 121Q245 122q245 137);"/>
+                    <Edge cubics="!245 137(245,137;245,162 241,156 241,156q245 137Q245 162q241 156)241,156;"/>
+                    <Edge cubics="!241 156(;236,156 230,161 220,165q241 156Q230 161q220 165);"/>
+                    <Edge cubics="!220 165(;205,160 195,162 195,137q220 165Q203 159q202 159Q195 153q195 137);"/>
+                    <Edge cubics="!195 137(;195,115 216,112 240,120q195 137Q195 121q209 117Q221 114q240 120);"/>
+                    <Edge cubics="!230 60(;230,66 235,52 235,77q230 60Q230 61q233 61Q235 62q235 77);"/>
+                    <Edge cubics="!235 77(;235,102 231,96 231,96q235 77Q235 102q231 96);"/>
+                    <Edge cubics="!231 96(;226,96 220,101 210,105q231 96Q220 101q210 105);"/>
+                    <Edge cubics="!210 105(;195,100 185,102 185,77q210 105Q193 99q192 99Q185 93q185 77)185,77;"/>
+                    <Edge cubics="!185 77(185,77;185,55 207,52 230,60q185 77Q185 61q199 57Q211 54q230 60);"/>
+                    <Edge cubics="!-60 -5(;-47,0 -40,6 -35,15q-60 -5Q-42 2q-35 15);"/>
+                    <Edge cubics="!-35 15(-35,15;-35,21 -42,36 -60,45q-35 15Q-35 21q-41 29Q-48 39q-60 45);"/>
+                    <Edge cubics="!-60 45(-60,45;-60,45 -75,40 -82,31q-60 45Q-75 40q-82 31);"/>
+                    <Edge cubics="!-82 31(-82,31;-82,31 -85,42 -85,17q-82 31Q-85 42q-85 17)-85,17;"/>
+                    <Edge cubics="!-85 17(;-85,-7 -70,-2 -60,-5q-85 17Q-85 2q-76 -2Q-65 -3q-60 -5);"/>
+                    <Edge cubics="!30 30(;30,36 35,22 35,47q30 30Q30 31q33 31Q35 32q35 47);"/>
+                    <Edge cubics="!35 47(;35,72 31,66 31,66q35 47Q35 72q31 66);"/>
+                    <Edge cubics="!31 66(;26,66 20,71 10,75q31 66Q20 71q10 75);"/>
+                    <Edge cubics="!10 75(;-5,70 -15,72 -15,47q10 75Q-7 69q-8 69Q-15 63q-15 47);"/>
+                    <Edge cubics="!-15 47(;-15,25 11,22 30,30q-15 47Q-15 32q0 27Q14 23q30 30);"/>
+                    <Edge cubics="!180 -85(;191,-80 200,-72 205,-65q180 -85Q196 -78q205 -65);"/>
+                    <Edge cubics="!205 -65(;205,-57 196,-42 180,-35q205 -65Q205 -58q199 -50Q191 -40q180 -35);"/>
+                    <Edge cubics="!180 -35(;180,-35 165,-40 156,-47q180 -35Q165 -40q156 -47);"/>
+                    <Edge cubics="!156 -47(;156,-47 155,-37 155,-62q156 -47Q155 -37q155 -62)155,-62;"/>
+                    <Edge cubics="!155 -62(;155,-87 170,-82 180,-85q155 -62Q155 -78q164 -82Q169 -84q180 -85);"/>
+                    <Edge cubics="!230 -145(;241,-140 250,-132 255,-125q230 -145Q246 -138q255 -125);"/>
+                    <Edge cubics="!255 -125(255,-125;255,-117 246,-102 230,-95q255 -125Q255 -118q249 -110Q241 -100q230 -95)230,-95;"/>
+                    <Edge cubics="!230 -95(230,-95;230,-95 215,-100 206,-107q230 -95Q215 -100q206 -107)206,-107;"/>
+                    <Edge cubics="!206 -107(206,-107;206,-107 205,-97 205,-122q206 -107Q205 -97q205 -122)205,-122;"/>
+                    <Edge cubics="!205 -122(205,-122;205,-147 220,-142 230,-145q205 -122Q205 -138q214 -142Q219 -144q230 -145)230,-145;"/>
+                    <Edge cubics="!-120 210(;-120,216 -115,202 -115,227q-120 210Q-120 211q-117 211Q-115 212q-115 227);"/>
+                    <Edge cubics="!-115 227(-115,227;-115,252 -117,240 -117,240q-115 227Q-115 252q-117 240)-117,240;"/>
+                    <Edge cubics="!-117 240(-117,240;-122,246 -130,251 -140,255q-117 240Q-124 249q-140 255)-140,255;"/>
+                    <Edge cubics="!-140 255(-140,255;-155,250 -165,235 -165,220q-140 255Q-151 251q-158 241Q-165 231q-165 220)-165,220;"/>
+                    <Edge cubics="!-165 220(-165,220;-157,211 -140,206 -120,210q-165 220Q-151 204q-120 210)-120,210;"/>
+                    <Edge cubics="!-150 -295(;-137,-290 -130,-282 -125,-275q-150 -295Q-135 -289q-125 -275);"/>
+                    <Edge cubics="!-125 -275(-125,-275;-125,-267 -132,-252 -150,-245q-125 -275Q-125 -255q-150 -245)-150,-245;"/>
+                    <Edge cubics="!-150 -245(-150,-245;-150,-245 -165,-250 -172,-257q-150 -245Q-150 -245q-172 -257)-172,-257;"/>
+                    <Edge cubics="!-172 -257(-172,-257;-172,-257 -175,-272 -175,-272q-172 -257 -175 -272)-175,-272;"/>
+                    <Edge cubics="!-175 -272(-175,-272;-175,-280 -160,-292 -150,-295q-175 -272Q-175 -278q-166 -285Q-158 -293q-150 -295)-150,-295;"/>
+                    <Edge cubics="!10 -285(;21,-280 30,-272 35,-265q10 -285Q26 -278q35 -265);"/>
+                    <Edge cubics="!35 -265(35,-265;35,-257 26,-242 10,-235q35 -265Q35 -258q29 -250Q21 -240q10 -235)10,-235;"/>
+                    <Edge cubics="!10 -235(10,-235;10,-235 -5,-240 -12,-247q10 -235Q6 -236q2 -238Q-8 -243q-12 -247)-12,-247;"/>
+                    <Edge cubics="!-12 -247(-12,-247;-12,-247 -15,-262 -15,-262q-12 -247 -15 -262)-15,-262;"/>
+                    <Edge cubics="!-15 -262(-15,-262;-15,-270 0,-282 10,-285q-15 -262Q-15 -268q-6 -275Q2 -283q10 -285)10,-285;"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="9" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[stop();
+this.parent.removeChild( this );]]></script>
+              </Actionscript>
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FF0000"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!29 -250S2[21 -240 10 -235!10 -235[6 -236 2 -238!2 -238[-8 -243 -12 -247!-12 -247|-15 -262!-15 -262[-15 -268 -6 -275!-6 -275[2 -283 10 -285!10 -285[26 -278 35 -265!35 -265[35 -258 29 -250!150 -265[166 -258 175 -245!175 -245[175 -238 169
+ -230!169 -230[161 -220 150 -215!150 -215[135 -220 126 -227!126 -227|126 -225!126 -225[125 -226 125 -242!125 -242[125 -258 134 -262!134 -262[139 -264 150 -265!155 -162[155 -178 164 -182!164 -182[169 -184 180 -185!180 -185[196 -178 205
+ -165!205 -165[205 -158 199 -150!199 -150[191 -140 180 -135!180 -135[165 -140 156 -147!156 -147|156 -145!156 -145[155 -146 155 -162!69 -190[61 -180 50 -175!50 -175|26 -187!26 -187|26 -185!26 -185[25 -186 25 -202!25 -202[25 -218 34 -222
+!34 -222[39 -224 50 -225!50 -225[66 -218 75 -205!75 -205[75 -198 69 -190!56 -67[55 -57 55 -82!55 -82[55 -98 64 -102!64 -102[69 -104 80 -105!80 -105[96 -98 105 -85!105 -85[105 -78 99 -70!99 -70[91 -60 80 -55!80 -55[65 -60 56 -67!156 -47
+[155 -37 155 -62!155 -62[155 -78 164 -82!164 -82[169 -84 180 -85!180 -85[196 -78 205 -65!205 -65[205 -58 199 -50!199 -50[191 -40 180 -35!180 -35[165 -40 156 -47!249 -110[241 -100 230 -95!230 -95[215 -100 206 -107!206 -107[205 -97 205
+ -122!205 -122[205 -138 214 -142!214 -142[219 -144 230 -145!230 -145[246 -138 255 -125!255 -125[255 -118 249 -110!243 121[245 122 245 137!245 137[245 162 241 156!241 156[230 161 220 165!220 165[203 159 202 159!202 159[195 153 195 137
+!195 137[195 121 209 117!209 117[221 114 240 120!240 120[240 121 243 121!233 61[235 62 235 77!235 77[235 102 231 96!231 96[220 101 210 105!210 105[193 99 192 99!192 99[185 93 185 77!185 77[185 61 199 57!199 57[211 54 230 60!230 60[230
+ 61 233 61!175 17[175 42 171 36!171 36[160 41 150 45!150 45[133 39 132 39!132 39[125 33 125 17!125 17[125 1 139 -2!139 -2[146 -3 170 0!170 0[170 1 173 2!173 2[175 3 175 17!133 91[135 92 135 107!135 107[135 132 131 126!131 126[120 131
+ 110 135!110 135[93 129 92 129!92 129[85 123 85 107!85 107[85 91 99 87!99 87[111 84 130 90!130 90[130 91 133 91!35 47[35 72 31 66!31 66[20 71 10 75!10 75[-7 69 -8 69!-8 69[-15 63 -15 47!-15 47[-15 32 0 27!0 27[14 23 30 30!30 30[30 31
+ 33 31!33 31[35 32 35 47!95 227[95 252 91 246!91 246[80 251 70 255!70 255[53 249 52 249!52 249[45 243 45 227!45 227[45 211 59 207!59 207[71 204 90 210!90 210[90 211 93 211!93 211[95 212 95 227!-175 -272[-175 -278 -166 -285!-166 -285[-158
+ -293 -150 -295!-150 -295[-135 -289 -125 -275!-125 -275[-125 -255 -150 -245!-150 -245|-172 -257!-172 -257|-175 -272!-70 -265[-55 -259 -45 -245!-45 -245[-45 -225 -70 -215!-70 -215|-78 -218!-78 -218[-88 -223 -92 -227!-92 -227|-95 -242!-95
+ -242[-95 -248 -86 -255!-86 -255[-78 -263 -70 -265!-206 -85[-198 -93 -190 -95!-190 -95[-175 -89 -165 -75!-165 -75[-165 -55 -190 -45!-190 -45|-198 -48!-198 -48[-208 -53 -212 -57!-212 -57|-215 -72!-215 -72[-215 -78 -206 -85!-206 -195[-198
+ -203 -190 -205!-190 -205[-175 -199 -165 -185!-165 -185[-165 -165 -190 -155!-190 -155|-198 -158!-198 -158[-208 -163 -212 -167!-212 -167|-215 -182!-215 -182[-215 -188 -206 -195!-75 -145[-75 -125 -100 -115!-100 -115|-108 -118!-108 -118
+[-118 -123 -122 -127!-122 -127|-125 -142!-125 -142[-125 -148 -116 -155!-116 -155[-108 -163 -100 -165!-100 -165[-85 -159 -75 -145!-60 -5[-42 2 -35 15!-35 15[-35 21 -41 29!-41 29[-48 39 -60 45!-60 45[-75 40 -82 31!-82 31[-85 42 -85 17!-85
+ 17[-85 2 -76 -2!-76 -2[-65 -3 -60 -5!-40 -35|-48 -38!-48 -38[-58 -43 -62 -47!-62 -47|-65 -62!-65 -62[-65 -68 -56 -75!-56 -75[-48 -83 -40 -85!-40 -85[-25 -79 -15 -65!-15 -65[-15 -45 -40 -35!-47 61[-45 62 -45 77!-45 77[-45 102 -47 90!-47
+ 90[-54 99 -70 105!-70 105[-95 97 -95 70!-95 70[-81 54 -50 60!-50 60[-50 61 -47 61!-185 47[-185 72 -187 60!-187 60[-194 69 -210 75!-210 75[-235 67 -235 40!-235 40[-221 24 -190 30!-190 30[-190 31 -187 31!-187 31[-185 32 -185 47!-157 141
+[-155 142 -155 157!-155 157[-155 182 -157 170!-157 170[-164 179 -180 185!-180 185[-191 181 -198 171!-198 171[-205 161 -205 150!-205 150[-191 134 -160 140!-160 140[-160 141 -157 141!-165 220[-151 204 -120 210!-120 210[-120 211 -117 211
+!-117 211[-115 212 -115 227!-115 227[-115 252 -117 240!-117 240[-124 249 -140 255!-140 255[-151 251 -158 241!-158 241[-165 231 -165 220!-37 151[-35 152 -35 167!-35 167[-35 192 -37 180!-37 180[-44 189 -60 195!-60 195[-85 187 -85 160!-85
+ 160[-71 144 -40 150!-40 150[-40 151 -37 151"/>
+                    <Edge cubics="!-190 -205(;-177,-200 -170,-192 -165,-185q-190 -205Q-175 -199q-165 -185);"/>
+                    <Edge cubics="!-165 -185(-165,-185;-165,-177 -172,-162 -190,-155q-165 -185Q-165 -165q-190 -155);"/>
+                    <Edge cubics="!-190 -155(;-190,-155 -205,-160 -212,-167q-190 -155Q-190 -155q-198 -158Q-208 -163q-212 -167);"/>
+                    <Edge cubics="!-212 -167(;-212,-167 -215,-182 -215,-182q-212 -167 -215 -182);"/>
+                    <Edge cubics="!-215 -182(;-215,-190 -200,-202 -190,-205q-215 -182Q-215 -188q-206 -195Q-198 -203q-190 -205);"/>
+                    <Edge cubics="!-70 -265(;-57,-260 -50,-252 -45,-245q-70 -265Q-55 -259q-45 -245);"/>
+                    <Edge cubics="!-45 -245(;-45,-237 -52,-222 -70,-215q-45 -245Q-45 -225q-70 -215);"/>
+                    <Edge cubics="!-70 -215(;-70,-215 -85,-220 -92,-227q-70 -215Q-70 -215q-78 -218Q-88 -223q-92 -227);"/>
+                    <Edge cubics="!-92 -227(;-92,-227 -95,-242 -95,-242q-92 -227 -95 -242);"/>
+                    <Edge cubics="!-95 -242(;-95,-250 -80,-262 -70,-265q-95 -242Q-95 -248q-86 -255Q-78 -263q-70 -265);"/>
+                    <Edge cubics="!-40 -85(;-27,-80 -20,-72 -15,-65q-40 -85Q-25 -79q-15 -65);"/>
+                    <Edge cubics="!-15 -65(;-15,-57 -22,-42 -40,-35q-15 -65Q-15 -45q-40 -35);"/>
+                    <Edge cubics="!-40 -35(;-40,-35 -55,-40 -62,-47q-40 -35Q-40 -35q-48 -38Q-58 -43q-62 -47);"/>
+                    <Edge cubics="!-62 -47(;-62,-47 -65,-62 -65,-62q-62 -47 -65 -62);"/>
+                    <Edge cubics="!-65 -62(;-65,-70 -50,-82 -40,-85q-65 -62Q-65 -68q-56 -75Q-48 -83q-40 -85);"/>
+                    <Edge cubics="!-190 -95(;-177,-90 -170,-82 -165,-75q-190 -95Q-175 -89q-165 -75);"/>
+                    <Edge cubics="!-165 -75(;-165,-67 -172,-52 -190,-45q-165 -75Q-165 -55q-190 -45);"/>
+                    <Edge cubics="!-190 -45(;-190,-45 -205,-50 -212,-57q-190 -45Q-190 -45q-198 -48Q-208 -53q-212 -57);"/>
+                    <Edge cubics="!-212 -57(;-212,-57 -215,-72 -215,-72q-212 -57 -215 -72);"/>
+                    <Edge cubics="!-215 -72(;-215,-80 -200,-92 -190,-95q-215 -72Q-215 -78q-206 -85Q-198 -93q-190 -95);"/>
+                    <Edge cubics="!-100 -165(;-87,-160 -80,-152 -75,-145q-100 -165Q-85 -159q-75 -145);"/>
+                    <Edge cubics="!-75 -145(;-75,-137 -82,-122 -100,-115q-75 -145Q-75 -125q-100 -115);"/>
+                    <Edge cubics="!-100 -115(;-100,-115 -115,-120 -122,-127q-100 -115Q-100 -115q-108 -118Q-118 -123q-122 -127);"/>
+                    <Edge cubics="!-122 -127(;-122,-127 -125,-142 -125,-142q-122 -127 -125 -142);"/>
+                    <Edge cubics="!-125 -142(;-125,-150 -110,-162 -100,-165q-125 -142Q-125 -148q-116 -155Q-108 -163q-100 -165);"/>
+                    <Edge cubics="!50 -225(;61,-220 70,-212 75,-205q50 -225Q66 -218q75 -205);"/>
+                    <Edge cubics="!75 -205(;75,-197 66,-182 50,-175q75 -205Q75 -198q69 -190Q61 -180q50 -175);"/>
+                    <Edge cubics="!50 -175(;50,-175 35,-180 26,-187q50 -175Q50 -175q26 -187);"/>
+                    <Edge cubics="!26 -187(;26,-187 25,-177 25,-202q26 -187Q26 -187q26 -185Q25 -186q25 -202);"/>
+                    <Edge cubics="!25 -202(;25,-227 40,-222 50,-225q25 -202Q25 -218q34 -222Q39 -224q50 -225);"/>
+                    <Edge cubics="!80 -105(;91,-100 100,-92 105,-85q80 -105Q96 -98q105 -85);"/>
+                    <Edge cubics="!105 -85(;105,-77 96,-62 80,-55q105 -85Q105 -78q99 -70Q91 -60q80 -55);"/>
+                    <Edge cubics="!80 -55(;80,-55 65,-60 56,-67q80 -55Q65 -60q56 -67);"/>
+                    <Edge cubics="!56 -67(;56,-67 55,-57 55,-82q56 -67Q55 -57q55 -82);"/>
+                    <Edge cubics="!55 -82(;55,-107 70,-102 80,-105q55 -82Q55 -98q64 -102Q69 -104q80 -105);"/>
+                    <Edge cubics="!180 -185(;191,-180 200,-172 205,-165q180 -185Q196 -178q205 -165);"/>
+                    <Edge cubics="!205 -165(;205,-157 196,-142 180,-135q205 -165Q205 -158q199 -150Q191 -140q180 -135);"/>
+                    <Edge cubics="!180 -135(;180,-135 165,-140 156,-147q180 -135Q165 -140q156 -147);"/>
+                    <Edge cubics="!156 -147(;156,-147 155,-137 155,-162q156 -147Q156 -147q156 -145Q155 -146q155 -162);"/>
+                    <Edge cubics="!155 -162(;155,-187 170,-182 180,-185q155 -162Q155 -178q164 -182Q169 -184q180 -185);"/>
+                    <Edge cubics="!150 -265(;161,-260 170,-252 175,-245q150 -265Q166 -258q175 -245);"/>
+                    <Edge cubics="!175 -245(;175,-237 166,-222 150,-215q175 -245Q175 -238q169 -230Q161 -220q150 -215);"/>
+                    <Edge cubics="!150 -215(;150,-215 135,-220 126,-227q150 -215Q135 -220q126 -227);"/>
+                    <Edge cubics="!126 -227(;126,-227 125,-217 125,-242q126 -227Q126 -227q126 -225Q125 -226q125 -242);"/>
+                    <Edge cubics="!125 -242(;125,-267 140,-262 150,-265q125 -242Q125 -258q134 -262Q139 -264q150 -265);"/>
+                    <Edge cubics="!170 0(;170,6 175,-7 175,17q170 0Q170 1q173 2Q175 3q175 17);"/>
+                    <Edge cubics="!175 17(;175,42 171,36 171,36q175 17Q175 42q171 36);"/>
+                    <Edge cubics="!171 36(;166,36 160,41 150,45q171 36Q160 41q150 45);"/>
+                    <Edge cubics="!150 45(;135,40 125,42 125,17q150 45Q133 39q132 39Q125 33q125 17);"/>
+                    <Edge cubics="!125 17(;125,-7 147,-3 170,0q125 17Q125 1q139 -2Q146 -3q170 0);"/>
+                    <Edge cubics="!130 90(;130,96 135,82 135,107q130 90Q130 91q133 91Q135 92q135 107);"/>
+                    <Edge cubics="!135 107(;135,132 131,126 131,126q135 107Q135 132q131 126);"/>
+                    <Edge cubics="!131 126(;126,126 120,131 110,135q131 126Q120 131q110 135);"/>
+                    <Edge cubics="!110 135(;95,130 85,132 85,107q110 135Q93 129q92 129Q85 123q85 107);"/>
+                    <Edge cubics="!85 107(;85,85 106,82 130,90q85 107Q85 91q99 87Q111 84q130 90);"/>
+                    <Edge cubics="!-40 150(;-40,156 -35,142 -35,167q-40 150Q-40 151q-37 151Q-35 152q-35 167);"/>
+                    <Edge cubics="!-35 167(;-35,192 -37,180 -37,180q-35 167Q-35 192q-37 180);"/>
+                    <Edge cubics="!-37 180(;-42,186 -50,191 -60,195q-37 180Q-44 189q-60 195);"/>
+                    <Edge cubics="!-60 195(;-75,190 -85,175 -85,160q-60 195Q-85 187q-85 160)-85,160;"/>
+                    <Edge cubics="!-85 160(;-77,151 -60,146 -40,150q-85 160Q-71 144q-40 150)-40,150;"/>
+                    <Edge cubics="!-50 60(;-50,66 -45,52 -45,77q-50 60Q-50 61q-47 61Q-45 62q-45 77);"/>
+                    <Edge cubics="!-45 77(-45,77;-45,102 -47,90 -47,90q-45 77Q-45 102q-47 90);"/>
+                    <Edge cubics="!-47 90(-47,90;-52,96 -60,101 -70,105q-47 90Q-54 99q-70 105);"/>
+                    <Edge cubics="!-70 105(-70,105;-85,100 -95,85 -95,70q-70 105Q-95 97q-95 70);"/>
+                    <Edge cubics="!-95 70(;-87,61 -70,56 -50,60q-95 70Q-81 54q-50 60)-50,60;"/>
+                    <Edge cubics="!-190 30(;-190,36 -185,22 -185,47q-190 30Q-190 31q-187 31Q-185 32q-185 47);"/>
+                    <Edge cubics="!-185 47(;-185,72 -187,60 -187,60q-185 47Q-185 72q-187 60)-187,60;"/>
+                    <Edge cubics="!-187 60(;-192,66 -200,71 -210,75q-187 60Q-194 69q-210 75)-210,75;"/>
+                    <Edge cubics="!-210 75(-210,75;-225,70 -235,55 -235,40q-210 75Q-235 67q-235 40);"/>
+                    <Edge cubics="!-235 40(;-227,31 -210,26 -190,30q-235 40Q-221 24q-190 30);"/>
+                    <Edge cubics="!-160 140(;-160,146 -155,132 -155,157q-160 140Q-160 141q-157 141Q-155 142q-155 157);"/>
+                    <Edge cubics="!-155 157(;-155,182 -157,170 -157,170q-155 157Q-155 182q-157 170);"/>
+                    <Edge cubics="!-157 170(-157,170;-162,176 -170,181 -180,185q-157 170Q-164 179q-180 185)-180,185;"/>
+                    <Edge cubics="!-180 185(;-195,180 -205,165 -205,150q-180 185Q-191 181q-198 171Q-205 161q-205 150)-205,150;"/>
+                    <Edge cubics="!-205 150(;-197,141 -180,136 -160,140q-205 150Q-191 134q-160 140)-160,140;"/>
+                    <Edge cubics="!90 210(;90,216 95,202 95,227q90 210Q90 211q93 211Q95 212q95 227);"/>
+                    <Edge cubics="!95 227(;95,252 91,246 91,246q95 227Q95 252q91 246)91,246;"/>
+                    <Edge cubics="!91 246(;86,246 80,251 70,255q91 246Q80 251q70 255);"/>
+                    <Edge cubics="!70 255(70,255;55,250 45,252 45,227q70 255Q53 249q52 249Q45 243q45 227)45,227;"/>
+                    <Edge cubics="!45 227(45,227;45,205 66,202 90,210q45 227Q45 211q59 207Q71 204q90 210);"/>
+                    <Edge cubics="!240 120(;240,126 245,112 245,137q240 120Q240 121q243 121Q245 122q245 137);"/>
+                    <Edge cubics="!245 137(245,137;245,162 241,156 241,156q245 137Q245 162q241 156)241,156;"/>
+                    <Edge cubics="!241 156(;236,156 230,161 220,165q241 156Q230 161q220 165);"/>
+                    <Edge cubics="!220 165(;205,160 195,162 195,137q220 165Q203 159q202 159Q195 153q195 137);"/>
+                    <Edge cubics="!195 137(;195,115 216,112 240,120q195 137Q195 121q209 117Q221 114q240 120);"/>
+                    <Edge cubics="!230 60(;230,66 235,52 235,77q230 60Q230 61q233 61Q235 62q235 77);"/>
+                    <Edge cubics="!235 77(;235,102 231,96 231,96q235 77Q235 102q231 96);"/>
+                    <Edge cubics="!231 96(;226,96 220,101 210,105q231 96Q220 101q210 105);"/>
+                    <Edge cubics="!210 105(;195,100 185,102 185,77q210 105Q193 99q192 99Q185 93q185 77)185,77;"/>
+                    <Edge cubics="!185 77(185,77;185,55 207,52 230,60q185 77Q185 61q199 57Q211 54q230 60);"/>
+                    <Edge cubics="!-60 -5(;-47,0 -40,6 -35,15q-60 -5Q-42 2q-35 15);"/>
+                    <Edge cubics="!-35 15(-35,15;-35,21 -42,36 -60,45q-35 15Q-35 21q-41 29Q-48 39q-60 45);"/>
+                    <Edge cubics="!-60 45(-60,45;-60,45 -75,40 -82,31q-60 45Q-75 40q-82 31);"/>
+                    <Edge cubics="!-82 31(-82,31;-82,31 -85,42 -85,17q-82 31Q-85 42q-85 17)-85,17;"/>
+                    <Edge cubics="!-85 17(;-85,-7 -70,-2 -60,-5q-85 17Q-85 2q-76 -2Q-65 -3q-60 -5);"/>
+                    <Edge cubics="!30 30(;30,36 35,22 35,47q30 30Q30 31q33 31Q35 32q35 47);"/>
+                    <Edge cubics="!35 47(;35,72 31,66 31,66q35 47Q35 72q31 66);"/>
+                    <Edge cubics="!31 66(;26,66 20,71 10,75q31 66Q20 71q10 75);"/>
+                    <Edge cubics="!10 75(;-5,70 -15,72 -15,47q10 75Q-7 69q-8 69Q-15 63q-15 47);"/>
+                    <Edge cubics="!-15 47(;-15,25 11,22 30,30q-15 47Q-15 32q0 27Q14 23q30 30);"/>
+                    <Edge cubics="!180 -85(;191,-80 200,-72 205,-65q180 -85Q196 -78q205 -65);"/>
+                    <Edge cubics="!205 -65(;205,-57 196,-42 180,-35q205 -65Q205 -58q199 -50Q191 -40q180 -35);"/>
+                    <Edge cubics="!180 -35(;180,-35 165,-40 156,-47q180 -35Q165 -40q156 -47);"/>
+                    <Edge cubics="!156 -47(;156,-47 155,-37 155,-62q156 -47Q155 -37q155 -62)155,-62;"/>
+                    <Edge cubics="!155 -62(;155,-87 170,-82 180,-85q155 -62Q155 -78q164 -82Q169 -84q180 -85);"/>
+                    <Edge cubics="!230 -145(;241,-140 250,-132 255,-125q230 -145Q246 -138q255 -125);"/>
+                    <Edge cubics="!255 -125(255,-125;255,-117 246,-102 230,-95q255 -125Q255 -118q249 -110Q241 -100q230 -95)230,-95;"/>
+                    <Edge cubics="!230 -95(230,-95;230,-95 215,-100 206,-107q230 -95Q215 -100q206 -107)206,-107;"/>
+                    <Edge cubics="!206 -107(206,-107;206,-107 205,-97 205,-122q206 -107Q205 -97q205 -122)205,-122;"/>
+                    <Edge cubics="!205 -122(205,-122;205,-147 220,-142 230,-145q205 -122Q205 -138q214 -142Q219 -144q230 -145)230,-145;"/>
+                    <Edge cubics="!-120 210(;-120,216 -115,202 -115,227q-120 210Q-120 211q-117 211Q-115 212q-115 227);"/>
+                    <Edge cubics="!-115 227(-115,227;-115,252 -117,240 -117,240q-115 227Q-115 252q-117 240)-117,240;"/>
+                    <Edge cubics="!-117 240(-117,240;-122,246 -130,251 -140,255q-117 240Q-124 249q-140 255)-140,255;"/>
+                    <Edge cubics="!-140 255(-140,255;-155,250 -165,235 -165,220q-140 255Q-151 251q-158 241Q-165 231q-165 220)-165,220;"/>
+                    <Edge cubics="!-165 220(-165,220;-157,211 -140,206 -120,210q-165 220Q-151 204q-120 210)-120,210;"/>
+                    <Edge cubics="!-150 -295(;-137,-290 -130,-282 -125,-275q-150 -295Q-135 -289q-125 -275);"/>
+                    <Edge cubics="!-125 -275(-125,-275;-125,-267 -132,-252 -150,-245q-125 -275Q-125 -255q-150 -245)-150,-245;"/>
+                    <Edge cubics="!-150 -245(-150,-245;-150,-245 -165,-250 -172,-257q-150 -245Q-150 -245q-172 -257)-172,-257;"/>
+                    <Edge cubics="!-172 -257(-172,-257;-172,-257 -175,-272 -175,-272q-172 -257 -175 -272)-175,-272;"/>
+                    <Edge cubics="!-175 -272(-175,-272;-175,-280 -160,-292 -150,-295q-175 -272Q-175 -278q-166 -285Q-158 -293q-150 -295)-150,-295;"/>
+                    <Edge cubics="!10 -285(;21,-280 30,-272 35,-265q10 -285Q26 -278q35 -265);"/>
+                    <Edge cubics="!35 -265(35,-265;35,-257 26,-242 10,-235q35 -265Q35 -258q29 -250Q21 -240q10 -235)10,-235;"/>
+                    <Edge cubics="!10 -235(10,-235;10,-235 -5,-240 -12,-247q10 -235Q6 -236q2 -238Q-8 -243q-12 -247)-12,-247;"/>
+                    <Edge cubics="!-12 -247(-12,-247;-12,-247 -15,-262 -15,-262q-12 -247 -15 -262)-15,-262;"/>
+                    <Edge cubics="!-15 -262(-15,-262;-15,-270 0,-282 10,-285q-15 -262Q-15 -268q-6 -275Q2 -283q10 -285)10,-285;"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

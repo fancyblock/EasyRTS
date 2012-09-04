@@ -53,7 +53,7 @@ package map.pathFinding
 		
 		/* INTERFACE IPathFinder */
 		
-		public function GetPath( theMap:GridMap, src:Point, dest:Point ):Array 
+		public function GetPath( theMap:GridMap, src:Point, dest:Point, omitDest:Boolean = false ):Array 
 		{
 			init();
 			
@@ -64,6 +64,12 @@ package map.pathFinding
 			node._f = node._g + node._h;
 			addOpenList( node );
 			
+			var forceNeighbor:GridInfo = null;
+			if ( omitDest == true )
+			{
+				forceNeighbor = theMap.GetGridInfo( dest.x, dest.y );
+			}
+			
 			var isArrived:Boolean = false;
 			while ( true )
 			{
@@ -73,7 +79,7 @@ package map.pathFinding
 				}
 				
 				node = popFirstNode();
-				var neighbors:Array = getNodeNeighbors( theMap, node );
+				var neighbors:Array = getNodeNeighbors( theMap, node, forceNeighbor );
 				addCloseList( node );
 				
 				var neiNode:GridInfo = null;
@@ -288,7 +294,7 @@ package map.pathFinding
 			m_closeList.push( node );
 		}
 		
-		protected function getNodeNeighbors( theMap:GridMap, nodeMe:GridInfo ):Array
+		protected function getNodeNeighbors( theMap:GridMap, nodeMe:GridInfo, forceNeighbor:GridInfo ):Array
 		{
 			var neighbors:Array = [];
 			
@@ -307,9 +313,11 @@ package map.pathFinding
 			{
 				if ( pending[i] == null )	continue;
 				
+				var canReachGrid:Boolean = pending[i]._type == GridInfo.BLANK || pending[i] == forceNeighbor;
+				
 				if ( i % 2 == 0 )
 				{
-					if ( pending[i]._list != GridInfo.CLOSE_LIST && pending[i]._type == GridInfo.BLANK )
+					if ( pending[i]._list != GridInfo.CLOSE_LIST && canReachGrid )
 					{
 						neighbors.push( pending[i] );
 						pending[i]._weight = 1.0;
@@ -317,8 +325,8 @@ package map.pathFinding
 				}
 				else
 				{
-					if ( pending[i]._list != GridInfo.CLOSE_LIST && pending[i]._type == GridInfo.BLANK && 
-						( pending[i - 1]._type == GridInfo.BLANK && pending[(i + 1)%8]._type == GridInfo.BLANK ) )
+					if ( pending[i]._list != GridInfo.CLOSE_LIST && canReachGrid && 
+						( pending[i - 1]._type == GridInfo.BLANK && ( pending[(i + 1)%8]._type == GridInfo.BLANK || pending[(i + 1)%8] == forceNeighbor ) ) )
 					{
 						neighbors.push( pending[i] );
 						pending[i]._weight = 1.414;

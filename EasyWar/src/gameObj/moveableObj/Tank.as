@@ -16,6 +16,8 @@ package gameObj.moveableObj
 		//------------------------------ static member -------------------------------------
 		
 		static protected const TANK_SPEED:Number = 6.0;
+		static protected const TANK_LIFE_VALUE:Number = 160.0;
+		static protected const TANK_FIRINGRANGE:Number = 180;
 		
 		//------------------------------ private member ------------------------------------
 		
@@ -32,7 +34,9 @@ package gameObj.moveableObj
 			super();
 			
 			this.VELOCITY = TANK_SPEED;
-			m_firingRange = 180;
+			m_firingRange = TANK_FIRINGRANGE;
+			m_maxLifeValue = TANK_LIFE_VALUE;
+			m_lifeValue = m_maxLifeValue;
 		}
 		
 		
@@ -68,6 +72,12 @@ package gameObj.moveableObj
 			m_imgGun.rotation = 10;
 			
 			m_lifeBar.visible = false;
+			
+			// enemy always show the life bar
+			if ( this.GROUP != 0 )
+			{
+				m_lifeBar.visible = true;
+			}
 		}
 		
 		
@@ -78,7 +88,11 @@ package gameObj.moveableObj
 		{
 			super.onRemove();
 			
-			//TODO
+			var boostAni:MovieClip = new mcBoost();
+			boostAni.x = m_position.x;
+			boostAni.y = m_position.y;
+			m_canvas.addChild( boostAni );
+			boostAni.play();
 		}
 		
 		
