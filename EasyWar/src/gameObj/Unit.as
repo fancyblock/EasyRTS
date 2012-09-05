@@ -190,7 +190,7 @@ package gameObj
 		 */
 		public function IsTroop():Boolean
 		{
-			if ( this.TYPE == UnitTypes.TYPE_TANK )
+			if ( this.TYPE == UnitTypes.TYPE_TANK || this.TYPE == UnitTypes.TYPE_INFANTRY )
 			{
 				return true;
 			}

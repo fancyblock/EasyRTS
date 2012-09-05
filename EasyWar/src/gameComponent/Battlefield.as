@@ -446,17 +446,24 @@ package gameComponent
 				
 				return;
 			}
-			// attack the enemy
-			else if ( mapUnit.GROUP == UnitTypes.ENEMY_GROUP )
+			else if ( mapUnit != null )
 			{
-				command._type = Command.CMD_ATTACK;
-				command._aim = mapUnit;
+				// attack the enemy
+				if ( mapUnit.GROUP == UnitTypes.ENEMY_GROUP )
+				{
+					command._type = Command.CMD_ATTACK;
+					command._aim = mapUnit;
+				}
+				// occupy the city ( )
+				else if ( mapUnit.GROUP != UnitTypes.SELF_GROUP && mapUnit.TYPE == UnitTypes.TYPE_CITY )
+				{
+					command._type = Command.CMD_OCCUPY;
+					command._aim = mapUnit;
+				}
 			}
-			// occupy the city ( )
-			else if ( mapUnit.GROUP != UnitTypes.SELF_GROUP && mapUnit.TYPE == UnitTypes.TYPE_CITY )
+			else
 			{
-				command._type = Command.CMD_OCCUPY;
-				command._aim = mapUnit;
+				return;			// dont need to send the order in this situation
 			}
 			
 			// send the command to all selected unit

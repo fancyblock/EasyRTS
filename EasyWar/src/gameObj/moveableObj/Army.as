@@ -75,10 +75,11 @@ package gameObj.moveableObj
 				if ( m_command._type == Command.CMD_MOVE )
 				{
 					moveTo( m_command._destGrid._x, m_command._destGrid._y );
+					
+					m_command = null;
 				}
-				
 				// attack an enemy
-				if ( m_command._type == Command.CMD_ATTACK )
+				else if ( m_command._type == Command.CMD_ATTACK )
 				{
 					m_pathBlocked = false;
 					this.stopMove();
@@ -88,9 +89,9 @@ package gameObj.moveableObj
 					m_currentTraceDest.y = -100;
 					
 					m_armyState = STATE_ARMY_ATTACK;
+					
+					m_command = null;
 				}
-				
-				m_command = null;
 			}
 			
 			// attack behavior

@@ -1,0 +1,396 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="soldier" itemID="50471c81-0000006e" linkageExportForAS="true" linkageClassName="mcSoldier" sourceLibraryItemHRef="元件 1" lastModified="1346841092" lastUniqueIdentifier="6">
+  <timeline>
+    <DOMTimeline name="soldier" currentFrame="31">
+      <layers>
+        <DOMLayer name="body" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="32" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFCC00"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#669966"/>
+                    </FillStyle>
+                    <FillStyle index="3">
+                      <SolidColor color="#666666"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge strokeStyle="1" edges="!-48 -132|-30 -127!-30 -127[-25 -117 -13 -115!-13 -115[-9 -111 -8 -107!-8 -107|15 -87!15 -87|17 -80!0 -82|10 -75!10 -75|15 -70.5!15 -70.5[15 #FFFFB8.C1 15 -72!15 -72[15 -73 15 -75!15 -75[14 -76 12 -77!12 -77[11 -78 10 -80!10 -80|0 -82
+!-80 -125|-50 -107!-50 -107|-35 -100!-35 -100[-35 -98 -34 -97!-34 -97[-34 -96.3125 -33.5 -95.5!-33.5 -95.5|-18 -87!-18 -87|-10 -85!-10 -85|5 -67!5 -67|15 -65!15 -65|27 -54.5!27 -54.5|23 -60.5!23 -60.5|19 -65.5!19 -65.5[#F.AA #FFFFBC.DB
+ 15 -70.5!23 -60.5|20 -65!20 -65[#13.81 #FFFFBE.CD 19 -65.5!27 -54.5|32 -50!32 -50|55 -20!55 -20|62 3!62 3[67 6 70 8!70 8|75 30!75 30[63 27 60 13!60 13|60 5!60 5|52 -2!52 -2[53 -7 49 -9!49 -9[49 -10 47 -10!47 -10|47 -17!47 -17|40 -35
+!40 -35|27 -54.5!-85 -140|-52.5 -117.5!-52.5 -117.5|-58 -125!-58 -125|-85 -140"/>
+                    <Edge fillStyle0="2" strokeStyle="1" edges="
+!-124 -104[-105 -104 -89 -98!-89 -98|-89 -176!-89 -176[-124.5 #FFFF32.36 -160 -176!-160 -176|-160 -98!-160 -98[-144 -104 -124 -104"/>
+                    <Edge strokeStyle="1" edges="
+!-229 28[-232 16 -232 4!-232 4[-232 -41 -200 -73!-200 -73[-183 -91 -160 -98!-33.5 -95.5|-33 -95!-33 -95|-8 -75!-8 -75|40 -5!40 -5|40 3!40 3|55 25!55 25|55 35!0 -82|-14.5 -91.5!-14.5 -91.5|-35 -105!-35 -105|-35.5 -106!-35.5 -106[#FFFFDA.23
+ -111.53125 -44.5 -112!-44.5 -112[-46.125 -112.1875 -48 -112!-48 -112|-52.5 -117.5!-35.5 -106|-14.5 -91.5!-83 -112|-63 -112!-63 -112|-33.5 -95.5!-89 -98[-74 -93 -60 -83"/>
+                    <Edge fillStyle1="2" edges="
+!-60 -83[-41 -72 -30 -53!-30 -53[-24 -39 -20 -21"/>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="
+!-20 -21[-20 -19 -19 -15!-19 -15|-17 -8!-17 -8[-17 -5 -17 -2.5!-17 -2.5|-17 4!-17 4[-17 6 -17 9"/>
+                    <Edge fillStyle1="2" edges="
+!-17 9[-17 11 -17 15!-17 15[-17 #16.FC -18 30.5!-18 30.5|-20.5 30.5!-20.5 30.5|-27 30!-27 30[-26 33 -26 36!-26 36|-24 41.5!-24 41.5|-24 42"/>
+                    <Edge fillStyle1="3" strokeStyle="1" edges="
+!-24 42|251 43"/>
+                    <Edge fillStyle1="3" edges="
+!251 43|251 68"/>
+                    <Edge fillStyle1="3" strokeStyle="1" edges="
+!251 68|-33.5 69"/>
+                    <Edge fillStyle1="2" edges="
+!-33.5 69[#FFFFDB.D9 #48.8B -39 76!-39 76[-57 99 -89 108"/>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="
+!-89 108|-89 133"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="
+!-89 133|-55 133!-55 133[-52 132 -50 130!-50 130[-49 129 -48 128!-48 128|12 108!12 108|22 108!22 108|87 75!87 75|137 75!137 75|127 93!127 93|105 108!105 108[105 109 105 110!105 110[104 112 102 113!102 113|77 128!77 128|15 150!15 150[14
+ 150 12 151!12 151[11 152 10 153!10 153|-5 155!-5 155[-4 160 -10 158!-10 158[-11 158 -13 158!-13 158|-18 163!-18 163|-89 170"/>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="
+!-89 170|-89 184!-89 184[#FFFF89.34 #D8.54 -160 184!-160 184|-160 114"/>
+                    <Edge fillStyle1="2" edges="
+!-160 114[-200 108 -219 72!-219 72[-229 52 -229 28"/>
+                    <Edge strokeStyle="1" edges="
+!-52.5 -117.5|-44.5 -112"/>
+                    <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="
+!-60 -83[-55 -79 -50 -73!-50 -73[-27 -50 -20 -21"/>
+                    <Edge fillStyle1="2" edges="
+!-229 28[-229 27 -229 25!-229 25[-229 -13 -216 -43!-216 -43[-191 -98 -128 -98!-128 -98[-88 -98 -60 -83"/>
+                    <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="
+!-17 9[#FFFFEE.72 #14.1A -20.5 30.5"/>
+                    <Edge fillStyle0="3" fillStyle1="2" edges="
+!-24 42[-23 44 -23 47!-23 47[#FFFFE9.3B #2F.77 -22.5 48!-22.5 48[-26.5625 #3A.D6 -33.5 69"/>
+                    <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="
+!-24 41.5[#FFFFDF.A2 #3D.F -50 79!-50 79[-80 112 -124 112!-124 112[-169 112 -200 79!-200 79[-224 57 -229 28"/>
+                    <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="
+!-89 170|-89 133"/>
+                    <Edge cubics="!-128 -98(-128,-98;-94,-98 -70,-90 -60,-83q-128 -98Q-88 -98q-60 -83)-60,-83;"/>
+                    <Edge cubics="!-60 -83(;-33,-63 -24,-38 -20,-21q-60 -83Q-41 -72q-30 -53 -20 -21);"/>
+                    <Edge cubics="!-20 -21(;-20,-19 -20,-16 -19,-15q-20 -21 -19 -15);"/>
+                    <Edge cubics="!-19 -15(-19,-15;-19,-12 -19,-9 -17,-8q-19 -15 -17 -8)-17,-8;"/>
+                    <Edge cubics="!-17 -8(;-18,-4 -17,-2 -17,-3q-17 -8 -17 -2);"/>
+                    <Edge cubics="!-17 4(;-17,7 -17,8 -17,9q-17 4 -17 9);"/>
+                    <Edge cubics="!-17 9(;-17,10 -17,12 -17,15q-17 9 -17 15);"/>
+                    <Edge cubics="!-17 15(;-17,19 -17,24 -18,31q-17 15 -18 31);"/>
+                    <Edge cubics="!-18 31(-18,31;-18,34 -19,37 -20,40q-18 31 -20 40)-20,40;"/>
+                    <Edge cubics="!-160 114(;-219,108 -228,49 -229,28q-160 114Q-200 108q-219 72Q-229 52q-229 28);"/>
+                    <Edge cubics="!-229 28(;-229,28 -229,25 -229,25q-229 28 -229 25);"/>
+                    <Edge cubics="!-229 25(;-229,9 -228,-98 -128,-98q-229 25Q-229 -13q-216 -43Q-191 -98q-128 -98);"/>
+                    <Edge cubics="!-232 4(;-232,-26 -221,-51 -200,-73q-232 4Q-232 -41q-200 -73);"/>
+                    <Edge cubics="!-229 28(;-230,19 -232,12 -232,4q-229 28Q-232 16q-232 4);"/>
+                    <Edge cubics="!-89 -98(;-77,-93 -69,-89 -60,-83q-89 -98 -60 -83);"/>
+                    <Edge cubics="!-60 -83(-60,-83;-57,-80 -53,-77 -50,-73q-60 -83Q-55 -79q-50 -73)-50,-73;"/>
+                    <Edge cubics="!-50 79(;-70,101 -94,112 -124,112q-50 79Q-80 112q-124 112);"/>
+                    <Edge cubics="!-124 112(;-154,112 -179,101 -200,79q-124 112Q-169 112q-200 79);"/>
+                    <Edge cubics="!-17 9(-17,9;-18,17 -19,25 -20,31q-17 9 -20 31)-20,31;"/>
+                    <Edge cubics="!-20 31(-20,31;-22,36 -23,39 -24,42q-20 31 -24 42)-24,42;"/>
+                    <Edge cubics="!-24 42(-24,42;-31,56 -39,68 -50,79q-24 42Q-32 62q-50 79)-50,79;"/>
+                    <Edge cubics="!-200 79(;-216,64 -225,47 -229,28q-200 79Q-224 57q-229 28);"/>
+                    <Edge cubics="!-50 -73(;-34,-57 -25,-41 -20,-21q-50 -73Q-27 -50q-20 -21);"/>
+                    <Edge cubics="!-89 184(;-89,184 -89,165 -89,165q-89 184 -89 165);"/>
+                    <Edge cubics="!-89 165(;-89,165 -89,135 -89,135q-89 165 -89 135);"/>
+                    <Edge cubics="!-89 135(;-89,135 -89,108 -89,108q-89 135 -89 108);"/>
+                    <Edge cubics="!-160 114(;-160,114 -160,184 -160,184q-160 114 -160 184);"/>
+                    <Edge cubics="!-160 -176(;-160,-176 -89,-176 -89,-176q-160 -176 -89 -176);"/>
+                    <Edge cubics="!-89 -176(;-89,-176 -89,-137 -89,-137q-89 -176 -89 -137);"/>
+                    <Edge cubics="!-89 -137(;-89,-137 -89,-98 -89,-98q-89 -137 -89 -98);"/>
+                    <Edge cubics="!-160 -98(;-160,-98 -160,-176 -160,-176q-160 -98 -160 -176);"/>
+                    <Edge cubics="!91 70(;91,70 77,66 77,66q91 70 77 66);"/>
+                    <Edge cubics="!-160 184(;-160,184 -89,184 -89,184q-160 184 -89 184);"/>
+                    <Edge cubics="!-200 -73(;-189,-85 -175,-94 -160,-98q-200 -73Q-183 -91q-160 -98);"/>
+                    <Edge cubics="!-124 -104(;-112,-104 -99,-103 -89,-98q-124 -104Q-105 -104q-89 -98);"/>
+                    <Edge cubics="!-160 -98(;-149,-103 -137,-104 -124,-104q-160 -98Q-144 -104q-124 -104);"/>
+                    <Edge cubics="!-39 76(;-51,91 -68,102 -89,108q-39 76Q-57 99q-89 108);"/>
+                    <Edge cubics="!-20 40(-20,40;-21,43 -22,46 -22,48q-20 40 -22 48)-22,48;"/>
+                    <Edge cubics="!-22 48(-22,48;-26,56 -30,63 -33,69q-22 48 -33 69)-33,69;"/>
+                    <Edge cubics="!-33 69(-33,69;-35,72 -37,74 -39,76q-33 69 -39 76)-39,76;"/>
+                    <Edge cubics="!-17 4(;-17,4 -17,-2 -17,-2q-17 4 -17 -2);"/>
+                    <Edge cubics="!-27 30(;-27,35 -26,36 -26,35q-27 30 -26 36);"/>
+                    <Edge cubics="!-24 42(;-23,45 -23,46 -23,47q-24 42 -23 47);"/>
+                    <Edge cubics="!-23 47(;-23,47 -23,47 -22,48q-23 47 -22 48);"/>
+                    <Edge cubics="!-22 48(-22,48;-22,48 -22,50 -21,52q-22 48 -21 52)-21,52;"/>
+                    <Edge cubics="!-21 52(;-20,58 -18,65 -18,78q-21 52 -18 78);"/>
+                    <Edge cubics="!273 50(;273,50 257,79 257,79q273 50 257 79);"/>
+                    <Edge cubics="!257 79(;257,79 113,78 113,78q257 79 113 78);"/>
+                    <Edge cubics="!113 78(;113,78 97,78 97,78q113 78 97 78);"/>
+                    <Edge cubics="!82 78(;82,78 53,78 53,78q82 78 53 78);"/>
+                    <Edge cubics="!53 78(53,78;53,78 -18,78 -18,78q53 78 -18 78)-18,78;"/>
+                    <Edge cubics="!-27 30(;-27,30 -20,31 -20,31q-27 30 -20 31);"/>
+                    <Edge cubics="!-20 31(-20,31;-20,31 -18,31 -18,31q-20 31 -18 31)-18,31;"/>
+                    <Edge cubics="!-18 31(-18,31;-18,31 273,50 273,50q-18 31 273 50)273,50;"/>
+                    <Edge cubics="!-24 42(-24,42;-24,42 -26,36 -26,36q-24 42 -26 36)-26,36;"/>
+                    <Edge cubics="!94 78(;94,78 97,78 97,78q94 78 97 78);"/>
+                    <Edge cubics="!93 76(;93,76 94,78 94,78q93 76 94 78);"/>
+                    <Edge cubics="!84 77(;84,77 93,76 93,76q84 77 93 76);"/>
+                    <Edge cubics="!82 78(;82,78 84,77 84,77q82 78 84 77);"/>
+                    <Edge cubics="!46 116(;46,116 65,91 65,91q46 116 65 91);"/>
+                    <Edge cubics="!30 -50(;30,-50 30,-42 30,-42q30 -50 30 -42);"/>
+                    <Edge cubics="!-89 -137(;-89,-137 -50,-137 -50,-137q-89 -137 -50 -137);"/>
+                    <Edge cubics="!-50 -137(;-50,-137 -50,-125 -50,-125q-50 -137 -50 -125);"/>
+                    <Edge cubics="!-39 -119(;-39,-119 -5,-92 -5,-92q-39 -119 -5 -92);"/>
+                    <Edge cubics="!-5 -92(;-5,-92 -5,-85 -5,-85q-5 -92 -5 -85);"/>
+                    <Edge cubics="!-50 -125(;-44,-122 -40,-120 -39,-119q-50 -125Q-41 -121q-39 -119);"/>
+                    <Edge cubics="!-24 42(-24,42;-24,42 -24,42 -24,42q-24 42)-24,42;"/>
+                    <Edge cubics="!-43 123(-43,123;-43,123 -25,123 -25,123q-43 123 -25 123)-25,123;"/>
+                    <Edge cubics="!-25 123(-25,123;-22,118 -16,114 -8,113q-25 123Q-20 115q-8 113)-8,113;"/>
+                    <Edge cubics="!-38 158(-38,158;-38,158 -89,165 -89,165q-38 158 -89 165)-89,165;"/>
+                    <Edge cubics="!-23 158(-23,158;-23,158 -38,158 -38,158q-23 158 -38 158)-38,158;"/>
+                    <Edge cubics="!-5 148(-5,148;-14,151 -20,154 -23,158q-5 148Q-18 152q-23 158)-23,158;"/>
+                    <Edge cubics="!-89 135(;-89,135 -43,135 -43,135q-89 135 -43 135);"/>
+                    <Edge cubics="!-43 135(-43,135;-43,135 -43,123 -43,123q-43 135 -43 123)-43,123;"/>
+                    <Edge cubics="!113 77(113,77;113,77 113,78 113,78q113 77 113 78)113,78;"/>
+                    <Edge cubics="!88 67(88,67;88,67 88,69 88,69q88 67 88 69)88,69;"/>
+                    <Edge cubics="!79 65(79,65;79,65 88,67 88,67q79 65 88 67)88,67;"/>
+                    <Edge cubics="!77 66(77,66;77,66 79,65 79,65q77 66 79 65)79,65;"/>
+                    <Edge cubics="!88 69(88,69;88,69 91,70 91,70q88 69 91 70)91,70;"/>
+                    <Edge cubics="!53 78(53,78;53,78 57,75 57,75q53 78 57 75)57,75;"/>
+                    <Edge cubics="!57 75(57,75;57,75 77,66 77,66q57 75 77 66)77,66;"/>
+                    <Edge cubics="!32 93(32,93;32,93 53,78 53,78q32 93 53 78)53,78;"/>
+                    <Edge cubics="!50 133(50,133;50,133 22,133 22,133q50 133 22 133)22,133;"/>
+                    <Edge cubics="!22 133(22,133;21,142 20,147 17,148q22 133Q21 146q17 148)17,148;"/>
+                    <Edge cubics="!113 78(113,78;113,78 92,113 92,113q113 78 92 113)92,113;"/>
+                    <Edge cubics="!92 113(92,113;92,113 50,133 50,133q92 113 50 133)50,133;"/>
+                    <Edge cubics="!91 70(91,70;91,70 113,77 113,77q91 70 113 77)113,77;"/>
+                    <Edge cubics="!-5 -85(-5,-85;-5,-85 30,-50 30,-50q-5 -85 30 -50)30,-50;"/>
+                    <Edge cubics="!30 -42(30,-42;30,-42 57,0 57,0q30 -42 57 0)57,0;"/>
+                    <Edge cubics="!-8 113(-8,113;-8,113 32,93 32,93q-8 113 32 93)32,93;"/>
+                    <Edge cubics="!17 148(17,148;17,148 -5,148 -5,148q17 148 -5 148)-5,148;"/>
+                    <Edge cubics="!-100 0(;-100,6 -105,25 -125,25q-100 0Q-100 7q-105 15Q-112 25q-125 25);"/>
+                    <Edge cubics="!-125 25(;-147,25 -150,1 -150,0q-125 25Q-147 25q-150 0);"/>
+                    <Edge cubics="!-150 0(;-150,-34 -100,-34 -100,0q-150 0Q-150 -25q-125 -25Q-100 -25q-100 0);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="leg2" color="#FF4FFF" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="leg2" name="" centerPoint3DX="-0.1" centerPoint3DY="6">
+                  <matrix>
+                    <Matrix tx="-3.6" ty="4.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.5" y="1.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="7" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="leg2" name="" centerPoint3DX="-6.1" centerPoint3DY="6">
+                  <matrix>
+                    <Matrix a="0.571426391601563" tx="-8.1" ty="4.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.5" y="1.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="8" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="leg" name="" centerPoint3DX="-6.1" centerPoint3DY="7">
+                  <matrix>
+                    <Matrix a="0.571426391601563" tx="-8.1" ty="5.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.5" y="1.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="15" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="leg" name="" centerPoint3DX="-9.9" centerPoint3DY="7">
+                  <matrix>
+                    <Matrix tx="-13.4" ty="5.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.5" y="1.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="16" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="leg" name="" centerPoint3DX="-9.9" centerPoint3DY="7">
+                  <matrix>
+                    <Matrix tx="-13.4" ty="5.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.5" y="1.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="23" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="leg" name="" selected="true" centerPoint3DX="-6.1" centerPoint3DY="7">
+                  <matrix>
+                    <Matrix a="0.571426391601563" tx="-8.1" ty="5.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.5" y="1.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="24" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="leg2" name="" centerPoint3DX="-6.1" centerPoint3DY="6">
+                  <matrix>
+                    <Matrix a="0.571426391601563" tx="-8.1" ty="4.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.5" y="1.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="31" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="leg2" name="" centerPoint3DX="-0.1" centerPoint3DY="6">
+                  <matrix>
+                    <Matrix tx="-3.6" ty="4.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.5" y="1.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="leg1" color="#FF800A" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="leg" name="" centerPoint3DX="-10.4" centerPoint3DY="-6.5">
+                  <matrix>
+                    <Matrix tx="-13.9" ty="-8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.5" y="1.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="7" keyMode="15872">
+              <elements>
+                <DOMSymbolInstance libraryItemName="leg" name="" centerPoint3DX="-6.2" centerPoint3DY="-6.5">
+                  <matrix>
+                    <Matrix a="0.571426391601563" tx="-8.2" ty="-8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.5" y="1.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="8" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="leg2" name="" centerPoint3DX="-6" centerPoint3DY="-7">
+                  <matrix>
+                    <Matrix a="0.571426391601563" tx="-8" ty="-8.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.5" y="1.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="15" keyMode="15872">
+              <elements>
+                <DOMSymbolInstance libraryItemName="leg2" name="" centerPoint3DX="-2.6" centerPoint3DY="-7">
+                  <matrix>
+                    <Matrix tx="-6.1" ty="-8.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.5" y="1.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="16" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="leg2" name="" centerPoint3DX="-2.6" centerPoint3DY="-7">
+                  <matrix>
+                    <Matrix tx="-6.1" ty="-8.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.5" y="1.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="23" keyMode="15872">
+              <elements>
+                <DOMSymbolInstance libraryItemName="leg2" name="" centerPoint3DX="-6" centerPoint3DY="-7">
+                  <matrix>
+                    <Matrix a="0.571426391601563" tx="-8" ty="-8.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.5" y="1.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="24" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="leg" name="" centerPoint3DX="-6.2" centerPoint3DY="-6.5">
+                  <matrix>
+                    <Matrix a="0.571426391601563" tx="-8.2" ty="-8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.5" y="1.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="31" keyMode="15872">
+              <elements>
+                <DOMSymbolInstance libraryItemName="leg" name="" centerPoint3DX="-10.4" centerPoint3DY="-6.5">
+                  <matrix>
+                    <Matrix tx="-13.9" ty="-8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="3.5" y="1.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bg" color="#4FFF4F" locked="true" autoNamed="false" layerType="guide">
+          <frames>
+            <DOMFrame index="0" duration="32" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="mcBlankTile" name="" cacheAsBitmap="true">
+                  <matrix>
+                    <Matrix tx="-16" ty="-16"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="16" y="16"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

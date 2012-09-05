@@ -1,0 +1,51 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="leg2" itemID="50472799-00000085" sourceLibraryItemHRef="元件 1" lastModified="1346840473">
+  <timeline>
+    <DOMTimeline name="leg2">
+      <layers>
+        <DOMLayer name="图层 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <matrix>
+                    <Matrix tx="3.6" ty="-4.5"/>
+                  </matrix>
+                  <members>
+                    <DOMShape selected="true">
+                      <matrix>
+                        <Matrix tx="3.6" ty="-4.5"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#669966"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!68 130S6|48 150!48 150|-72 150!-72 150|-72 90!-72 90|48 90!48 90|68 110!68 110|68 130"/>
+                        <Edge cubics="!-72 90(;-72,90 48,90 48,90q-72 90p48 90);"/>
+                        <Edge cubics="!48 90(;48,90 68,110 68,110q48 90p68 110);"/>
+                        <Edge cubics="!68 110(;68,110 68,130 68,130q68 110p68 130);"/>
+                        <Edge cubics="!68 130(;68,130 48,150 48,150q68 130p48 150);"/>
+                        <Edge cubics="!48 150(;48,150 -72,150 -72,150q48 150p-72 150);"/>
+                        <Edge cubics="!-72 150(;-72,150 -72,90 -72,90q-72 150p-72 90);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

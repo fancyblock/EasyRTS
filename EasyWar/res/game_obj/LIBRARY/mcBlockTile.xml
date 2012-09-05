@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="mcBlockTile" itemID="503e4031-0000001a" linkageExportForAS="true" linkageClassName="mcBlockTile" sourceLibraryItemHRef="元件 1" lastModified="1346513644">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="mcBlockTile" itemID="503e4031-0000001a" linkageExportForAS="true" linkageClassName="mcBlockTile" sourceLibraryItemHRef="元件 1" lastModified="1346838026">
   <timeline>
     <DOMTimeline name="mcBlockTile">
       <layers>
@@ -6,54 +6,65 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMShape>
-                  <fills>
-                    <FillStyle index="1">
-                      <SolidColor color="#FF6600"/>
-                    </FillStyle>
-                  </fills>
-                  <strokes>
-                    <StrokeStyle index="1">
-                      <SolidStroke scaleMode="normal">
-                        <fill>
-                          <SolidColor/>
-                        </fill>
-                      </SolidStroke>
-                    </StrokeStyle>
-                  </strokes>
-                  <edges>
-                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!0 0|320 320!320 320|635 5!635 5|635 0"/>
-                    <Edge fillStyle0="1" strokeStyle="1" edges="!635 0|0 0"/>
-                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!635 5|640 0"/>
-                    <Edge fillStyle0="1" strokeStyle="1" edges="!640 0|635 0"/>
-                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!0 640|5 635!5 635|0 635"/>
-                    <Edge fillStyle0="1" strokeStyle="1" edges="!0 635|0 640!635 640|640 640"/>
-                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!640 640|635 635!635 635|635 640"/>
-                    <Edge fillStyle0="1" edges="!0 640|635 640!640 640|640 0"/>
-                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!320 320|635 635!635 635|635 5"/>
-                    <Edge fillStyle0="1" strokeStyle="1" edges="!0 0|0 635"/>
-                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!635 635|5 635!5 635|320 320"/>
-                    <Edge cubics="!0 0(;0,0 320,320 320,320q0 0 320 320);"/>
-                    <Edge cubics="!320 320(;320,320 635,635 635,635q320 320 635 635);"/>
-                    <Edge cubics="!635 635(;635,635 640,640 640,640q635 635 640 640)640,640;"/>
-                    <Edge cubics="!640 640(;640,640 640,0 640,0q640 640 640 0);"/>
-                    <Edge cubics="!640 0(;640,0 635,0 635,0q640 0 635 0)635,0;"/>
-                    <Edge cubics="!635 0(;635,0 0,0 0,0q635 0 0 0);"/>
-                    <Edge cubics="!0 640(0,640;0,640 5,635 5,635q0 640 5 635)5,635;"/>
-                    <Edge cubics="!5 635(5,635;5,635 320,320 320,320q5 635 320 320)320,320;"/>
-                    <Edge cubics="!320 320(;320,320 635,5 635,5q320 320 635 5);"/>
-                    <Edge cubics="!635 5(;635,5 640,0 640,0q635 5 640 0);"/>
-                    <Edge cubics="!0 0(;0,0 0,635 0,635q0 0 0 635);"/>
-                    <Edge cubics="!0 635(0,635;0,635 0,640 0,640q0 635 0 640)0,640;"/>
-                    <Edge cubics="!0 640(;0,640 635,640 635,640q0 640 635 640);"/>
-                    <Edge cubics="!635 640(;635,640 640,640 640,640q635 640 640 640);"/>
-                    <Edge cubics="!635 640(;635,640 635,635 635,635q635 640 635 635);"/>
-                    <Edge cubics="!635 635(635,635;635,635 635,5 635,5q635 635 635 5)635,5;"/>
-                    <Edge cubics="!635 5(635,5;635,5 635,0 635,0q635 5 635 0)635,0;"/>
-                    <Edge cubics="!0 635(;0,635 5,635 5,635q0 635 5 635);"/>
-                    <Edge cubics="!5 635(;5,635 635,635 635,635q5 635 635 635);"/>
-                  </edges>
-                </DOMShape>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#FF6600"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="5">
+                            <fill>
+                              <SolidColor/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="2">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" edges="!0 635S1|0 640!0 640|640 640!640 640|640 0!640 0|635 0"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="2" edges="!635 0S7|635 635!635 635|0 635"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!319 321S7|320 320!320 320|319 319!319 319|318 320!318 320|319 321!319 321|320 322!320 322|589 591!319 321|277 363!277 363|318 320!318 320|273 273!273 273|46 44!319 319|273 273!80 580|560 580!582 82|582 562!80 48|560 48!52 68|52 548"/>
+                        <Edge fillStyle0="1" strokeStyle="2" edges="!635 0S5|0 0!0 0|0 635"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!319 319S7|591 47!49 593|320 322"/>
+                        <Edge cubics="!319 319(;319,319 320,320 320,320q319 319 320 320);"/>
+                        <Edge cubics="!640 640(;640,640 640,0 640,0q640 640 640 0);"/>
+                        <Edge cubics="!640 0(;640,0 635,0 635,0q640 0 635 0)635,0;"/>
+                        <Edge cubics="!635 0(;635,0 0,0 0,0q635 0 0 0);"/>
+                        <Edge cubics="!0 0(;0,0 0,635 0,635q0 0 0 635);"/>
+                        <Edge cubics="!0 635(0,635;0,635 0,640 0,640q0 635 0 640)0,640;"/>
+                        <Edge cubics="!319 319(;319,319 591,47 591,47q319 319 591 47);"/>
+                        <Edge cubics="!318 320(;318,320 319,321 319,321q318 320 319 321);"/>
+                        <Edge cubics="!319 321(;319,321 320,320 320,320q319 321 320 320);"/>
+                        <Edge cubics="!277 363(277,363;277,363 319,321 319,321q277 363 319 321)319,321;"/>
+                        <Edge cubics="!318 320(;318,320 319,319 319,319q318 320 319 319);"/>
+                        <Edge cubics="!277 363(;277,363 318,320 318,320q277 363 318 320);"/>
+                        <Edge cubics="!273 273(;273,273 318,320 318,320q273 273 318 320);"/>
+                        <Edge cubics="!273 273(;273,273 319,319 319,319q273 273 319 319);"/>
+                        <Edge cubics="!49 593(;49,593 320,322 320,322q49 593 320 322);"/>
+                        <Edge cubics="!319 321(;319,321 320,322 320,322q319 321 320 322);"/>
+                        <Edge cubics="!320 322(;320,322 589,591 589,591q320 322 589 591);"/>
+                        <Edge cubics="!635 635(;635,635 635,0 635,0q635 635 635 0);"/>
+                        <Edge cubics="!0 640(;0,640 640,640 640,640q0 640 640 640);"/>
+                        <Edge cubics="!635 635(;635,635 0,635 0,635q635 635 0 635);"/>
+                        <Edge cubics="!46 44(;46,44 273,273 273,273q46 44 273 273);"/>
+                        <Edge cubics="!52 68(52,68;52,68 52,548 52,548q52 68 52 548)52,548;"/>
+                        <Edge cubics="!80 48(80,48;80,48 560,48 560,48q80 48 560 48)560,48;"/>
+                        <Edge cubics="!582 82(582,82;582,82 582,562 582,562q582 82 582 562)582,562;"/>
+                        <Edge cubics="!80 580(80,580;80,580 560,580 560,580q80 580 560 580)560,580;"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
               </elements>
             </DOMFrame>
           </frames>
