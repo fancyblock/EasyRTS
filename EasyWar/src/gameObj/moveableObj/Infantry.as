@@ -1,8 +1,8 @@
 package gameObj.moveableObj 
 {
 	import flash.display.MovieClip;
-	import flash.display.Sprite;
 	import flash.geom.Point;
+	import gameComponent.Command;
 	import gameObj.Unit;
 	import gameObj.UnitTypes;
 	import gameObj.weapons.Cannonball;
@@ -12,34 +12,35 @@ package gameObj.moveableObj
 	 * ...
 	 * @author Hejiabin
 	 */
-	public class Tank extends Army 
+	public class Infantry extends Army 
 	{
 		//------------------------------ static member -------------------------------------
 		
-		static protected const TANK_SPEED:Number = 6.0;
-		static protected const TANK_LIFE_VALUE:Number = 160.0;
-		static protected const TANK_FIRINGRANGE:Number = 180;
+		static protected const INFANTRY_SPEED:Number = 2.5;
+		static protected const INFANTRY_LIFE_VALUE:Number = 100.0;
+		static protected const INFANTRY_FIRINGRANGE:Number = 90;
+		
+		static protected const INFANTRY_FORCE:Number = 3;
 		
 		//------------------------------ private member ------------------------------------
 		
-		protected var m_imgBody:MovieClip = null;
-		protected var m_imgGun:Sprite = null;
+		protected var m_imgSoldier:MovieClip = null;
 		
 		//------------------------------ public function -----------------------------------
 		
 		/**
-		 * @desc	constructor of Tank
+		 * @desc	constructor of Infantry
 		 */
-		public function Tank() 
+		public function Infantry() 
 		{
 			super();
 			
-			this.VELOCITY = TANK_SPEED;
-			m_firingRange = TANK_FIRINGRANGE;
-			m_maxLifeValue = TANK_LIFE_VALUE;
+			this.VELOCITY = INFANTRY_SPEED;
+			m_firingRange = INFANTRY_FIRINGRANGE;
+			m_maxLifeValue = INFANTRY_LIFE_VALUE;
 			m_lifeValue = m_maxLifeValue;
 			
-			m_type = UnitTypes.TYPE_TANK;
+			m_type = UnitTypes.TYPE_INFANTRY;
 		}
 		
 		
@@ -50,6 +51,16 @@ package gameObj.moveableObj
 		override public function Update( elapsed:Number ):void
 		{
 			super.Update( elapsed );
+			
+			if ( m_command != null )
+			{
+				if ( m_command._type == Command.CMD_OCCUPY )
+				{
+					//TODO 
+					
+					m_command = null;
+				}
+			}
 			
 			//TODO 
 		}
@@ -63,13 +74,12 @@ package gameObj.moveableObj
 			super.onAdd();
 			
 			// initial the display stuff
-			setTankDisplay();
+			m_imgSoldier = new mcSoldier();
 			
-			m_display.addChild( m_imgBody );
-			m_display.addChild( m_imgGun );
+			m_display.addChild( m_imgSoldier );
 			m_display.addChild( m_lifeBar );
 			
-			m_imgGun.rotation = 10;
+			m_imgSoldier.rotation = 0;
 			
 			// enemy always show the life bar
 			if ( this.GROUP != UnitTypes.SELF_GROUP )
@@ -104,7 +114,7 @@ package gameObj.moveableObj
 			super.onDirectionChanged( newDir );
 			
 			// update the tank body rotation
-			m_imgBody.rotation = MathCalculator.VectorToAngle( newDir );
+			m_imgSoldier.rotation = MathCalculator.VectorToAngle( newDir );
 		}
 		
 		
@@ -116,11 +126,9 @@ package gameObj.moveableObj
 		{
 			super.onFire( unit );
 			
-			// set the tank gun angle
-			m_imgGun.rotation = MathCalculator.VectorToAngle( new Point( unit.POSITION.x - m_position.x, unit.POSITION.y - m_position.y ) );
-			
 			// shoot to the enemy
 			var cannonBall:Cannonball = new Cannonball();
+			cannonBall.SetForce( INFANTRY_FORCE );
 			cannonBall.SetDest( unit.POSITION.x, unit.POSITION.y );
 			
 			m_unitHost.AddGameObject( cannonBall, m_position.x, m_position.y, this.GROUP );
@@ -128,23 +136,6 @@ package gameObj.moveableObj
 		
 		
 		//------------------------------ private function ----------------------------------
-		
-		
-		// set tank display
-		protected function setTankDisplay():void
-		{
-			if ( m_group == UnitTypes.SELF_GROUP )
-			{
-				m_imgBody = new mcTankBody();
-				m_imgGun = new mcTankGun();
-			}
-			else
-			{
-				m_imgBody = new mcTankBody02();
-				m_imgGun = new mcTankGun02();
-			}
-		}
-		
 		
 		//------------------------------- event callback -----------------------------------
 		

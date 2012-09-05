@@ -5,9 +5,11 @@ package stages
 	import flash.events.MouseEvent;
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
+	import flash.text.TextField;
 	import gameComponent.Battlefield;
 	import gameObj.building.Arsenal;
 	import gameObj.building.City;
+	import gameObj.moveableObj.Infantry;
 	import gameObj.moveableObj.Tank;
 	import gameObj.UnitTypes;
 	import map.MiniMap;
@@ -35,7 +37,7 @@ package stages
 		static protected const SCROLL_VELOCITY:Number = 10;
 		
 		static protected const VIEWPORT_WIDTH:int = 1024;
-		static protected const VIEWPORT_HEIGHT:int = 668;
+		static protected const VIEWPORT_HEIGHT:int = 722;
 		
 		static protected const SELECT_FRAME_COLOR:uint = 0xfa3399;
 		
@@ -46,6 +48,9 @@ package stages
 		protected var m_battlefield:Battlefield = null;
 		protected var m_scrollBars:Array = null;
 		protected var m_btnExit:SimpleButton = null;
+		protected var m_txtMoney:TextField = null;
+		protected var m_txtArmyCnt:TextField = null;
+		protected var m_txtCityCnt:TextField = null;
 		
 		// mini map
 		protected var m_miniMapCom:Sprite = null;
@@ -115,8 +120,11 @@ package stages
 			m_scrollBars[SCROLL_RIGHT_BUTTON].addEventListener( MouseEvent.ROLL_OUT, onEndScrollMap );
 			
 			m_btnExit = m_ui.getChildByName( "btnExit" ) as SimpleButton;
+			m_txtArmyCnt = m_ui.getChildByName( "txtTroopCnt" ) as TextField;
+			m_txtCityCnt = m_ui.getChildByName( "txtCityCnt" ) as TextField;
+			m_txtMoney = m_ui.getChildByName( "txtMoneyCnt" ) as TextField;
+			
 			m_btnExit.addEventListener( MouseEvent.CLICK, onExitGame );
-			//TODO	ui stuff
 			
 			this.CANVAS.addChild( m_ui );
 			
@@ -153,9 +161,9 @@ package stages
 			m_battlefield.AddGameObject( new Arsenal(), 3.5 * m_battlefield.MAP.GRID_SIZE, 3.5 * m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
 			m_battlefield.AddGameObject( new City(), 17.5 * m_battlefield.MAP.GRID_SIZE, 7.5 * m_battlefield.MAP.GRID_SIZE, UnitTypes.NEUTRAL_GROUP );
 			m_battlefield.AddGameObject( new Tank(), 5.5*m_battlefield.MAP.GRID_SIZE, 5.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
-			m_battlefield.AddGameObject( new Tank(), 5.5*m_battlefield.MAP.GRID_SIZE, 6.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
-			m_battlefield.AddGameObject( new Tank(), 5.5*m_battlefield.MAP.GRID_SIZE, 7.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
-			m_battlefield.AddGameObject( new Tank(), 7.5*m_battlefield.MAP.GRID_SIZE, 5.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
+			m_battlefield.AddGameObject( new Infantry(), 5.5*m_battlefield.MAP.GRID_SIZE, 6.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
+			m_battlefield.AddGameObject( new Infantry(), 5.5*m_battlefield.MAP.GRID_SIZE, 7.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
+			m_battlefield.AddGameObject( new Infantry(), 7.5*m_battlefield.MAP.GRID_SIZE, 5.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
 			m_battlefield.AddGameObject( new Tank(), 8.5*m_battlefield.MAP.GRID_SIZE, 5.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
 			m_battlefield.AddGameObject( new Tank(), 5.5*m_battlefield.MAP.GRID_SIZE, 8.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
 			m_battlefield.AddGameObject( new Tank(), 13.5*m_battlefield.MAP.GRID_SIZE, 5.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.ENEMY_GROUP );
