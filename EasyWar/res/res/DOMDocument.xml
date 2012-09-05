@@ -1,6 +1,12 @@
-<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" width="1024" height="768" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" gridSpacingX="32" gridSpacingY="32" gridSnapTo="true" objectsSnapTo="false" adjustViewAngle3D="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" width="1024" height="768" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" gridSpacingX="32" gridSpacingY="32" objectsSnapTo="false" adjustViewAngle3D="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+     <fonts>
+          <DOMFontItem name="number" itemID="5046f54f-00000043" font="TimesNewRomanPSMT" size="0" id="1" sourceLastImported="1346827599" embedRanges="3"/>
+     </fonts>
      <symbols>
+          <Include href="btnBack.xml" itemIcon="0" loadImmediate="false"/>
+          <Include href="btnMiniMapSwitch.xml" itemIcon="0" loadImmediate="false"/>
           <Include href="btnStart.xml" itemIcon="0" loadImmediate="false"/>
+          <Include href="city.xml" loadImmediate="false"/>
           <Include href="inGame.xml"/>
           <Include href="mainMenu.xml"/>
           <Include href="mcMiniMap.xml" loadImmediate="false"/>
@@ -9,7 +15,11 @@
           <Include href="mcScrollRight.xml" itemIcon="0" loadImmediate="false"/>
           <Include href="mcScrollUp.xml" itemIcon="0" loadImmediate="false"/>
           <Include href="mcSelect.xml"/>
+          <Include href="mcTank.xml" itemIcon="1" loadImmediate="false"/>
+          <Include href="mcTankGun.xml" loadImmediate="false"/>
+          <Include href="miniMapComponent.xml" loadImmediate="false"/>
           <Include href="mouseArea.xml" loadImmediate="false"/>
+          <Include href="tankBody01.xml" loadImmediate="false"/>
      </symbols>
      <timelines>
           <DOMTimeline name="场景 1">
@@ -333,25 +343,25 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
-          <PublishItem publishSize="7849" publishTime="1346558098"/>
-          <PublishItem publishSize="7903" publishTime="1346517039"/>
-          <PublishItem publishSize="7892" publishTime="1346512240"/>
-          <PublishItem publishSize="7860" publishTime="1346512165"/>
-          <PublishItem publishSize="7862" publishTime="1346512131"/>
-          <PublishItem publishSize="7863" publishTime="1346512077"/>
-          <PublishItem publishSize="7866" publishTime="1346511596"/>
-          <PublishItem publishSize="7846" publishTime="1346504441"/>
-          <PublishItem publishSize="7873" publishTime="1346297557"/>
-          <PublishItem publishSize="7873" publishTime="1346296529"/>
-          <PublishItem publishSize="7873" publishTime="1346295846"/>
-          <PublishItem publishSize="7825" publishTime="1346262981"/>
-          <PublishItem publishSize="7784" publishTime="1346262918"/>
-          <PublishItem publishSize="7779" publishTime="1346262572"/>
-          <PublishItem publishSize="7649" publishTime="1346262442"/>
-          <PublishItem publishSize="7554" publishTime="1346262312"/>
-          <PublishItem publishSize="7541" publishTime="1346262265"/>
-          <PublishItem publishSize="7541" publishTime="1346262235"/>
-          <PublishItem publishSize="7531" publishTime="1346262164"/>
-          <PublishItem publishSize="7470" publishTime="1346225213"/>
+          <PublishItem publishSize="40057" publishTime="1346830743"/>
+          <PublishItem publishSize="40056" publishTime="1346830682"/>
+          <PublishItem publishSize="40057" publishTime="1346830663"/>
+          <PublishItem publishSize="40057" publishTime="1346830614"/>
+          <PublishItem publishSize="40032" publishTime="1346830536"/>
+          <PublishItem publishSize="38782" publishTime="1346830508"/>
+          <PublishItem publishSize="39688" publishTime="1346830360"/>
+          <PublishItem publishSize="39690" publishTime="1346830250"/>
+          <PublishItem publishSize="15311" publishTime="1346830069"/>
+          <PublishItem publishSize="14097" publishTime="1346829631"/>
+          <PublishItem publishSize="14072" publishTime="1346829372"/>
+          <PublishItem publishSize="14072" publishTime="1346829346"/>
+          <PublishItem publishSize="14071" publishTime="1346829322"/>
+          <PublishItem publishSize="14040" publishTime="1346829296"/>
+          <PublishItem publishSize="15110" publishTime="1346828860"/>
+          <PublishItem publishSize="15543" publishTime="1346828149"/>
+          <PublishItem publishSize="14361" publishTime="1346827989"/>
+          <PublishItem publishSize="14362" publishTime="1346827642"/>
+          <PublishItem publishSize="14508" publishTime="1346827602"/>
+          <PublishItem publishSize="13143" publishTime="1346827586"/>
      </publishHistory>
 </DOMDocument>

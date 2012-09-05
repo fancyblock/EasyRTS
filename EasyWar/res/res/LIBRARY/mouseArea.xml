@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="mouseArea" itemID="503c9054-00000017" sourceLibraryItemHRef="元件 1" lastModified="1346146388">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="mouseArea" itemID="503c9054-00000017" sourceLibraryItemHRef="元件 1" lastModified="1346829057">
   <timeline>
     <DOMTimeline name="mouseArea">
       <layers>
@@ -13,7 +13,7 @@
                     </FillStyle>
                   </fills>
                   <edges>
-                    <Edge fillStyle1="1" edges="!20480 11200|0 11200!0 11200|0 0!0 0|20480 0!20480 0|20480 11200"/>
+                    <Edge fillStyle1="1" edges="!20480 14440S2|0 14440!0 14440|0 0!0 0|20480 0!20480 0|20480 14440"/>
                   </edges>
                 </DOMShape>
               </elements>

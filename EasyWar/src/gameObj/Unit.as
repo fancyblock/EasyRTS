@@ -184,6 +184,21 @@ package gameObj
 		}
 		
 		
+		/**
+		 * @desc	return this unit is troop or not
+		 * @return
+		 */
+		public function IsTroop():Boolean
+		{
+			if ( this.TYPE == UnitTypes.TYPE_TANK )
+			{
+				return true;
+			}
+			
+			return false;
+		}
+		
+		
 		//------------------------------ private function ----------------------------------
 		
 		//------------------------------- event callback -----------------------------------

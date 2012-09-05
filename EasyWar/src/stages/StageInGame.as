@@ -7,7 +7,9 @@ package stages
 	import flash.geom.Rectangle;
 	import gameComponent.Battlefield;
 	import gameObj.building.Arsenal;
+	import gameObj.building.City;
 	import gameObj.moveableObj.Tank;
+	import gameObj.UnitTypes;
 	import map.MiniMap;
 	import Utility.MathCalculator;
 	
@@ -19,11 +21,7 @@ package stages
 	{
 		//---------------------------- static member ------------------------------
 		
-		static protected const STATE_NORMAL:int = 0;
-		//TODO
-		
-		static protected const SELF_GROUP:int = 0;
-		static protected const ENEMY_GROUP:int = 1;
+		static protected const MOUSE_MOVE_MIN:Number = 5.0;
 		
 		static protected const SCROLL_UP:int = 0;
 		static protected const SCROLL_DOWN:int = 1;
@@ -33,7 +31,7 @@ package stages
 		static protected const SCROLL_VELOCITY:Number = 10;
 		
 		static protected const VIEWPORT_WIDTH:int = 1024;
-		static protected const VIEWPORT_HEIGHT:int = 558;
+		static protected const VIEWPORT_HEIGHT:int = 668;
 		
 		static protected const SELECT_FRAME_COLOR:uint = 0xfa3399;
 		
@@ -43,8 +41,10 @@ package stages
 		protected var m_gameLayer:Sprite = null;
 		protected var m_battlefield:Battlefield = null;
 		protected var m_scrollBars:Array = null;
+		protected var m_btnExit:SimpleButton = null;
 		
 		// mini map
+		protected var m_miniMapCom:Sprite = null;
 		protected var m_miniMapFrame:Sprite = null;
 		protected var m_miniMap:MiniMap = null;
 		protected var m_miniMapMouseArea:Sprite = null;
@@ -54,7 +54,6 @@ package stages
 		protected var m_isMouseDown:Boolean = false;
 		protected var m_startMousePos:Point = new Point();
 		
-		protected var m_state:int = 0;
 		protected var m_inScrollMap:Boolean = false;
 		protected var m_scrollMapVec:Point = new Point();
 		
@@ -97,13 +96,16 @@ package stages
 			m_scrollBars[SCROLL_RIGHT].addEventListener( MouseEvent.ROLL_OVER, onBeginScrollMap );
 			m_scrollBars[SCROLL_RIGHT].addEventListener( MouseEvent.ROLL_OUT, onEndScrollMap );
 			
+			m_btnExit = m_ui.getChildByName( "btnExit" ) as SimpleButton;
+			m_btnExit.addEventListener( MouseEvent.CLICK, onExitGame );
 			//TODO	ui stuff
 			
 			this.CANVAS.addChild( m_ui );
 			
 			// mini map
-			m_miniMapFrame = m_ui.getChildByName( "mcMiniMapFrame" ) as Sprite;
-			m_miniMapMouseArea = m_ui.getChildByName( "mcMiniMapMouseArea" ) as Sprite;
+			m_miniMapCom = m_ui.getChildByName( "mcMiniMapCom" ) as Sprite;
+			m_miniMapFrame = m_miniMapCom.getChildByName( "mcMiniMapFrame" ) as Sprite;
+			m_miniMapMouseArea = m_miniMapCom.getChildByName( "mcMiniMapMouseArea" ) as Sprite;
 			m_miniMapMouseArea.addEventListener( MouseEvent.CLICK, onClkMiniMap );
 			m_miniMapMouseArea.addEventListener( MouseEvent.MOUSE_DOWN, onStartDragMiniMap );
 			m_miniMapMouseArea.addEventListener( MouseEvent.MOUSE_MOVE, onDragMiniMap );
@@ -130,18 +132,17 @@ package stages
 									VIEWPORT_HEIGHT / m_battlefield.MAP.MAP_SIZE_HEIGHT );
 			
 			//[hack]
-			m_battlefield.AddGameObject( new Arsenal(), 3.5 * m_battlefield.MAP.GRID_SIZE, 3.5 * m_battlefield.MAP.GRID_SIZE, SELF_GROUP );
-			m_battlefield.AddGameObject( new Tank(), 5.5*m_battlefield.MAP.GRID_SIZE, 5.5*m_battlefield.MAP.GRID_SIZE, SELF_GROUP );
-			m_battlefield.AddGameObject( new Tank(), 5.5*m_battlefield.MAP.GRID_SIZE, 6.5*m_battlefield.MAP.GRID_SIZE, SELF_GROUP );
-			m_battlefield.AddGameObject( new Tank(), 5.5*m_battlefield.MAP.GRID_SIZE, 7.5*m_battlefield.MAP.GRID_SIZE, SELF_GROUP );
-			m_battlefield.AddGameObject( new Tank(), 7.5*m_battlefield.MAP.GRID_SIZE, 5.5*m_battlefield.MAP.GRID_SIZE, SELF_GROUP );
-			m_battlefield.AddGameObject( new Tank(), 8.5*m_battlefield.MAP.GRID_SIZE, 5.5*m_battlefield.MAP.GRID_SIZE, SELF_GROUP );
-			m_battlefield.AddGameObject( new Tank(), 5.5*m_battlefield.MAP.GRID_SIZE, 8.5*m_battlefield.MAP.GRID_SIZE, SELF_GROUP );
-			m_battlefield.AddGameObject( new Tank(), 13.5*m_battlefield.MAP.GRID_SIZE, 5.5*m_battlefield.MAP.GRID_SIZE, ENEMY_GROUP );
+			m_battlefield.AddGameObject( new Arsenal(), 3.5 * m_battlefield.MAP.GRID_SIZE, 3.5 * m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
+			m_battlefield.AddGameObject( new City(), 17.5 * m_battlefield.MAP.GRID_SIZE, 7.5 * m_battlefield.MAP.GRID_SIZE, UnitTypes.NEUTRAL_GROUP );
+			m_battlefield.AddGameObject( new Tank(), 5.5*m_battlefield.MAP.GRID_SIZE, 5.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
+			m_battlefield.AddGameObject( new Tank(), 5.5*m_battlefield.MAP.GRID_SIZE, 6.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
+			m_battlefield.AddGameObject( new Tank(), 5.5*m_battlefield.MAP.GRID_SIZE, 7.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
+			m_battlefield.AddGameObject( new Tank(), 7.5*m_battlefield.MAP.GRID_SIZE, 5.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
+			m_battlefield.AddGameObject( new Tank(), 8.5*m_battlefield.MAP.GRID_SIZE, 5.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
+			m_battlefield.AddGameObject( new Tank(), 5.5*m_battlefield.MAP.GRID_SIZE, 8.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
+			m_battlefield.AddGameObject( new Tank(), 13.5*m_battlefield.MAP.GRID_SIZE, 5.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.ENEMY_GROUP );
 			//[hack]
 			
-			// set game state
-			m_state = STATE_NORMAL;
 		}
 		
 		override public function onFrame(elapsed:Number):void 
@@ -177,7 +178,7 @@ package stages
 		// group select your troop
 		protected function selectUnits( rect:Rectangle ):void
 		{
-			var cnt:int = m_battlefield.SelectUnits( rect, SELF_GROUP );
+			var cnt:int = m_battlefield.SelectUnits( rect, UnitTypes.SELF_GROUP );
 			
 			//TODO 
 		}
@@ -229,11 +230,12 @@ package stages
 			m_isMouseDown = false;
 			
 			var rect:Rectangle = MathCalculator.GetRectBy2Spot( evt.localX, evt.localY, m_startMousePos.x, m_startMousePos.y );
+			var distance:Point = m_startMousePos.subtract( new Point( evt.localX, evt.localY ) );
 			
 			// no move
-			if ( rect.width == 0 && rect.height == 0 )
+			if ( distance.length < MOUSE_MOVE_MIN )
 			{
-				var selected:Boolean = m_battlefield.SelectUnit( evt.localX, evt.localY, SELF_GROUP );
+				var selected:Boolean = m_battlefield.SelectUnit( evt.localX, evt.localY, UnitTypes.SELF_GROUP );
 				
 				if ( selected == false )
 				{
@@ -304,6 +306,12 @@ package stages
 		protected function onStopDragMiniMap( evt:MouseEvent ):void
 		{
 			//TODO 
+		}
+		
+		// exit the game & back to the main menu
+		protected function onExitGame( evt:MouseEvent ):void
+		{
+			StageManager.SINGLETON.StartStage( "MainMenu" );
 		}
 		
 	}

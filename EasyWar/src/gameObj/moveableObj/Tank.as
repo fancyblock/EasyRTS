@@ -136,7 +136,7 @@ package gameObj.moveableObj
 		// set tank display
 		protected function setTankDisplay():void
 		{
-			if ( m_group == 0 )
+			if ( m_group == UnitTypes.SELF_GROUP )
 			{
 				m_imgBody = new mcTankBody();
 				m_imgGun = new mcTankGun();

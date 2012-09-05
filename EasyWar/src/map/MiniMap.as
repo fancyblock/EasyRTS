@@ -3,6 +3,9 @@ package map
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
 	import flash.display.Sprite;
+	import gameObj.Unit;
+	import gameObj.UnitTypes;
+	import mapItem.MapItem;
 	
 	/**
 	 * ...
@@ -15,8 +18,11 @@ package map
 		static protected const COLOR_BLANK:uint = 0xffffcc;
 		static protected const COLOR_BLOCK:uint = 0xff6600;
 		
-		static protected const COLOR_SELF_GROUP:uint = 0x00aa00;
-		static protected const COLOR_ENEMY_GROUP:uint = 0x0000ff;
+		static protected const COLOR_SELF_ARMY:uint = 0x00aa00;
+		static protected const COLOR_ENEMY_ARMY:uint = 0x0000ff;
+		static protected const COLOR_SELF_BUILDING:uint = 0xf00000;
+		static protected const COLOR_ENEMY_BUILDING:uint = 0xaa0000;
+		static protected const COLOR_NEUTRAL:uint = 0x999999;
 		
 		//------------------------------ private member ------------------------------------
 		
@@ -102,30 +108,54 @@ package map
 		
 		
 		/**
-		 * @desc	set the troop
+		 * @desc	set map item
 		 * @param	xPos
 		 * @param	yPos
-		 * @param	group
+		 * @param	mapItem
 		 */
-		public function SetTroop( xPos:int, yPos:int, group:int ):void
+		public function SetMapItem( xPos:int, yPos:int, mapUnit:MapItem ):void
 		{
-			if ( group == 0 )		//[hack]
+			var color:uint = 0;
+			
+			if ( mapUnit.GROUP == UnitTypes.SELF_GROUP )
 			{
-				m_unitData.setPixel( xPos, yPos, COLOR_SELF_GROUP );
+				if ( mapUnit.IsTroop() )
+				{
+					color = COLOR_SELF_ARMY;
+				}
+				else
+				{
+					color = COLOR_SELF_BUILDING;
+				}
 			}
-			else
+			
+			if ( mapUnit.GROUP == UnitTypes.ENEMY_GROUP )
 			{
-				m_unitData.setPixel( xPos, yPos, COLOR_ENEMY_GROUP );
+				if ( mapUnit.IsTroop() )
+				{
+					color = COLOR_ENEMY_ARMY;
+				}
+				else
+				{
+					color = COLOR_ENEMY_BUILDING;
+				}
 			}
+			
+			if ( mapUnit.GROUP == UnitTypes.NEUTRAL_GROUP )
+			{
+				color = COLOR_NEUTRAL;
+			}
+			
+			m_unitData.setPixel( xPos, yPos, color );
 		}
 		
 		
 		/**
-		 * @desc	clean the troop
+		 * @desc	clean the map item
 		 * @param	xPos
 		 * @param	yPos
 		 */
-		public function CleanTroop( xPos:int, yPos:int ):void
+		public function CleanMapItem( xPos:int, yPos:int ):void
 		{
 			m_unitData.setPixel( xPos, yPos, COLOR_BLANK );
 		}

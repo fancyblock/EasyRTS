@@ -1,7 +1,8 @@
-<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" gridSpacingX="1" gridSpacingY="1" gridSnapTo="true" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" gridSpacingX="1" gridSpacingY="1" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
      <symbols>
           <Include href="boost.xml"/>
           <Include href="bullet.xml"/>
+          <Include href="city.xml"/>
           <Include href="deadArea.xml"/>
           <Include href="lifeBarFrame.xml" loadImmediate="false"/>
           <Include href="mcBlankTile.xml"/>
@@ -19,13 +20,13 @@
      <timelines>
           <DOMTimeline name="场景 1">
                <layers>
-                    <DOMLayer name="图层 2" color="#9933CC" current="true" isSelected="true">
+                    <DOMLayer name="图层 2" color="#9933CC">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="mcBlankTile" name="" cacheAsBitmap="true" centerPoint3DX="98" centerPoint3DY="25">
+                                        <DOMSymbolInstance libraryItemName="mcBlankTile" name="" cacheAsBitmap="true" centerPoint3DX="65" centerPoint3DY="34">
                                              <matrix>
-                                                  <Matrix tx="82" ty="9"/>
+                                                  <Matrix tx="49" ty="18"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="16" y="16"/>
@@ -87,9 +88,17 @@
                                                   <Point x="3.5" y="3.5"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="mcFactory" name="" centerPoint3DX="52.9" centerPoint3DY="41.8">
+                                        <DOMSymbolInstance libraryItemName="mcFactory" name="" centerPoint3DX="166" centerPoint3DY="227">
                                              <matrix>
-                                                  <Matrix tx="36.9" ty="25.8"/>
+                                                  <Matrix tx="150" ty="211"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="16" y="16"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="city" name="" centerPoint3DX="38" centerPoint3DY="45.1">
+                                             <matrix>
+                                                  <Matrix tx="22" ty="29.1"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="16" y="16"/>
@@ -99,11 +108,11 @@
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
-                    <DOMLayer name="图层 7" color="#4F80FF">
+                    <DOMLayer name="图层 7" color="#4F80FF" current="true" isSelected="true">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="mcTankGun" name="" centerPoint3DX="51.2" centerPoint3DY="124.45">
+                                        <DOMSymbolInstance libraryItemName="mcTankGun" name="" selected="true" centerPoint3DX="51.2" centerPoint3DY="124.45">
                                              <matrix>
                                                   <Matrix tx="28.95" ty="108.45"/>
                                              </matrix>
@@ -127,7 +136,7 @@
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="tankBody01" name="" centerPoint3DX="41.95" centerPoint3DY="90.45">
+                                        <DOMSymbolInstance libraryItemName="tankBody01" name="" selected="true" centerPoint3DX="41.95" centerPoint3DY="90.45">
                                              <matrix>
                                                   <Matrix tx="28.95" ty="77.45"/>
                                              </matrix>
@@ -453,6 +462,12 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="6165" publishTime="1346824338"/>
+          <PublishItem publishSize="6146" publishTime="1346824170"/>
+          <PublishItem publishSize="6146" publishTime="1346824143"/>
+          <PublishItem publishSize="6131" publishTime="1346824066"/>
+          <PublishItem publishSize="5664" publishTime="1346823023"/>
+          <PublishItem publishSize="5664" publishTime="1346823020"/>
           <PublishItem publishSize="5699" publishTime="1346752978"/>
           <PublishItem publishSize="5697" publishTime="1346750201"/>
           <PublishItem publishSize="5697" publishTime="1346750198"/>

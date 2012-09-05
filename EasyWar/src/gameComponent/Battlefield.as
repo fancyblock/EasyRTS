@@ -5,7 +5,9 @@ package gameComponent
 	import flash.display.Sprite;
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
+	import gameObj.building.Arsenal;
 	import gameObj.Unit;
+	import gameObj.UnitTypes;
 	import map.GridInfo;
 	import map.GridMap;
 	import map.MapLoader;
@@ -27,7 +29,7 @@ package gameComponent
 		protected var m_canvas:DisplayObjectContainer = null;
 		protected var m_map:GridMap = null;
 		protected var m_unitList:Array = null;
-		protected var m_selectedUnit:Array = null;
+		protected var m_selectedUnits:Array = null;
 		
 		protected var m_mapCanvas:Sprite = null;
 		protected var m_mapBG:Bitmap = null;
@@ -35,6 +37,8 @@ package gameComponent
 		protected var m_viewportSize:Point = new Point();
 		
 		protected var m_playerCommand:Command = null;
+		
+		protected var m_currentBuilding:Arsenal = null;
 		
 		//------------------------------ public function -----------------------------------
 		
@@ -44,7 +48,7 @@ package gameComponent
 		public function Battlefield() 
 		{
 			m_unitList = new Array();
-			m_selectedUnit = new Array();
+			m_selectedUnits = new Array();
 		}
 		
 		
@@ -72,7 +76,7 @@ package gameComponent
 		 */
 		public function get SELECTED_UNIT():Array
 		{ 
-			return m_selectedUnit;
+			return m_selectedUnits;
 		}
 		
 		
@@ -261,6 +265,8 @@ package gameComponent
 			var endGridX:int = ( rect.left + rect.width - m_mapOffset.x ) / m_map.GRID_SIZE;
 			var endGridY:int = ( rect.top + rect.height - m_mapOffset.y ) / m_map.GRID_SIZE;
 			
+			var selectedBuilding:Array = new Array();
+			
 			for ( i = startGridX; i <= endGridX; i++ )
 			{
 				for ( j = startGridY; j <= endGridY; j++ )
@@ -271,6 +277,11 @@ package gameComponent
 					{
 						if ( gridInfo._coverItem.GROUP == group )
 						{
+							if ( gridInfo._coverItem.IsTroop() == false )
+							{
+								selectedBuilding.push( gridInfo._coverItem );
+							}
+							
 							unitList.push( gridInfo._coverItem );
 						}
 					}
@@ -279,15 +290,35 @@ package gameComponent
 			
 			if ( unitList.length > 0 )
 			{
-				cleanCurrentSelect();
-				m_selectedUnit = unitList;
-				
-				for ( i = 0; i < m_selectedUnit.length; i++ )
+				if ( selectedBuilding.length > 0 )
 				{
-					m_selectedUnit[i].SELECTED = true;
+					// contain troops
+					if ( unitList.length > selectedBuilding.length )
+					{
+						// remove all the building item from the selected list
+						for ( i = 0; i < selectedBuilding.length; i++ )
+						{
+							unitList.splice( unitList.indexOf( selectedBuilding[i] ), 1 );
+						}
+					}
+					// more than one buildings be selected
+					else if ( selectedBuilding.length > 1 )
+					{
+						return 0;
+					}
 				}
 				
-				return m_selectedUnit.length;
+				cleanCurrentSelect();
+				m_selectedUnits = unitList;
+				
+				for ( i = 0; i < m_selectedUnits.length; i++ )
+				{
+					m_selectedUnits[i].SELECTED = true;
+				}
+				
+				updateSelectState();
+				
+				return m_selectedUnits.length;
 			}
 			
 			return 0;
@@ -321,7 +352,9 @@ package gameComponent
 			cleanCurrentSelect();
 			
 			unit.SELECTED = true;
-			m_selectedUnit.push( unit );
+			m_selectedUnits.push( unit );
+			
+			updateSelectState();
 			
 			return true;
 		}
@@ -335,7 +368,7 @@ package gameComponent
 		public function OrderSpot( xPos:Number, yPos:Number ):void
 		{
 			// judge if the any unit be selected 
-			if ( m_selectedUnit.length == 0 )
+			if ( m_selectedUnits.length == 0 )
 			{
 				return;
 			}
@@ -358,7 +391,7 @@ package gameComponent
 		public function OrderSpotGrid( xPos:int, yPos:int ):void
 		{
 			// judge if the any unit be selected 
-			if ( m_selectedUnit.length == 0 )
+			if ( m_selectedUnits.length == 0 )
 			{
 				return;
 			}
@@ -369,54 +402,79 @@ package gameComponent
 			sendOrderByClickGrid( mapItem, gridInfo );
 		}
 		
+		
+		/**
+		 * @desc	return the current selected building ( for manufacture the troop )
+		 */
+		public function get SELECTED_BUILDING():Arsenal
+		{
+			return m_currentBuilding;
+		}
+		
+		
 		//------------------------------ private function ----------------------------------
 		
 		
+		// update the select state
+		protected function updateSelectState():void
+		{
+			m_currentBuilding = null;
+			
+			if ( m_selectedUnits.length == 1 )
+			{
+				if ( ( m_selectedUnits[0] as Unit ).IsTroop == false )
+				{
+					m_currentBuilding = m_selectedUnits[0];
+				}
+			}
+		}
+		
 		// send order
-		protected function sendOrderByClickGrid( mapItem:MapItem, gridInfo:GridInfo ):void
+		protected function sendOrderByClickGrid( mapUnit:MapItem, gridInfo:GridInfo ):void
 		{
 			var command:Command = new Command();
 			
-			if ( mapItem != null )
+			// move to that position
+			if ( gridInfo._type == GridInfo.BLANK )
 			{
-				command._type = Command.CMD_ATTACK;
-				command._aim = mapItem;
-			}
-			else if ( gridInfo._type == GridInfo.BLANK )
-			{
-				/*
-				// move command 
-				if ( m_selectedUnit.length > 1 )
-				{
-					//TODO 
-				}
-				else
-				{
-					command._type = Command.CMD_MOVE;
-					command._destGrid = gridInfo;
-				}
-				*/
-				
 				command._type = Command.CMD_MOVE;
 				command._destGrid = gridInfo;
 			}
+			else if ( gridInfo._type == GridInfo.BLOCK )
+			{
+				//TODO 
+				
+				return;
+			}
+			// attack the enemy
+			else if ( mapUnit.GROUP == UnitTypes.ENEMY_GROUP )
+			{
+				command._type = Command.CMD_ATTACK;
+				command._aim = mapUnit;
+			}
+			// occupy the city ( )
+			else if ( mapUnit.GROUP != UnitTypes.SELF_GROUP && mapUnit.TYPE == UnitTypes.TYPE_CITY )
+			{
+				command._type = Command.CMD_OCCUPY;
+				command._aim = mapUnit;
+			}
 			
 			// send the command to all selected unit
-			for ( var i:int = 0; i < m_selectedUnit.length; i++ )
+			for ( var i:int = 0; i < m_selectedUnits.length; i++ )
 			{
-				( m_selectedUnit[i] as MapItem ).SendCommand( command );
+				( m_selectedUnits[i] as MapItem ).SendCommand( command );
 			}
 		}
 		
 		// clean the current selected unit
 		protected function cleanCurrentSelect():void
 		{
-			for ( var i:int = 0; i < m_selectedUnit.length; i++ )
+			for ( var i:int = 0; i < m_selectedUnits.length; i++ )
 			{
-				( m_selectedUnit[i] as MapItem ).SELECTED = false;
+				( m_selectedUnits[i] as MapItem ).SELECTED = false;
 			}
 			
-			m_selectedUnit = new Array();
+			m_selectedUnits = new Array();
 		}
 		
 		//------------------------------- event callback -----------------------------------

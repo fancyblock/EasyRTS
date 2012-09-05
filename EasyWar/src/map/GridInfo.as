@@ -49,7 +49,7 @@ package map
 			
 			if ( _map.MINI_MAP != null )
 			{
-				_map.MINI_MAP.CleanTroop( _x, _y );
+				_map.MINI_MAP.CleanMapItem( _x, _y );
 			}
 		}
 		
@@ -87,7 +87,7 @@ package map
 			// update the miniMap display
 			if ( _map.MINI_MAP != null )
 			{
-				_map.MINI_MAP.SetTroop( _x, _y, item.GROUP );
+				_map.MINI_MAP.SetMapItem( _x, _y, item );
 			}
 		}
 		
