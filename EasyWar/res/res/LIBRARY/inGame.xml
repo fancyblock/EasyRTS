@@ -1,8 +1,8 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="inGame" itemID="50390172-00000014" linkageExportForAS="true" linkageClassName="inGameUI" sourceLibraryItemHRef="元件 1" lastModified="1346830868" lastUniqueIdentifier="6">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="inGame" itemID="50390172-00000014" linkageExportForAS="true" linkageClassName="inGameUI" sourceLibraryItemHRef="元件 1" lastModified="1346833102" lastUniqueIdentifier="6">
   <timeline>
     <DOMTimeline name="inGame">
       <layers>
-        <DOMLayer name="ad" color="#FF800A" current="true" isSelected="true" autoNamed="false">
+        <DOMLayer name="ad" color="#FF800A" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -292,7 +292,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="mcScrollUp" name="mcScrollUp" symbolType="button">
+                <DOMSymbolInstance libraryItemName="mcScrollUp" name="mcScrollUp" selected="true" symbolType="button">
                   <matrix>
                     <Matrix d="0.4375"/>
                   </matrix>
@@ -309,6 +309,58 @@
                   </matrix>
                   <transformationPoint>
                     <Point x="512" y="16"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.3984375"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="scrollBar3" color="#FF4FFF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="btnScroll" name="mcScrollLeftTop" symbolType="button">
+                  <matrix>
+                    <Matrix tx="0.5" ty="-1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="23.75" y="22.75"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.3984375"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="btnScroll" name="mcScrollRightTop" symbolType="button">
+                  <matrix>
+                    <Matrix a="-1" tx="1024.75" ty="-0.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="23.75" y="22.75"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.3984375"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="btnScroll" name="mcScrollRightBottom" symbolType="button">
+                  <matrix>
+                    <Matrix a="-1" d="-1" tx="1024.75" ty="723.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="23.75" y="22.75"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.3984375"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="btnScroll" name="mcScrollLeftBottom" symbolType="button">
+                  <matrix>
+                    <Matrix d="-1" tx="-1.75" ty="724.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="23.75" y="22.75"/>
                   </transformationPoint>
                   <color>
                     <Color alphaMultiplier="0.3984375"/>

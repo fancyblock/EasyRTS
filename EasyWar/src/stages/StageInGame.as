@@ -27,6 +27,10 @@ package stages
 		static protected const SCROLL_DOWN:int = 1;
 		static protected const SCROLL_LEFT:int = 2;
 		static protected const SCROLL_RIGHT:int = 3;
+		static protected const SCROLL_LEFT_TOP:int = 4;
+		static protected const SCROLL_RIGHT_TOP:int = 5;
+		static protected const SCROLL_LEFT_BOTTOM:int = 6;
+		static protected const SCROLL_RIGHT_BUTTON:int = 7;
 		
 		static protected const SCROLL_VELOCITY:Number = 10;
 		
@@ -82,11 +86,16 @@ package stages
 			m_mouseArea.addEventListener( MouseEvent.MOUSE_MOVE, onMouseMove );
 			m_mouseArea.addEventListener( MouseEvent.MOUSE_UP, onMouseUp );
 			
-			m_scrollBars = new Array(4);
+			m_scrollBars = new Array(8);
 			m_scrollBars[SCROLL_UP] = m_ui.getChildByName( "mcScrollUp" ) as SimpleButton;
 			m_scrollBars[SCROLL_DOWN] = m_ui.getChildByName( "mcScrollDown" ) as SimpleButton;
 			m_scrollBars[SCROLL_LEFT] = m_ui.getChildByName( "mcScrollLeft" ) as SimpleButton;
 			m_scrollBars[SCROLL_RIGHT] = m_ui.getChildByName( "mcScrollRight" ) as SimpleButton;
+			m_scrollBars[SCROLL_LEFT_TOP] = m_ui.getChildByName( "mcScrollLeftTop" ) as SimpleButton;
+			m_scrollBars[SCROLL_LEFT_BOTTOM] = m_ui.getChildByName( "mcScrollLeftBottom" ) as SimpleButton;
+			m_scrollBars[SCROLL_RIGHT_TOP] = m_ui.getChildByName( "mcScrollRightTop" ) as SimpleButton;
+			m_scrollBars[SCROLL_RIGHT_BUTTON] = m_ui.getChildByName( "mcScrollRightBottom" ) as SimpleButton;
+			
 			m_scrollBars[SCROLL_UP].addEventListener( MouseEvent.ROLL_OVER, onBeginScrollMap );
 			m_scrollBars[SCROLL_UP].addEventListener( MouseEvent.ROLL_OUT, onEndScrollMap );
 			m_scrollBars[SCROLL_DOWN].addEventListener( MouseEvent.ROLL_OVER, onBeginScrollMap );
@@ -95,6 +104,15 @@ package stages
 			m_scrollBars[SCROLL_LEFT].addEventListener( MouseEvent.ROLL_OUT, onEndScrollMap );
 			m_scrollBars[SCROLL_RIGHT].addEventListener( MouseEvent.ROLL_OVER, onBeginScrollMap );
 			m_scrollBars[SCROLL_RIGHT].addEventListener( MouseEvent.ROLL_OUT, onEndScrollMap );
+			
+			m_scrollBars[SCROLL_LEFT_TOP].addEventListener( MouseEvent.ROLL_OVER, onBeginScrollMap );
+			m_scrollBars[SCROLL_LEFT_TOP].addEventListener( MouseEvent.ROLL_OUT, onEndScrollMap );
+			m_scrollBars[SCROLL_LEFT_BOTTOM].addEventListener( MouseEvent.ROLL_OVER, onBeginScrollMap );
+			m_scrollBars[SCROLL_LEFT_BOTTOM].addEventListener( MouseEvent.ROLL_OUT, onEndScrollMap );
+			m_scrollBars[SCROLL_RIGHT_TOP].addEventListener( MouseEvent.ROLL_OVER, onBeginScrollMap );
+			m_scrollBars[SCROLL_RIGHT_TOP].addEventListener( MouseEvent.ROLL_OUT, onEndScrollMap );
+			m_scrollBars[SCROLL_RIGHT_BUTTON].addEventListener( MouseEvent.ROLL_OVER, onBeginScrollMap );
+			m_scrollBars[SCROLL_RIGHT_BUTTON].addEventListener( MouseEvent.ROLL_OUT, onEndScrollMap );
 			
 			m_btnExit = m_ui.getChildByName( "btnExit" ) as SimpleButton;
 			m_btnExit.addEventListener( MouseEvent.CLICK, onExitGame );
@@ -276,6 +294,30 @@ package stages
 			if ( evt.target == m_scrollBars[SCROLL_DOWN] )
 			{
 				m_scrollMapVec.x = 0;
+				m_scrollMapVec.y = -1;
+			}
+			
+			if ( evt.target == m_scrollBars[SCROLL_LEFT_TOP] )
+			{
+				m_scrollMapVec.x = 1;
+				m_scrollMapVec.y = 1;
+			}
+			
+			if ( evt.target == m_scrollBars[SCROLL_LEFT_BOTTOM] )
+			{
+				m_scrollMapVec.x = 1;
+				m_scrollMapVec.y = -1;
+			}
+			
+			if ( evt.target == m_scrollBars[SCROLL_RIGHT_TOP] )
+			{
+				m_scrollMapVec.x = -1;
+				m_scrollMapVec.y = 1;
+			}
+			
+			if ( evt.target == m_scrollBars[SCROLL_RIGHT_BUTTON] )
+			{
+				m_scrollMapVec.x = -1;
 				m_scrollMapVec.y = -1;
 			}
 		}
