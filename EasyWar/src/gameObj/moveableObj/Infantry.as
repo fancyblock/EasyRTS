@@ -116,7 +116,7 @@ package gameObj.moveableObj
 			// update the tank body rotation
 			m_imgSoldier.rotation = MathCalculator.VectorToAngle( newDir );
 		}
-		
+		 
 		
 		/**
 		 * @desc	fire to the enemy
@@ -125,6 +125,9 @@ package gameObj.moveableObj
 		override public function onFire( unit:Unit ):void 
 		{
 			super.onFire( unit );
+			
+			// set the fire angle
+			m_imgSoldier.rotation = MathCalculator.VectorToAngle( new Point( unit.POSITION.x - m_position.x, unit.POSITION.y - m_position.y ) );
 			
 			// shoot to the enemy
 			var cannonBall:Cannonball = new Cannonball();

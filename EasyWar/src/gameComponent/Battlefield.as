@@ -422,7 +422,7 @@ package gameComponent
 			
 			if ( m_selectedUnits.length == 1 )
 			{
-				if ( ( m_selectedUnits[0] as Unit ).IsTroop == false )
+				if ( ( m_selectedUnits[0] as Unit ).IsTroop() == false )
 				{
 					m_currentBuilding = m_selectedUnits[0];
 				}

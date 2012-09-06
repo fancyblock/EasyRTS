@@ -1,14 +1,20 @@
-<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" width="1024" height="768" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" gridSpacingX="32" gridSpacingY="32" gridSnapTo="true" objectsSnapTo="false" adjustViewAngle3D="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" width="1024" height="768" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" gridSpacingX="8" gridSpacingY="8" gridSnapTo="true" objectsSnapTo="false" adjustViewAngle3D="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
      <fonts>
           <DOMFontItem name="number" itemID="5046f54f-00000043" font="TimesNewRomanPSMT" size="0" id="1" sourceLastImported="1346827599" embedRanges="3"/>
      </fonts>
+     <media/>
      <symbols>
           <Include href="btnBack.xml" itemIcon="0" loadImmediate="false"/>
           <Include href="btnMiniMapSwitch.xml" itemIcon="0" loadImmediate="false"/>
           <Include href="btnScroll.xml" itemIcon="0" loadImmediate="false"/>
+          <Include href="btnSoldier.xml" itemIcon="0" loadImmediate="false"/>
           <Include href="btnStart.xml" itemIcon="0" loadImmediate="false"/>
+          <Include href="btnTank.xml" itemIcon="0" loadImmediate="false"/>
           <Include href="city.xml" loadImmediate="false"/>
+          <Include href="factoryUI.xml"/>
           <Include href="inGame.xml"/>
+          <Include href="leg.xml" loadImmediate="false"/>
+          <Include href="leg2.xml" loadImmediate="false"/>
           <Include href="mainMenu.xml"/>
           <Include href="mcMiniMap.xml" loadImmediate="false"/>
           <Include href="mcScrollDown.xml" itemIcon="0" loadImmediate="false"/>
@@ -20,16 +26,34 @@
           <Include href="mcTankGun.xml" loadImmediate="false"/>
           <Include href="miniMapComponent.xml" loadImmediate="false"/>
           <Include href="mouseArea.xml" loadImmediate="false"/>
+          <Include href="soldier.xml" loadImmediate="false"/>
           <Include href="tankBody01.xml" loadImmediate="false"/>
+          <Include href="元件 2.xml" loadImmediate="false"/>
      </symbols>
      <timelines>
           <DOMTimeline name="场景 1">
                <layers>
-                    <DOMLayer name="图层 1" color="#4FFF4F" current="true" isSelected="true">
+                    <DOMLayer name="图层 2" color="#9933CC" current="true" isSelected="true">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="inGame" name="" selected="true" centerPoint3DX="512" centerPoint3DY="383.95">
+                                        <DOMSymbolInstance libraryItemName="factoryUI" name="" selected="true" centerPoint3DX="136" centerPoint3DY="136">
+                                             <matrix>
+                                                  <Matrix tx="120" ty="120"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="16" y="16"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="图层 1" color="#4FFF4F">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="inGame" name="" centerPoint3DX="512" centerPoint3DY="383.95">
                                              <transformationPoint>
                                                   <Point x="512" y="383.95"/>
                                              </transformationPoint>
@@ -344,25 +368,22 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
-          <PublishItem publishSize="41225" publishTime="1346833129"/>
-          <PublishItem publishSize="41138" publishTime="1346833020"/>
-          <PublishItem publishSize="41133" publishTime="1346833001"/>
-          <PublishItem publishSize="40995" publishTime="1346832560"/>
-          <PublishItem publishSize="40992" publishTime="1346832536"/>
-          <PublishItem publishSize="40987" publishTime="1346832440"/>
-          <PublishItem publishSize="41002" publishTime="1346832389"/>
-          <PublishItem publishSize="41004" publishTime="1346832378"/>
-          <PublishItem publishSize="40973" publishTime="1346831008"/>
-          <PublishItem publishSize="40057" publishTime="1346830743"/>
-          <PublishItem publishSize="40056" publishTime="1346830682"/>
-          <PublishItem publishSize="40057" publishTime="1346830663"/>
-          <PublishItem publishSize="40057" publishTime="1346830614"/>
-          <PublishItem publishSize="40032" publishTime="1346830536"/>
-          <PublishItem publishSize="38782" publishTime="1346830508"/>
-          <PublishItem publishSize="39688" publishTime="1346830360"/>
-          <PublishItem publishSize="39690" publishTime="1346830250"/>
-          <PublishItem publishSize="15311" publishTime="1346830069"/>
-          <PublishItem publishSize="14097" publishTime="1346829631"/>
-          <PublishItem publishSize="14072" publishTime="1346829372"/>
+          <PublishItem publishSize="35385" publishTime="1346911019"/>
+          <PublishItem publishSize="35386" publishTime="1346911004"/>
+          <PublishItem publishSize="34996" publishTime="1346910954"/>
+          <PublishItem publishSize="34994" publishTime="1346910938"/>
+          <PublishItem publishSize="34996" publishTime="1346910907"/>
+          <PublishItem publishSize="35322" publishTime="1346910789"/>
+          <PublishItem publishSize="34997" publishTime="1346910614"/>
+          <PublishItem publishSize="34997" publishTime="1346910584"/>
+          <PublishItem publishSize="35204" publishTime="1346910561"/>
+          <PublishItem publishSize="35211" publishTime="1346910530"/>
+          <PublishItem publishSize="35211" publishTime="1346910510"/>
+          <PublishItem publishSize="35005" publishTime="1346910475"/>
+          <PublishItem publishSize="34928" publishTime="1346910440"/>
+          <PublishItem publishSize="34348" publishTime="1346910127"/>
+          <PublishItem publishSize="34347" publishTime="1346910086"/>
+          <PublishItem publishSize="34348" publishTime="1346910079"/>
+          <PublishItem publishSize="34141" publishTime="1346909881"/>
      </publishHistory>
 </DOMDocument>

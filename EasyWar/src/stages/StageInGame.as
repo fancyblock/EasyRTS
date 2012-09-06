@@ -51,6 +51,9 @@ package stages
 		protected var m_txtMoney:TextField = null;
 		protected var m_txtArmyCnt:TextField = null;
 		protected var m_txtCityCnt:TextField = null;
+		protected var m_uiFactory:Sprite = null;
+		protected var m_btnMakeTank:SimpleButton = null;
+		protected var m_btnMakeSoldier:SimpleButton = null;
 		
 		// mini map
 		protected var m_miniMapCom:Sprite = null;
@@ -65,6 +68,8 @@ package stages
 		
 		protected var m_inScrollMap:Boolean = false;
 		protected var m_scrollMapVec:Point = new Point();
+		
+		protected var m_currentArsenal:Arsenal = null;
 		
 		//--------------------------- public function ----------------------------
 		
@@ -91,6 +96,7 @@ package stages
 			m_mouseArea.addEventListener( MouseEvent.MOUSE_MOVE, onMouseMove );
 			m_mouseArea.addEventListener( MouseEvent.MOUSE_UP, onMouseUp );
 			
+			// map scroll stuff
 			m_scrollBars = new Array(8);
 			m_scrollBars[SCROLL_UP] = m_ui.getChildByName( "mcScrollUp" ) as SimpleButton;
 			m_scrollBars[SCROLL_DOWN] = m_ui.getChildByName( "mcScrollDown" ) as SimpleButton;
@@ -123,6 +129,15 @@ package stages
 			m_txtArmyCnt = m_ui.getChildByName( "txtTroopCnt" ) as TextField;
 			m_txtCityCnt = m_ui.getChildByName( "txtCityCnt" ) as TextField;
 			m_txtMoney = m_ui.getChildByName( "txtMoneyCnt" ) as TextField;
+			
+			// factory stuff
+			m_uiFactory = new mcFactoryUI();
+			m_btnMakeTank = m_uiFactory.getChildByName( "btnTank" ) as SimpleButton;
+			m_btnMakeSoldier = m_uiFactory.getChildByName( "btnSoldier" ) as SimpleButton;
+			m_btnMakeTank.addEventListener( MouseEvent.CLICK, onMakeTroop );
+			m_btnMakeSoldier.addEventListener( MouseEvent.CLICK, onMakeTroop );
+			m_mouseArea.addChild( m_uiFactory );
+			m_uiFactory.visible = false;
 			
 			m_btnExit.addEventListener( MouseEvent.CLICK, onExitGame );
 			
@@ -187,6 +202,8 @@ package stages
 									-m_battlefield.MAP_OFFSET.y / m_battlefield.MAP.MAP_SIZE_HEIGHT,
 									VIEWPORT_WIDTH / m_battlefield.MAP.MAP_SIZE_WIDTH,
 									VIEWPORT_HEIGHT / m_battlefield.MAP.MAP_SIZE_HEIGHT );
+									
+				displayFactoryUI( false );
 			}
 		}
 		
@@ -230,10 +247,44 @@ package stages
 			aniSelect.play();
 		}
 		
+		
+		// show or hide the factory ui
+		protected function displayFactoryUI( show:Boolean ):void
+		{
+			m_currentArsenal = null;
+			
+			if ( show == true )
+			{
+				var factory:Arsenal = m_battlefield.SELECTED_BUILDING;
+				
+				if ( factory != null )
+				{
+					m_currentArsenal = factory;
+					
+					m_uiFactory.x = factory.POSITION.x + m_battlefield.MAP_OFFSET.x;
+					m_uiFactory.y = factory.POSITION.y + m_battlefield.MAP_OFFSET.y;
+					
+					m_uiFactory.visible = true;
+				}
+				
+				if ( factory == null )
+				{
+					m_uiFactory.visible = false;
+				}
+			}
+			
+			if ( show == false )
+			{
+				m_uiFactory.visible = false;
+			}
+		}
+		
 		//----------------------------- event function ---------------------------- 
 		
 		protected function onMouseDown( evt:MouseEvent ):void
 		{
+			if ( evt.target != m_mouseArea ) return;
+			
 			m_isMouseDown = true;
 			
 			m_startMousePos.x = evt.localX;
@@ -242,6 +293,8 @@ package stages
 		
 		protected function onMouseMove( evt:MouseEvent ):void
 		{
+			if ( evt.target != m_mouseArea ) return;
+			
 			if ( m_isMouseDown )
 			{
 				m_mouseArea.graphics.clear();
@@ -253,6 +306,8 @@ package stages
 		
 		protected function onMouseUp( evt:MouseEvent ):void
 		{
+			if ( evt.target != m_mouseArea ) return;
+			
 			m_isMouseDown = false;
 			
 			var rect:Rectangle = MathCalculator.GetRectBy2Spot( evt.localX, evt.localY, m_startMousePos.x, m_startMousePos.y );
@@ -274,6 +329,8 @@ package stages
 			}
 			
 			m_mouseArea.graphics.clear();
+			
+			displayFactoryUI( true );
 		}
 		
 		
@@ -362,6 +419,24 @@ package stages
 		protected function onExitGame( evt:MouseEvent ):void
 		{
 			StageManager.SINGLETON.StartStage( "MainMenu" );
+		}
+		
+		
+		protected function onMakeTroop( evt:MouseEvent ):void
+		{
+			if ( evt.target == m_btnMakeSoldier )
+			{
+				trace( "Make a soldier" );
+				
+				//TODO 
+			}
+			
+			if ( evt.target == m_btnMakeTank )
+			{
+				trace( "Make a tank" );
+				
+				//TODO 
+			}
 		}
 		
 	}

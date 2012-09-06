@@ -1,4 +1,4 @@
-<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" gridSpacingX="1" gridSpacingY="1" gridSnapTo="true" guidesSnapTo="false" gridVisible="true" snapAlign="false" objectsSnapTo="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" gridSpacingX="1" gridSpacingY="1" guidesSnapTo="false" snapAlign="false" objectsSnapTo="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
      <symbols>
           <Include href="boost.xml"/>
           <Include href="bullet.xml"/>
@@ -83,9 +83,9 @@
                                                   <Point x="3.5" y="3.5"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="mcFactory" name="" centerPoint3DX="166" centerPoint3DY="227">
+                                        <DOMSymbolInstance libraryItemName="mcFactory" name="" centerPoint3DX="322" centerPoint3DY="108.05">
                                              <matrix>
-                                                  <Matrix tx="150" ty="211"/>
+                                                  <Matrix tx="306" ty="92.05"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="16" y="16"/>
@@ -99,9 +99,17 @@
                                                   <Point x="16" y="16"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="soldier" name="" selected="true" centerPoint3DX="42.85" centerPoint3DY="38.6">
+                                        <DOMSymbolInstance libraryItemName="soldier" name="" centerPoint3DX="42.85" centerPoint3DY="38.6">
                                              <matrix>
                                                   <Matrix tx="26.85" ty="22.6"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="16" y="16"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="mcBlankTile" name="" centerPoint3DX="85.35" centerPoint3DY="32.35">
+                                             <matrix>
+                                                  <Matrix tx="69.35" ty="16.35"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="16" y="16"/>
@@ -465,6 +473,7 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="7021" publishTime="1346909697"/>
           <PublishItem publishSize="7104" publishTime="1346841070"/>
           <PublishItem publishSize="7118" publishTime="1346840996"/>
           <PublishItem publishSize="7095" publishTime="1346840948"/>
@@ -484,6 +493,5 @@
           <PublishItem publishSize="6443" publishTime="1346838460"/>
           <PublishItem publishSize="6257" publishTime="1346838043"/>
           <PublishItem publishSize="6257" publishTime="1346837991"/>
-          <PublishItem publishSize="6163" publishTime="1346837190"/>
      </publishHistory>
 </DOMDocument>

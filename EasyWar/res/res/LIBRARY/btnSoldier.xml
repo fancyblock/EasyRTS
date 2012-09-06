@@ -1,0 +1,63 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="btnSoldier" itemID="50483868-00000055" sourceLibraryItemHRef="元件 1" symbolType="button" lastModified="1346910430">
+  <timeline>
+    <DOMTimeline name="btnSoldier" currentFrame="3">
+      <layers>
+        <DOMLayer name="图层 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="soldier" name="" centerPoint3DX="29.9" centerPoint3DY="25.55">
+                  <matrix>
+                    <Matrix tx="13.9" ty="9.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="16" y="16"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="soldier" name="" cacheAsBitmap="true" centerPoint3DX="29.9" centerPoint3DY="25.55">
+                  <matrix>
+                    <Matrix tx="13.9" ty="9.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="16" y="16"/>
+                  </transformationPoint>
+                  <filters>
+                    <GlowFilter/>
+                  </filters>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="soldier" name="" cacheAsBitmap="true" centerPoint3DX="29.9" centerPoint3DY="25.55">
+                  <matrix>
+                    <Matrix tx="13.9" ty="9.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="16" y="16"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="3" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="soldier" name="" cacheAsBitmap="true" centerPoint3DX="29.9" centerPoint3DY="25.55">
+                  <matrix>
+                    <Matrix tx="13.9" ty="9.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="16" y="16"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
