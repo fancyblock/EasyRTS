@@ -1,6 +1,7 @@
 package gameObj.moveableObj 
 {
 	import flash.display.MovieClip;
+	import flash.display.Sprite;
 	import flash.geom.Point;
 	import gameComponent.Command;
 	import gameObj.Unit;
@@ -135,6 +136,20 @@ package gameObj.moveableObj
 			cannonBall.SetDest( unit.POSITION.x, unit.POSITION.y );
 			
 			m_unitHost.AddGameObject( cannonBall, m_position.x, m_position.y, this.GROUP );
+		}
+		
+		
+		/**
+		 * @desc	return a display present this unit
+		 * @return
+		 */
+		override public function GetDisplay():Sprite
+		{
+			var spr:Sprite = new Sprite();
+			
+			spr.addChild( new mcSoldier() );
+			
+			return spr;
 		}
 		
 		

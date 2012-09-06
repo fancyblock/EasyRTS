@@ -19,10 +19,10 @@ package gameComponent
 		
 		//------------------------------ private member ------------------------------------
 		
-		public var _type:int = 0;
-		public var _destGrid:GridInfo = null;
-		public var _aim:MapItem = null;
-		public var _unitType:int = 0;
+		public var _type:int = 0;					// comman type
+		public var _destGrid:GridInfo = null;		// for CMD_MOVE
+		public var _aim:MapItem = null;				// for CMD_ATTACK
+		public var _unitType:int = 0;				// for CMD_PRODUCE
 		
 		//------------------------------ public function -----------------------------------
 		

@@ -122,7 +122,7 @@ package mapItem
 		 * @desc	callback when remove from map
 		 */
 		override public function onRemove():void 
-		{	
+		{
 			// remove from map
 			m_map.GetGridInfo( m_gridCoordinate.x, m_gridCoordinate.y ).SetBlank();
 			

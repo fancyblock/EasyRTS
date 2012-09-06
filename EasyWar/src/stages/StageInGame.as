@@ -7,6 +7,7 @@ package stages
 	import flash.geom.Rectangle;
 	import flash.text.TextField;
 	import gameComponent.Battlefield;
+	import gameComponent.Command;
 	import gameObj.building.Arsenal;
 	import gameObj.building.City;
 	import gameObj.moveableObj.Infantry;
@@ -175,12 +176,6 @@ package stages
 			//[hack]
 			m_battlefield.AddGameObject( new Arsenal(), 3.5 * m_battlefield.MAP.GRID_SIZE, 3.5 * m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
 			m_battlefield.AddGameObject( new City(), 17.5 * m_battlefield.MAP.GRID_SIZE, 7.5 * m_battlefield.MAP.GRID_SIZE, UnitTypes.NEUTRAL_GROUP );
-			m_battlefield.AddGameObject( new Tank(), 5.5*m_battlefield.MAP.GRID_SIZE, 5.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
-			m_battlefield.AddGameObject( new Infantry(), 5.5*m_battlefield.MAP.GRID_SIZE, 6.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
-			m_battlefield.AddGameObject( new Infantry(), 5.5*m_battlefield.MAP.GRID_SIZE, 7.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
-			m_battlefield.AddGameObject( new Infantry(), 7.5*m_battlefield.MAP.GRID_SIZE, 5.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
-			m_battlefield.AddGameObject( new Tank(), 8.5*m_battlefield.MAP.GRID_SIZE, 5.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
-			m_battlefield.AddGameObject( new Tank(), 5.5*m_battlefield.MAP.GRID_SIZE, 8.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
 			m_battlefield.AddGameObject( new Tank(), 13.5*m_battlefield.MAP.GRID_SIZE, 5.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.ENEMY_GROUP );
 			//[hack]
 			
@@ -422,21 +417,30 @@ package stages
 		}
 		
 		
+		// make a troop from current factory
 		protected function onMakeTroop( evt:MouseEvent ):void
 		{
+			// check the money & arsenal state
+			//TODO 
+			
+			var command:Command = new Command();
+			command._type = Command.CMD_PRODUCE;
+			
 			if ( evt.target == m_btnMakeSoldier )
 			{
 				trace( "Make a soldier" );
 				
-				//TODO 
+				command._unitType = UnitTypes.TYPE_INFANTRY;
 			}
 			
 			if ( evt.target == m_btnMakeTank )
 			{
 				trace( "Make a tank" );
 				
-				//TODO 
+				command._unitType = UnitTypes.TYPE_TANK
 			}
+			
+			m_currentArsenal.SendCommand( command );
 		}
 		
 	}

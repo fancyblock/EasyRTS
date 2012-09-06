@@ -1,27 +1,46 @@
 package gameObj.building 
 {
-	import gameObj.UnitTypes;
+	import map.GridInfo;
+	import mapItem.MapItem;
 	
 	/**
 	 * ...
 	 * @author Hejiabin
 	 */
-	public class City extends Building 
+	public class Building extends MapItem 
 	{
 		//------------------------------ static member -------------------------------------
 		
 		//------------------------------ private member ------------------------------------
 		
+		protected var m_myGrid:GridInfo = null;
+		
 		//------------------------------ public function -----------------------------------
 		
 		/**
-		 * @desc	constructor of City
+		 * @desc	constructor of Building
 		 */
-		public function City() 
+		public function Building() 
 		{
 			super();
 			
-			m_type = UnitTypes.TYPE_CITY;
+		}
+		
+		
+		/**
+		 * @desc	hide on map in logic
+		 */
+		public function HideOnMap( hide:Boolean ):void
+		{
+			if ( hide == true )
+			{
+				m_myGrid.SetBlank();
+			}
+			
+			if ( hide == false )
+			{
+				m_myGrid.SetMapItem( this );
+			}
 		}
 		
 		
@@ -32,9 +51,8 @@ package gameObj.building
 		{
 			super.onAdd();
 			
-			m_display.addChild( new mcCity01() );
+			m_myGrid = m_map.GetGridInfo( m_gridCoordinate.x, m_gridCoordinate.y );
 		}
-		
 		
 		//------------------------------ private function ----------------------------------
 		

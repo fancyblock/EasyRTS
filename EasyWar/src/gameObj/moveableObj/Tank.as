@@ -127,6 +127,21 @@ package gameObj.moveableObj
 		}
 		
 		
+		/**
+		 * @desc	return a display present this unit
+		 * @return
+		 */
+		override public function GetDisplay():Sprite
+		{
+			var spr:Sprite = new Sprite();
+			
+			spr.addChild( new mcTankBody() );
+			spr.addChild( new mcTankGun() );
+			
+			return spr;
+		}
+		
+		
 		//------------------------------ private function ----------------------------------
 		
 		

@@ -19,6 +19,8 @@ package gameObj
 		static public var STATE_DEAD:int = 1;
 		static public var STATE_REMOVE:int = 2;
 		
+		static public var DEFAULT_PRODUCE_CYCLE:int = 60
+		
 		//------------------------------ private member ------------------------------------
 		
 		protected var m_unitHost:IUnitHost = null;
@@ -38,6 +40,7 @@ package gameObj
 		
 		protected var m_lifeValue:Number = 0;
 		protected var m_maxLifeValue:Number = 0;
+		protected var m_produceCycle:int = DEFAULT_PRODUCE_CYCLE;
 		
 		//------------------------------ public function -----------------------------------
 		
@@ -196,6 +199,25 @@ package gameObj
 			}
 			
 			return false;
+		}
+		
+		
+		/**
+		 * @desc	return a display present this unit
+		 * @return
+		 */
+		public function GetDisplay():Sprite
+		{
+			return null;
+		}
+		
+		
+		/**
+		 * @desc	return the peoduce cycle of this unit
+		 */
+		public function get PRODUCE_CYCLE():int
+		{
+			return m_produceCycle;
 		}
 		
 		

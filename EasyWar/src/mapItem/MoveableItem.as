@@ -238,7 +238,7 @@ package mapItem
 		
 		
 		// find the path ommit the destination spot
-		protected function findPathToUnit( unit:Unit ):Array
+		protected function findPathOmitDest( xPos:int, yPos:int ):Array
 		{
 			if ( this.m_map == null )
 			{
@@ -247,7 +247,7 @@ package mapItem
 			
 			var path:Array = null;
 			
-			path = AStar.SINGLETON.GetPath( m_map, m_gridCoordinate, new Point( (int)(unit.POSITION.x / m_map.GRID_SIZE), (int)(unit.POSITION.y / m_map.GRID_SIZE) ), true );
+			path = AStar.SINGLETON.GetPath( m_map, m_gridCoordinate, new Point( xPos, yPos ), true );
 			
 			return path;
 		}

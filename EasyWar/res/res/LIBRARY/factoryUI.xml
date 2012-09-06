@@ -1,8 +1,8 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="factoryUI" itemID="5048365f-00000040" linkageExportForAS="true" linkageClassName="mcFactoryUI" sourceLibraryItemHRef="元件 1" lastModified="1346911054" lastUniqueIdentifier="2">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="factoryUI" itemID="5048365f-00000040" linkageExportForAS="true" linkageClassName="mcFactoryUI" sourceLibraryItemHRef="元件 1" lastModified="1346921611" lastUniqueIdentifier="2">
   <timeline>
     <DOMTimeline name="factoryUI">
       <layers>
-        <DOMLayer name="图层 3" color="#FF800A" current="true" isSelected="true">
+        <DOMLayer name="图层 3" color="#FF800A">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -25,7 +25,7 @@
                     <Edge fillStyle1="1" strokeStyle="1" edges="!800 -320|-800 -320!-800 -320|-800 -1120!-800 -1120|800 -1120!800 -1120|800 -320"/>
                   </edges>
                 </DOMShape>
-                <DOMSymbolInstance libraryItemName="btnSoldier" name="btnSoldier" selected="true" symbolType="button">
+                <DOMSymbolInstance libraryItemName="btnSoldier" name="btnSoldier" symbolType="button">
                   <matrix>
                     <Matrix tx="6.8" ty="-45.5"/>
                   </matrix>
@@ -45,7 +45,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="frame" color="#9933CC" locked="true" autoNamed="false">
+        <DOMLayer name="frame" color="#9933CC" locked="true" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -61,24 +61,6 @@
                   </strokes>
                   <edges>
                     <Edge strokeStyle="1" edges="!320 -320|320 320!320 320|-320 320!-320 320|-320 -320!-320 -320|320 -320"/>
-                  </edges>
-                </DOMShape>
-              </elements>
-            </DOMFrame>
-          </frames>
-        </DOMLayer>
-        <DOMLayer name="bg" color="#4FFF4F" locked="true" autoNamed="false">
-          <frames>
-            <DOMFrame index="0" keyMode="9728">
-              <elements>
-                <DOMShape>
-                  <fills>
-                    <FillStyle index="1">
-                      <SolidColor color="#669966" alpha="0.349019607843137"/>
-                    </FillStyle>
-                  </fills>
-                  <edges>
-                    <Edge fillStyle1="1" edges="!320 -320|320 320!320 320|-320 320!-320 320|-320 -320!-320 -320|320 -320"/>
                   </edges>
                 </DOMShape>
               </elements>

@@ -133,7 +133,7 @@ package gameObj.moveableObj
 							this.stopMove();
 							
 							// refinding the path to trace
-							orgPath = this.findPathToUnit( m_enemyUnit );
+							orgPath = this.findPathOmitDest( m_enemyUnit.GRID_COORDINATE.x, m_enemyUnit.GRID_COORDINATE.y );
 							
 							if ( orgPath != null )
 							{
