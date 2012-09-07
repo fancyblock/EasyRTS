@@ -9,11 +9,7 @@ package stages
 	import gameComponent.Battlefield;
 	import gameComponent.Command;
 	import gameObj.building.Arsenal;
-	import gameObj.building.City;
-	import gameObj.moveableObj.Infantry;
-	import gameObj.moveableObj.Tank;
 	import gameObj.UnitTypes;
-	import map.MiniMap;
 	import Utility.MathCalculator;
 	
 	/**
@@ -24,7 +20,7 @@ package stages
 	{
 		//---------------------------- static member ------------------------------
 		
-		static protected const MOUSE_MOVE_MIN:Number = 5.0;
+		static protected const MOUSE_MOVE_MIN:Number = 7.0;
 		
 		static protected const SCROLL_UP:int = 0;
 		static protected const SCROLL_DOWN:int = 1;
@@ -59,7 +55,6 @@ package stages
 		// mini map
 		protected var m_miniMapCom:Sprite = null;
 		protected var m_miniMapFrame:Sprite = null;
-		protected var m_miniMap:MiniMap = null;
 		protected var m_miniMapMouseArea:Sprite = null;
 		
 		// for mouse action
@@ -71,6 +66,8 @@ package stages
 		protected var m_scrollMapVec:Point = new Point();
 		
 		protected var m_currentArsenal:Arsenal = null;
+		
+		protected var m_money:Number = 0;
 		
 		//--------------------------- public function ----------------------------
 		
@@ -152,33 +149,25 @@ package stages
 			m_miniMapMouseArea.addEventListener( MouseEvent.MOUSE_DOWN, onStartDragMiniMap );
 			m_miniMapMouseArea.addEventListener( MouseEvent.MOUSE_MOVE, onDragMiniMap );
 			m_miniMapMouseArea.addEventListener( MouseEvent.MOUSE_UP, onStopDragMiniMap );
-			m_miniMap = new MiniMap( 90, 90 );
-			m_miniMap.width = m_miniMapFrame.width;
-			m_miniMap.height = m_miniMapFrame.height;
-			m_miniMapFrame.addChild( m_miniMap );
 			
 			// create the game stuff
 			m_battlefield = new Battlefield();
 			m_battlefield.SetViewport( VIEWPORT_WIDTH, VIEWPORT_HEIGHT );
 			m_battlefield.CANVAS = m_gameLayer;
 			
-			//[hack]
-			m_battlefield.RandomCreate( 90, 90 );
-			//[hack]
+			m_battlefield.CreateRandomMap( 50, 50 );
+			
+			m_battlefield.MINI_MAP.width = m_miniMapFrame.width;
+			m_battlefield.MINI_MAP.height = m_miniMapFrame.height;
+			m_miniMapFrame.addChild( m_battlefield.MINI_MAP );
 			
 			// set the mini map
-			m_battlefield.MAP.MINI_MAP = m_miniMap;
-			m_miniMap.SetViewPort( -m_battlefield.MAP_OFFSET.x / m_battlefield.MAP.MAP_SIZE_WIDTH,
+			m_battlefield.MINI_MAP.SetViewPort( -m_battlefield.MAP_OFFSET.x / m_battlefield.MAP.MAP_SIZE_WIDTH,
 									-m_battlefield.MAP_OFFSET.y / m_battlefield.MAP.MAP_SIZE_HEIGHT,
 									VIEWPORT_WIDTH / m_battlefield.MAP.MAP_SIZE_WIDTH,
 									VIEWPORT_HEIGHT / m_battlefield.MAP.MAP_SIZE_HEIGHT );
 			
-			//[hack]
-			m_battlefield.AddGameObject( new Arsenal(), 3.5 * m_battlefield.MAP.GRID_SIZE, 3.5 * m_battlefield.MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
-			m_battlefield.AddGameObject( new City(), 17.5 * m_battlefield.MAP.GRID_SIZE, 7.5 * m_battlefield.MAP.GRID_SIZE, UnitTypes.NEUTRAL_GROUP );
-			m_battlefield.AddGameObject( new Tank(), 13.5*m_battlefield.MAP.GRID_SIZE, 5.5*m_battlefield.MAP.GRID_SIZE, UnitTypes.ENEMY_GROUP );
-			//[hack]
-			
+			//TODO 
 		}
 		
 		override public function onFrame(elapsed:Number):void 
@@ -193,13 +182,21 @@ package stages
 				
 				m_battlefield.MoveMap( offsetX, offsetY );
 				
-				m_miniMap.SetViewPort( -m_battlefield.MAP_OFFSET.x / m_battlefield.MAP.MAP_SIZE_WIDTH,
+				m_battlefield.MINI_MAP.SetViewPort( -m_battlefield.MAP_OFFSET.x / m_battlefield.MAP.MAP_SIZE_WIDTH,
 									-m_battlefield.MAP_OFFSET.y / m_battlefield.MAP.MAP_SIZE_HEIGHT,
 									VIEWPORT_WIDTH / m_battlefield.MAP.MAP_SIZE_WIDTH,
 									VIEWPORT_HEIGHT / m_battlefield.MAP.MAP_SIZE_HEIGHT );
-									
+				
 				displayFactoryUI( false );
 			}
+			
+			m_money += ( 0.1 + m_battlefield.SELF_CITY_CNT * 0.1 );
+			
+			//update ui
+			m_txtArmyCnt.text = m_battlefield.SELF_TROOP_CNT + "";
+			m_txtCityCnt.text = m_battlefield.SELF_CITY_CNT + "";
+			m_txtMoney.text = (int)(m_money) + "";
+			
 		}
 		
 		override public function onLeave():void 
@@ -420,15 +417,14 @@ package stages
 		// make a troop from current factory
 		protected function onMakeTroop( evt:MouseEvent ):void
 		{
-			// check the money & arsenal state
-			//TODO 
-			
+			var needMoney:Number = 0;
 			var command:Command = new Command();
 			command._type = Command.CMD_PRODUCE;
 			
 			if ( evt.target == m_btnMakeSoldier )
 			{
 				trace( "Make a soldier" );
+				needMoney = 30;
 				
 				command._unitType = UnitTypes.TYPE_INFANTRY;
 			}
@@ -436,11 +432,18 @@ package stages
 			if ( evt.target == m_btnMakeTank )
 			{
 				trace( "Make a tank" );
+				needMoney = 60;
 				
 				command._unitType = UnitTypes.TYPE_TANK
 			}
 			
-			m_currentArsenal.SendCommand( command );
+			// check the money & arsenal state
+			if ( m_money > needMoney )
+			{
+				m_money -= needMoney;
+				
+				m_currentArsenal.SendCommand( command );
+			}
 		}
 		
 	}

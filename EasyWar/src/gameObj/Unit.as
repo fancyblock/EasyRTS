@@ -19,7 +19,7 @@ package gameObj
 		static public var STATE_DEAD:int = 1;
 		static public var STATE_REMOVE:int = 2;
 		
-		static public var DEFAULT_PRODUCE_CYCLE:int = 60
+		static public var DEFAULT_PRODUCE_CYCLE:int = 0
 		
 		//------------------------------ private member ------------------------------------
 		
@@ -41,6 +41,8 @@ package gameObj
 		protected var m_lifeValue:Number = 0;
 		protected var m_maxLifeValue:Number = 0;
 		protected var m_produceCycle:int = DEFAULT_PRODUCE_CYCLE;
+		
+		protected var m_attackerGroup:int = 0;
 		
 		//------------------------------ public function -----------------------------------
 		
@@ -81,6 +83,13 @@ package gameObj
 		 */
 		public function get GROUP():int { return m_group; }
 		public function set GROUP( value:int ):void { m_group = value; }
+		
+		
+		/**
+		 * @desc	setter & getter of the group property
+		 */
+		public function get ATTACK_GROUP():int { return m_attackerGroup; }
+		public function set ATTACK_GROUP( value:int ):void { m_attackerGroup = value; }
 		
 		
 		/**
@@ -206,7 +215,7 @@ package gameObj
 		 * @desc	return a display present this unit
 		 * @return
 		 */
-		public function GetDisplay():Sprite
+		public function GetDisplay( group:int ):Sprite
 		{
 			return null;
 		}

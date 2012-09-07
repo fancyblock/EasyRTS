@@ -131,12 +131,20 @@ package gameObj.moveableObj
 		 * @desc	return a display present this unit
 		 * @return
 		 */
-		override public function GetDisplay():Sprite
+		override public function GetDisplay( group:int ):Sprite
 		{
 			var spr:Sprite = new Sprite();
 			
-			spr.addChild( new mcTankBody() );
-			spr.addChild( new mcTankGun() );
+			if ( m_group == UnitTypes.SELF_GROUP )
+			{
+				spr.addChild( new mcTankBody() );
+				spr.addChild( new mcTankGun() );
+			}
+			else
+			{
+				spr.addChild( new mcTankBody02() );
+				spr.addChild( new mcTankGun02() );
+			}
 			
 			return spr;
 		}

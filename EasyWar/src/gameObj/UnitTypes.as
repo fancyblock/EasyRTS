@@ -19,6 +19,7 @@ package gameObj
 		
 		static public const TYPE_CANNONBALL:int = 301;
 		static public const TYPE_DEAD_AREA:int = 302;
+		static public const TYPE_OCCUPY_POINT:int = 303;
 		
 	}
 

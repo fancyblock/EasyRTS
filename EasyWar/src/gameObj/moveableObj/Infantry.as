@@ -7,6 +7,7 @@ package gameObj.moveableObj
 	import gameObj.Unit;
 	import gameObj.UnitTypes;
 	import gameObj.weapons.Cannonball;
+	import gameObj.weapons.OccupyPoint;
 	import Utility.MathCalculator;
 	
 	/**
@@ -22,6 +23,7 @@ package gameObj.moveableObj
 		static protected const INFANTRY_FIRINGRANGE:Number = 90;
 		
 		static protected const INFANTRY_FORCE:Number = 3;
+		static protected const OCCUPY_RANGE:Number = 70;
 		
 		//------------------------------ private member ------------------------------------
 		
@@ -57,13 +59,57 @@ package gameObj.moveableObj
 			{
 				if ( m_command._type == Command.CMD_OCCUPY )
 				{
-					//TODO 
-					
-					m_command = null;
+					if ( m_command._aim.GROUP != this.GROUP )
+					{
+						m_pathBlocked = false;
+						this.stopMove();
+						
+						m_enemyUnit = m_command._aim;
+						m_currentTraceDest.x = -100;
+						m_currentTraceDest.y = -100;
+						
+						m_armyState = STATE_ARMY_OCCUPY;
+						
+						traceTo( m_enemyUnit );
+						
+						m_command = null;
+					}
 				}
 			}
 			
-			//TODO 
+			if ( m_armyState == STATE_ARMY_OCCUPY )
+			{
+				// city already be occupy
+				if ( m_enemyUnit.GROUP == this.GROUP )
+				{
+					m_enemyUnit = null;
+					
+					m_pathBlocked = false;
+					this.stopMove();
+					
+					m_armyState = STATE_ARMY_IDLE;
+				}
+				else
+				{
+					// stop for occupy
+					if ( isUnitInRange( m_enemyUnit, OCCUPY_RANGE ) == true )
+					{
+						m_pathBlocked = false;
+						this.stopMove();
+						
+						if ( m_fireColdDownCounter == 0 )
+						{
+							onOccupy( m_enemyUnit );
+							m_fireColdDownCounter = m_fireColdDownTime;
+						}
+					}
+					// trace the enemy
+					else
+					{
+						//TODO 
+					}
+				}
+			}
 		}
 		
 		
@@ -75,7 +121,14 @@ package gameObj.moveableObj
 			super.onAdd();
 			
 			// initial the display stuff
-			m_imgSoldier = new mcSoldier();
+			if ( m_group == UnitTypes.SELF_GROUP )
+			{
+				m_imgSoldier = new mcSoldier();
+			}
+			else
+			{
+				m_imgSoldier = new mcSoldier02();
+			}
 			
 			m_display.addChild( m_imgSoldier );
 			m_display.addChild( m_lifeBar );
@@ -140,14 +193,39 @@ package gameObj.moveableObj
 		
 		
 		/**
+		 * @desc	occupy the city
+		 * @param	unit
+		 */
+		public function onOccupy( unit:Unit ):void
+		{
+			// set the angle
+			m_imgSoldier.rotation = MathCalculator.VectorToAngle( new Point( unit.POSITION.x - m_position.x, unit.POSITION.y - m_position.y ) );
+			
+			// shoot to occupy the city
+			var occupyPoint:OccupyPoint = new OccupyPoint();
+			occupyPoint.SetForce( INFANTRY_FORCE );
+			occupyPoint.SetDest( unit.POSITION.x, unit.POSITION.y );
+			
+			m_unitHost.AddGameObject( occupyPoint, m_position.x, m_position.y , this.GROUP );
+		}
+		
+		
+		/**
 		 * @desc	return a display present this unit
 		 * @return
 		 */
-		override public function GetDisplay():Sprite
+		override public function GetDisplay( group:int ):Sprite
 		{
 			var spr:Sprite = new Sprite();
 			
-			spr.addChild( new mcSoldier() );
+			if ( m_group == UnitTypes.SELF_GROUP )
+			{
+				spr.addChild( new mcSoldier() );
+			}
+			else
+			{
+				spr.addChild( new mcSoldier02() );
+			}
 			
 			return spr;
 		}

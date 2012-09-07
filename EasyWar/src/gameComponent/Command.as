@@ -21,7 +21,7 @@ package gameComponent
 		
 		public var _type:int = 0;					// comman type
 		public var _destGrid:GridInfo = null;		// for CMD_MOVE
-		public var _aim:MapItem = null;				// for CMD_ATTACK
+		public var _aim:MapItem = null;				// for CMD_ATTACK , CMD_OCCUPY 
 		public var _unitType:int = 0;				// for CMD_PRODUCE
 		
 		//------------------------------ public function -----------------------------------

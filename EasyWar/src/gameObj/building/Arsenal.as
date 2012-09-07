@@ -6,7 +6,6 @@ package gameObj.building
 	import gameObj.moveableObj.Army;
 	import gameObj.moveableObj.Infantry;
 	import gameObj.moveableObj.Tank;
-	import gameObj.Unit;
 	import gameObj.UnitTypes;
 	import map.GridInfo;
 	
@@ -21,6 +20,7 @@ package gameObj.building
 		static protected const ARSENAL_STATE_IDLE:int = 0;
 		static protected const ARSENAL_STATE_PRODUCE:int = 1;
 		static protected const ARSENAL_STATE_DELIVERY:int = 2;
+		static protected const ARSENAL_LIFE_VALUE:int = 500;
 		
 		//------------------------------ private member ------------------------------------
 		
@@ -29,6 +29,7 @@ package gameObj.building
 		
 		protected var m_timer:int = 0;
 		protected var m_model:Sprite = null;
+		protected var m_portList:Array = null;
 		
 		//------------------------------ public function -----------------------------------
 		
@@ -41,6 +42,9 @@ package gameObj.building
 			super();
 			
 			m_type = UnitTypes.TYPE_ARSENAL;
+			m_maxLifeValue = ARSENAL_LIFE_VALUE;
+			m_lifeValue = m_maxLifeValue;
+			m_portList = new Array();
 		}
 		
 		
@@ -103,8 +107,22 @@ package gameObj.building
 		{
 			super.onAdd();
 			
-			m_display.addChild( new mcFactory01() );
+			if ( m_group == UnitTypes.SELF_GROUP )
+			{
+				m_display.addChild( new mcFactory01() );
+			}
+			else
+			{
+				m_display.addChild( new mcFactory02() );
+			}
+			
 			m_display.addChild( m_lifeBar );
+			
+			// enemy always show the life bar
+			if ( this.GROUP != UnitTypes.SELF_GROUP )
+			{
+				m_lifeBar.visible = true;
+			}
 		}
 		
 		
@@ -127,18 +145,21 @@ package gameObj.building
 		{
 			super.SendCommand( command );
 			
-			if ( m_factoryState != ARSENAL_STATE_IDLE )
+			if ( command._type == Command.CMD_PRODUCE )
 			{
-				trace( "[Arsenal]: not in idle state, can not produce the unit" );
+				if ( m_factoryState != ARSENAL_STATE_IDLE )
+				{
+					trace( "[Arsenal]: not in idle state, can not produce the unit" );
+					
+					return;
+				}
 				
-				return;
-			}
-			
-			if ( m_factoryState == ARSENAL_STATE_IDLE )
-			{
-				produceTroop( command._unitType );
-				
-				m_command = null;
+				if ( m_factoryState == ARSENAL_STATE_IDLE )
+				{
+					produceTroop( command._unitType );
+					
+					m_command = null;
+				}
 			}
 		}
 		
@@ -162,7 +183,7 @@ package gameObj.building
 			m_currentProduction = unit;
 			m_timer = 0;
 			
-			m_model = unit.GetDisplay();
+			m_model = unit.GetDisplay( this.GROUP );
 			m_model.x = m_position.x;
 			m_model.y = m_position.y;
 			m_model.alpha = 0;
@@ -183,6 +204,7 @@ package gameObj.building
 			
 			if ( positionGrid._type == GridInfo.UNIT )
 			{
+				m_portList = new Array();
 				cleanGrid( positionGrid );
 			}
 			
@@ -210,6 +232,21 @@ package gameObj.building
 				pendingGrid = m_map.GetGridInfo( gridInfo._x + offsets[i].x, gridInfo._y + offsets[i].y );
 				if ( pendingGrid != null )
 				{
+					var omit:Boolean = false;
+					for ( var j:int = 0; j < m_portList.length; j++ )
+					{
+						if ( pendingGrid == m_portList[j] )
+						{
+							omit = true;
+							break;
+						}
+					}
+					
+					if ( omit == true )
+					{
+						continue;
+					}
+					
 					if ( pendingGrid._type == GridInfo.BLANK )
 					{
 						roundBlankGrids.push( pendingGrid );
@@ -244,6 +281,7 @@ package gameObj.building
 				path.push( nextGrid );
 				unit.PATH = path;
 				
+				m_portList.push( nextGrid );
 				cleanGrid( nextGrid );
 			}
 			else

@@ -3,6 +3,8 @@
           <Include href="boost.xml"/>
           <Include href="bullet.xml"/>
           <Include href="city.xml"/>
+          <Include href="city02.xml"/>
+          <Include href="city03.xml"/>
           <Include href="deadArea.xml"/>
           <Include href="leg.xml" loadImmediate="false"/>
           <Include href="leg2.xml" loadImmediate="false"/>
@@ -10,6 +12,7 @@
           <Include href="mcBlankTile.xml"/>
           <Include href="mcBlockTile.xml"/>
           <Include href="mcFactory.xml"/>
+          <Include href="mcFactory02.xml"/>
           <Include href="mcHoldTile.xml"/>
           <Include href="mcLifeBar.xml"/>
           <Include href="mcLifeInc.xml" loadImmediate="false"/>
@@ -17,6 +20,7 @@
           <Include href="mcTankGun02.xml"/>
           <Include href="mcUnitTile.xml"/>
           <Include href="soldier.xml"/>
+          <Include href="soldier02.xml"/>
           <Include href="tankBody01.xml"/>
           <Include href="tankBody02.xml"/>
      </symbols>
@@ -83,25 +87,25 @@
                                                   <Point x="3.5" y="3.5"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="mcFactory" name="" centerPoint3DX="322" centerPoint3DY="108.05">
+                                        <DOMSymbolInstance libraryItemName="mcFactory" name="" centerPoint3DX="42" centerPoint3DY="335">
                                              <matrix>
-                                                  <Matrix tx="306" ty="92.05"/>
+                                                  <Matrix tx="26" ty="319"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="16" y="16"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="city" name="" centerPoint3DX="245.55" centerPoint3DY="91.45">
+                                        <DOMSymbolInstance libraryItemName="city" name="" centerPoint3DX="152.55" centerPoint3DY="221.4">
                                              <matrix>
-                                                  <Matrix tx="229.55" ty="75.45"/>
+                                                  <Matrix tx="136.55" ty="205.4"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="16" y="16"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="soldier" name="" centerPoint3DX="42.85" centerPoint3DY="38.6">
+                                        <DOMSymbolInstance libraryItemName="soldier02" name="" centerPoint3DX="99.8" centerPoint3DY="277.55">
                                              <matrix>
-                                                  <Matrix tx="26.85" ty="22.6"/>
+                                                  <Matrix tx="83.8" ty="261.55"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="16" y="16"/>
@@ -110,6 +114,38 @@
                                         <DOMSymbolInstance libraryItemName="mcBlankTile" name="" centerPoint3DX="85.35" centerPoint3DY="32.35">
                                              <matrix>
                                                   <Matrix tx="69.35" ty="16.35"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="16" y="16"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="city02" name="" centerPoint3DX="95.95" centerPoint3DY="221.95">
+                                             <matrix>
+                                                  <Matrix tx="79.95" ty="205.95"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="16" y="16"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="city03" name="" centerPoint3DX="41.05" centerPoint3DY="221.75">
+                                             <matrix>
+                                                  <Matrix tx="25.05" ty="205.75"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="16" y="16"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="soldier" name="" centerPoint3DX="43.7" centerPoint3DY="277.7">
+                                             <matrix>
+                                                  <Matrix tx="27.7" ty="261.7"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="16" y="16"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="mcFactory02" name="" selected="true" centerPoint3DX="102.9" centerPoint3DY="334.75">
+                                             <matrix>
+                                                  <Matrix tx="86.9" ty="318.75"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="16" y="16"/>
@@ -473,6 +509,13 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="7986" publishTime="1346988389"/>
+          <PublishItem publishSize="7929" publishTime="1346988339"/>
+          <PublishItem publishSize="7908" publishTime="1346988323"/>
+          <PublishItem publishSize="7538" publishTime="1346988238"/>
+          <PublishItem publishSize="7526" publishTime="1346988230"/>
+          <PublishItem publishSize="7302" publishTime="1346988197"/>
+          <PublishItem publishSize="7285" publishTime="1346988185"/>
           <PublishItem publishSize="7021" publishTime="1346909697"/>
           <PublishItem publishSize="7104" publishTime="1346841070"/>
           <PublishItem publishSize="7118" publishTime="1346840996"/>
@@ -486,12 +529,5 @@
           <PublishItem publishSize="6717" publishTime="1346840347"/>
           <PublishItem publishSize="6717" publishTime="1346840341"/>
           <PublishItem publishSize="6716" publishTime="1346840328"/>
-          <PublishItem publishSize="6669" publishTime="1346840222"/>
-          <PublishItem publishSize="6520" publishTime="1346840175"/>
-          <PublishItem publishSize="6504" publishTime="1346840153"/>
-          <PublishItem publishSize="6520" publishTime="1346840029"/>
-          <PublishItem publishSize="6443" publishTime="1346838460"/>
-          <PublishItem publishSize="6257" publishTime="1346838043"/>
-          <PublishItem publishSize="6257" publishTime="1346837991"/>
      </publishHistory>
 </DOMDocument>

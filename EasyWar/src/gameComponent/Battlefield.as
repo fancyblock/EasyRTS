@@ -6,11 +6,12 @@ package gameComponent
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
 	import gameObj.building.Arsenal;
+	import gameObj.building.City;
 	import gameObj.Unit;
 	import gameObj.UnitTypes;
 	import map.GridInfo;
 	import map.GridMap;
-	import map.MapLoader;
+	import map.MiniMap;
 	import mapItem.MapItem;
 	
 	/**
@@ -28,6 +29,7 @@ package gameComponent
 		
 		protected var m_canvas:DisplayObjectContainer = null;
 		protected var m_map:GridMap = null;
+		protected var m_miniMap:MiniMap = null;
 		protected var m_unitList:Array = null;
 		protected var m_selectedUnits:Array = null;
 		
@@ -39,6 +41,11 @@ package gameComponent
 		protected var m_playerCommand:Command = null;
 		
 		protected var m_currentBuilding:Arsenal = null;
+		
+		protected var m_selfCityCnt:int = 0;
+		protected var m_enemyCityCnt:int = 0;
+		protected var m_selfTroopCnt:int = 0;
+		protected var m_enemyTroopCnt:int = 0;
 		
 		//------------------------------ public function -----------------------------------
 		
@@ -112,24 +119,68 @@ package gameComponent
 		
 		
 		/**
-		 * @desc	create a random map 
+		 * @desc	getter of the mini map
+		 */
+		public function get MINI_MAP():MiniMap { return m_miniMap; }
+		
+		
+		/**
+		 * @desc	create a random map
 		 * @param	wid
 		 * @param	hei
 		 */
-		public function RandomCreate( wid:int, hei:int ):void
+		public function CreateRandomMap( wid:int, hei:int ):void
 		{
 			if ( wid <= 0 || hei <= 0 )
 			{
 				throw new Error( "[Battlefield]: create battlefield error, size is illegal" );
 			}
 			
+			m_miniMap = new MiniMap( wid, hei );
+			
 			m_mapCanvas = new Sprite();
 			m_canvas.addChild( m_mapCanvas );
 			
-			m_map = MapLoader.SINGLETON.GenRandomMap( wid, hei );
-			m_mapBG = m_map.GetMapBitmap();
+			m_map = new GridMap( wid, hei );
 			
+			//add city & block
+			var gridCnt:int = wid * hei;
+			var blockCnt:int = gridCnt / 50;
+			var cityList:Array = new Array();
+			var i:int;
+			
+			for ( i = 0; i < blockCnt; i++ )
+			{
+				var randX:int = Math.random() * wid;
+				var randY:int = Math.random() * hei;
+				var gridInfo:GridInfo = m_map.GetGridInfo( randX, randY );
+				
+				if ( gridInfo._type == GridInfo.BLANK )
+				{
+					if ( Math.random() < 0.3 )
+					{
+						cityList.push( new Point( (Number)(randX + 0.5) * MAP.GRID_SIZE, (Number)(randY + 0.5) * MAP.GRID_SIZE ) );
+					}
+					else
+					{
+						gridInfo.SetBlock();
+					}
+				}
+			}
+			
+			m_map.MINI_MAP = m_miniMap;
+			
+			m_mapBG = m_map.GetMapBitmap();
 			m_mapCanvas.addChild( m_mapBG );
+			
+			// add citys
+			for ( i = 0; i < cityList.length; i++ )
+			{
+				AddGameObject( new City, cityList[i].x, cityList[i].y, UnitTypes.NEUTRAL_GROUP );
+			}
+			
+			AddGameObject( new Arsenal(), 5.5 * MAP.GRID_SIZE, 5.5 * MAP.GRID_SIZE, UnitTypes.SELF_GROUP );
+			AddGameObject( new Arsenal(), (Number)(wid - 5.5) * MAP.GRID_SIZE, (Number)(hei - 5.5) * MAP.GRID_SIZE, UnitTypes.ENEMY_GROUP );
 		}
 		
 		
@@ -198,25 +249,62 @@ package gameComponent
 		
 		
 		/**
+		 * @desc	getter of the self info
+		 */
+		public function get SELF_CITY_CNT():int { return m_selfCityCnt; }
+		public function get SELF_TROOP_CNT():int { return m_selfTroopCnt; }
+		
+		
+		/**
 		 * @desc	update
 		 * @param	elapsed
 		 */
 		public function Update( elapsed:Number ):void
 		{
+			m_selfCityCnt = 0;
+			m_enemyCityCnt = 0;
+			m_selfTroopCnt = 0;
+			m_enemyTroopCnt = 0;
+			
 			var i:int;
 			var removeList:Array = new Array();
 			
 			for ( i = 0; i < m_unitList.length; i++ )
 			{
-				m_unitList[i].Update( elapsed );
+				var unit:Unit = m_unitList[i];
 				
-				if ( ( m_unitList[i] as Unit ).STATE == Unit.STATE_DEAD )
+				if ( unit.GROUP == UnitTypes.SELF_GROUP )
 				{
-					( m_unitList[i] as Unit ).STATE = Unit.STATE_REMOVE;
+					if ( unit.IsTroop() )
+					{
+						m_selfTroopCnt++;
+					}
+					if ( unit.TYPE == UnitTypes.TYPE_CITY )
+					{
+						m_selfCityCnt++;
+					}
 				}
-				else if ( ( m_unitList[i] as Unit ).STATE == Unit.STATE_REMOVE )
+				if ( unit.GROUP == UnitTypes.ENEMY_GROUP )
 				{
-					removeList.push( m_unitList[i] );
+					if ( unit.IsTroop() )
+					{
+						m_enemyTroopCnt++;
+					}
+					if ( unit.TYPE == UnitTypes.TYPE_CITY )
+					{
+						m_enemyCityCnt++;
+					}
+				}
+				
+				unit.Update( elapsed );
+				
+				if ( unit.STATE == Unit.STATE_DEAD )
+				{
+					unit.STATE = Unit.STATE_REMOVE;
+				}
+				else if ( unit.STATE == Unit.STATE_REMOVE )
+				{
+					removeList.push( unit );
 				}
 				
 			}
@@ -422,7 +510,7 @@ package gameComponent
 			
 			if ( m_selectedUnits.length == 1 )
 			{
-				if ( ( m_selectedUnits[0] as Unit ).IsTroop() == false )
+				if ( ( m_selectedUnits[0] as Unit ).TYPE == UnitTypes.TYPE_ARSENAL )
 				{
 					m_currentBuilding = m_selectedUnits[0];
 				}
@@ -449,7 +537,7 @@ package gameComponent
 			else if ( mapUnit != null )
 			{
 				// attack the enemy
-				if ( mapUnit.GROUP == UnitTypes.ENEMY_GROUP )
+				if ( mapUnit.GROUP == UnitTypes.ENEMY_GROUP && mapUnit.TYPE != UnitTypes.TYPE_CITY )
 				{
 					command._type = Command.CMD_ATTACK;
 					command._aim = mapUnit;

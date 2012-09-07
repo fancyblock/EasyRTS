@@ -17,11 +17,15 @@ package gameObj.weapons
 		static protected const STATE_BOOST_ANI:int = 1;
 		static protected const STATE_BOOST_DISAPPEAR:int = 2;
 		
+		static public const BOOST_TYPE_DESTORY:int = 3;
+		static public const BOOST_TYPE_OCCUPY:int = 4;
+		
 		//------------------------------ private member ------------------------------------
 		
 		protected var m_force:Number = 0;
 		protected var m_deadAreaState:int = 0;
 		
+		protected var m_occupyType:int = 0;
 		protected var m_aniBoost:MovieClip = null;
 		
 		//------------------------------ public function -----------------------------------
@@ -34,6 +38,17 @@ package gameObj.weapons
 			super();
 			
 			m_type = UnitTypes.TYPE_DEAD_AREA;
+			m_occupyType = BOOST_TYPE_DESTORY;
+		}
+		
+		
+		/**
+		 * @desc	getter & setter of the occupy_type property
+		 */
+		public function get OCCUPY_TYPE():int { return m_occupyType; }
+		public function set OCCUPY_TYPE( value:int ):void 
+		{
+			m_occupyType = value;
 		}
 		
 		
@@ -53,7 +68,14 @@ package gameObj.weapons
 			
 			if ( m_deadAreaState == STATE_BOOST )
 			{
-				doDestory();
+				if ( m_occupyType == BOOST_TYPE_DESTORY )
+				{
+					doDestory();
+				}
+				if ( m_occupyType == BOOST_TYPE_OCCUPY )
+				{
+					doOccupy();
+				}
 				
 				m_deadAreaState = STATE_BOOST_ANI;
 			}
@@ -100,6 +122,21 @@ package gameObj.weapons
 			{
 				if ( unit.GROUP != this.GROUP )
 				{
+					unit.LIFE = unit.LIFE - m_force;
+				}
+			}
+		}
+		
+		// do occupy 
+		protected function doOccupy():void
+		{
+			var unit:MapItem = m_unitHost.MAP.GetPositionItem( m_position.x, m_position.y );
+			
+			if ( unit != null )
+			{
+				if ( unit.GROUP != this.GROUP )
+				{
+					unit.ATTACK_GROUP = this.GROUP;
 					unit.LIFE = unit.LIFE - m_force;
 				}
 			}

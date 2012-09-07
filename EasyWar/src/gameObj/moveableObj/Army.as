@@ -19,6 +19,7 @@ package gameObj.moveableObj
 		static protected const STATE_ARMY_MOVE:int = 1;
 		static protected const STATE_ARMY_ATTACK:int = 2;
 		static protected const STATE_ARMY_ALERT:int = 3;
+		static protected const STATE_ARMY_OCCUPY:int = 4;
 		
 		static protected const BLOCK_WAIT_TIME:int = 13;				// magic number
 		static protected const MAX_RETRACE_DISTANCE:Number = 60.0;		// THIS NUMBER IS FOR IF YOUR ENEMY ESCAPE FORM THE ORIGIN POSITION, RE FIND THE PATH TO TRACE IT
@@ -111,7 +112,7 @@ package gameObj.moveableObj
 				else
 				{
 					// stop for firing
-					if ( isUnitInFiringRange( m_enemyUnit ) == true )
+					if ( isUnitInRange( m_enemyUnit, m_firingRange ) == true )
 					{
 						m_pathBlocked = false;
 						this.stopMove();
@@ -129,29 +130,7 @@ package gameObj.moveableObj
 						
 						if ( escapeDistance > MAX_RETRACE_DISTANCE )
 						{
-							m_pathBlocked = false;
-							this.stopMove();
-							
-							// refinding the path to trace
-							orgPath = this.findPathOmitDest( m_enemyUnit.GRID_COORDINATE.x, m_enemyUnit.GRID_COORDINATE.y );
-							
-							if ( orgPath != null )
-							{
-								path = new Vector.<GridInfo>();
-								for ( i = 1; i < orgPath.length; i++ )					// exclude self
-								{
-									path.push( m_map.GetGridInfo( orgPath[i].x, orgPath[i].y ) );
-								}
-								
-								this.PATH = path;
-								
-								m_currentTraceDest.x = m_enemyUnit.POSITION.x;
-								m_currentTraceDest.y = m_enemyUnit.POSITION.y;
-							}
-							else
-							{
-								trace( "[Army]: can not find the path to the unit: " + m_enemyUnit );
-							}
+							traceTo( m_enemyUnit );
 						}
 					}
 				}
@@ -210,13 +189,13 @@ package gameObj.moveableObj
 		//------------------------------ private function ----------------------------------
 		
 		// judge if the unit is in firing range
-		protected function isUnitInFiringRange( unit:Unit ):Boolean
+		protected function isUnitInRange( unit:Unit, maxDistance:Number ):Boolean
 		{
 			var xOffset:Number = unit.POSITION.x - m_position.x;
 			var yOffset:Number = unit.POSITION.y - m_position.y;
 			var distance:Number = Math.sqrt( ( xOffset * xOffset ) + ( yOffset * yOffset ) );
 			
-			if ( distance <= m_firingRange )
+			if ( distance <= maxDistance )
 			{
 				return true;
 			}
@@ -254,6 +233,38 @@ package gameObj.moveableObj
 				//TODO 
 				
 				trace( "[Army]: can not find the path" );
+			}
+		}
+		
+		// trace the dest unit
+		protected function traceTo( unit:Unit ):void
+		{
+			var i:int;
+			var orgPath:Array = null;
+			var path:Vector.<GridInfo> = null;
+			
+			m_pathBlocked = false;
+			this.stopMove();
+			
+			// refinding the path to trace
+			orgPath = this.findPathOmitDest( m_enemyUnit.GRID_COORDINATE.x, m_enemyUnit.GRID_COORDINATE.y );
+			
+			if ( orgPath != null )
+			{
+				path = new Vector.<GridInfo>();
+				for ( i = 1; i < orgPath.length; i++ )					// exclude self
+				{
+					path.push( m_map.GetGridInfo( orgPath[i].x, orgPath[i].y ) );
+				}
+				
+				this.PATH = path;
+				
+				m_currentTraceDest.x = m_enemyUnit.POSITION.x;
+				m_currentTraceDest.y = m_enemyUnit.POSITION.y;
+			}
+			else
+			{
+				trace( "[Army]: can not find the path to the unit: " + m_enemyUnit );
 			}
 		}
 		
